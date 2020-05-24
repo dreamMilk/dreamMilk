@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="baidu-site-verification" content="ZGbOgNUIf1" />
+<title>1012 数字分类 (20分) | Milk &#39;s Home</title>
+<meta name="referrer" content="never" />
+<link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
+<link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+    <meta name="description" content="题目
+
+给定一系列正整数，请按要求对数字进行分类，并输出以下 5 个数字：
+
+A1A_1A1​ = 能被 5 整除的数字中所有偶数的和；
+A2A_2A2​ = 将被 5 除后余 1 的数字按给出顺序进行交错求和，即计算 n1n_1n1​−n..." />
+    <meta name="keywords" content="代码练习" />
+    
+    <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+    <script src="https://dreammilk.now.sh/media/js/prism.min.js"></script>
+    
+    
+    <link rel="prefetch" href="https://dreammilk.now.sh/1013-shu-su-shu-20-fen/">
+    
+    
+    <link rel="prefetch" href="https://dreammilk.now.sh/1011-ab-he-c-15-fen/">
+    
+</head>
+
+<body>
+    <!-- start: #wrapper -->
+    <header id="header"
+        style="background-image:url(https://s1.ax1x.com/2020/04/07/G2hSiQ.jpg)">
+        <div class="header-container">
+  <h1 class="site-title"><a href="https://dreammilk.now.sh"><span>Milk &#39;s Home</span><span class="logo__cursor"></span></a></h1>
+  <h2 class="site-description">welcome</h2>
+  <nav class="main-navigation">
+    <ul id="" class="">
+      
+      <li class="" ><a href="https://dreammilk.now.sh" class="menu">首页</a></li>
+      
+      <li class="" ><a href="https://dreammilk.now.sh/archives" class="menu">归档</a></li>
+      
+      <li class="" ><a href="https://dreammilk.now.sh/tags" class="menu">标签</a></li>
+      
+      <li class="" ><a href="https://dreammilk.now.sh/movies/" class="menu">电影</a></li>
+      
+      <li class="" ><a href="https://dreammilk.now.sh/books/" class="menu">阅读</a></li>
+      
+      <li class="" ><a href="https://dreammilk.now.sh/post/about" class="menu">关于</a></li>
+      
+    </ul>
+  </nav>
+  <div class="my_socials">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+      <a href="https://github.com/dreamMilk" class="translate-effect" target="_blank"><i class="fa fa-github"></i></a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+    </header>
+    <div class="wrapper single">
+        <div class="post-meta">
+        </div>
+        <div class="content">
+            <div id="posts" class="posts">
+                <!-- start: .articles -->
+                
+                <article
+                    class="post hentry format-daily format-practice">
+                    <header>
+                        <time class="date">
+                            <i class="fa">
+                                <span class="datetime">1 个月前</span>
+                            </i>
+                        </time>
+                    </header>
+                    <h1 class="entry-title">
+                        1012 数字分类 (20分)
+                    </h1>
+                    <div class="post-content">
+                        <div class="post-hentry">
+                            <h3 id="题目">题目</h3>
+<blockquote>
+<p>给定一系列正整数，请按要求对数字进行分类，并输出以下 5 个数字：</p>
+<ul>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">A_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> = 能被 5 整除的数字中所有偶数的和；</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">A_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> = 将被 5 除后余 1 的数字按给出顺序进行交错求和，即计算 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>n</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">n_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>−<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>n</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">n_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>n</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">n_3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>−<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>n</mi><mn>4</mn></msub></mrow><annotation encoding="application/x-tex">n_4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>⋯；</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">A_3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> = 被 5 除后余 2 的数字的个数；</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>4</mn></msub></mrow><annotation encoding="application/x-tex">A_4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> = 被 5 除后余 3 的数字的平均数，精确到小数点后 1 位；</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>5</mn></msub></mrow><annotation encoding="application/x-tex">A_5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> = 被 5 除后余 4 的数字中最大数字。</li>
+</ul>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>每个输入包含 1 个测试用例。每个测试用例先给出一个不超过 1000 的正整数 <em>N</em>，随后给出 <em>N</em> 个不超过 1000 的待分类的正整数。数字间以空格分隔。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>对给定的 <em>N</em> 个正整数，按题目要求计算 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">A_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>~ <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>5</mn></msub></mrow><annotation encoding="application/x-tex">A_5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>并在一行中顺序输出。数字间以空格分隔，但行末不得有多余空格。</p>
+<p>若其中某一类数字不存在，则在相应位置输出 <code>N</code>。</p>
+</blockquote>
+<h3 id="输入样例1">输入样例1：</h3>
+<pre><code class="language-in">13 1 2 3 4 5 6 7 8 9 10 20 16 18
+</code></pre>
+<h3 id="输出样例1">输出样例1：</h3>
+<pre><code class="language-out">30 11 2 9.7 9
+</code></pre>
+<h3 id="输入样例2">输入样例2：</h3>
+<pre><code class="language-in">8 1 2 4 5 6 7 9 16
+</code></pre>
+<h3 id="输出样例2">输出样例2：</h3>
+<pre><code class="language-out">N 11 2 N 9
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>将数据对<code>5</code>取余，然后分别按照要求进行处理</p>
+<blockquote>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">A_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>要求偶数和，直接将判断条件变为对<code>10</code>取余即可</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">A_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>要求错位加减，使用一个辅助变量控制加减</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">A_3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>直接统计个数即可</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>4</mn></msub></mrow><annotation encoding="application/x-tex">A_4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>需要使用辅助变量计数，然后求平均数</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>5</mn></msub></mrow><annotation encoding="application/x-tex">A_5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>通过数值判断覆盖求最大值</p>
+</blockquote>
+<p>关于不存在的判断需要注意</p>
+<blockquote>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">A_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>可能会出现像<code>1，6，6，1</code>的组合，得到结果为<code>0</code>，所以不能简单的判断是否为<code>0</code></p>
+</blockquote>
+<p>这次因为审题不仔细，导致结果错误原因排查困难 (<s>最近做事效率比较低</s>💫）</p>
+<blockquote>
+<p>输入样例的首位数值为输入数字的数量，在编写代码时一起进行了计算，导致运行结果错误</p>
+</blockquote>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    int num,input;
+    bool flag = false;
+    bool open = false;
+    int cnt=0,a1=0,a2=0,a3=0,a5=0;
+    float a4=0;
+    cin &gt;&gt; num;
+    for(int i=0;i&lt;num;i++){
+        cin &gt;&gt; input;
+        if(input%10 == 0){
+            a1 += input;
+        }
+        if(input%5 == 1){
+            open = true;
+            if(flag == false){
+                a2 += input;
+                flag = true;
+            }else{
+                a2 -= input;
+                flag = false;
+            }
+        }
+        if(input%5 == 2){
+            a3++;
+        }
+        if(input%5 == 3){
+            a4 += input;
+            cnt ++;
+        }
+        if(input%5 == 4){
+            if(input &gt; a5){
+                a5 = input;
+            }
+        }
+    }
+    if(a1 == 0){
+        cout &lt;&lt; &quot;N&quot;;
+    }else cout &lt;&lt; a1;
+    if(!open){
+        cout &lt;&lt; &quot; &quot; &lt;&lt; &quot;N&quot;;
+    }else cout &lt;&lt; &quot; &quot; &lt;&lt; a2;
+    if(a3 == 0){
+        cout &lt;&lt; &quot; &quot; &lt;&lt; &quot;N&quot;;
+    }else cout &lt;&lt; &quot; &quot; &lt;&lt; a3;
+    if(cnt &lt; 2){
+        cout &lt;&lt; &quot; &quot; &lt;&lt; &quot;N&quot;;
+    }else printf(&quot; %.1f&quot;,a4/cnt);
+    if(a5 == 0){
+        cout &lt;&lt; &quot; &quot; &lt;&lt; &quot;N&quot;;
+    }else cout &lt;&lt; &quot; &quot; &lt;&lt; a5;
+    return 0;
+}
+</code></pre>
+
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </article>
+                
+
+                <div class="pager">
+                    
+                    <a class="prev" href="https://dreammilk.now.sh/1013-shu-su-shu-20-fen/">1013 数素数 (20分)</a>
+                    
+                    
+                    <a class="next" href="https://dreammilk.now.sh/1011-ab-he-c-15-fen/">1011 A+B 和 C (15分)</a>
+                    
+                    <div class="clear"></div>
+                </div>
+
+                
+                <div id="comments"></div>
+                <div class="clear"></div>
+                
+
+            </div>
+
+        </div>
+
+            <footer id="footer" class="">
+        <p class="published border-effect">
+          ©2020 共 54 篇文章
+          <br/>
+          Theme <a href="https://github.com/dreamMilk/dreamMilk.github.io" target="_blank">「Motify」</a> Powered by <a href="https://gridea.dev/" target="_blank">「Gridea」</a>
+        </p>
+    </footer>
+
+    <a id="back_to_top" href="#" class="back_to_top">
+      <span>⚡</span>
+    </a>
+
+
+<script src="https://cdn.jsdelivr.net/gh/dreamMilk/dreamMilk.github.io/media/js/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/dreamMilk/dreamMilk.github.io/media/js/lately.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/dreamMilk/dreamMilk.github.io/media/js/waterfall.min.js"></script>
+<script async src="https://cdn.jsdelivr.net/gh/dreamMilk/dreamMilk.github.io/media/js/slimbox2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/dreamMilk/dreamMilk.github.io/media/js/functions.js"></script>
+<script async src="https://cdn.jsdelivr.net/gh/dreamMilk/dreamMilk.github.io/media/js/func.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+    </div>
+
+    
+    <!-- <script src="https://cdn.staticfile.org/valine/1.3.10/Valine.Pure.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.Pure.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            new Valine({
+                el: '#comments',
+                visitor:true,
+                recordIP: true,
+                appId: 'PeKXGBvSz0e8NaL0a7evysl3-MdYXbMMI',
+                appKey: 'KBGk1meRDYb0eANKOoU0Q8YD',
+                pageSize: 30,
+                placeholder: '既然来了，那就留个痕迹吧~',
+                requiredFields: ['nick','mail'],
+                emojiCDN: '//i0.hdslb.com/bfs/emote/',
+                emojiMaps: {
+                    "tv_doge": "6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png",
+                    "tv_亲亲": "a8111ad55953ef5e3be3327ef94eb4a39d535d06.png",
+                    "tv_偷笑": "bb690d4107620f1c15cff29509db529a73aee261.png",
+                    "tv_再见": "180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png",
+                    "tv_冷漠": "b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png",
+                    "tv_发怒": "34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png",
+                    "tv_发财": "34db290afd2963723c6eb3c4560667db7253a21a.png",
+                    "tv_可爱": "9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png",
+                    "tv_吐血": "09dd16a7aa59b77baa1155d47484409624470c77.png",
+                    "tv_呆": "fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png",
+                    "tv_呕吐": "9f996894a39e282ccf5e66856af49483f81870f3.png",
+                    "tv_困": "241ee304e44c0af029adceb294399391e4737ef2.png",
+                    "tv_坏笑": "1f0b87f731a671079842116e0991c91c2c88645a.png",
+                    "tv_大佬": "093c1e2c490161aca397afc45573c877cdead616.png",
+                    "tv_大哭": "23269aeb35f99daee28dda129676f6e9ea87934f.png",
+                    "tv_委屈": "d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png",
+                    "tv_害羞": "a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png",
+                    "tv_尴尬": "7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png",
+                    "tv_微笑": "70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png",
+                    "tv_思考": "90cf159733e558137ed20aa04d09964436f618a1.png",
+                    "tv_惊吓": "0d15c7e2ee58e935adc6a7193ee042388adc22af.png",
+                    "tv_打脸": "56ab10b624063e966bfcb76ea5dc4794d87dfd47.png",
+                    "tv_抓狂": "fe31c08edad661d63762b04e17b8d5ae3c71a757.png",
+                    "tv_抠鼻": "c666f55e88d471e51bbd9fab9bb308110824a6eb.png",
+                    "tv_斜眼笑": "911f987aa8bc1bee12d52aafe62bc41ef4474e6c.png",
+                    "tv_无奈": "ea8ed89ee9878f2fece2dda0ea8a5dbfe21b5751.png",
+                    "tv_晕": "5443c22b4d07fb1907ccc610c8e6db254f2461b7.png",
+                    "tv_流汗": "cead1c351ab8d79e9f369605beb90148db0fbed3.png",
+                    "tv_流泪": "7e71cde7858f0cd50d74b0264aa26db612a8a167.png",
+                    "tv_流鼻血": "c32d39db2737f89b904ca32700d140a9241b0767.png",
+                    "tv_点赞": "f85c354995bd99e28fc76c869bfe42ba6438eff4.png",
+                    "tv_生气": "26702dcafdab5e8225b43ffd23c94ac1ff932654.png",
+                    "tv_生病": "8b0ec90e6b86771092a498c54f09fc94621c1900.png",
+                    "tv_疑问": "0793d949b18d7be716078349c202c15ff166f314.png",
+                    "tv_白眼": "c1d59f439e379ee50eef488bcb5e5378e5044ea4.png",
+                    "tv_皱眉": "72ccad6679fea0d14cce648b4d818e09b8ffea2d.png",
+                    "tv_目瞪口呆": "0b8cb81a68de5d5365212c99375e7ace3e7891b7.png",
+                    "tv_睡着": "8b196675b53af58264f383c50ad0945048290b33.png",
+                    "tv_笑哭": "1abc628f6d4f4caf9d0e7800878f4697abbc8273.png",
+                    "tv_腼腆": "89712c0d4af73e67f89e35cbc518420380a7f6f4.png",
+                    "tv_色": "61822c7e9aae5da76475e7892534545336b23a6f.png",
+                    "tv_调侃": "4bc022533ef31544ca0d72c12c808cf4a1cce3e3.png",
+                    "tv_调皮": "b9c41de8e82dd7a8515ae5e3cb63e898bf245186.png",
+                    "tv_鄙视": "6e72339f346a692a495b123174b49e4e8e781303.png",
+                    "tv_闭嘴": "c9e990da7f6e93975e25fd8b70e2e290aa4086ef.png",
+                    "tv_难过": "87f46748d3f142ebc6586ff58860d0e2fc8263ba.png",
+                    "tv_馋": "fc7e829b845c43c623c8b490ee3602b7f0e76a31.png",
+                    "tv_鬼脸": "0ffbbddf8a94d124ca2f54b360bbc04feb6bbfea.png",
+                    "tv_黑人问号": "45821a01f51bc867da9edbaa2e070410819a95b2.png",
+                    "tv_鼓掌": "1d21793f96ef4e6f48b23e53e3b9e42da833a0f6.png"
+                } 
+            })
+            jinrishici.load(function (result) {
+                var jrsc_plac = result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin.dynasty + " · " + result.data.origin.author
+                document.getElementById("veditor").setAttribute("placeholder", jrsc_plac);
+            });
+            $('.vemoji-btn').append('');
+            $("#comments").on('click', 'span.vat', function () {
+                $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
+                $('textarea#veditor').focus();
+            })
+            if (window.location.hash) {
+                var checkExist = setInterval(function () {
+                    if ($(window.location.hash).length) {
+                        $('html, body').animate({ scrollTop: $(window.location.hash).offset().top - 90 }, 1000);
+                        clearInterval(checkExist);
+                    }
+                }, 100);
+            }
+        });
+    </script>
+    
+
+</body>
+
+</html>

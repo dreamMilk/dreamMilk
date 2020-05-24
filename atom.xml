@@ -1,45 +1,841 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://dreammilk.github.io</id>
+    <id>https://dreammilk.now.sh</id>
     <title>Milk &apos;s Home</title>
-    <updated>2020-05-24T08:49:50.786Z</updated>
+    <updated>2020-05-24T09:22:17.373Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://dreammilk.github.io"/>
-    <link rel="self" href="https://dreammilk.github.io/atom.xml"/>
+    <link rel="alternate" href="https://dreammilk.now.sh"/>
+    <link rel="self" href="https://dreammilk.now.sh/atom.xml"/>
     <subtitle>welcome</subtitle>
-    <logo>https://dreammilk.github.io/images/avatar.png</logo>
-    <icon>https://dreammilk.github.io/favicon.ico</icon>
+    <logo>https://dreammilk.now.sh/images/avatar.png</logo>
+    <icon>https://dreammilk.now.sh/favicon.ico</icon>
     <rights>All rights reserved 2020, Milk &apos;s Home</rights>
     <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://dreammilk.github.io/hello-gridea/</id>
-        <link href="https://dreammilk.github.io/hello-gridea/">
+        <title type="html"><![CDATA[1057 数零壹 (20分)]]></title>
+        <id>https://dreammilk.now.sh/1057-shu-ling-yi-20-fen/</id>
+        <link href="https://dreammilk.now.sh/1057-shu-ling-yi-20-fen/">
         </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+        <updated>2020-05-24T03:45:27.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>给定一串长度不超过 105 的字符串，本题要求你将其中所有英文字母的序号（字母 a-z 对应序号 1-26，不分大小写）相加，得到整数 N，然后再分析一下 N 的二进制表示中有多少 0、多少 1。例如给定字符串 <code>PAT (Basic)</code>，其字母序号之和为：16+1+20+2+1+19+9+3=71，而 71 的二进制是 1000111，即有 3 个 0、4 个 1。</p>
+</blockquote>
 ]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>给定一串长度不超过 105 的字符串，本题要求你将其中所有英文字母的序号（字母 a-z 对应序号 1-26，不分大小写）相加，得到整数 N，然后再分析一下 N 的二进制表示中有多少 0、多少 1。例如给定字符串 <code>PAT (Basic)</code>，其字母序号之和为：16+1+20+2+1+19+9+3=71，而 71 的二进制是 1000111，即有 3 个 0、4 个 1。</p>
+</blockquote>
 <!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入在一行中给出长度不超过 105、以回车结束的字符串。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>在一行中先后输出 0 的个数和 1 的个数，其间以空格分隔。</p>
+</blockquote>
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">PAT (Basic)
+</code></pre>
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">3 4
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>题目比较容易：</p>
+<blockquote>
+<p>先将输入字符串转换为整数，这一步可以统一大写（小写）然后减去‘A’（‘a’）得到每个字母的大小</p>
+<p>转换为二进制只需循环对2取余并除以2即可，使用数组统计0、1出现次数</p>
+<p>最后输出数组即可</p>
+</blockquote>
+<p>关于输入时的要点：</p>
+<blockquote>
+<p>在输入时可能会存在空格，因此使用<code>getline</code>函数会比较好</p>
+</blockquote>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;cctype&gt;
+
+using namespace std;
+
+int main() {
+    string s;
+    getline(cin,s);
+    int sum=0;
+    for(int i=0;i&lt;s.length();i++){
+        if(isalpha(s[i])) sum += tolower(s[i])-'a'+1;
+    }
+    int cnt[2]={0};
+    while(sum&gt;0){
+        cnt[sum%2]++;
+        sum /= 2;
+    }
+    cout &lt;&lt; cnt[0] &lt;&lt; ' ' &lt;&lt; cnt[1];
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[1056 组合数的和 (15分)]]></title>
+        <id>https://dreammilk.now.sh/1056-zu-he-shu-de-he-15-fen/</id>
+        <link href="https://dreammilk.now.sh/1056-zu-he-shu-de-he-15-fen/">
+        </link>
+        <updated>2020-05-23T04:00:01.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>给定 N 个非 0 的个位数字，用其中任意 2 个数字都可以组合成 1 个 2 位的数字。要求所有可能组合出来的 2 位数字的和。例如给定 2、5、8，则可以组合出：25、28、52、58、82、85，它们的和为330。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>给定 N 个非 0 的个位数字，用其中任意 2 个数字都可以组合成 1 个 2 位的数字。要求所有可能组合出来的 2 位数字的和。例如给定 2、5、8，则可以组合出：25、28、52、58、82、85，它们的和为330。</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入在一行中先给出 N（1 &lt; N &lt; 10），随后给出 N 个不同的非 0 个位数字。数字间以空格分隔。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>输出所有可能组合出来的2位数字的和。</p>
+</blockquote>
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">3 2 8 5
+</code></pre>
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">330
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>题目的规律比较简单：</p>
+<blockquote>
+<p>通过题目中的例子可以看出<code>2、5、8</code>都在个位与十位出现过两次</p>
+<p>再公式化一点，每个数字都需要成为剩下<code>n-1</code>个数的十位数，每个数字也需要成为其他数字的个位数</p>
+<p>因此</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">每</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">字</mi><mi mathvariant="normal">出</mi><mi mathvariant="normal">现</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">和</mi><mo>=</mo><mn>10</mn><mo>∗</mo><mi mathvariant="normal">（</mi><mi>n</mi><mo>−</mo><mn>1</mn><mi mathvariant="normal">）</mi><mo>+</mo><mn>1</mn><mo>∗</mo><mi mathvariant="normal">（</mi><mi>n</mi><mo>−</mo><mn>1</mn><mi mathvariant="normal">）</mi><mo>=</mo><mn>11</mn><mo>∗</mo><mi mathvariant="normal">（</mi><mi>n</mi><mo>−</mo><mn>1</mn><mi mathvariant="normal">）</mi></mrow><annotation encoding="application/x-tex">每个数字出现的和=10*（n-1）+1*（n-1）=11*（n-1）
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mord cjk_fallback">每</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">字</span><span class="mord cjk_fallback">出</span><span class="mord cjk_fallback">现</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">和</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord cjk_fallback">（</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mord cjk_fallback">）</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord cjk_fallback">（</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord cjk_fallback">）</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord cjk_fallback">（</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord cjk_fallback">）</span></span></span></span></span></p>
+</blockquote>
+<p>剩下的就是入门编程了</p>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    int n,sum=0;
+    cin &gt;&gt; n;
+    for(int i=0;i&lt;n;i++){
+        int a;cin &gt;&gt; a;
+        sum+=11*a*(n-1);
+    }
+    cout &lt;&lt; sum;
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[1055 集体照 (25分)]]></title>
+        <id>https://dreammilk.now.sh/1055-ji-ti-zhao-25-fen/</id>
+        <link href="https://dreammilk.now.sh/1055-ji-ti-zhao-25-fen/">
+        </link>
+        <updated>2020-05-22T03:48:51.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>拍集体照时队形很重要，这里对给定的 <em>N</em> 个人 <em>K</em> 排的队形设计排队规则如下：</p>
+<ul>
+<li>每排人数为 <em>N</em>/<em>K</em>（向下取整），多出来的人全部站在最后一排；</li>
+<li>后排所有人的个子都不比前排任何人矮；</li>
+<li>每排中最高者站中间（中间位置为 <em>m</em>/2+1，其中 <em>m</em> 为该排人数，除法向下取整）；</li>
+<li>每排其他人以中间人为轴，按身高非增序，先右后左交替入队站在中间人的两侧（例如5人身高为190、188、186、175、170，则队形为175、188、190、186、170。这里假设你面对拍照者，所以你的左边是中间人的右边）；</li>
+<li>若多人身高相同，则按名字的字典序升序排列。这里保证无重名。</li>
+</ul>
+<p>现给定一组拍照人，请编写程序输出他们的队形。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>拍集体照时队形很重要，这里对给定的 <em>N</em> 个人 <em>K</em> 排的队形设计排队规则如下：</p>
+<ul>
+<li>每排人数为 <em>N</em>/<em>K</em>（向下取整），多出来的人全部站在最后一排；</li>
+<li>后排所有人的个子都不比前排任何人矮；</li>
+<li>每排中最高者站中间（中间位置为 <em>m</em>/2+1，其中 <em>m</em> 为该排人数，除法向下取整）；</li>
+<li>每排其他人以中间人为轴，按身高非增序，先右后左交替入队站在中间人的两侧（例如5人身高为190、188、186、175、170，则队形为175、188、190、186、170。这里假设你面对拍照者，所以你的左边是中间人的右边）；</li>
+<li>若多人身高相同，则按名字的字典序升序排列。这里保证无重名。</li>
+</ul>
+<p>现给定一组拍照人，请编写程序输出他们的队形。</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>每个输入包含 1 个测试用例。每个测试用例第 1 行给出两个正整数 <em>N</em>（≤<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">10^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span>，总人数）和 <em>K</em>（≤10，总排数）。随后 <em>N</em> 行，每行给出一个人的名字（不包含空格、长度不超过 8 个英文字母）和身高（[30, 300] 区间内的整数）。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>输出拍照的队形。即K排人名，其间以空格分隔，行末不得有多余空格。注意：假设你面对拍照者，后排的人输出在上方，前排输出在下方。</p>
+</blockquote>
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">10 3
+Tom 188
+Mike 170
+Eva 168
+Tim 160
+Joe 190
+Ann 168
+Bob 175
+Nick 186
+Amy 160
+John 159
+</code></pre>
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">Bob Tom Joe Nick
+Ann Mike Eva
+Tim Amy John
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>题目看着就有点晕，稍微梳理一下：</p>
+<blockquote>
+<p>首先在输出时大致顺序还是从高到低，所以需要按照题目要求对输入身高排序</p>
+<p>因为每排输出时并不是按顺序来的，而是按照先右后左的顺序排列</p>
+<p>这个可以寻找规律，（<code>row</code>为当前行元素个数）最左端<code>row-row%2</code>，最右端<code>row+row%2-1</code></p>
+<p>也可以直接用一个数组存储每一行，存储到对应的位置下标然后输出整个数组</p>
+</blockquote>
+<p>总结一下：</p>
+<blockquote>
+<p>在题目需要按照某种复杂规律输出时，并不一定要总结规律，可以将顺序对应到数组下标，直接按照题目所说的逻辑，将每个元素存放到对应位置，这个方法会避免逻辑打结，以及调试时把自己绕晕💫</p>
+</blockquote>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;vector&gt;
+#include&lt;algorithm&gt;
+
+using namespace std;
+
+struct stu{
+    string name;
+    int height;
+};
+
+bool cmp(stu a,stu b){
+    if(a.height != b.height) return a.height&gt;b.height;
+    else return a.name&lt;b.name;
+}
+
+int main() {
+    int N,K;
+    cin &gt;&gt; N &gt;&gt; K;
+    int m=N/K;
+    vector&lt;stu&gt; v(N);
+    for(int i=0;i&lt;N;i++) cin &gt;&gt; v[i].name &gt;&gt; v[i].height;
+    sort(v.begin(),v.end(),cmp);
+    string str;
+    int row,index=0;
+    for(int i=0;i&lt;K;i++){
+        str =&quot;&quot;;
+        row = i!=0?m:m+N%K;
+        for(int j=row-row%2-1;j&gt;0;j-=2) str += v[j+index].name+&quot; &quot;;
+        str += i!=0?v[N%K+i*row].name:v[0].name;
+        for(int j=2;j&lt;=row+row%2-2;j+=2) str += &quot; &quot;+v[j+index].name;
+        cout &lt;&lt; str &lt;&lt; endl;
+        index += row;
+    }
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[1054 求平均值 (20分)]]></title>
+        <id>https://dreammilk.now.sh/1054-qiu-ping-jun-zhi-20-fen/</id>
+        <link href="https://dreammilk.now.sh/1054-qiu-ping-jun-zhi-20-fen/">
+        </link>
+        <updated>2020-05-21T04:40:39.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>本题的基本要求非常简单：给定 <em>N</em> 个实数，计算它们的平均值。但复杂的是有些输入数据可能是非法的。一个“合法”的输入是 [−1000,1000] 区间内的实数，并且最多精确到小数点后 2 位。当你计算平均值的时候，不能把那些非法的数据算在内。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>本题的基本要求非常简单：给定 <em>N</em> 个实数，计算它们的平均值。但复杂的是有些输入数据可能是非法的。一个“合法”的输入是 [−1000,1000] 区间内的实数，并且最多精确到小数点后 2 位。当你计算平均值的时候，不能把那些非法的数据算在内。</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入第一行给出正整数 <em>N</em>（≤100）。随后一行给出 <em>N</em> 个实数，数字间以一个空格分隔。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>对每个非法输入，在一行中输出 <code>ERROR: X is not a legal number</code>，其中 <code>X</code> 是输入。最后在一行中输出结果：<code>The average of K numbers is Y</code>，其中 <code>K</code> 是合法输入的个数，<code>Y</code> 是它们的平均值，精确到小数点后 2 位。如果平均值无法计算，则用 <code>Undefined</code> 替换 <code>Y</code>。如果 <code>K</code> 为 1，则输出 <code>The average of 1 number is Y</code>。</p>
+</blockquote>
+<h3 id="输入样例1">输入样例1：</h3>
+<pre><code class="language-in">7
+5 -3.2 aaa 9999 2.3.4 7.123 2.35
+</code></pre>
+<h3 id="输出样例1">输出样例1：</h3>
+<pre><code class="language-out">ERROR: aaa is not a legal number
+ERROR: 9999 is not a legal number
+ERROR: 2.3.4 is not a legal number
+ERROR: 7.123 is not a legal number
+The average of 3 numbers is 1.38
+</code></pre>
+<h3 id="输入样例2">输入样例2：</h3>
+<pre><code class="language-in">2
+aaa -9999
+</code></pre>
+<h3 id="输出样例2">输出样例2：</h3>
+<pre><code class="language-out">ERROR: aaa is not a legal number
+ERROR: -9999 is not a legal number
+The average of 0 numbers is Undefined
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>题目主要是如何过滤数据：</p>
+<blockquote>
+<p>根据题目的要求可以得出以下的数字特点</p>
+<ul>
+<li>输入的数字只能包含<code>-</code> &amp;<code>.</code>&amp; <code>数字</code>（保证输入中只有这三种符号）</li>
+<li><code>-</code>只能出现在开头（保证除首位以外，只有小数点和数字）</li>
+<li><code>-</code>后面不能存在<code>.</code>（保证小数点前至少有一位数字）</li>
+<li><code>.</code>只能出现一次，且后面只能有两个数字字符（保证小数点不会再次出现小数点）</li>
+<li>数字大小不要超过 [−1000,1000] 区间（保证数字大小符合条件）</li>
+</ul>
+<p>对于判断的顺序按照上面所列的次序进行，避免错误或进行额外的判断</p>
+</blockquote>
+<p>关于输出时的一个格式问题：</p>
+<blockquote>
+<p>如果只有一个数字符合要求，输出语句中应该为<code>number</code>不要添加<code>s</code></p>
+</blockquote>
+<p>看见柳婼大佬写的20行代码确实比较简洁：</p>
+<blockquote>
+<p>在过滤数字的时候使用了<code>sscanf</code>函数与<code>sprintf</code>函数，这两个函数能够格式化输入数据，将符合条件的数字进行存储，省略了这种原始的过滤方式</p>
+</blockquote>
+<p>但是对于这两个函数不是很了解，等以后再琢磨一下如何使用😭</p>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;string&gt;
+#include&lt;vector&gt;
+
+using namespace std;
+
+int main() {
+    int N;
+    cin &gt;&gt; N;
+    vector&lt;double&gt; v;
+    for(int i=0;i&lt;N;i++){
+        string s;
+        cin &gt;&gt; s;
+        int j=0,point=0;
+        for(;j&lt;s.length();j++){
+            if((s[j]&gt;='0'&amp;&amp;s[j]&lt;='9') || s[j]=='.' || s[j]=='-'){
+                if(s[j]=='-' &amp;&amp; j!=0) break;
+                if(s[j]=='.'){
+                    if(j==0) break;
+                    if(s[j-1]=='-') break;
+                    if(s.length()-j&gt;3) break;
+                    point ++;
+                    if(point == 2) break;
+                }
+            }
+            else break;
+        }
+        if(j==s.length() &amp;&amp; stod(s)&gt;=-1000 &amp;&amp; stod(s)&lt;=1000) v.push_back(stod(s));
+        else cout &lt;&lt; &quot;ERROR: &quot; &lt;&lt; s &lt;&lt; &quot; is not a legal number&quot; &lt;&lt; endl;
+    }
+    double sum=0;
+    if(v.size()==0){printf(&quot;The average of 0 numbers is Undefined&quot;);}
+    else if(v.size()==1){printf(&quot;The average of 1 number is %.2f&quot;,v[0]);}
+    else{
+        for(int i=0;i&lt;v.size();i++) sum += v[i];
+        printf(&quot;The average of %d numbers is %.2f&quot;, v.size(),sum/v.size());
+    }
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[1053 住房空置率 (20分)]]></title>
+        <id>https://dreammilk.now.sh/1053-zhu-fang-kong-zhi-lu-20-fen/</id>
+        <link href="https://dreammilk.now.sh/1053-zhu-fang-kong-zhi-lu-20-fen/">
+        </link>
+        <updated>2020-05-20T02:54:06.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>在不打扰居民的前提下，统计住房空置率的一种方法是根据每户用电量的连续变化规律进行判断。判断方法如下：</p>
+<ul>
+<li>在观察期内，若存在超过一半的日子用电量低于某给定的阈值 <em>e</em>，则该住房为“可能空置”；</li>
+<li>若观察期超过某给定阈值 <em>D</em> 天，且满足上一个条件，则该住房为“空置”。</li>
+</ul>
+<p>现给定某居民区的住户用电量数据，请你统计“可能空置”的比率和“空置”比率，即以上两种状态的住房占居民区住房总套数的百分比。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>在不打扰居民的前提下，统计住房空置率的一种方法是根据每户用电量的连续变化规律进行判断。判断方法如下：</p>
+<ul>
+<li>在观察期内，若存在超过一半的日子用电量低于某给定的阈值 <em>e</em>，则该住房为“可能空置”；</li>
+<li>若观察期超过某给定阈值 <em>D</em> 天，且满足上一个条件，则该住房为“空置”。</li>
+</ul>
+<p>现给定某居民区的住户用电量数据，请你统计“可能空置”的比率和“空置”比率，即以上两种状态的住房占居民区住房总套数的百分比。</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入第一行给出正整数 <em>N</em>（≤1000），为居民区住房总套数；正实数 <em>e</em>，即低电量阈值；正整数 <em>D</em>，即观察期阈值。随后 <em>N</em> 行，每行按以下格式给出一套住房的用电量数据：</p>
+<p><em>K</em> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>E</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">E_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>E</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">E_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> ... <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>E</mi><mi>K</mi></msub></mrow><annotation encoding="application/x-tex">E_K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.07153em;">K</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></p>
+<p>其中 <em>K</em> 为观察的天数，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>E</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">E_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 为第 <em>i</em> 天的用电量。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>在一行中输出“可能空置”的比率和“空置”比率的百分比值，其间以一个空格分隔，保留小数点后 1 位。</p>
+</blockquote>
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">5 0.5 10
+6 0.3 0.4 0.5 0.2 0.8 0.6
+10 0.0 0.1 0.2 0.3 0.0 0.8 0.6 0.7 0.0 0.5
+5 0.4 0.3 0.5 0.1 0.7
+11 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1
+11 2 2 2 1 1 0.1 1 0.1 0.1 0.1 0.1
+</code></pre>
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">40.0% 20.0%
+</code></pre>
+<p>（样例解释：第2、3户为“可能空置”，第4户为“空置”，其他户不是空置。）</p>
+<h3 id="思路">思路：</h3>
+<p>题目的逻辑很清晰：</p>
+<blockquote>
+<p>分别统计每户每天的电量是否低于阈值，得到低于阈值的天数</p>
+<p>如果天数超过观察期的一半，则可能空置，如果观察期也大于阈值，则空置</p>
+</blockquote>
+<p>关于输出时的要点：</p>
+<blockquote>
+<p>为了输出浮点数，需要将分子分母强制转换一下，或者在开始定义变量时，使用浮点数</p>
+</blockquote>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    int N,D,must=0,may=0;float e;
+    cin &gt;&gt; N &gt;&gt; e &gt;&gt; D;
+    for(int i=0;i&lt;N;i++){
+        int K,day=0;
+        cin &gt;&gt; K;
+        for(int i=0;i&lt;K;i++){
+            float E;cin &gt;&gt; E;
+            if(E&lt;e) day++;
+        }
+        if(day&gt;K/2 &amp;&amp; K&gt;D) must++;
+        else if(day&gt;K/2) may++;
+    }
+    printf(&quot;%.1f%% %.1f%%&quot;,float(may)*100/float(N),float(must)*100/float(N));
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[1052 卖个萌 (20分)]]></title>
+        <id>https://dreammilk.now.sh/1052-mai-ge-meng-20-fen/</id>
+        <link href="https://dreammilk.now.sh/1052-mai-ge-meng-20-fen/">
+        </link>
+        <updated>2020-05-19T05:13:28.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>萌萌哒表情符号通常由“手”、“眼”、“口”三个主要部分组成。简单起见，我们假设一个表情符号是按下列格式输出的：</p>
+<pre><code class="language-in">[左手]([左眼][口][右眼])[右手]
+</code></pre>
+<p>现给出可选用的符号集合，请你按用户的要求输出表情。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>萌萌哒表情符号通常由“手”、“眼”、“口”三个主要部分组成。简单起见，我们假设一个表情符号是按下列格式输出的：</p>
+<pre><code class="language-in">[左手]([左眼][口][右眼])[右手]
+</code></pre>
+<p>现给出可选用的符号集合，请你按用户的要求输出表情。</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入首先在前三行顺序对应给出手、眼、口的可选符号集。每个符号括在一对方括号 <code>[]</code>内。题目保证每个集合都至少有一个符号，并不超过 10 个符号；每个符号包含 1 到 4 个非空字符。</p>
+<p>之后一行给出一个正整数 K，为用户请求的个数。随后 K 行，每行给出一个用户的符号选择，顺序为左手、左眼、口、右眼、右手——这里只给出符号在相应集合中的序号（从 1 开始），数字间以空格分隔。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>对每个用户请求，在一行中输出生成的表情。若用户选择的序号不存在，则输出 <code>Are you kidding me? @\/@</code>。</p>
+</blockquote>
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">[╮][╭][o][~\][/~]  [&lt;][&gt;]
+ [╯][╰][^][-][=][&gt;][&lt;][@][⊙]
+[Д][▽][_][ε][^]  ...
+4
+1 1 2 2 2
+6 8 1 5 5
+3 3 4 3 3
+2 10 3 9 3
+</code></pre>
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">╮(╯▽╰)╭
+&lt;(@Д=)/~
+o(^ε^)o
+Are you kidding me? @\/@
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>题目难点在于如何获取每个<code>[ ]</code>内的表情：</p>
+<blockquote>
+<p>使用第一层循环确定左括号，使用第二层循环确定右括号，然后使用<code>substr</code>函数截取</p>
+<p>存放好每个表情后，判断用户输入的是否合理，如果合理，输出每个对应的表情</p>
+</blockquote>
+<p>关于代码中的注意事项：</p>
+<blockquote>
+<p>在表情输入时因为存在未知空格，需要使用<code>getline</code>函数进行整行读取，这也是为什么需要两层循环的原因</p>
+<p>在输出转义字符<code>\</code>时需要在前面额外添加一个转义字符</p>
+</blockquote>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;vector&gt;
+
+using namespace std;
+
+int extract(vector&lt;string&gt; &amp;v){
+    string sign;
+    getline(cin,sign);
+    for(int i=0;i&lt;sign.length()-1;i++){
+        if(sign[i]=='['){
+            for(int j=i+1;j&lt;sign.length();j++){
+                if(sign[j]==']'){
+                    v.push_back(sign.substr(i+1,j-i-1));
+                    break;
+                }
+            }
+        }
+    }
+    return 1;
+}
+
+int main() {
+    vector&lt;string&gt; hand,eye,mouth;
+    extract(hand);
+    extract(eye);
+    extract(mouth);
+    int k;
+    cin &gt;&gt; k;
+    for(int i=0;i&lt;k;i++){
+        int h1,e1,m,e2,h2;
+        cin &gt;&gt; h1 &gt;&gt; e1 &gt;&gt; m &gt;&gt; e2 &gt;&gt; h2;
+        if(h1&gt;hand.size()||e1&gt;eye.size()||m&gt;mouth.size()||e2&gt;eye.size()||h2&gt;hand.size()||h1&lt;1||e1&lt;1||m&lt;1||e2&lt;1||h2&lt;1){
+            cout &lt;&lt; &quot;Are you kidding me? @\\/@&quot; &lt;&lt; endl;
+        }
+        else cout &lt;&lt; hand[h1-1] &lt;&lt; &quot;(&quot; &lt;&lt; eye[e1-1] &lt;&lt; mouth[m-1] &lt;&lt; eye[e2-1] &lt;&lt; &quot;)&quot; &lt;&lt; hand[h2-1] &lt;&lt; endl;
+    }
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[1051 复数乘法 (15分)]]></title>
+        <id>https://dreammilk.now.sh/1051-fu-shu-cheng-fa-15-fen/</id>
+        <link href="https://dreammilk.now.sh/1051-fu-shu-cheng-fa-15-fen/">
+        </link>
+        <updated>2020-05-18T04:45:56.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>复数可以写成 (<em><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>+</mo><mi>B</mi><mi>i</mi></mrow><annotation encoding="application/x-tex">A+Bi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mord mathdefault">i</span></span></span></span></em>) 的常规形式，其中 <em>A</em> 是实部，<em>B</em> 是虚部，<em>i</em> 是虚数单位，满足 <em><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>i</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">i^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">i</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></em>=−1；也可以写成极坐标下的指数形式 (<em>R</em>×<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>e</mi><mrow><mo>(</mo><mi>P</mi><mi>i</mi><mo>)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">e^{(Pi)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8879999999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8879999999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight" style="margin-right:0.13889em;">P</span><span class="mord mathdefault mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span></span></span></span>)，其中 <em>R</em> 是复数模，<em>P</em> 是辐角，<em>i</em> 是虚数单位，其等价于三角形式 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>R</mi><mo>(</mo><mi>c</mi><mi>o</mi><mi>s</mi><mo>(</mo><mi>P</mi><mo>)</mo><mo>+</mo><mi>i</mi><mi>s</mi><mi>i</mi><mi>n</mi><mo>(</mo><mi>P</mi><mo>)</mo><mo>)</mo></mrow><annotation encoding="application/x-tex">R(cos(P)+isin(P))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="mopen">(</span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mclose">)</span><span class="mclose">)</span></span></span></span>。</p>
+<p>现给定两个复数的 <em>R</em> 和 <em>P</em>，要求输出两数乘积的常规形式。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>复数可以写成 (<em><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mo>+</mo><mi>B</mi><mi>i</mi></mrow><annotation encoding="application/x-tex">A+Bi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mord mathdefault">i</span></span></span></span></em>) 的常规形式，其中 <em>A</em> 是实部，<em>B</em> 是虚部，<em>i</em> 是虚数单位，满足 <em><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>i</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">i^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">i</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></em>=−1；也可以写成极坐标下的指数形式 (<em>R</em>×<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>e</mi><mrow><mo>(</mo><mi>P</mi><mi>i</mi><mo>)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">e^{(Pi)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8879999999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8879999999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight" style="margin-right:0.13889em;">P</span><span class="mord mathdefault mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span></span></span></span>)，其中 <em>R</em> 是复数模，<em>P</em> 是辐角，<em>i</em> 是虚数单位，其等价于三角形式 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>R</mi><mo>(</mo><mi>c</mi><mi>o</mi><mi>s</mi><mo>(</mo><mi>P</mi><mo>)</mo><mo>+</mo><mi>i</mi><mi>s</mi><mi>i</mi><mi>n</mi><mo>(</mo><mi>P</mi><mo>)</mo><mo>)</mo></mrow><annotation encoding="application/x-tex">R(cos(P)+isin(P))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="mopen">(</span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mclose">)</span><span class="mclose">)</span></span></span></span>。</p>
+<p>现给定两个复数的 <em>R</em> 和 <em>P</em>，要求输出两数乘积的常规形式。</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入在一行中依次给出两个复数的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">R_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">P_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>,<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>R</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">R_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.00773em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>,<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">P_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，数字间以空格分隔。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>在一行中按照 <code>A+Bi</code> 的格式输出两数乘积的常规形式，实部和虚部均保留 2 位小数。注意：如果 <code>B</code> 是负数，则应该写成 <code>A-|B|i</code> 的形式。</p>
+</blockquote>
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">2.3 3.5 5.2 0.4
+</code></pre>
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">-8.68-8.23i
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>题目意思稍微有点绕口，但是没什么问题：</p>
+<blockquote>
+<p>先将输入的三角形式按照公式转换为一般形式，然后相乘得到A和B，最后进行输出即可</p>
+</blockquote>
+<p>关于输出时的要点：</p>
+<blockquote>
+<p>在A和B属于-0.005~0时，保留小数后不应该为-0.00，而是转化为0.00</p>
+</blockquote>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;cmath&gt;
+
+using namespace std;
+
+int cmp(int a,int b){ return a&gt;b; }
+
+int main() {
+    double r1,p1,r2,p2;
+    scanf(&quot;%lf %lf %lf %lf&quot;,&amp;r1,&amp;p1,&amp;r2,&amp;p2);
+    double a=r1*cos(p1)*r2*cos(p2)-r1*sin(p1)*r2*sin(p2);
+    double b=r1*cos(p1)*r2*sin(p2)+r1*sin(p1)*r2*cos(p2);
+    if(a+0.005 &gt;= 0 &amp;&amp; a&lt;0) printf(&quot;0.00&quot;);
+    else printf(&quot;%.2f&quot;,a);
+    if(b+0.005 &gt;= 0 &amp;&amp; b&lt;0) printf(&quot;+0.00i&quot;);
+    else if(b&gt;=0) printf(&quot;+%.2fi&quot;,b);
+    else printf(&quot;%.2fi&quot;,b);
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[1050 螺旋矩阵 (25分)]]></title>
+        <id>https://dreammilk.now.sh/1050-luo-xuan-ju-zhen-25-fen/</id>
+        <link href="https://dreammilk.now.sh/1050-luo-xuan-ju-zhen-25-fen/">
+        </link>
+        <updated>2020-05-17T05:48:36.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>本题要求将给定的 <em>N</em> 个正整数按非递增的顺序，填入“螺旋矩阵”。所谓“螺旋矩阵”，是指从左上角第 1 个格子开始，按顺时针螺旋方向填充。要求矩阵的规模为 <em>m</em> 行 <em>n</em> 列，满足条件：<em>m</em>×<em>n</em> 等于 <em>N</em>；<em>m</em>≥<em>n</em>；且 <em>m</em>−<em>n</em> 取所有可能值中的最小值。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>本题要求将给定的 <em>N</em> 个正整数按非递增的顺序，填入“螺旋矩阵”。所谓“螺旋矩阵”，是指从左上角第 1 个格子开始，按顺时针螺旋方向填充。要求矩阵的规模为 <em>m</em> 行 <em>n</em> 列，满足条件：<em>m</em>×<em>n</em> 等于 <em>N</em>；<em>m</em>≥<em>n</em>；且 <em>m</em>−<em>n</em> 取所有可能值中的最小值。</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入在第 1 行中给出一个正整数 <em>N</em>，第 2 行给出 <em>N</em> 个待填充的正整数。所有数字不超过 104，相邻数字以空格分隔。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>输出螺旋矩阵。每行 <em>n</em> 个数字，共 <em>m</em> 行。相邻数字以 1 个空格分隔，行末不得有多余空格。</p>
+</blockquote>
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">12
+37 76 20 98 76 42 53 95 60 81 58 93
+</code></pre>
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">98 95 93
+42 37 81
+53 20 76
+58 60 76
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>首先整理一下题目的思路：</p>
+<blockquote>
+<p>先从<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msqrt><mi>N</mi></msqrt></mrow><annotation encoding="application/x-tex">\sqrt{N}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.11333499999999996em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9266650000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span><span style="top:-2.886665em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
+-10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
+-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
+35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
+-221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
+s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
+s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.11333499999999996em;"><span></span></span></span></span></span></span></span></span>开始往前寻找到列数n,然后确定行数m</p>
+<p>将输入的数字按从大到小排序</p>
+<p>因为每次螺旋一圈会减少两行，所以可以通过行数m确定循环次数（旋转圈数）</p>
+<p>每次旋转一圈需要经过上、右、下、左四个边，每个边写成一个循环，将对应数字按序装入二维数组</p>
+<p>最后将二维数组输出即可</p>
+</blockquote>
+<p>需要注意的地方：</p>
+<blockquote>
+<p>当第一次发现符合条件的n时，需要退出循环，避免获取到错误的n</p>
+<p>当行数是偶数时，循环次数为行数/2，奇数时，循环次数为行数/2+1</p>
+<p>当四条边循环时，需要注意每条边之间的重合部分，避免发生错误</p>
+</blockquote>
+<p>只要在存储到二维数组的过程中仔细地对应下标数字，题目就没什么问题了</p>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;vector&gt;
+#include&lt;cmath&gt;
+#include&lt;algorithm&gt;
+
+using namespace std;
+
+int cmp(int a,int b){ return a&gt;b; }
+
+int main() {
+    int N,m,n;
+    cin &gt;&gt; N;
+    for(int i=sqrt((double)N);i&gt;0;i--){
+        if(N%i == 0) {n=i; m=N/n; break;}
+    }
+    vector&lt;int&gt; v(N);
+    for(int i=0;i&lt;N;i++) scanf(&quot;%d&quot;,&amp;v[i]);
+    sort(v.begin(),v.end(),cmp);
+    vector&lt;vector&lt;int&gt;&gt; V(m,vector&lt;int&gt;(n));
+    int t=0,level = m%2+m/2;
+    for(int i=0;i&lt;level;i++){
+        for(int j=i;j&lt;n-i &amp;&amp; t &lt; N;j++) V[i][j] = v[t++];
+        for(int j=i+1;j&lt;m-i &amp;&amp; t &lt; N;j++) V[j][n-i-1] = v[t++];
+        for(int j=i+1;j&lt;n-i &amp;&amp; t &lt; N;j++) V[m-1-i][n-1-j] = v[t++];
+        for(int j=i+1;j&lt;m-1-i &amp;&amp; t &lt; N;j++) V[m-1-j][i] = v[t++];
+    }
+    for(int i=0;i&lt;m;i++){
+        for(int j=0;j&lt;n;j++){
+            if(j==0) cout &lt;&lt; V[i][j];
+            else cout &lt;&lt; ' ' &lt;&lt; V[i][j];
+        }
+        cout &lt;&lt; endl;
+    }
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[1049 数列的片段和 (20分)]]></title>
+        <id>https://dreammilk.now.sh/1049-shu-lie-de-pian-duan-he-20-fen/</id>
+        <link href="https://dreammilk.now.sh/1049-shu-lie-de-pian-duan-he-20-fen/">
+        </link>
+        <updated>2020-05-16T03:45:50.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>给定一个正数数列，我们可以从中截取任意的连续的几个数，称为片段。例如，给定数列 { 0.1, 0.2, 0.3, 0.4 }，我们有 (0.1) (0.1, 0.2) (0.1, 0.2, 0.3) (0.1, 0.2, 0.3, 0.4) (0.2) (0.2, 0.3) (0.2, 0.3, 0.4) (0.3) (0.3, 0.4) (0.4) 这 10 个片段。</p>
+<p>给定正整数数列，求出全部片段包含的所有的数之和。如本例中 10 个片段总和是 0.1 + 0.3 + 0.6 + 1.0 + 0.2 + 0.5 + 0.9 + 0.3 + 0.7 + 0.4 = 5.0。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>给定一个正数数列，我们可以从中截取任意的连续的几个数，称为片段。例如，给定数列 { 0.1, 0.2, 0.3, 0.4 }，我们有 (0.1) (0.1, 0.2) (0.1, 0.2, 0.3) (0.1, 0.2, 0.3, 0.4) (0.2) (0.2, 0.3) (0.2, 0.3, 0.4) (0.3) (0.3, 0.4) (0.4) 这 10 个片段。</p>
+<p>给定正整数数列，求出全部片段包含的所有的数之和。如本例中 10 个片段总和是 0.1 + 0.3 + 0.6 + 1.0 + 0.2 + 0.5 + 0.9 + 0.3 + 0.7 + 0.4 = 5.0。</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入第一行给出一个不超过 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span> 的正整数 <em>N</em>，表示数列中数的个数，第二行给出 <em>N</em> 个不超过 1.0 的正数，是数列中的数，其间以空格分隔。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>在一行中输出该序列所有片段包含的数之和，精确到小数点后 2 位。</p>
+</blockquote>
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">4
+0.1 0.2 0.3 0.4
+</code></pre>
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">5.00
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>题目主要是寻找规律：</p>
+<blockquote>
+<pre><code class="language-json">1	12	123	1234			|		其中1出现的次数为1*4（第一行的四种组合）
+	 2	 23	 234			|		    2出现的次数为2*3（前两行的后三列的六种组合）
+		  3	  34			|			3出现的次数为3*2（前三行的后两列的六种组合）
+			   4			|			4出现的次数为4*1（最后一列的四种组合）
+</code></pre>
+<p>按照上面的例子可以看出来每个数值出现的次数是有规律的</p>
+<p><code>(i+1)*(n-i)</code>：其中<code>i</code>指第i个数（从0开始计数），<code>n</code>指输入的总数</p>
+<p>使用上述规律将每个数 * 出现次数再进行相加就可以得到结果</p>
+</blockquote>
+<p>注意题目的精度问题，需要使用double类型才能通过所有测试点，float可能会精度不足</p>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;vector&gt;
+
+using namespace std;
+
+int main() {
+    int n;
+    cin &gt;&gt; n;
+    vector&lt;double&gt; v(n);
+    for(int i=0;i&lt;n;i++){
+        cin &gt;&gt; v[i];
+    }
+    double sum=0.0;
+    for(int i=0;i&lt;n;i++){
+        sum += v[i]*(i+1)*(n-i);
+    }
+    printf(&quot;%.2f&quot;,sum);
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[1048 数字加密 (20分)]]></title>
+        <id>https://dreammilk.now.sh/1048-shu-zi-jia-mi-20-fen/</id>
+        <link href="https://dreammilk.now.sh/1048-shu-zi-jia-mi-20-fen/">
+        </link>
+        <updated>2020-05-15T04:09:39.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>本题要求实现一种数字加密方法。首先固定一个加密用正整数 A，对任一正整数 B，将其每 1 位数字与 A 的对应位置上的数字进行以下运算：对奇数位，对应位的数字相加后对 13 取余——这里用 J 代表 10、Q 代表 11、K 代表 12；对偶数位，用 B 的数字减去 A 的数字，若结果为负数，则再加 10。这里令个位为第 1 位。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>本题要求实现一种数字加密方法。首先固定一个加密用正整数 A，对任一正整数 B，将其每 1 位数字与 A 的对应位置上的数字进行以下运算：对奇数位，对应位的数字相加后对 13 取余——这里用 J 代表 10、Q 代表 11、K 代表 12；对偶数位，用 B 的数字减去 A 的数字，若结果为负数，则再加 10。这里令个位为第 1 位。</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入在一行中依次给出 A 和 B，均为不超过 100 位的正整数，其间以空格分隔。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>在一行中输出加密后的结果。</p>
+</blockquote>
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">1234567 368782971
+</code></pre>
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">3695Q8118
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>题目是字符串处理问题：</p>
+<blockquote>
+<p>因为字符串的末尾是第一位，可以先反转字符再处理，或处理时从后往前</p>
+<p>如果两个字符串的长度不一致，在较短字符串前填零，使长度一致</p>
+<p>然后按照奇偶处理逻辑进行处理，并生成一个新的字符串后输出</p>
+</blockquote>
+<p>在写代码过程中的注意点：</p>
+<blockquote>
+<p>题目没说明，但是对于较长字符串多余的部分需要与<code>'0'</code>字符进行加密，而不是保持原形</p>
+<p>因此字符串长短不一致时，不能通过截断较长字符串后与新字符串进行拼接（因为奇偶处理逻辑不同，且字符与<code>'0'</code>处理后并非原字符）</p>
+</blockquote>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    string a,b,result;
+    cin &gt;&gt; a &gt;&gt; b;
+    bool flag =true;
+    if(a.length()&gt;b.length()) b.insert(0,a.length()-b.length(),'0');
+    else a.insert(0,b.length()-a.length(),'0');
+    for(int i=a.length()-1;i&gt;=0;i--){
+        if(flag){
+            int temp = ((a[i]-'0')+(b[i]-'0'))%13;
+            switch (temp){
+                case 10: result.insert(0,1,'J');break;
+                case 11: result.insert(0,1,'Q');break;
+                case 12: result.insert(0,1,'K');break;
+                default: result.insert(0,1,temp+'0');break;
+            }
+            flag=false;
+        }else{
+            int temp = b[i]-a[i];
+            if(temp&lt;0) result.insert(0,1,temp+10+'0');
+            else result.insert(0,1,temp+'0');
+            flag = true;
+        }
+    }
+    cout &lt;&lt; result;
+    return 0;
+}
+</code></pre>
 ]]></content>
     </entry>
 </feed>

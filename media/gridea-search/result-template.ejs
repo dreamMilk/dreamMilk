@@ -7,7 +7,6 @@
       <div class="post-info">
         <time class="post-time">
           · <%= post.dateFormat %> ·
-          <!-- · <%= site.utils.moment(post.date).locale('zh-cn').fromNow() %> · -->
         </time>
         <% post.tags.forEach(function(tag) { %>
           <a href="<%= tag.link %>" class="post-tag">

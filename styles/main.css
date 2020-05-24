@@ -57,12 +57,6 @@ html::-webkit-scrollbar-track-piece:vertical:start {
 html::-webkit-scrollbar-thumb:window-inactive {
   background: #e2ebf0;
 }
-@font-face {
-  font-family: 'JetBrains Mono';
-  src: url('../media/fonts/JetBrainsMono-Regular.eot');
-  /* IE9*/
-  src: url('../media/fonts/JetBrainsMono-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../media/fonts/JetBrainsMono-Regular.woff2') format('woff2'), /* chrome、firefox、opera、Safari, Android, iOS */ url('../media/fonts/JetBrainsMono-Regular.woff') format('woff'), /* chrome、firefox */ url('../media/fonts/JetBrainsMono-Regular.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/;
-}
 /* SLIMBOX2 */
 #lbOverlay {
   position: fixed;
@@ -639,6 +633,7 @@ figure figcaption {
   padding: 2px 20px;
   font-size: 14px;
   background: #fff;
+  background: var(--background-secondary);
   transition-property: background-color;
   line-height: 2em;
 }
@@ -837,7 +832,7 @@ footer.footer:before,
   content: "";
   display: block;
   margin: 80px auto;
-  width: 16%;
+  width: 50%;
   height: 1px;
   background: #BBB;
   text-align: center;
@@ -1120,6 +1115,67 @@ a.back_to_top span {
   color: #fff !important;
 }
 /* Media ----------------------------------*/
+@media (prefers-color-scheme: light) {
+  /* 浅色模式样式 */
+  :root {
+    --roll-color: linear-gradient(180deg, #cfd9df, #e2ebf0);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  /* 深色模式样式 */
+  :root {
+    --background-color: #292a2d;
+    --background-secondary: #3b3d42;
+    --border-color: #4a4b50;
+    --color: #a9a9b3;
+    --roll-color: #292a2d;
+  }
+  body {
+    background-color: #292a2d;
+    background-color: var(--background-color);
+    color: #a9a9b3;
+    color: var(--color);
+  }
+  a:link,
+  a:visited {
+    color: var(--color);
+  }
+  .pager:before,
+  .pager:after,
+  footer.footer:before,
+  .index .post.hentry:not(:last-child):after {
+    background: var(--border-color);
+  }
+  #comments:after {
+    background: var(--border-color);
+  }
+  .hentry h3 {
+    color: var(--color);
+  }
+  code {
+    background: #3b3d42;
+    background: var(--background-secondary);
+  }
+  pre[class*=language-] {
+    background: #3b3d42 !important;
+  }
+  .v .vwrap {
+    border: 1px solid #4a4b50 !important;
+  }
+  .v .vwrap input {
+    color: #dcdcdc;
+    background: #292a2d !important;
+  }
+  .v .vbtn {
+    color: #dcdcdc;
+    background: #4a4b50 !important;
+  }
+  html::-webkit-scrollbar-thumb,
+  html::-webkit-scrollbar-track-piece:vertical:start,
+  html::-webkit-scrollbar-thumb:window-inactive {
+    background: var(--background-color);
+  }
+}
 @media only screen and (max-width: 500px) {
   #header {
     padding: 48px 20px 10px 20px;

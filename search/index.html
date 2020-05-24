@@ -1,16 +1,23 @@
-<!doctype html>
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="baidu-site-verification" content="ZGbOgNUIf1" />
-<title>我的朋友们 | Milk &#39;s Home</title>
+<title>搜索 | Milk &#39;s Home</title>
 <meta name="referrer" content="never" />
 <link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
-  </head>
-  <body>
+    <meta name="referrer" content="never">
+    <script src="https://dreammilk.now.sh/media/gridea-search/fuse.basic.min.js"></script>
+    <script src="https://dreammilk.now.sh/media/gridea-search/ejs.min.js"></script>
+    <script src="https://dreammilk.now.sh/media/gridea-search/gridea-search.js"></script>
+    <script src="https://dreammilk.now.sh/media/gridea-search/result-template.ejs" type="text/ejs"></script>
+</head>
+
+<body>
     <!-- start: #wrapper -->
     <header id="header" style="background-image:url(/media/images/custom-headerBgImage.webp)">
         <div class="header-container">
@@ -57,18 +64,30 @@
   </div>
 </div>
     </header>
+    <div class="content">
+        <div id="posts" class="posts">
+        <!-- start: .articles -->
+        <article class="post hentry format-daily" style="margin-top:3em;">
+            <h1 class="entry-title">
+               搜索结果
+            </h1>
+            <div class="post-content" style="margin:0 auto;width:80%;padding:1em 0"></div>
+        </article>
+        
+        </div>
 
-    <div class="wrapper">
-    <div class="content posts post archive hentry">
-        <h1>我的朋友们</h1>
-        <ul class="archive-list">
-            
-            
-            
-        </ul>
-        <div class="clear"></div>
     </div>
-
+    <style>
+        .searched-keyword {
+            background-color: yellow;
+        }
+    </style>
+    <div class="main animated">
+        <div id="gridea-search-result" data-update="1590337682755">
+            <div class="searching">搜索中......</div>
+            <div class="no-result" style="display:none">未搜索到相关文章</div>
+        </div>
+    </div>
         <footer id="footer" class="">
         <p class="published border-effect">
           ©2020 共 54 篇文章
@@ -92,8 +111,12 @@
 
 
 <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+    
+        <script src="https://cdn.jsdelivr.net/gh/dreamMilk/dreamMilk.github.io/media/gridea-search/fuse.basic.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/dreamMilk/dreamMilk.github.io/media/gridea-search/ejs.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/dreamMilk/dreamMilk.github.io/media/gridea-search/gridea-search.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/dreamMilk/dreamMilk.github.iomedia/gridea-search/result-template.ejs" type="text/ejs"></script>
+      
+</body>
 
-    </div>
-    <!-- end: #wrapper -->
-  </body>
 </html>

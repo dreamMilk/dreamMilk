@@ -5,11 +5,12 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="baidu-site-verification" content="ZGbOgNUIf1" />
-<title>Milk &#39;s Home</title>
+<title>搜索 | Milk &#39;s Home</title>
 <meta name="referrer" content="never" />
 <link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+    <meta name="referrer" content="never">
     <script src="https://dreammilk.now.sh/media/gridea-search/fuse.basic.min.js"></script>
     <script src="https://dreammilk.now.sh/media/gridea-search/ejs.min.js"></script>
     <script src="https://dreammilk.now.sh/media/gridea-search/gridea-search.js"></script>
@@ -17,12 +18,8 @@
 </head>
 
 <body>
-    <style>
-        .searched-keyword {
-            background-color: yellow;
-        }
-    </style>
-    <div class="main animated">
+    <!-- start: #wrapper -->
+    <header id="header" style="background-image:url(/media/images/custom-headerBgImage.webp)">
         <div class="header-container">
   <h1 class="site-title"><a href="https://dreammilk.now.sh"><span>Milk &#39;s Home</span><span class="logo__cursor"></span></a></h1>
   <h2 class="site-description">welcome</h2>
@@ -43,9 +40,9 @@
       
     </ul>
   </nav>
-  <form id="gridea-search-form" action="https://dreammilk.now.sh/search/">
+  <!-- <form id="gridea-search-form" action="https://dreammilk.now.sh/search/">
     <input name="q" />
-  </form>
+  </form> -->
   <div class="my_socials">
     
       
@@ -66,6 +63,27 @@
     
   </div>
 </div>
+    </header>
+    <div class="content">
+        <div id="posts" class="posts">
+        <!-- start: .articles -->
+        <article class="post hentry format-daily" style="margin-top:3em;">
+            <h1 class="entry-title">
+               搜索结果
+            </h1>
+            <div class="post-content" style="margin:0 auto;width:80%;padding:1em 0"></div>
+        </article>
+        
+        </div>
+
+    </div>
+
+    <style>
+        .searched-keyword {
+            background-color: yellow;
+        }
+    </style>
+    <div class="main animated">
         <div id="gridea-search-result" data-update="1590337682755">
             <div class="searching">搜索中......</div>
             <div class="no-result" style="display:none">未搜索到相关文章</div>

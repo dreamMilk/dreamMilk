@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dreammilk.now.sh</id>
     <title>Milk &apos;s Home</title>
-    <updated>2020-05-24T17:21:27.967Z</updated>
+    <updated>2020-05-25T05:35:33.277Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dreammilk.now.sh"/>
     <link rel="self" href="https://dreammilk.now.sh/atom.xml"/>
@@ -10,6 +10,126 @@
     <logo>https://dreammilk.now.sh/images/avatar.png</logo>
     <icon>https://dreammilk.now.sh/favicon.ico</icon>
     <rights>All rights reserved 2020, Milk &apos;s Home</rights>
+    <entry>
+        <title type="html"><![CDATA[1058 选择题 (20分)]]></title>
+        <id>https://dreammilk.now.sh/1058-xuan-ze-ti-20-fen/</id>
+        <link href="https://dreammilk.now.sh/1058-xuan-ze-ti-20-fen/">
+        </link>
+        <updated>2020-05-25T05:32:17.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>批改多选题是比较麻烦的事情，本题就请你写个程序帮助老师批改多选题，并且指出哪道题错的人最多。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>批改多选题是比较麻烦的事情，本题就请你写个程序帮助老师批改多选题，并且指出哪道题错的人最多。</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入在第一行给出两个正整数 N（≤ 1000）和 M（≤ 100），分别是学生人数和多选题的个数。随后 M 行，每行顺次给出一道题的满分值（不超过 5 的正整数）、选项个数（不少于 2 且不超过 5 的正整数）、正确选项个数（不超过选项个数的正整数）、所有正确选项。注意每题的选项从小写英文字母 a 开始顺次排列。各项间以 1 个空格分隔。最后 N 行，每行给出一个学生的答题情况，其每题答案格式为 <code>(选中的选项个数 选项1 ……)</code>，按题目顺序给出。注意：题目保证学生的答题情况是合法的，即不存在选中的选项数超过实际选项数的情况。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>按照输入的顺序给出每个学生的得分，每个分数占一行。注意判题时只有选择全部正确才能得到该题的分数。最后一行输出错得最多的题目的错误次数和编号（题目按照输入的顺序从 1 开始编号）。如果有并列，则按编号递增顺序输出。数字间用空格分隔，行首尾不得有多余空格。如果所有题目都没有人错，则在最后一行输出 <code>Too simple</code>。</p>
+</blockquote>
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">3 4 
+3 4 2 a c
+2 5 1 b
+5 3 2 b c
+1 5 4 a b d e
+(2 a c) (2 b d) (2 a c) (3 a b e)
+(2 a c) (1 b) (2 a b) (4 a b d e)
+(2 b d) (1 e) (2 b c) (4 a b c d)
+</code></pre>
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">3
+6
+5
+2 2 3 4
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>题目的难度有点高，先梳理一下结构：</p>
+<blockquote>
+<p>对于每题的选项使用set结构存储，因为每个选项不会重复并自动排序，可以直接比较正确选项与学生选项</p>
+<p>每题再使用vector结构存储，可以循环遍历每题的答案</p>
+<p>每题做错人数也使用vector结构存储，最后循环遍历出最大值</p>
+<p>每题的分数使用vector储存可以方便统计分数</p>
+</blockquote>
+<p>再说一下题目逻辑：</p>
+<blockquote>
+<p>循环存储每题的分数和正确选项数，通过正确选项数，循环存储每题的正确选项</p>
+<p>对于学生选项先获取选中个数，然后通过循环存储学生选项，对比两个set变量是否相等</p>
+<p>如果相等就加分，否则该题做错人数加一</p>
+<p>最后通过循环错题人数获取最大值，然后再循环一次找出这些错题（做错人数为最大值的题目）</p>
+</blockquote>
+<p>题目核心还是在于如何存储这些数据：</p>
+<blockquote>
+<p>本题输入函数推荐使用scanf函数，避免使用cin</p>
+<p>因为题目涉及到的输入的代码比较多，cin可能会影响效率，并且在格式化输入上表现不佳</p>
+<p>在输入时，首当其冲的细节是需要消除换行的回车<code>\n</code>符号，否则会引起莫名其妙的程序错误</p>
+<p>其次，在捕获选项字符时，需要留意中间的空格，避免<code>%c</code>储存空格字符</p>
+</blockquote>
+<p>写的时候完全理不清思路，在存储数据上面不停的栽跟头，感觉写到现在水平依然处于入门阶段😭</p>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include &lt;cstdio&gt;
+#include &lt;vector&gt;
+#include &lt;set&gt;
+
+using namespace std;
+
+int main() {
+    int m,n,cnt;
+    char c;
+    scanf(&quot;%d%d&quot;,&amp;n,&amp;m);
+    vector&lt;int&gt; score(m),error(m);
+    vector&lt;set&lt;char&gt;&gt; options(m);
+    for(int i=0;i&lt;m;i++){
+        scanf(&quot;\n&quot;);
+        scanf(&quot;%d%*d%d&quot;,&amp;score[i],&amp;cnt);
+        for(int j=0;j&lt;cnt;j++){
+            scanf(&quot; %c&quot;,&amp;c);
+            options[i].insert(c);
+        }
+    }
+    for(int i=0;i&lt;n;i++){
+        int num = 0;
+        scanf(&quot;\n&quot;);
+        for(int j=0;j&lt;m;j++){
+            if(j!=0) scanf(&quot; &quot;);
+            set&lt;char&gt; ans;
+            scanf(&quot;(%d&quot;,&amp;cnt);
+            for(int k=0;k&lt;cnt;k++){
+                scanf(&quot; %c&quot;,&amp;c);
+                ans.insert(c);
+            }
+            scanf(&quot;)&quot;);
+            if(ans == options[j]){
+                num += score[j];
+            }else{
+                error[j] ++;
+            }
+        }
+        printf(&quot;%d\n&quot;,num);
+    }
+    int max_error = 0;
+    for(int i=0;i&lt;m;i++){
+        if(error[i] &gt; max_error) max_error=error[i];
+    }
+    if(max_error==0) printf(&quot;Too simple&quot;);
+    else{
+        printf(&quot;%d&quot;,max_error);
+        for(int i=0;i&lt;m;i++){
+            if(error[i] == max_error) printf(&quot; %d&quot;,i+1);
+        }
+    }
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[1057 数零壹 (20分)]]></title>
         <id>https://dreammilk.now.sh/1057-shu-ling-yi-20-fen/</id>
@@ -757,82 +877,6 @@ int main() {
         sum += v[i]*(i+1)*(n-i);
     }
     printf(&quot;%.2f&quot;,sum);
-    return 0;
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1048 数字加密 (20分)]]></title>
-        <id>https://dreammilk.now.sh/1048-shu-zi-jia-mi-20-fen/</id>
-        <link href="https://dreammilk.now.sh/1048-shu-zi-jia-mi-20-fen/">
-        </link>
-        <updated>2020-05-15T04:09:39.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>本题要求实现一种数字加密方法。首先固定一个加密用正整数 A，对任一正整数 B，将其每 1 位数字与 A 的对应位置上的数字进行以下运算：对奇数位，对应位的数字相加后对 13 取余——这里用 J 代表 10、Q 代表 11、K 代表 12；对偶数位，用 B 的数字减去 A 的数字，若结果为负数，则再加 10。这里令个位为第 1 位。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>本题要求实现一种数字加密方法。首先固定一个加密用正整数 A，对任一正整数 B，将其每 1 位数字与 A 的对应位置上的数字进行以下运算：对奇数位，对应位的数字相加后对 13 取余——这里用 J 代表 10、Q 代表 11、K 代表 12；对偶数位，用 B 的数字减去 A 的数字，若结果为负数，则再加 10。这里令个位为第 1 位。</p>
-</blockquote>
-<!-- more -->
-<h3 id="输入格式">输入格式：</h3>
-<blockquote>
-<p>输入在一行中依次给出 A 和 B，均为不超过 100 位的正整数，其间以空格分隔。</p>
-</blockquote>
-<h3 id="输出格式">输出格式：</h3>
-<blockquote>
-<p>在一行中输出加密后的结果。</p>
-</blockquote>
-<h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">1234567 368782971
-</code></pre>
-<h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">3695Q8118
-</code></pre>
-<h3 id="思路">思路：</h3>
-<p>题目是字符串处理问题：</p>
-<blockquote>
-<p>因为字符串的末尾是第一位，可以先反转字符再处理，或处理时从后往前</p>
-<p>如果两个字符串的长度不一致，在较短字符串前填零，使长度一致</p>
-<p>然后按照奇偶处理逻辑进行处理，并生成一个新的字符串后输出</p>
-</blockquote>
-<p>在写代码过程中的注意点：</p>
-<blockquote>
-<p>题目没说明，但是对于较长字符串多余的部分需要与<code>'0'</code>字符进行加密，而不是保持原形</p>
-<p>因此字符串长短不一致时，不能通过截断较长字符串后与新字符串进行拼接（因为奇偶处理逻辑不同，且字符与<code>'0'</code>处理后并非原字符）</p>
-</blockquote>
-<h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-
-using namespace std;
-
-int main() {
-    string a,b,result;
-    cin &gt;&gt; a &gt;&gt; b;
-    bool flag =true;
-    if(a.length()&gt;b.length()) b.insert(0,a.length()-b.length(),'0');
-    else a.insert(0,b.length()-a.length(),'0');
-    for(int i=a.length()-1;i&gt;=0;i--){
-        if(flag){
-            int temp = ((a[i]-'0')+(b[i]-'0'))%13;
-            switch (temp){
-                case 10: result.insert(0,1,'J');break;
-                case 11: result.insert(0,1,'Q');break;
-                case 12: result.insert(0,1,'K');break;
-                default: result.insert(0,1,temp+'0');break;
-            }
-            flag=false;
-        }else{
-            int temp = b[i]-a[i];
-            if(temp&lt;0) result.insert(0,1,temp+10+'0');
-            else result.insert(0,1,temp+'0');
-            flag = true;
-        }
-    }
-    cout &lt;&lt; result;
     return 0;
 }
 </code></pre>

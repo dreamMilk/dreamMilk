@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dreammilk.now.sh</id>
     <title>Milk &apos;s Home</title>
-    <updated>2020-05-25T05:35:33.277Z</updated>
+    <updated>2020-05-26T05:48:32.054Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dreammilk.now.sh"/>
     <link rel="self" href="https://dreammilk.now.sh/atom.xml"/>
@@ -10,6 +10,125 @@
     <logo>https://dreammilk.now.sh/images/avatar.png</logo>
     <icon>https://dreammilk.now.sh/favicon.ico</icon>
     <rights>All rights reserved 2020, Milk &apos;s Home</rights>
+    <entry>
+        <title type="html"><![CDATA[1059 C语言竞赛 (20分)]]></title>
+        <id>https://dreammilk.now.sh/1059-c-yu-yan-jing-sai-20-fen/</id>
+        <link href="https://dreammilk.now.sh/1059-c-yu-yan-jing-sai-20-fen/">
+        </link>
+        <updated>2020-05-26T05:45:07.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>C 语言竞赛是浙江大学计算机学院主持的一个欢乐的竞赛。既然竞赛主旨是为了好玩，颁奖规则也就制定得很滑稽：</p>
+<ul>
+<li>0、冠军将赢得一份“神秘大奖”（比如很巨大的一本学生研究论文集……）。</li>
+<li>1、排名为素数的学生将赢得最好的奖品 —— 小黄人玩偶！</li>
+<li>2、其他人将得到巧克力。</li>
+</ul>
+<p>给定比赛的最终排名以及一系列参赛者的 ID，你要给出这些参赛者应该获得的奖品。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>C 语言竞赛是浙江大学计算机学院主持的一个欢乐的竞赛。既然竞赛主旨是为了好玩，颁奖规则也就制定得很滑稽：</p>
+<ul>
+<li>0、冠军将赢得一份“神秘大奖”（比如很巨大的一本学生研究论文集……）。</li>
+<li>1、排名为素数的学生将赢得最好的奖品 —— 小黄人玩偶！</li>
+<li>2、其他人将得到巧克力。</li>
+</ul>
+<p>给定比赛的最终排名以及一系列参赛者的 ID，你要给出这些参赛者应该获得的奖品。</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入第一行给出一个正整数 <em>N</em>（≤<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">10^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span>），是参赛者人数。随后 <em>N</em> 行给出最终排名，每行按排名顺序给出一位参赛者的 ID（4 位数字组成）。接下来给出一个正整数 <em>K</em> 以及 <em>K</em> 个需要查询的 ID。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>对每个要查询的 ID，在一行中输出 <code>ID: 奖品</code>，其中奖品或者是 <code>Mystery Award</code>（神秘大奖）、或者是 <code>Minion</code>（小黄人）、或者是 <code>Chocolate</code>（巧克力）。如果所查 ID 根本不在排名里，打印 <code>Are you kidding?</code>（耍我呢？）。如果该 ID 已经查过了（即奖品已经领过了），打印 <code>ID: Checked</code>（不能多吃多占）。</p>
+</blockquote>
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">6
+1111
+6666
+8888
+1234
+5555
+0001
+6
+8888
+0001
+1111
+2222
+8888
+2222
+</code></pre>
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">8888: Minion
+0001: Chocolate
+1111: Mystery Award
+2222: Are you kidding?
+8888: Checked
+2222: Are you kidding?
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>题目比较容易：</p>
+<blockquote>
+<p>可以使用一个数组将对应ID的名次进行存储，对于没有ID的名次置为0</p>
+<p>在输出时，进行判断名次是否为0，为0说明查无此人</p>
+<p>其他的名次按照题目条件进行判断</p>
+<p>对于每一个查过的ID，需要将名次置为-1，避免重复查询</p>
+</blockquote>
+<p>至于素数的判断可以参考直接<code>1013 数素数</code></p>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+using namespace std;
+
+bool judge(int i){
+    if(i &lt;= 3) return i &gt; 1;
+    if(i%6 != 1 &amp;&amp; i%6 != 5) return false;
+    for(int j=2;j*j &lt;= i;j++){
+        if(i%j == 0) return false;
+    }
+    return true;
+}
+
+int main() {
+    int n;
+    cin &gt;&gt; n;
+    int ids[10000]={0};
+    for(int i=1;i&lt;=n;i++){
+        int id;
+        cin &gt;&gt; id;
+        ids[id] = i;
+    }
+    int k;
+    cin &gt;&gt; k;
+    for(int i=0;i&lt;k;i++){
+        string id;
+        cin &gt;&gt; id;
+        if(ids[stoi(id)]==0) cout &lt;&lt; id  &lt;&lt; &quot;: Are you kidding?&quot; &lt;&lt; endl;
+        else if(ids[stoi(id)]==-1) cout &lt;&lt; id &lt;&lt; &quot;: Checked&quot; &lt;&lt; endl;
+        else{
+            if(ids[stoi(id)]==1){
+                cout &lt;&lt; id &lt;&lt; &quot;: Mystery Award&quot; &lt;&lt; endl;
+                ids[stoi(id)]=-1;
+            }
+            else if(judge(ids[stoi(id)])){
+                cout &lt;&lt; id &lt;&lt; &quot;: Minion&quot; &lt;&lt; endl;
+                ids[stoi(id)]=-1;
+            }
+            else{
+                cout &lt;&lt; id &lt;&lt; &quot;: Chocolate&quot; &lt;&lt; endl;
+                ids[stoi(id)]=-1;
+            }
+        }
+    }
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[1058 选择题 (20分)]]></title>
         <id>https://dreammilk.now.sh/1058-xuan-ze-ti-20-fen/</id>
@@ -808,75 +927,6 @@ int main() {
         }
         cout &lt;&lt; endl;
     }
-    return 0;
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1049 数列的片段和 (20分)]]></title>
-        <id>https://dreammilk.now.sh/1049-shu-lie-de-pian-duan-he-20-fen/</id>
-        <link href="https://dreammilk.now.sh/1049-shu-lie-de-pian-duan-he-20-fen/">
-        </link>
-        <updated>2020-05-16T03:45:50.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>给定一个正数数列，我们可以从中截取任意的连续的几个数，称为片段。例如，给定数列 { 0.1, 0.2, 0.3, 0.4 }，我们有 (0.1) (0.1, 0.2) (0.1, 0.2, 0.3) (0.1, 0.2, 0.3, 0.4) (0.2) (0.2, 0.3) (0.2, 0.3, 0.4) (0.3) (0.3, 0.4) (0.4) 这 10 个片段。</p>
-<p>给定正整数数列，求出全部片段包含的所有的数之和。如本例中 10 个片段总和是 0.1 + 0.3 + 0.6 + 1.0 + 0.2 + 0.5 + 0.9 + 0.3 + 0.7 + 0.4 = 5.0。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>给定一个正数数列，我们可以从中截取任意的连续的几个数，称为片段。例如，给定数列 { 0.1, 0.2, 0.3, 0.4 }，我们有 (0.1) (0.1, 0.2) (0.1, 0.2, 0.3) (0.1, 0.2, 0.3, 0.4) (0.2) (0.2, 0.3) (0.2, 0.3, 0.4) (0.3) (0.3, 0.4) (0.4) 这 10 个片段。</p>
-<p>给定正整数数列，求出全部片段包含的所有的数之和。如本例中 10 个片段总和是 0.1 + 0.3 + 0.6 + 1.0 + 0.2 + 0.5 + 0.9 + 0.3 + 0.7 + 0.4 = 5.0。</p>
-</blockquote>
-<!-- more -->
-<h3 id="输入格式">输入格式：</h3>
-<blockquote>
-<p>输入第一行给出一个不超过 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span> 的正整数 <em>N</em>，表示数列中数的个数，第二行给出 <em>N</em> 个不超过 1.0 的正数，是数列中的数，其间以空格分隔。</p>
-</blockquote>
-<h3 id="输出格式">输出格式：</h3>
-<blockquote>
-<p>在一行中输出该序列所有片段包含的数之和，精确到小数点后 2 位。</p>
-</blockquote>
-<h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">4
-0.1 0.2 0.3 0.4
-</code></pre>
-<h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">5.00
-</code></pre>
-<h3 id="思路">思路：</h3>
-<p>题目主要是寻找规律：</p>
-<blockquote>
-<pre><code class="language-json">1	12	123	1234			|		其中1出现的次数为1*4（第一行的四种组合）
-	 2	 23	 234			|		    2出现的次数为2*3（前两行的后三列的六种组合）
-		  3	  34			|			3出现的次数为3*2（前三行的后两列的六种组合）
-			   4			|			4出现的次数为4*1（最后一列的四种组合）
-</code></pre>
-<p>按照上面的例子可以看出来每个数值出现的次数是有规律的</p>
-<p><code>(i+1)*(n-i)</code>：其中<code>i</code>指第i个数（从0开始计数），<code>n</code>指输入的总数</p>
-<p>使用上述规律将每个数 * 出现次数再进行相加就可以得到结果</p>
-</blockquote>
-<p>注意题目的精度问题，需要使用double类型才能通过所有测试点，float可能会精度不足</p>
-<h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;vector&gt;
-
-using namespace std;
-
-int main() {
-    int n;
-    cin &gt;&gt; n;
-    vector&lt;double&gt; v(n);
-    for(int i=0;i&lt;n;i++){
-        cin &gt;&gt; v[i];
-    }
-    double sum=0.0;
-    for(int i=0;i&lt;n;i++){
-        sum += v[i]*(i+1)*(n-i);
-    }
-    printf(&quot;%.2f&quot;,sum);
     return 0;
 }
 </code></pre>

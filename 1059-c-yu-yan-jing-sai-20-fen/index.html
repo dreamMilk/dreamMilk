@@ -5,31 +5,32 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="baidu-site-verification" content="ZGbOgNUIf1" />
-<title>1041 考试座位号 (15分) | Milk &#39;s Home</title>
+<title>1059 C语言竞赛 (20分) | Milk &#39;s Home</title>
 <meta name="referrer" content="never" />
 <link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
     <meta name="description" content="题目
 
-每个 PAT 考生在参加考试时都会被分配两个座位号，一个是试机座位，一个是考试座位。正常情况下，考生在入场时先得到试机座位号码，入座进入试机状态后，系统会显示该考生的考试座位号码，考试时考生需要换到考试座位就座。但有些考生迟到了，试..." />
+C 语言竞赛是浙江大学计算机学院主持的一个欢乐的竞赛。既然竞赛主旨是为了好玩，颁奖规则也就制定得很滑稽：
+
+0、冠军将赢得一份“神秘大奖”（比如很巨大的一本学生研究论文集……）。
+1、排名为素数的学生将赢得最好的奖品 —— 小黄人玩..." />
     <meta name="keywords" content="代码练习" />
     
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
     <script src="https://dreammilk.now.sh/media/js/prism.min.js"></script>
     
     
-    <link rel="prefetch" href="https://dreammilk.now.sh/1042-zi-fu-tong-ji-20-fen/">
     
-    
-    <link rel="prefetch" href="https://dreammilk.now.sh/1040-you-ji-ge-pat-25-fen/">
+    <link rel="prefetch" href="https://dreammilk.now.sh/1058-xuan-ze-ti-20-fen/">
     
 </head>
 
 <body>
     <!-- start: #wrapper -->
     <header id="header"
-        style="background-image:url(https://s1.ax1x.com/2020/04/30/JHaXwQ.jpg)">
+        style="background-image:url(https://s1.ax1x.com/2020/05/13/YaO3qK.jpg)">
         <div class="header-container">
   <h1 class="site-title"><a href="https://dreammilk.now.sh"><span>Milk &#39;s Home</span><span class="logo__cursor"></span></a></h1>
   <h2 class="site-description">welcome</h2>
@@ -86,70 +87,111 @@
                     <header>
                         <time class="date">
                             <i class="fa">
-                                <span class="datetime">18 天前</span>
+                                <span class="datetime">3 分钟前</span>
                             </i>
                         </time>
                     </header>
                     <h1 class="entry-title">
-                        1041 考试座位号 (15分)
+                        1059 C语言竞赛 (20分)
                     </h1>
                     <div class="post-content">
                         <div class="post-hentry">
                             <h3 id="题目">题目</h3>
 <blockquote>
-<p>每个 PAT 考生在参加考试时都会被分配两个座位号，一个是试机座位，一个是考试座位。正常情况下，考生在入场时先得到试机座位号码，入座进入试机状态后，系统会显示该考生的考试座位号码，考试时考生需要换到考试座位就座。但有些考生迟到了，试机已经结束，他们只能拿着领到的试机座位号码求助于你，从后台查出他们的考试座位号码。</p>
+<p>C 语言竞赛是浙江大学计算机学院主持的一个欢乐的竞赛。既然竞赛主旨是为了好玩，颁奖规则也就制定得很滑稽：</p>
+<ul>
+<li>0、冠军将赢得一份“神秘大奖”（比如很巨大的一本学生研究论文集……）。</li>
+<li>1、排名为素数的学生将赢得最好的奖品 —— 小黄人玩偶！</li>
+<li>2、其他人将得到巧克力。</li>
+</ul>
+<p>给定比赛的最终排名以及一系列参赛者的 ID，你要给出这些参赛者应该获得的奖品。</p>
 </blockquote>
 <!-- more -->
 <h3 id="输入格式">输入格式：</h3>
 <blockquote>
-<p>输入第一行给出一个正整数 <em>N</em>（≤1000），随后 <em>N</em> 行，每行给出一个考生的信息：<code>准考证号 试机座位号 考试座位号</code>。其中<code>准考证号</code>由 16 位数字组成，座位从 1 到 <em>N</em> 编号。输入保证每个人的准考证号都不同，并且任何时候都不会把两个人分配到同一个座位上。</p>
-<p>考生信息之后，给出一个正整数 <em>M</em>（≤<em>N</em>），随后一行中给出 <em>M</em> 个待查询的试机座位号码，以空格分隔。</p>
+<p>输入第一行给出一个正整数 <em>N</em>（≤<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">10^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span>），是参赛者人数。随后 <em>N</em> 行给出最终排名，每行按排名顺序给出一位参赛者的 ID（4 位数字组成）。接下来给出一个正整数 <em>K</em> 以及 <em>K</em> 个需要查询的 ID。</p>
 </blockquote>
 <h3 id="输出格式">输出格式：</h3>
 <blockquote>
-<p>对应每个需要查询的试机座位号码，在一行中输出对应考生的准考证号和考试座位号码，中间用 1 个空格分隔。</p>
+<p>对每个要查询的 ID，在一行中输出 <code>ID: 奖品</code>，其中奖品或者是 <code>Mystery Award</code>（神秘大奖）、或者是 <code>Minion</code>（小黄人）、或者是 <code>Chocolate</code>（巧克力）。如果所查 ID 根本不在排名里，打印 <code>Are you kidding?</code>（耍我呢？）。如果该 ID 已经查过了（即奖品已经领过了），打印 <code>ID: Checked</code>（不能多吃多占）。</p>
 </blockquote>
 <h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">4
-3310120150912233 2 4
-3310120150912119 4 1
-3310120150912126 1 3
-3310120150912002 3 2
-2
-3 4
+<pre><code class="language-in">6
+1111
+6666
+8888
+1234
+5555
+0001
+6
+8888
+0001
+1111
+2222
+8888
+2222
 </code></pre>
 <h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">3310120150912002 2
-3310120150912119 1
+<pre><code class="language-out">8888: Minion
+0001: Chocolate
+1111: Mystery Award
+2222: Are you kidding?
+8888: Checked
+2222: Are you kidding?
 </code></pre>
 <h3 id="思路">思路：</h3>
-<p>题目又是数据查找类型的：</p>
+<p>题目比较容易：</p>
 <blockquote>
-<p>记录中优先考虑试机号作为特征码，因为题目最后是按照试机号进行查询</p>
-<p>通过两个数组分别存储试机号对应的考生号与考试号</p>
-<p>最后通过试机号直接进行访问输出即可</p>
+<p>可以使用一个数组将对应ID的名次进行存储，对于没有ID的名次置为0</p>
+<p>在输出时，进行判断名次是否为0，为0说明查无此人</p>
+<p>其他的名次按照题目条件进行判断</p>
+<p>对于每一个查过的ID，需要将名次置为-1，避免重复查询</p>
 </blockquote>
-<p>数组进行数据查询是十分方便的，如果需要对数据排序后再查询的话，数组可能就不怎么香了（因为数组排序后下标与数据不再是对应关系，需要进行额外处理），这种情况可以考虑使用map结构</p>
+<p>至于素数的判断可以参考直接<code>1013 数素数</code></p>
 <h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;vector&gt;
+<pre><code class="language-cpp">#include &lt;iostream&gt;
 
 using namespace std;
+
+bool judge(int i){
+    if(i &lt;= 3) return i &gt; 1;
+    if(i%6 != 1 &amp;&amp; i%6 != 5) return false;
+    for(int j=2;j*j &lt;= i;j++){
+        if(i%j == 0) return false;
+    }
+    return true;
+}
+
 int main() {
     int n;
     cin &gt;&gt; n;
-    vector&lt;string&gt; v(n+1);
-    vector&lt;int&gt; seat(n+1);
-    for(int i=0;i&lt;n;i++){
-        string sno;int test,exam;
-        cin &gt;&gt; sno &gt;&gt; test &gt;&gt; exam;
-        v[test] = sno;
-        seat[test] = exam;
+    int ids[10000]={0};
+    for(int i=1;i&lt;=n;i++){
+        int id;
+        cin &gt;&gt; id;
+        ids[id] = i;
     }
-    cin &gt;&gt; n;
-    for(int i=0;i&lt;n;i++){
-        int test;cin &gt;&gt; test;
-        cout &lt;&lt; v[test] &lt;&lt; ' ' &lt;&lt; seat[test] &lt;&lt; endl;
+    int k;
+    cin &gt;&gt; k;
+    for(int i=0;i&lt;k;i++){
+        string id;
+        cin &gt;&gt; id;
+        if(ids[stoi(id)]==0) cout &lt;&lt; id  &lt;&lt; &quot;: Are you kidding?&quot; &lt;&lt; endl;
+        else if(ids[stoi(id)]==-1) cout &lt;&lt; id &lt;&lt; &quot;: Checked&quot; &lt;&lt; endl;
+        else{
+            if(ids[stoi(id)]==1){
+                cout &lt;&lt; id &lt;&lt; &quot;: Mystery Award&quot; &lt;&lt; endl;
+                ids[stoi(id)]=-1;
+            }
+            else if(judge(ids[stoi(id)])){
+                cout &lt;&lt; id &lt;&lt; &quot;: Minion&quot; &lt;&lt; endl;
+                ids[stoi(id)]=-1;
+            }
+            else{
+                cout &lt;&lt; id &lt;&lt; &quot;: Chocolate&quot; &lt;&lt; endl;
+                ids[stoi(id)]=-1;
+            }
+        }
     }
     return 0;
 }
@@ -163,10 +205,10 @@ int main() {
 
                 <div class="pager">
                     
-                    <a class="prev" href="https://dreammilk.now.sh/1042-zi-fu-tong-ji-20-fen/">1042 字符统计 (20分)</a>
+                    <span class="prev">已是最新一篇</span>
                     
                     
-                    <a class="next" href="https://dreammilk.now.sh/1040-you-ji-ge-pat-25-fen/">1040 有几个PAT (25分)</a>
+                    <a class="next" href="https://dreammilk.now.sh/1058-xuan-ze-ti-20-fen/">1058 选择题 (20分)</a>
                     
                     <div class="clear"></div>
                 </div>

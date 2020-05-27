@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dreammilk.now.sh</id>
     <title>Milk &apos;s Home</title>
-    <updated>2020-05-26T05:48:32.054Z</updated>
+    <updated>2020-05-27T04:24:00.905Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dreammilk.now.sh"/>
     <link rel="self" href="https://dreammilk.now.sh/atom.xml"/>
@@ -10,6 +10,76 @@
     <logo>https://dreammilk.now.sh/images/avatar.png</logo>
     <icon>https://dreammilk.now.sh/favicon.ico</icon>
     <rights>All rights reserved 2020, Milk &apos;s Home</rights>
+    <entry>
+        <title type="html"><![CDATA[1060 爱丁顿数 (25分)]]></title>
+        <id>https://dreammilk.now.sh/1060-ai-ding-dun-shu-25-fen/</id>
+        <link href="https://dreammilk.now.sh/1060-ai-ding-dun-shu-25-fen/">
+        </link>
+        <updated>2020-05-27T04:16:08.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>英国天文学家爱丁顿很喜欢骑车。据说他为了炫耀自己的骑车功力，还定义了一个“爱丁顿数” <em>E</em> ，即满足有 <em>E</em> 天骑车超过 <em>E</em> 英里的最大整数 <em>E</em>。据说爱丁顿自己的 <em>E</em> 等于87。</p>
+<p>现给定某人 <em>N</em> 天的骑车距离，请你算出对应的爱丁顿数 <em>E</em>（≤<em>N</em>）。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>英国天文学家爱丁顿很喜欢骑车。据说他为了炫耀自己的骑车功力，还定义了一个“爱丁顿数” <em>E</em> ，即满足有 <em>E</em> 天骑车超过 <em>E</em> 英里的最大整数 <em>E</em>。据说爱丁顿自己的 <em>E</em> 等于87。</p>
+<p>现给定某人 <em>N</em> 天的骑车距离，请你算出对应的爱丁顿数 <em>E</em>（≤<em>N</em>）。</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入第一行给出一个正整数 <em>N</em> (≤<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span>)，即连续骑车的天数；第二行给出 <em>N</em> 个非负整数，代表每天的骑车距离。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>在一行中给出 <em>N</em> 天的爱丁顿数。</p>
+</blockquote>
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">10
+6 7 6 9 3 10 8 2 7 8
+</code></pre>
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">6
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>题目不要使用傻乎乎的反复遍历：</p>
+<blockquote>
+<p>首先将输入的数字按从大到小进行排序（从小到大排序不能保证前面的数超过E）</p>
+<p>遍历数字，每次遍历时E++，直到当前数字不超过E为止</p>
+<p>最后输出E即可</p>
+</blockquote>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include&lt;vector&gt;
+#include&lt;algorithm&gt;
+
+using namespace std;
+
+bool cmp(int a,int b){
+    return a&gt;b;
+}
+
+int main() {
+    int n;
+    cin &gt;&gt; n;
+    vector&lt;int&gt; v(n);
+    for(int i=0;i&lt;n;i++){
+        cin &gt;&gt; v[i];
+    }
+    sort(v.begin(),v.end(),cmp);
+    int e=0;
+    for(int i=0;i&lt;n;i++){
+        if(v[i]&gt;e+1) e++;
+        else break;
+    }
+    cout &lt;&lt; e &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[1059 C语言竞赛 (20分)]]></title>
         <id>https://dreammilk.now.sh/1059-c-yu-yan-jing-sai-20-fen/</id>
@@ -832,101 +902,6 @@ int main() {
     if(b+0.005 &gt;= 0 &amp;&amp; b&lt;0) printf(&quot;+0.00i&quot;);
     else if(b&gt;=0) printf(&quot;+%.2fi&quot;,b);
     else printf(&quot;%.2fi&quot;,b);
-    return 0;
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1050 螺旋矩阵 (25分)]]></title>
-        <id>https://dreammilk.now.sh/1050-luo-xuan-ju-zhen-25-fen/</id>
-        <link href="https://dreammilk.now.sh/1050-luo-xuan-ju-zhen-25-fen/">
-        </link>
-        <updated>2020-05-17T05:48:36.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>本题要求将给定的 <em>N</em> 个正整数按非递增的顺序，填入“螺旋矩阵”。所谓“螺旋矩阵”，是指从左上角第 1 个格子开始，按顺时针螺旋方向填充。要求矩阵的规模为 <em>m</em> 行 <em>n</em> 列，满足条件：<em>m</em>×<em>n</em> 等于 <em>N</em>；<em>m</em>≥<em>n</em>；且 <em>m</em>−<em>n</em> 取所有可能值中的最小值。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>本题要求将给定的 <em>N</em> 个正整数按非递增的顺序，填入“螺旋矩阵”。所谓“螺旋矩阵”，是指从左上角第 1 个格子开始，按顺时针螺旋方向填充。要求矩阵的规模为 <em>m</em> 行 <em>n</em> 列，满足条件：<em>m</em>×<em>n</em> 等于 <em>N</em>；<em>m</em>≥<em>n</em>；且 <em>m</em>−<em>n</em> 取所有可能值中的最小值。</p>
-</blockquote>
-<!-- more -->
-<h3 id="输入格式">输入格式：</h3>
-<blockquote>
-<p>输入在第 1 行中给出一个正整数 <em>N</em>，第 2 行给出 <em>N</em> 个待填充的正整数。所有数字不超过 104，相邻数字以空格分隔。</p>
-</blockquote>
-<h3 id="输出格式">输出格式：</h3>
-<blockquote>
-<p>输出螺旋矩阵。每行 <em>n</em> 个数字，共 <em>m</em> 行。相邻数字以 1 个空格分隔，行末不得有多余空格。</p>
-</blockquote>
-<h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">12
-37 76 20 98 76 42 53 95 60 81 58 93
-</code></pre>
-<h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">98 95 93
-42 37 81
-53 20 76
-58 60 76
-</code></pre>
-<h3 id="思路">思路：</h3>
-<p>首先整理一下题目的思路：</p>
-<blockquote>
-<p>先从<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msqrt><mi>N</mi></msqrt></mrow><annotation encoding="application/x-tex">\sqrt{N}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.11333499999999996em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9266650000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span><span style="top:-2.886665em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
--10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
--50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
-35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
--221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
-s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
-s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.11333499999999996em;"><span></span></span></span></span></span></span></span></span>开始往前寻找到列数n,然后确定行数m</p>
-<p>将输入的数字按从大到小排序</p>
-<p>因为每次螺旋一圈会减少两行，所以可以通过行数m确定循环次数（旋转圈数）</p>
-<p>每次旋转一圈需要经过上、右、下、左四个边，每个边写成一个循环，将对应数字按序装入二维数组</p>
-<p>最后将二维数组输出即可</p>
-</blockquote>
-<p>需要注意的地方：</p>
-<blockquote>
-<p>当第一次发现符合条件的n时，需要退出循环，避免获取到错误的n</p>
-<p>当行数是偶数时，循环次数为行数/2，奇数时，循环次数为行数/2+1</p>
-<p>当四条边循环时，需要注意每条边之间的重合部分，避免发生错误</p>
-</blockquote>
-<p>只要在存储到二维数组的过程中仔细地对应下标数字，题目就没什么问题了</p>
-<h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;vector&gt;
-#include&lt;cmath&gt;
-#include&lt;algorithm&gt;
-
-using namespace std;
-
-int cmp(int a,int b){ return a&gt;b; }
-
-int main() {
-    int N,m,n;
-    cin &gt;&gt; N;
-    for(int i=sqrt((double)N);i&gt;0;i--){
-        if(N%i == 0) {n=i; m=N/n; break;}
-    }
-    vector&lt;int&gt; v(N);
-    for(int i=0;i&lt;N;i++) scanf(&quot;%d&quot;,&amp;v[i]);
-    sort(v.begin(),v.end(),cmp);
-    vector&lt;vector&lt;int&gt;&gt; V(m,vector&lt;int&gt;(n));
-    int t=0,level = m%2+m/2;
-    for(int i=0;i&lt;level;i++){
-        for(int j=i;j&lt;n-i &amp;&amp; t &lt; N;j++) V[i][j] = v[t++];
-        for(int j=i+1;j&lt;m-i &amp;&amp; t &lt; N;j++) V[j][n-i-1] = v[t++];
-        for(int j=i+1;j&lt;n-i &amp;&amp; t &lt; N;j++) V[m-1-i][n-1-j] = v[t++];
-        for(int j=i+1;j&lt;m-1-i &amp;&amp; t &lt; N;j++) V[m-1-j][i] = v[t++];
-    }
-    for(int i=0;i&lt;m;i++){
-        for(int j=0;j&lt;n;j++){
-            if(j==0) cout &lt;&lt; V[i][j];
-            else cout &lt;&lt; ' ' &lt;&lt; V[i][j];
-        }
-        cout &lt;&lt; endl;
-    }
     return 0;
 }
 </code></pre>

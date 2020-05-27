@@ -633,7 +633,6 @@ figure figcaption {
   padding: 2px 20px;
   font-size: 14px;
   background: #fff;
-  background: var(--background-secondary);
   transition-property: background-color;
   line-height: 2em;
 }
@@ -832,7 +831,7 @@ footer.footer:before,
   content: "";
   display: block;
   margin: 80px auto;
-  width: 50%;
+  width: 25%;
   height: 1px;
   background: #BBB;
   text-align: center;

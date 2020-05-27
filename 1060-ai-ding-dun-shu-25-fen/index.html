@@ -5,31 +5,30 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="baidu-site-verification" content="ZGbOgNUIf1" />
-<title>1024 科学计数法 (20分) | Milk &#39;s Home</title>
+<title>1060 爱丁顿数 (25分) | Milk &#39;s Home</title>
 <meta name="referrer" content="never" />
 <link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
     <meta name="description" content="题目
 
-科学计数法是科学家用来表示很大或很小的数字的一种方便的方法，其满足正则表达式 [+-][1-9].[0-9]+E[+-][0-9]+，即数字的整数部分只有 1 位，小数部分至少有 1 位，该数字及其指数部分的正负号即使对正数也必定明..." />
+英国天文学家爱丁顿很喜欢骑车。据说他为了炫耀自己的骑车功力，还定义了一个“爱丁顿数” E ，即满足有 E 天骑车超过 E 英里的最大整数 E。据说爱丁顿自己的 E 等于87。
+现给定某人 N 天的骑车距离，请你算出对应的爱丁顿数 E..." />
     <meta name="keywords" content="代码练习" />
     
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
     <script src="https://dreammilk.now.sh/media/js/prism.min.js"></script>
     
     
-    <link rel="prefetch" href="https://dreammilk.now.sh/1025-fan-zhuan-lian-biao-25-fen/">
     
-    
-    <link rel="prefetch" href="https://dreammilk.now.sh/1023-zu-ge-zui-xiao-shu-20-fen/">
+    <link rel="prefetch" href="https://dreammilk.now.sh/1059-c-yu-yan-jing-sai-20-fen/">
     
 </head>
 
 <body>
     <!-- start: #wrapper -->
     <header id="header"
-        style="background-image:url(https://s1.ax1x.com/2020/04/12/GL9V1I.jpg)">
+        style="background-image:url(https://s1.ax1x.com/2020/05/13/YaOGVO.jpg)">
         <div class="header-container">
   <h1 class="site-title"><a href="https://dreammilk.now.sh"><span>Milk &#39;s Home</span><span class="logo__cursor"></span></a></h1>
   <h2 class="site-description">welcome</h2>
@@ -86,78 +85,68 @@
                     <header>
                         <time class="date">
                             <i class="fa">
-                                <span class="datetime">1 个月前</span>
+                                <span class="datetime">8 分钟前</span>
                             </i>
                         </time>
                     </header>
                     <h1 class="entry-title">
-                        1024 科学计数法 (20分)
+                        1060 爱丁顿数 (25分)
                     </h1>
                     <div class="post-content">
                         <div class="post-hentry">
                             <h3 id="题目">题目</h3>
 <blockquote>
-<p>科学计数法是科学家用来表示很大或很小的数字的一种方便的方法，其满足正则表达式 [+-][1-9]<code>.</code>[0-9]+E[+-][0-9]+，即数字的整数部分只有 1 位，小数部分至少有 1 位，该数字及其指数部分的正负号即使对正数也必定明确给出。</p>
-<p>现以科学计数法的格式给出实数 <em>A</em>，请编写程序按普通数字表示法输出 <em>A</em>，并保证所有有效位都被保留。</p>
+<p>英国天文学家爱丁顿很喜欢骑车。据说他为了炫耀自己的骑车功力，还定义了一个“爱丁顿数” <em>E</em> ，即满足有 <em>E</em> 天骑车超过 <em>E</em> 英里的最大整数 <em>E</em>。据说爱丁顿自己的 <em>E</em> 等于87。</p>
+<p>现给定某人 <em>N</em> 天的骑车距离，请你算出对应的爱丁顿数 <em>E</em>（≤<em>N</em>）。</p>
 </blockquote>
 <!-- more -->
 <h3 id="输入格式">输入格式：</h3>
 <blockquote>
-<p>每个输入包含 1 个测试用例，即一个以科学计数法表示的实数 <em>A</em>。该数字的存储长度不超过 9999 字节，且其指数的绝对值不超过 9999。</p>
+<p>输入第一行给出一个正整数 <em>N</em> (≤<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span>)，即连续骑车的天数；第二行给出 <em>N</em> 个非负整数，代表每天的骑车距离。</p>
 </blockquote>
 <h3 id="输出格式">输出格式：</h3>
 <blockquote>
-<p>对每个测试用例，在一行中按普通数字表示法输出 <em>A</em>，并保证所有有效位都被保留，包括末尾的 0。</p>
+<p>在一行中给出 <em>N</em> 天的爱丁顿数。</p>
 </blockquote>
-<h3 id="输入样例1">输入样例1：</h3>
-<pre><code class="language-in">+1.23400E-03
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">10
+6 7 6 9 3 10 8 2 7 8
 </code></pre>
-<h3 id="输出样例1">输出样例1：</h3>
-<pre><code class="language-out">0.00123400
-</code></pre>
-<h3 id="输入样例2">输入样例2：</h3>
-<pre><code class="language-in">-1.2E+10
-</code></pre>
-<h3 id="输出样例2">输出样例2：</h3>
-<pre><code class="language-out">-12000000000
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">6
 </code></pre>
 <h3 id="思路">思路：</h3>
-<p>题目只需要注意各种临界条件即可：</p>
+<p>题目不要使用傻乎乎的反复遍历：</p>
 <blockquote>
-<p>先将数字从<code>E</code>分为两部分（忽略符号和小数点），一个是数字部分，一个是指数部分</p>
+<p>首先将输入的数字按从大到小进行排序（从小到大排序不能保证前面的数超过E）</p>
+<p>遍历数字，每次遍历时E++，直到当前数字不超过E为止</p>
+<p>最后输出E即可</p>
 </blockquote>
-<p>后面需要对指数部分进行判断操作：</p>
-<blockquote>
-<p>如果指数为负数，则在数字部分前添加<strong>0</strong>，并在第一个<strong>0</strong>后面添加<code>.</code>小数点</p>
-<p>如果指数大于数字长度（即小数点后移位数比数字位数多），则在数字部分后面添加<strong>0</strong></p>
-<p>如果指数介于两者之间，则在对应的数字后添加<code>.</code>小数点即可</p>
-</blockquote>
-<p>注意：添加符号时，如果为负数则需要添加符号；如果为正数则不用添加符号</p>
 <h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include&lt;vector&gt;
+#include&lt;algorithm&gt;
 
 using namespace std;
 
+bool cmp(int a,int b){
+    return a&gt;b;
+}
+
 int main() {
-    string a,s,t;
-    cin &gt;&gt; a;
-    int i=1;
-    while(a[i]!='E') i++;
-    s=a[1]+a.substr(3,i-3);
-    int n=stoi(a.substr(i+1));
-    if(a[0]=='-') cout &lt;&lt; '-';
-    if(n&lt;0){
-        cout &lt;&lt; &quot;0.&quot;;
-        for(int i=-1;i&gt;n;i--) cout &lt;&lt; &quot;0&quot;;
-        cout &lt;&lt; s;
-    }else if(n&gt;=0){
-        if(n &lt; s.length()-1){
-            cout &lt;&lt; s.substr(0,n+1) &lt;&lt; &quot;.&quot; &lt;&lt; s.substr(n+1);
-        }else{
-            s.insert(s.length(),n-s.length()+1,'0');
-            cout &lt;&lt; s;
-        }
+    int n;
+    cin &gt;&gt; n;
+    vector&lt;int&gt; v(n);
+    for(int i=0;i&lt;n;i++){
+        cin &gt;&gt; v[i];
     }
+    sort(v.begin(),v.end(),cmp);
+    int e=0;
+    for(int i=0;i&lt;n;i++){
+        if(v[i]&gt;e+1) e++;
+        else break;
+    }
+    cout &lt;&lt; e &lt;&lt; endl;
     return 0;
 }
 </code></pre>
@@ -170,10 +159,10 @@ int main() {
 
                 <div class="pager">
                     
-                    <a class="prev" href="https://dreammilk.now.sh/1025-fan-zhuan-lian-biao-25-fen/">1025 反转链表 (25分)</a>
+                    <span class="prev">已是最新一篇</span>
                     
                     
-                    <a class="next" href="https://dreammilk.now.sh/1023-zu-ge-zui-xiao-shu-20-fen/">1023 组个最小数 (20分)</a>
+                    <a class="next" href="https://dreammilk.now.sh/1059-c-yu-yan-jing-sai-20-fen/">1059 C语言竞赛 (20分)</a>
                     
                     <div class="clear"></div>
                 </div>

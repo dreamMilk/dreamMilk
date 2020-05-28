@@ -5,31 +5,34 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="baidu-site-verification" content="ZGbOgNUIf1" />
-<title>1048 数字加密 (20分) | Milk &#39;s Home</title>
+<title>1061 判断题 (15分) | Milk &#39;s Home</title>
 <meta name="referrer" content="never" />
 <link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
     <meta name="description" content="题目
 
-本题要求实现一种数字加密方法。首先固定一个加密用正整数 A，对任一正整数 B，将其每 1 位数字与 A 的对应位置上的数字进行以下运算：对奇数位，对应位的数字相加后对 13 取余——这里用 J 代表 10、Q 代表 11、K 代表 ..." />
+判断题的评判很简单，本题就要求你写个简单的程序帮助老师判题并统计学生们判断题的得分。
+
+
+输入格式：
+
+输入在第一行给出两个不超过 100 的正整数 N 和 M，分别是学生人数和判断题数量。第二行给出 M 个不超过 5 的正整数，是..." />
     <meta name="keywords" content="代码练习" />
     
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
     <script src="https://dreammilk.now.sh/media/js/prism.min.js"></script>
     
     
-    <link rel="prefetch" href="https://dreammilk.now.sh/1049-shu-lie-de-pian-duan-he-20-fen/">
     
-    
-    <link rel="prefetch" href="https://dreammilk.now.sh/1047-bian-cheng-tuan-ti-sai-20-fen/">
+    <link rel="prefetch" href="https://dreammilk.now.sh/1060-ai-ding-dun-shu-25-fen/">
     
 </head>
 
 <body>
     <!-- start: #wrapper -->
     <header id="header"
-        style="background-image:url(https://s1.ax1x.com/2020/04/30/JHdR10.png)">
+        style="background-image:url(https://s1.ax1x.com/2020/05/13/YaXq78.jpg)">
         <div class="header-container">
   <h1 class="site-title"><a href="https://dreammilk.now.sh"><span>Milk &#39;s Home</span><span class="logo__cursor"></span></a></h1>
   <h2 class="site-description">welcome</h2>
@@ -86,75 +89,72 @@
                     <header>
                         <time class="date">
                             <i class="fa">
-                                <span class="datetime">13 天前</span>
+                                <span class="datetime">3 分钟前</span>
                             </i>
                         </time>
                     </header>
                     <h1 class="entry-title">
-                        1048 数字加密 (20分)
+                        1061 判断题 (15分)
                     </h1>
                     <div class="post-content">
                         <div class="post-hentry">
                             <h3 id="题目">题目</h3>
 <blockquote>
-<p>本题要求实现一种数字加密方法。首先固定一个加密用正整数 A，对任一正整数 B，将其每 1 位数字与 A 的对应位置上的数字进行以下运算：对奇数位，对应位的数字相加后对 13 取余——这里用 J 代表 10、Q 代表 11、K 代表 12；对偶数位，用 B 的数字减去 A 的数字，若结果为负数，则再加 10。这里令个位为第 1 位。</p>
+<p>判断题的评判很简单，本题就要求你写个简单的程序帮助老师判题并统计学生们判断题的得分。</p>
 </blockquote>
 <!-- more -->
 <h3 id="输入格式">输入格式：</h3>
 <blockquote>
-<p>输入在一行中依次给出 A 和 B，均为不超过 100 位的正整数，其间以空格分隔。</p>
+<p>输入在第一行给出两个不超过 100 的正整数 N 和 M，分别是学生人数和判断题数量。第二行给出 M 个不超过 5 的正整数，是每道题的满分值。第三行给出每道题对应的正确答案，0 代表“非”，1 代表“是”。随后 N 行，每行给出一个学生的解答。数字间均以空格分隔。</p>
 </blockquote>
 <h3 id="输出格式">输出格式：</h3>
 <blockquote>
-<p>在一行中输出加密后的结果。</p>
+<p>按照输入的顺序输出每个学生的得分，每个分数占一行。</p>
 </blockquote>
 <h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">1234567 368782971
+<pre><code class="language-in">3 6
+2 1 3 3 4 5
+0 0 1 0 1 1
+0 1 1 0 0 1
+1 0 1 0 1 0
+1 1 0 0 1 1
 </code></pre>
 <h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">3695Q8118
+<pre><code class="language-out">13
+11
+12
 </code></pre>
 <h3 id="思路">思路：</h3>
-<p>题目是字符串处理问题：</p>
+<p>题目相比于<code>1058 选择题</code>而言，降低了难度：</p>
 <blockquote>
-<p>因为字符串的末尾是第一位，可以先反转字符再处理，或处理时从后往前</p>
-<p>如果两个字符串的长度不一致，在较短字符串前填零，使长度一致</p>
-<p>然后按照奇偶处理逻辑进行处理，并生成一个新的字符串后输出</p>
+<p>准备两个数组，一个存放每个题目的分数，另一个存放每个题目的答案</p>
+<p>然后循环学生的解答，答案正确的加分，之后输出当前学生的总分</p>
 </blockquote>
-<p>在写代码过程中的注意点：</p>
-<blockquote>
-<p>题目没说明，但是对于较长字符串多余的部分需要与<code>'0'</code>字符进行加密，而不是保持原形</p>
-<p>因此字符串长短不一致时，不能通过截断较长字符串后与新字符串进行拼接（因为奇偶处理逻辑不同，且字符与<code>'0'</code>处理后并非原字符）</p>
-</blockquote>
+<p>整体没有什么难点，基础题目</p>
 <h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include&lt;vector&gt;
 
 using namespace std;
 
 int main() {
-    string a,b,result;
-    cin &gt;&gt; a &gt;&gt; b;
-    bool flag =true;
-    if(a.length()&gt;b.length()) b.insert(0,a.length()-b.length(),'0');
-    else a.insert(0,b.length()-a.length(),'0');
-    for(int i=a.length()-1;i&gt;=0;i--){
-        if(flag){
-            int temp = ((a[i]-'0')+(b[i]-'0'))%13;
-            switch (temp){
-                case 10: result.insert(0,1,'J');break;
-                case 11: result.insert(0,1,'Q');break;
-                case 12: result.insert(0,1,'K');break;
-                default: result.insert(0,1,temp+'0');break;
-            }
-            flag=false;
-        }else{
-            int temp = b[i]-a[i];
-            if(temp&lt;0) result.insert(0,1,temp+10+'0');
-            else result.insert(0,1,temp+'0');
-            flag = true;
-        }
+    int n,m;
+    cin &gt;&gt; n &gt;&gt; m;
+    vector&lt;int&gt; answer(m),score(m);
+    for(int i=0;i&lt;m;i++){
+        cin &gt;&gt; score[i];
     }
-    cout &lt;&lt; result;
+    for(int i=0;i&lt;m;i++){
+        cin &gt;&gt; answer[i];
+    }
+    for(int i=0;i&lt;n;i++){
+        int sum=0;
+        for(int j=0;j&lt;m;j++){
+            int option; cin &gt;&gt; option;
+            if(option == answer[j]) sum += score[j];
+        }
+        cout &lt;&lt; sum &lt;&lt; endl;
+    }
     return 0;
 }
 </code></pre>
@@ -167,10 +167,10 @@ int main() {
 
                 <div class="pager">
                     
-                    <a class="prev" href="https://dreammilk.now.sh/1049-shu-lie-de-pian-duan-he-20-fen/">1049 数列的片段和 (20分)</a>
+                    <span class="prev">已是最新一篇</span>
                     
                     
-                    <a class="next" href="https://dreammilk.now.sh/1047-bian-cheng-tuan-ti-sai-20-fen/">1047 编程团体赛 (20分)</a>
+                    <a class="next" href="https://dreammilk.now.sh/1060-ai-ding-dun-shu-25-fen/">1060 爱丁顿数 (25分)</a>
                     
                     <div class="clear"></div>
                 </div>

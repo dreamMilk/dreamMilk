@@ -5,36 +5,29 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="baidu-site-verification" content="ZGbOgNUIf1" />
-<title>1029 旧键盘 (20分) | Milk &#39;s Home</title>
+<title>1064 朋友数 (20分) | Milk &#39;s Home</title>
 <meta name="referrer" content="never" />
 <link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
     <meta name="description" content="题目
 
-旧键盘上坏了几个键，于是在敲一段文字的时候，对应的字符就不会出现。现在给出应该输入的一段文字、以及实际被输入的文字，请你列出肯定坏掉的那些键。
-
-
-输入格式：
-
-输入在 2 行中分别给出应该输入的文字、以及实际被输入的文字。每段文字..." />
+如果两个整数各位数字的和是一样的，则被称为是“朋友数”，而那个公共的和就是它们的“朋友证号”。例如 123 和 51 就是朋友数，因为 1+2+3 = 5+1 = 6，而 6 就是它们的朋友证号。给定一些整数，要求你统计一下它们中有..." />
     <meta name="keywords" content="代码练习" />
     
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
     <script src="https://dreammilk.now.sh/media/js/prism.min.js"></script>
     
     
-    <link rel="prefetch" href="https://dreammilk.now.sh/1030-wan-mei-shu-lie-25-fen/">
     
-    
-    <link rel="prefetch" href="https://dreammilk.now.sh/1028-ren-kou-pu-cha-20-fen/">
+    <link rel="prefetch" href="https://dreammilk.now.sh/1063-ji-suan-pu-ban-jing-20-fen/">
     
 </head>
 
 <body>
     <!-- start: #wrapper -->
     <header id="header"
-        style="background-image:url(https://s1.ax1x.com/2020/04/25/JsAAYV.jpg)">
+        style="background-image:url(https://s1.ax1x.com/2020/05/22/YOP8JK.jpg)">
         <div class="header-container">
   <h1 class="site-title"><a href="https://dreammilk.now.sh"><span>Milk &#39;s Home</span><span class="logo__cursor"></span></a></h1>
   <h2 class="site-description">welcome</h2>
@@ -91,62 +84,68 @@
                     <header>
                         <time class="date">
                             <i class="fa">
-                                <span class="datetime">1 个月前</span>
+                                <span class="datetime">9 小时前</span>
                             </i>
                         </time>
                     </header>
                     <h1 class="entry-title">
-                        1029 旧键盘 (20分)
+                        1064 朋友数 (20分)
                     </h1>
                     <div class="post-content">
                         <div class="post-hentry">
                             <h3 id="题目">题目</h3>
 <blockquote>
-<p>旧键盘上坏了几个键，于是在敲一段文字的时候，对应的字符就不会出现。现在给出应该输入的一段文字、以及实际被输入的文字，请你列出肯定坏掉的那些键。</p>
+<p>如果两个整数各位数字的和是一样的，则被称为是“朋友数”，而那个公共的和就是它们的“朋友证号”。例如 123 和 51 就是朋友数，因为 1+2+3 = 5+1 = 6，而 6 就是它们的朋友证号。给定一些整数，要求你统计一下它们中有多少个不同的朋友证号。</p>
 </blockquote>
 <!-- more -->
 <h3 id="输入格式">输入格式：</h3>
 <blockquote>
-<p>输入在 2 行中分别给出应该输入的文字、以及实际被输入的文字。每段文字是不超过 80 个字符的串，由字母 A-Z（包括大、小写）、数字 0-9、以及下划线 <code>_</code>（代表空格）组成。题目保证 2 个字符串均非空。</p>
+<p>输入第一行给出正整数 N。随后一行给出 N 个正整数，数字间以空格分隔。题目保证所有数字小于 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">10^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span>。</p>
 </blockquote>
 <h3 id="输出格式">输出格式：</h3>
 <blockquote>
-<p>按照发现顺序，在一行中输出坏掉的键。其中英文字母只输出大写，每个坏键只输出一次。题目保证至少有 1 个坏键。</p>
+<p>首先第一行输出给定数字中不同的朋友证号的个数；随后一行按递增顺序输出这些朋友证号，数字间隔一个空格，且行末不得有多余空格。</p>
 </blockquote>
 <h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">7_This_is_a_test
-_hs_s_a_es
+<pre><code class="language-in">8
+123 899 51 998 27 33 36 12
 </code></pre>
 <h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">7TI
+<pre><code class="language-out">4
+3 6 9 26
 </code></pre>
 <h3 id="思路">思路：</h3>
-<p>题目主要进行字符串比较：</p>
+<p>题目主要是关于朋友数的个数：</p>
 <blockquote>
-<p>原本是想将字符串先预处理，全部转换成为大写并去重，然后进行比较，并把第二个字符串中出现过的字符在第一个字符串中删除，最后输出第一个字符串</p>
+<p>只要能够想起set结构的特性，本题基本就迎刃而解了</p>
+<p>遍历每一个数，将该数的朋友数填入set数组中</p>
+<p>最后输出set结构的大小与元素即可</p>
 </blockquote>
-<p>但是整个流程实现好像比较复杂，还是选用老办法，逐个比对：</p>
-<blockquote>
-<p>如果<code>S1</code>的字符不存在于<code>S2</code>中，并且该字符的大写形式也不存在于结果字符串中，那么将该字符添加到结果字符串中</p>
-</blockquote>
-<p>主要学习到了字符串的相关操作，<strong>例如</strong>：字符串搜索不到字符时，返回<code>string::npos</code>；以及<code>cctype</code>库的相关函数</p>
+<p>set结构的元素无重复特性在解题需要去重时可以考虑一下😸</p>
 <h4 id="于是代码如下">于是代码如下：</h4>
 <pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;cctype&gt;
+#include&lt;set&gt;
 
 using namespace std;
 
 int main() {
-    string s1,s2;
-    string result;
-    cin &gt;&gt; s1 &gt;&gt; s2;
-
-    for(int i=0;i&lt;s1.length();i++){
-        if(s2.find(s1[i]) == string::npos &amp;&amp; result.find(toupper(s1[i])) == string::npos){
-            result += toupper(s1[i]);
+    int n;
+    cin &gt;&gt; n;
+    set&lt;int&gt; s;
+    for(int i=0;i&lt;n;i++){
+        int num,sum=0;
+        cin &gt;&gt; num;
+        while(num!=0){
+            sum += num%10;
+            num /= 10;
         }
+        s.insert(sum);
     }
-    cout &lt;&lt; result;
+    cout &lt;&lt; s.size() &lt;&lt; endl;
+    for(auto it=s.begin();it!=s.end();it++){
+        if(it==s.begin()) cout &lt;&lt; *it;
+        else cout &lt;&lt; ' ' &lt;&lt; *it;
+    }
     return 0;
 }
 </code></pre>
@@ -159,10 +158,10 @@ int main() {
 
                 <div class="pager">
                     
-                    <a class="prev" href="https://dreammilk.now.sh/1030-wan-mei-shu-lie-25-fen/">1030 完美数列 (25分)</a>
+                    <span class="prev">已是最新一篇</span>
                     
                     
-                    <a class="next" href="https://dreammilk.now.sh/1028-ren-kou-pu-cha-20-fen/">1028 人口普查 (20分)</a>
+                    <a class="next" href="https://dreammilk.now.sh/1063-ji-suan-pu-ban-jing-20-fen/">1063 计算谱半径 (20分)</a>
                     
                     <div class="clear"></div>
                 </div>

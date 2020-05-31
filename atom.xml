@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dreammilk.now.sh</id>
     <title>Milk &apos;s Home</title>
-    <updated>2020-05-30T13:30:24.086Z</updated>
+    <updated>2020-05-31T13:13:58.255Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dreammilk.now.sh"/>
     <link rel="self" href="https://dreammilk.now.sh/atom.xml"/>
@@ -10,6 +10,75 @@
     <logo>https://dreammilk.now.sh/images/avatar.png</logo>
     <icon>https://dreammilk.now.sh/favicon.ico</icon>
     <rights>All rights reserved 2020, Milk &apos;s Home</rights>
+    <entry>
+        <title type="html"><![CDATA[1064 朋友数 (20分)]]></title>
+        <id>https://dreammilk.now.sh/1064-peng-you-shu-20-fen/</id>
+        <link href="https://dreammilk.now.sh/1064-peng-you-shu-20-fen/">
+        </link>
+        <updated>2020-05-31T04:11:29.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>如果两个整数各位数字的和是一样的，则被称为是“朋友数”，而那个公共的和就是它们的“朋友证号”。例如 123 和 51 就是朋友数，因为 1+2+3 = 5+1 = 6，而 6 就是它们的朋友证号。给定一些整数，要求你统计一下它们中有多少个不同的朋友证号。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>如果两个整数各位数字的和是一样的，则被称为是“朋友数”，而那个公共的和就是它们的“朋友证号”。例如 123 和 51 就是朋友数，因为 1+2+3 = 5+1 = 6，而 6 就是它们的朋友证号。给定一些整数，要求你统计一下它们中有多少个不同的朋友证号。</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入第一行给出正整数 N。随后一行给出 N 个正整数，数字间以空格分隔。题目保证所有数字小于 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">10^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span>。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>首先第一行输出给定数字中不同的朋友证号的个数；随后一行按递增顺序输出这些朋友证号，数字间隔一个空格，且行末不得有多余空格。</p>
+</blockquote>
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">8
+123 899 51 998 27 33 36 12
+</code></pre>
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">4
+3 6 9 26
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>题目主要是关于朋友数的个数：</p>
+<blockquote>
+<p>只要能够想起set结构的特性，本题基本就迎刃而解了</p>
+<p>遍历每一个数，将该数的朋友数填入set数组中</p>
+<p>最后输出set结构的大小与元素即可</p>
+</blockquote>
+<p>set结构的元素无重复特性在解题需要去重时可以考虑一下😸</p>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;set&gt;
+
+using namespace std;
+
+int main() {
+    int n;
+    cin &gt;&gt; n;
+    set&lt;int&gt; s;
+    for(int i=0;i&lt;n;i++){
+        int num,sum=0;
+        cin &gt;&gt; num;
+        while(num!=0){
+            sum += num%10;
+            num /= 10;
+        }
+        s.insert(sum);
+    }
+    cout &lt;&lt; s.size() &lt;&lt; endl;
+    for(auto it=s.begin();it!=s.end();it++){
+        if(it==s.begin()) cout &lt;&lt; *it;
+        else cout &lt;&lt; ' ' &lt;&lt; *it;
+    }
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[1063 计算谱半径 (20分)]]></title>
         <id>https://dreammilk.now.sh/1063-ji-suan-pu-ban-jing-20-fen/</id>
@@ -752,115 +821,6 @@ int main() {
         for(int j=2;j&lt;=row+row%2-2;j+=2) str += &quot; &quot;+v[j+index].name;
         cout &lt;&lt; str &lt;&lt; endl;
         index += row;
-    }
-    return 0;
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1054 求平均值 (20分)]]></title>
-        <id>https://dreammilk.now.sh/1054-qiu-ping-jun-zhi-20-fen/</id>
-        <link href="https://dreammilk.now.sh/1054-qiu-ping-jun-zhi-20-fen/">
-        </link>
-        <updated>2020-05-21T04:40:39.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>本题的基本要求非常简单：给定 <em>N</em> 个实数，计算它们的平均值。但复杂的是有些输入数据可能是非法的。一个“合法”的输入是 [−1000,1000] 区间内的实数，并且最多精确到小数点后 2 位。当你计算平均值的时候，不能把那些非法的数据算在内。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>本题的基本要求非常简单：给定 <em>N</em> 个实数，计算它们的平均值。但复杂的是有些输入数据可能是非法的。一个“合法”的输入是 [−1000,1000] 区间内的实数，并且最多精确到小数点后 2 位。当你计算平均值的时候，不能把那些非法的数据算在内。</p>
-</blockquote>
-<!-- more -->
-<h3 id="输入格式">输入格式：</h3>
-<blockquote>
-<p>输入第一行给出正整数 <em>N</em>（≤100）。随后一行给出 <em>N</em> 个实数，数字间以一个空格分隔。</p>
-</blockquote>
-<h3 id="输出格式">输出格式：</h3>
-<blockquote>
-<p>对每个非法输入，在一行中输出 <code>ERROR: X is not a legal number</code>，其中 <code>X</code> 是输入。最后在一行中输出结果：<code>The average of K numbers is Y</code>，其中 <code>K</code> 是合法输入的个数，<code>Y</code> 是它们的平均值，精确到小数点后 2 位。如果平均值无法计算，则用 <code>Undefined</code> 替换 <code>Y</code>。如果 <code>K</code> 为 1，则输出 <code>The average of 1 number is Y</code>。</p>
-</blockquote>
-<h3 id="输入样例1">输入样例1：</h3>
-<pre><code class="language-in">7
-5 -3.2 aaa 9999 2.3.4 7.123 2.35
-</code></pre>
-<h3 id="输出样例1">输出样例1：</h3>
-<pre><code class="language-out">ERROR: aaa is not a legal number
-ERROR: 9999 is not a legal number
-ERROR: 2.3.4 is not a legal number
-ERROR: 7.123 is not a legal number
-The average of 3 numbers is 1.38
-</code></pre>
-<h3 id="输入样例2">输入样例2：</h3>
-<pre><code class="language-in">2
-aaa -9999
-</code></pre>
-<h3 id="输出样例2">输出样例2：</h3>
-<pre><code class="language-out">ERROR: aaa is not a legal number
-ERROR: -9999 is not a legal number
-The average of 0 numbers is Undefined
-</code></pre>
-<h3 id="思路">思路：</h3>
-<p>题目主要是如何过滤数据：</p>
-<blockquote>
-<p>根据题目的要求可以得出以下的数字特点</p>
-<ul>
-<li>输入的数字只能包含<code>-</code> &amp;<code>.</code>&amp; <code>数字</code>（保证输入中只有这三种符号）</li>
-<li><code>-</code>只能出现在开头（保证除首位以外，只有小数点和数字）</li>
-<li><code>-</code>后面不能存在<code>.</code>（保证小数点前至少有一位数字）</li>
-<li><code>.</code>只能出现一次，且后面只能有两个数字字符（保证小数点不会再次出现小数点）</li>
-<li>数字大小不要超过 [−1000,1000] 区间（保证数字大小符合条件）</li>
-</ul>
-<p>对于判断的顺序按照上面所列的次序进行，避免错误或进行额外的判断</p>
-</blockquote>
-<p>关于输出时的一个格式问题：</p>
-<blockquote>
-<p>如果只有一个数字符合要求，输出语句中应该为<code>number</code>不要添加<code>s</code></p>
-</blockquote>
-<p>看见柳婼大佬写的20行代码确实比较简洁：</p>
-<blockquote>
-<p>在过滤数字的时候使用了<code>sscanf</code>函数与<code>sprintf</code>函数，这两个函数能够格式化输入数据，将符合条件的数字进行存储，省略了这种原始的过滤方式</p>
-</blockquote>
-<p>但是对于这两个函数不是很了解，等以后再琢磨一下如何使用😭</p>
-<h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;string&gt;
-#include&lt;vector&gt;
-
-using namespace std;
-
-int main() {
-    int N;
-    cin &gt;&gt; N;
-    vector&lt;double&gt; v;
-    for(int i=0;i&lt;N;i++){
-        string s;
-        cin &gt;&gt; s;
-        int j=0,point=0;
-        for(;j&lt;s.length();j++){
-            if((s[j]&gt;='0'&amp;&amp;s[j]&lt;='9') || s[j]=='.' || s[j]=='-'){
-                if(s[j]=='-' &amp;&amp; j!=0) break;
-                if(s[j]=='.'){
-                    if(j==0) break;
-                    if(s[j-1]=='-') break;
-                    if(s.length()-j&gt;3) break;
-                    point ++;
-                    if(point == 2) break;
-                }
-            }
-            else break;
-        }
-        if(j==s.length() &amp;&amp; stod(s)&gt;=-1000 &amp;&amp; stod(s)&lt;=1000) v.push_back(stod(s));
-        else cout &lt;&lt; &quot;ERROR: &quot; &lt;&lt; s &lt;&lt; &quot; is not a legal number&quot; &lt;&lt; endl;
-    }
-    double sum=0;
-    if(v.size()==0){printf(&quot;The average of 0 numbers is Undefined&quot;);}
-    else if(v.size()==1){printf(&quot;The average of 1 number is %.2f&quot;,v[0]);}
-    else{
-        for(int i=0;i&lt;v.size();i++) sum += v[i];
-        printf(&quot;The average of %d numbers is %.2f&quot;, v.size(),sum/v.size());
     }
     return 0;
 }

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dreammilk.now.sh</id>
     <title>Milk &apos;s Home</title>
-    <updated>2020-05-31T13:13:58.255Z</updated>
+    <updated>2020-06-01T05:02:45.046Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dreammilk.now.sh"/>
     <link rel="self" href="https://dreammilk.now.sh/atom.xml"/>
@@ -10,6 +10,102 @@
     <logo>https://dreammilk.now.sh/images/avatar.png</logo>
     <icon>https://dreammilk.now.sh/favicon.ico</icon>
     <rights>All rights reserved 2020, Milk &apos;s Home</rights>
+    <entry>
+        <title type="html"><![CDATA[1065 单身狗 (25分)]]></title>
+        <id>https://dreammilk.now.sh/1065-dan-shen-gou-25-fen/</id>
+        <link href="https://dreammilk.now.sh/1065-dan-shen-gou-25-fen/">
+        </link>
+        <updated>2020-06-01T04:59:54.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>“单身狗”是中文对于单身人士的一种爱称。本题请你从上万人的大型派对中找出落单的客人，以便给予特殊关爱。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>“单身狗”是中文对于单身人士的一种爱称。本题请你从上万人的大型派对中找出落单的客人，以便给予特殊关爱。</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入第一行给出一个正整数 N（≤ 50 000），是已知夫妻/伴侣的对数；随后 N 行，每行给出一对夫妻/伴侣——为方便起见，每人对应一个 ID 号，为 5 位数字（从 00000 到 99999），ID 间以空格分隔；之后给出一个正整数 M（≤ 10 000），为参加派对的总人数；随后一行给出这 M 位客人的 ID，以空格分隔。题目保证无人重婚或脚踩两条船。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>首先第一行输出落单客人的总人数；随后第二行按 ID 递增顺序列出落单的客人。ID 间用 1 个空格分隔，行的首尾不得有多余空格。</p>
+</blockquote>
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">3
+11111 22222
+33333 44444
+55555 66666
+7
+55555 44444 10000 88888 22222 11111 23333
+</code></pre>
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">5
+10000 23333 44444 55555 88888
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>题目寻找单身🐶，包括当时没有伴侣的人：</p>
+<blockquote>
+<p>首先说明变量：id数组用于保存伴侣关系，其中id数组默认值为-1（没有伴侣）；</p>
+<p>visitor数组用于保存参与者id；</p>
+<p>iscome数组用于保存是否到场的信息，默认为0（未到场）；</p>
+<p>single数组用于保存单身人士id；</p>
+</blockquote>
+<p>再过一下运行流程：</p>
+<blockquote>
+<p>先将每一对伴侣信息存入id中，然后将每一个参与者的id存储<code>visitor</code>中，并判断参与者是否有伴侣关系，如果存在伴侣关系，则将该参与者的伴侣在iscome数组中变为1</p>
+<p>这一步是为存在伴侣关系并且到场的人进行标记；比如a和b是伴侣，a到场b未到场，则<code>iscome[b]=1</code>，<code>iscome[a]=0</code>；这意味着当事人的伴侣不在场的话，当事人在<code>iscome</code>数组中永远为0</p>
+<p>再循环visitor数组，判断iscome数组中值是否为0，如果为0说明该参与者是单身人士</p>
+</blockquote>
+<p>注意事项：</p>
+<blockquote>
+<p>对于id数组的默认值不能设为0，因为id可以为0</p>
+<p>输出时记得使用格式化输出<code>%05d</code></p>
+</blockquote>
+<p>关于<code>iscome</code>数组，只有你的伴侣在场时，你的伴侣会将她（他）的伴侣（也就是你）置为1，证明你是一个有伴侣的人</p>
+<p>相当于她（他）到场后会喊一嗓子：我是你的女（男）朋友</p>
+<p>因为这个逻辑有点烧脑，容易混乱，所以有点啰嗦，希望能够写的通俗易懂一点</p>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;vector&gt;
+#include&lt;set&gt;
+
+using namespace std;
+
+int main() {
+    int n;
+    cin &gt;&gt; n;
+    int id[100000]={-1};
+    for(int i=0;i&lt;n;i++){
+        int man,femal;
+        cin &gt;&gt; man &gt;&gt; femal;
+        id[man] = femal;
+        id[femal] = man;
+    }
+    int num;cin &gt;&gt; num;
+    vector&lt;int&gt; visitor(num);
+    int iscome[100000]={0};
+    for(int i=0;i&lt;num;i++){
+        cin &gt;&gt; visitor[i];
+        if(id[visitor[i]]!=-1) iscome[id[visitor[i]]] = 1;
+    }
+    set&lt;int&gt; single;
+    for(int i=0;i&lt;num;i++){
+        if(!iscome[visitor[i]]) single.insert(visitor[i]);
+    }
+    cout &lt;&lt; single.size() &lt;&lt; endl;
+    for(auto it=single.begin();it!=single.end();it++){
+        if(it==single.begin()) printf(&quot;%05d&quot;,*it);
+        else printf(&quot; %05d&quot;,*it);
+    }
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[1064 朋友数 (20分)]]></title>
         <id>https://dreammilk.now.sh/1064-peng-you-shu-20-fen/</id>
@@ -712,116 +808,6 @@ int main() {
         sum+=11*a*(n-1);
     }
     cout &lt;&lt; sum;
-    return 0;
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1055 集体照 (25分)]]></title>
-        <id>https://dreammilk.now.sh/1055-ji-ti-zhao-25-fen/</id>
-        <link href="https://dreammilk.now.sh/1055-ji-ti-zhao-25-fen/">
-        </link>
-        <updated>2020-05-22T03:48:51.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>拍集体照时队形很重要，这里对给定的 <em>N</em> 个人 <em>K</em> 排的队形设计排队规则如下：</p>
-<ul>
-<li>每排人数为 <em>N</em>/<em>K</em>（向下取整），多出来的人全部站在最后一排；</li>
-<li>后排所有人的个子都不比前排任何人矮；</li>
-<li>每排中最高者站中间（中间位置为 <em>m</em>/2+1，其中 <em>m</em> 为该排人数，除法向下取整）；</li>
-<li>每排其他人以中间人为轴，按身高非增序，先右后左交替入队站在中间人的两侧（例如5人身高为190、188、186、175、170，则队形为175、188、190、186、170。这里假设你面对拍照者，所以你的左边是中间人的右边）；</li>
-<li>若多人身高相同，则按名字的字典序升序排列。这里保证无重名。</li>
-</ul>
-<p>现给定一组拍照人，请编写程序输出他们的队形。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>拍集体照时队形很重要，这里对给定的 <em>N</em> 个人 <em>K</em> 排的队形设计排队规则如下：</p>
-<ul>
-<li>每排人数为 <em>N</em>/<em>K</em>（向下取整），多出来的人全部站在最后一排；</li>
-<li>后排所有人的个子都不比前排任何人矮；</li>
-<li>每排中最高者站中间（中间位置为 <em>m</em>/2+1，其中 <em>m</em> 为该排人数，除法向下取整）；</li>
-<li>每排其他人以中间人为轴，按身高非增序，先右后左交替入队站在中间人的两侧（例如5人身高为190、188、186、175、170，则队形为175、188、190、186、170。这里假设你面对拍照者，所以你的左边是中间人的右边）；</li>
-<li>若多人身高相同，则按名字的字典序升序排列。这里保证无重名。</li>
-</ul>
-<p>现给定一组拍照人，请编写程序输出他们的队形。</p>
-</blockquote>
-<!-- more -->
-<h3 id="输入格式">输入格式：</h3>
-<blockquote>
-<p>每个输入包含 1 个测试用例。每个测试用例第 1 行给出两个正整数 <em>N</em>（≤<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">10^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span>，总人数）和 <em>K</em>（≤10，总排数）。随后 <em>N</em> 行，每行给出一个人的名字（不包含空格、长度不超过 8 个英文字母）和身高（[30, 300] 区间内的整数）。</p>
-</blockquote>
-<h3 id="输出格式">输出格式：</h3>
-<blockquote>
-<p>输出拍照的队形。即K排人名，其间以空格分隔，行末不得有多余空格。注意：假设你面对拍照者，后排的人输出在上方，前排输出在下方。</p>
-</blockquote>
-<h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">10 3
-Tom 188
-Mike 170
-Eva 168
-Tim 160
-Joe 190
-Ann 168
-Bob 175
-Nick 186
-Amy 160
-John 159
-</code></pre>
-<h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">Bob Tom Joe Nick
-Ann Mike Eva
-Tim Amy John
-</code></pre>
-<h3 id="思路">思路：</h3>
-<p>题目看着就有点晕，稍微梳理一下：</p>
-<blockquote>
-<p>首先在输出时大致顺序还是从高到低，所以需要按照题目要求对输入身高排序</p>
-<p>因为每排输出时并不是按顺序来的，而是按照先右后左的顺序排列</p>
-<p>这个可以寻找规律，（<code>row</code>为当前行元素个数）最左端<code>row-row%2</code>，最右端<code>row+row%2-1</code></p>
-<p>也可以直接用一个数组存储每一行，存储到对应的位置下标然后输出整个数组</p>
-</blockquote>
-<p>总结一下：</p>
-<blockquote>
-<p>在题目需要按照某种复杂规律输出时，并不一定要总结规律，可以将顺序对应到数组下标，直接按照题目所说的逻辑，将每个元素存放到对应位置，这个方法会避免逻辑打结，以及调试时把自己绕晕💫</p>
-</blockquote>
-<h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;vector&gt;
-#include&lt;algorithm&gt;
-
-using namespace std;
-
-struct stu{
-    string name;
-    int height;
-};
-
-bool cmp(stu a,stu b){
-    if(a.height != b.height) return a.height&gt;b.height;
-    else return a.name&lt;b.name;
-}
-
-int main() {
-    int N,K;
-    cin &gt;&gt; N &gt;&gt; K;
-    int m=N/K;
-    vector&lt;stu&gt; v(N);
-    for(int i=0;i&lt;N;i++) cin &gt;&gt; v[i].name &gt;&gt; v[i].height;
-    sort(v.begin(),v.end(),cmp);
-    string str;
-    int row,index=0;
-    for(int i=0;i&lt;K;i++){
-        str =&quot;&quot;;
-        row = i!=0?m:m+N%K;
-        for(int j=row-row%2-1;j&gt;0;j-=2) str += v[j+index].name+&quot; &quot;;
-        str += i!=0?v[N%K+i*row].name:v[0].name;
-        for(int j=2;j&lt;=row+row%2-2;j+=2) str += &quot; &quot;+v[j+index].name;
-        cout &lt;&lt; str &lt;&lt; endl;
-        index += row;
-    }
     return 0;
 }
 </code></pre>

@@ -5,39 +5,34 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="baidu-site-verification" content="ZGbOgNUIf1" />
-<title>1004 成绩排名 (20分) | Milk &#39;s Home</title>
+<title>1065 单身狗 (25分) | Milk &#39;s Home</title>
 <meta name="referrer" content="never" />
 <link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
     <meta name="description" content="题目
 
-读入 n（&gt;0）名学生的姓名、学号、成绩，分别输出成绩最高和成绩最低学生的姓名和学号。
+“单身狗”是中文对于单身人士的一种爱称。本题请你从上万人的大型派对中找出落单的客人，以便给予特殊关爱。
 
 
 输入格式：
 
-每个测试输入包含 1 个测试用例，格式为
-第 1 行：正整数 n
-第 2 行：第 1 个学生的姓名 学号 成绩
-第 3 ..." />
+输入第一行给出一个正整数 N（≤ 50 000），是已知夫妻/伴侣的对数；随后 N 行，每行给出一对夫妻/伴侣..." />
     <meta name="keywords" content="代码练习" />
     
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
     <script src="https://dreammilk.now.sh/media/js/prism.min.js"></script>
     
     
-    <link rel="prefetch" href="https://dreammilk.now.sh/1005-ji-xu-3n1cai-xiang-25-fen/">
     
-    
-    <link rel="prefetch" href="https://dreammilk.now.sh/1003/">
+    <link rel="prefetch" href="https://dreammilk.now.sh/1064-peng-you-shu-20-fen/">
     
 </head>
 
 <body>
     <!-- start: #wrapper -->
     <header id="header"
-        style="background-image:url(https://s1.ax1x.com/2020/04/01/G8sXYF.png)">
+        style="background-image:url(https://s1.ax1x.com/2020/05/22/YOPjT1.png)">
         <div class="header-container">
   <h1 class="site-title"><a href="https://dreammilk.now.sh"><span>Milk &#39;s Home</span><span class="logo__cursor"></span></a></h1>
   <h2 class="site-description">welcome</h2>
@@ -94,94 +89,94 @@
                     <header>
                         <time class="date">
                             <i class="fa">
-                                <span class="datetime">2 个月前</span>
+                                <span class="datetime">3 分钟前</span>
                             </i>
                         </time>
                     </header>
                     <h1 class="entry-title">
-                        1004 成绩排名 (20分)
+                        1065 单身狗 (25分)
                     </h1>
                     <div class="post-content">
                         <div class="post-hentry">
                             <h3 id="题目">题目</h3>
 <blockquote>
-<p>读入 <em>n</em>（&gt;0）名学生的姓名、学号、成绩，分别输出成绩最高和成绩最低学生的姓名和学号。</p>
+<p>“单身狗”是中文对于单身人士的一种爱称。本题请你从上万人的大型派对中找出落单的客人，以便给予特殊关爱。</p>
 </blockquote>
 <!-- more -->
 <h3 id="输入格式">输入格式：</h3>
 <blockquote>
-<p>每个测试输入包含 1 个测试用例，格式为</p>
-<pre><code class="language-markdown">第 1 行：正整数 n
-第 2 行：第 1 个学生的姓名 学号 成绩
-第 3 行：第 2 个学生的姓名 学号 成绩
-... ... ...
-第 n+1 行：第 n 个学生的姓名 学号 成绩
-</code></pre>
-<p>其中<code>姓名</code>和<code>学号</code>均为不超过 10 个字符的字符串，成绩为 0 到 100 之间的一个整数，这里保证在一组测试用例中没有两个学生的成绩是相同的。</p>
+<p>输入第一行给出一个正整数 N（≤ 50 000），是已知夫妻/伴侣的对数；随后 N 行，每行给出一对夫妻/伴侣——为方便起见，每人对应一个 ID 号，为 5 位数字（从 00000 到 99999），ID 间以空格分隔；之后给出一个正整数 M（≤ 10 000），为参加派对的总人数；随后一行给出这 M 位客人的 ID，以空格分隔。题目保证无人重婚或脚踩两条船。</p>
 </blockquote>
 <h3 id="输出格式">输出格式：</h3>
 <blockquote>
-<p>对每个测试用例输出 2 行，第 1 行是成绩最高学生的姓名和学号，第 2 行是成绩最低学生的姓名和学号，字符串间有 1 空格。</p>
+<p>首先第一行输出落单客人的总人数；随后第二行按 ID 递增顺序列出落单的客人。ID 间用 1 个空格分隔，行的首尾不得有多余空格。</p>
 </blockquote>
 <h3 id="输入样例">输入样例：</h3>
 <pre><code class="language-in">3
-Joe Math990112 89
-Mike CS991301 100
-Mary EE990830 95
+11111 22222
+33333 44444
+55555 66666
+7
+55555 44444 10000 88888 22222 11111 23333
 </code></pre>
 <h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">Mike CS991301
-Joe Math990112
+<pre><code class="language-out">5
+10000 23333 44444 55555 88888
 </code></pre>
 <h3 id="思路">思路：</h3>
-<p>题目相对比较简单，是使用结构体的<strong>数组查找最值</strong>问题</p>
+<p>题目寻找单身🐶，包括当时没有伴侣的人：</p>
 <blockquote>
-<p>一开始思路比较偏向极端，追求代码像python一样简洁，使用了set容器进行自动排序输出，发现运行时会报错，可能是对c++的一些细节没有掌握</p>
-<p>补充：set容器内的元素为结构体时，需要对set类的方法进行<s>覆写</s>重载，以免因set类找不到排序标准而报错</p>
+<p>首先说明变量：id数组用于保存伴侣关系，其中id数组默认值为-1（没有伴侣）；</p>
+<p>visitor数组用于保存参与者id；</p>
+<p>iscome数组用于保存是否到场的信息，默认为0（未到场）；</p>
+<p>single数组用于保存单身人士id；</p>
 </blockquote>
-<p>重新审题过后，发现只是需要输出两个最值，不需要保存其他数据</p>
+<p>再过一下运行流程：</p>
 <blockquote>
-<p>于是舍弃set结构，使用结构体数组进行保存即可</p>
+<p>先将每一对伴侣信息存入id中，然后将每一个参与者的id存储<code>visitor</code>中，并判断参与者是否有伴侣关系，如果存在伴侣关系，则将该参与者的伴侣在iscome数组中变为1</p>
+<p>这一步是为存在伴侣关系并且到场的人进行标记；比如a和b是伴侣，a到场b未到场，则<code>iscome[b]=1</code>，<code>iscome[a]=0</code>；这意味着当事人的伴侣不在场的话，当事人在<code>iscome</code>数组中永远为0</p>
+<p>再循环visitor数组，判断iscome数组中值是否为0，如果为0说明该参与者是单身人士</p>
 </blockquote>
-<p>剩余部分只需像数组中寻找最大最小值的步骤一样，在此按下不表</p>
+<p>注意事项：</p>
+<blockquote>
+<p>对于id数组的默认值不能设为0，因为id可以为0</p>
+<p>输出时记得使用格式化输出<code>%05d</code></p>
+</blockquote>
+<p>关于<code>iscome</code>数组，只有你的伴侣在场时，你的伴侣会将她（他）的伴侣（也就是你）置为1，证明你是一个有伴侣的人</p>
+<p>相当于她（他）到场后会喊一嗓子：我是你的女（男）朋友</p>
+<p>因为这个逻辑有点烧脑，容易混乱，所以有点啰嗦，希望能够写的通俗易懂一点</p>
 <h4 id="于是代码如下">于是代码如下：</h4>
 <pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;string&gt;
+#include&lt;vector&gt;
+#include&lt;set&gt;
 
 using namespace std;
 
-struct stu{
-    string name;
-    string sno;
-    int grade;
-};
-
-int main(){
+int main() {
     int n;
-    stu s[2];
     cin &gt;&gt; n;
-    for(int i=0;i &lt; n;i++){
-        stu student;
-        cin &gt;&gt; student.name;
-        cin &gt;&gt; student.sno;
-        cin &gt;&gt; student.grade;
-        if(i == 0){
-            s[0] = student;
-            s[1] = student;
-        }else{
-            if(student.grade &gt; s[0].grade){
-                s[0].name = student.name;
-                s[0].sno = student.sno;
-                s[0].grade = student.grade;
-            }else if(student.grade &lt; s[1].grade){
-                s[1].name = student.name;
-                s[1].sno = student.sno;
-                s[1].grade = student.grade;
-            }
-        }
+    int id[100000]={-1};
+    for(int i=0;i&lt;n;i++){
+        int man,femal;
+        cin &gt;&gt; man &gt;&gt; femal;
+        id[man] = femal;
+        id[femal] = man;
     }
-    for(int i=0;i &lt; 2;i++){
-        cout &lt;&lt; s[i].name &lt;&lt; &quot; &quot; &lt;&lt; s[i].sno &lt;&lt; endl;
+    int num;cin &gt;&gt; num;
+    vector&lt;int&gt; visitor(num);
+    int iscome[100000]={0};
+    for(int i=0;i&lt;num;i++){
+        cin &gt;&gt; visitor[i];
+        if(id[visitor[i]]!=-1) iscome[id[visitor[i]]] = 1;
+    }
+    set&lt;int&gt; single;
+    for(int i=0;i&lt;num;i++){
+        if(!iscome[visitor[i]]) single.insert(visitor[i]);
+    }
+    cout &lt;&lt; single.size() &lt;&lt; endl;
+    for(auto it=single.begin();it!=single.end();it++){
+        if(it==single.begin()) printf(&quot;%05d&quot;,*it);
+        else printf(&quot; %05d&quot;,*it);
     }
     return 0;
 }
@@ -195,10 +190,10 @@ int main(){
 
                 <div class="pager">
                     
-                    <a class="prev" href="https://dreammilk.now.sh/1005-ji-xu-3n1cai-xiang-25-fen/">1005 继续(3n+1)猜想 (25分)</a>
+                    <span class="prev">已是最新一篇</span>
                     
                     
-                    <a class="next" href="https://dreammilk.now.sh/1003/">1003 我要通过！ (20 分)</a>
+                    <a class="next" href="https://dreammilk.now.sh/1064-peng-you-shu-20-fen/">1064 朋友数 (20分)</a>
                     
                     <div class="clear"></div>
                 </div>

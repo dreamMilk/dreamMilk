@@ -5,36 +5,34 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="baidu-site-verification" content="ZGbOgNUIf1" />
-<title>1029 旧键盘 (20分) | Milk &#39;s Home</title>
+<title>1066 图像过滤 (15分) | Milk &#39;s Home</title>
 <meta name="referrer" content="never" />
 <link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
     <meta name="description" content="题目
 
-旧键盘上坏了几个键，于是在敲一段文字的时候，对应的字符就不会出现。现在给出应该输入的一段文字、以及实际被输入的文字，请你列出肯定坏掉的那些键。
+图像过滤是把图像中不重要的像素都染成背景色，使得重要部分被凸显出来。现给定一幅黑白图像，要求你将灰度值位于某指定区间内的所有像素颜色都用一种指定的颜色替换。
 
 
 输入格式：
 
-输入在 2 行中分别给出应该输入的文字、以及实际被输入的文字。每段文字..." />
+输入在第一行给出一幅图像的分辨率，即两个正整数 M 和 ..." />
     <meta name="keywords" content="代码练习" />
     
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
     <script src="https://dreammilk.now.sh/media/js/prism.min.js"></script>
     
     
-    <link rel="prefetch" href="https://dreammilk.now.sh/1030-wan-mei-shu-lie-25-fen/">
     
-    
-    <link rel="prefetch" href="https://dreammilk.now.sh/1028-ren-kou-pu-cha-20-fen/">
+    <link rel="prefetch" href="https://dreammilk.now.sh/1065-dan-shen-gou-25-fen/">
     
 </head>
 
 <body>
     <!-- start: #wrapper -->
     <header id="header"
-        style="background-image:url(https://s1.ax1x.com/2020/04/25/JsAAYV.jpg)">
+        style="background-image:url(https://s1.ax1x.com/2020/05/22/YOPxFx.jpg)">
         <div class="header-container">
   <h1 class="site-title"><a href="https://dreammilk.now.sh"><span>Milk &#39;s Home</span><span class="logo__cursor"></span></a></h1>
   <h2 class="site-description">welcome</h2>
@@ -91,62 +89,62 @@
                     <header>
                         <time class="date">
                             <i class="fa">
-                                <span class="datetime">1 个月前</span>
+                                <span class="datetime">10 小时前</span>
                             </i>
                         </time>
                     </header>
                     <h1 class="entry-title">
-                        1029 旧键盘 (20分)
+                        1066 图像过滤 (15分)
                     </h1>
                     <div class="post-content">
                         <div class="post-hentry">
                             <h3 id="题目">题目</h3>
 <blockquote>
-<p>旧键盘上坏了几个键，于是在敲一段文字的时候，对应的字符就不会出现。现在给出应该输入的一段文字、以及实际被输入的文字，请你列出肯定坏掉的那些键。</p>
+<p>图像过滤是把图像中不重要的像素都染成背景色，使得重要部分被凸显出来。现给定一幅黑白图像，要求你将灰度值位于某指定区间内的所有像素颜色都用一种指定的颜色替换。</p>
 </blockquote>
 <!-- more -->
 <h3 id="输入格式">输入格式：</h3>
 <blockquote>
-<p>输入在 2 行中分别给出应该输入的文字、以及实际被输入的文字。每段文字是不超过 80 个字符的串，由字母 A-Z（包括大、小写）、数字 0-9、以及下划线 <code>_</code>（代表空格）组成。题目保证 2 个字符串均非空。</p>
+<p>输入在第一行给出一幅图像的分辨率，即两个正整数 <em>M</em> 和 <em>N</em>（0&lt;<em>M</em>,<em>N</em>≤500），另外是待过滤的灰度值区间端点 <em>A</em> 和 <em>B</em>（0≤<em>A</em>&lt;<em>B</em>≤255）、以及指定的替换灰度值。随后 <em>M</em> 行，每行给出 <em>N</em> 个像素点的灰度值，其间以空格分隔。所有灰度值都在 [0, 255] 区间内。</p>
 </blockquote>
 <h3 id="输出格式">输出格式：</h3>
 <blockquote>
-<p>按照发现顺序，在一行中输出坏掉的键。其中英文字母只输出大写，每个坏键只输出一次。题目保证至少有 1 个坏键。</p>
+<p>输出按要求过滤后的图像。即输出 <em>M</em> 行，每行 <em>N</em> 个像素灰度值，每个灰度值占 3 位（例如黑色要显示为 <code>000</code>），其间以一个空格分隔。行首尾不得有多余空格。</p>
 </blockquote>
 <h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">7_This_is_a_test
-_hs_s_a_es
+<pre><code class="language-in">3 5 100 150 0
+3 189 254 101 119
+150 233 151 99 100
+88 123 149 0 255
 </code></pre>
 <h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">7TI
+<pre><code class="language-out">003 189 254 000 000
+000 233 151 099 000
+088 000 000 000 255
 </code></pre>
 <h3 id="思路">思路：</h3>
-<p>题目主要进行字符串比较：</p>
+<p>题目比较容易：</p>
 <blockquote>
-<p>原本是想将字符串先预处理，全部转换成为大写并去重，然后进行比较，并把第二个字符串中出现过的字符在第一个字符串中删除，最后输出第一个字符串</p>
+<p>遍历二维数组，如果在过滤范围内，替换即可</p>
 </blockquote>
-<p>但是整个流程实现好像比较复杂，还是选用老办法，逐个比对：</p>
-<blockquote>
-<p>如果<code>S1</code>的字符不存在于<code>S2</code>中，并且该字符的大写形式也不存在于结果字符串中，那么将该字符添加到结果字符串中</p>
-</blockquote>
-<p>主要学习到了字符串的相关操作，<strong>例如</strong>：字符串搜索不到字符时，返回<code>string::npos</code>；以及<code>cctype</code>库的相关函数</p>
+<p>输出时使用<code>%03d</code>即可</p>
 <h4 id="于是代码如下">于是代码如下：</h4>
 <pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;cctype&gt;
 
 using namespace std;
 
 int main() {
-    string s1,s2;
-    string result;
-    cin &gt;&gt; s1 &gt;&gt; s2;
-
-    for(int i=0;i&lt;s1.length();i++){
-        if(s2.find(s1[i]) == string::npos &amp;&amp; result.find(toupper(s1[i])) == string::npos){
-            result += toupper(s1[i]);
+    int m,n,a,b,g;
+    scanf(&quot;%d%d%d%d%d&quot;,&amp;m,&amp;n,&amp;a,&amp;b,&amp;g);
+    for(int i=0;i&lt;m;i++){
+        for(int j=0;j&lt;n;j++){
+            int color;scanf(&quot;%d&quot;,&amp;color);
+            if(color&lt;a||color&gt;b) printf(&quot;%03d&quot;,color);
+            else printf(&quot;%03d&quot;,g);
+            if(j!=n-1) printf(&quot; &quot;);
         }
+        printf(&quot;\n&quot;);
     }
-    cout &lt;&lt; result;
     return 0;
 }
 </code></pre>
@@ -159,10 +157,10 @@ int main() {
 
                 <div class="pager">
                     
-                    <a class="prev" href="https://dreammilk.now.sh/1030-wan-mei-shu-lie-25-fen/">1030 完美数列 (25分)</a>
+                    <span class="prev">已是最新一篇</span>
                     
                     
-                    <a class="next" href="https://dreammilk.now.sh/1028-ren-kou-pu-cha-20-fen/">1028 人口普查 (20分)</a>
+                    <a class="next" href="https://dreammilk.now.sh/1065-dan-shen-gou-25-fen/">1065 单身狗 (25分)</a>
                     
                     <div class="clear"></div>
                 </div>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dreammilk.now.sh</id>
     <title>Milk &apos;s Home</title>
-    <updated>2020-06-02T14:42:04.106Z</updated>
+    <updated>2020-06-03T08:01:44.495Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dreammilk.now.sh"/>
     <link rel="self" href="https://dreammilk.now.sh/atom.xml"/>
@@ -10,6 +10,97 @@
     <logo>https://dreammilk.now.sh/images/avatar.png</logo>
     <icon>https://dreammilk.now.sh/favicon.ico</icon>
     <rights>All rights reserved 2020, Milk &apos;s Home</rights>
+    <entry>
+        <title type="html"><![CDATA[1067 试密码 (20分)]]></title>
+        <id>https://dreammilk.now.sh/1067-shi-mi-ma-20-fen/</id>
+        <link href="https://dreammilk.now.sh/1067-shi-mi-ma-20-fen/">
+        </link>
+        <updated>2020-06-03T04:50:48.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>当你试图登录某个系统却忘了密码时，系统一般只会允许你尝试有限多次，当超出允许次数时，账号就会被锁死。本题就请你实现这个小功能。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>当你试图登录某个系统却忘了密码时，系统一般只会允许你尝试有限多次，当超出允许次数时，账号就会被锁死。本题就请你实现这个小功能。</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入在第一行给出一个密码（长度不超过 20 的、不包含空格、Tab、回车的非空字符串）和一个正整数 N（≤ 10），分别是正确的密码和系统允许尝试的次数。随后每行给出一个以回车结束的非空字符串，是用户尝试输入的密码。输入保证至少有一次尝试。当读到一行只有单个 # 字符时，输入结束，并且这一行不是用户的输入。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>对用户的每个输入，如果是正确的密码且尝试次数不超过 N，则在一行中输出 <code>Welcome in</code>，并结束程序；如果是错误的，则在一行中按格式输出 <code>Wrong password: 用户输入的错误密码</code>；当错误尝试达到 N 次时，再输出一行 <code>Account locked</code>，并结束程序。</p>
+</blockquote>
+<h3 id="输入样例1">输入样例1：</h3>
+<pre><code class="language-in">Correct%pw 3
+correct%pw
+Correct@PW
+whatisthepassword!
+Correct%pw
+#
+</code></pre>
+<h3 id="输出样例1">输出样例1：</h3>
+<pre><code class="language-out">Wrong password: correct%pw
+Wrong password: Correct@PW
+Wrong password: whatisthepassword!
+Account locked
+</code></pre>
+<h3 id="输入样例2">输入样例2：</h3>
+<pre><code class="language-in">cool@gplt 3
+coolman@gplt
+coollady@gplt
+cool@gplt
+try again
+#
+</code></pre>
+<h3 id="输出样例2">输出样例2：</h3>
+<pre><code class="language-out">Wrong password: coolman@gplt
+Wrong password: coollady@gplt
+Welcome in
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>感觉题目相对比较简单：</p>
+<blockquote>
+<p>循环输入的字符串，遇到<code>#</code>结束、超过错误次数结束或者输入正确后结束</p>
+<p>关于字符串可以直接通过<code>==</code>比较，每次输入错误时，计数加一</p>
+</blockquote>
+<p>一个小坑记录：</p>
+<blockquote>
+<p>在使用<code>getline</code>函数时，需要注意前面是否存在回车符号，如果有，需要使用<code>getchar</code>函数吃掉回车</p>
+<p>在网上百度了一下，发现<code>scanf(&quot;\n&quot;)</code>与<code>getchar</code>函数在消除回车时的效果并不一样</p>
+<p><code>scanf(&quot;\n&quot;)</code>有时候消除回车时并不彻底，而<code>getchar</code>函数的表现更胜一筹</p>
+</blockquote>
+<p>哪天有时间可以总结一下这些细枝末节🤓</p>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    string psd,input;
+    int n,cnt=0;
+    cin &gt;&gt; psd &gt;&gt; n;
+    getchar();
+    getline(cin,input);
+    while(input!=&quot;#&quot; &amp;&amp; cnt&lt;n){
+        if(input != psd){
+            cnt++;
+            cout &lt;&lt; &quot;Wrong password: &quot; &lt;&lt; input &lt;&lt; endl;
+        }else{
+            cout &lt;&lt; &quot;Welcome in&quot;;
+            break;
+        }
+        getline(cin,input);
+    }
+    if(cnt == n) cout &lt;&lt; &quot;Account locked&quot;;
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[1066 图像过滤 (15分)]]></title>
         <id>https://dreammilk.now.sh/1066-tu-xiang-guo-lu-15-fen/</id>
@@ -748,71 +839,6 @@ int main() {
             if(error[i] == max_error) printf(&quot; %d&quot;,i+1);
         }
     }
-    return 0;
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1057 数零壹 (20分)]]></title>
-        <id>https://dreammilk.now.sh/1057-shu-ling-yi-20-fen/</id>
-        <link href="https://dreammilk.now.sh/1057-shu-ling-yi-20-fen/">
-        </link>
-        <updated>2020-05-24T03:45:27.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>给定一串长度不超过 105 的字符串，本题要求你将其中所有英文字母的序号（字母 a-z 对应序号 1-26，不分大小写）相加，得到整数 N，然后再分析一下 N 的二进制表示中有多少 0、多少 1。例如给定字符串 <code>PAT (Basic)</code>，其字母序号之和为：16+1+20+2+1+19+9+3=71，而 71 的二进制是 1000111，即有 3 个 0、4 个 1。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>给定一串长度不超过 105 的字符串，本题要求你将其中所有英文字母的序号（字母 a-z 对应序号 1-26，不分大小写）相加，得到整数 N，然后再分析一下 N 的二进制表示中有多少 0、多少 1。例如给定字符串 <code>PAT (Basic)</code>，其字母序号之和为：16+1+20+2+1+19+9+3=71，而 71 的二进制是 1000111，即有 3 个 0、4 个 1。</p>
-</blockquote>
-<!-- more -->
-<h3 id="输入格式">输入格式：</h3>
-<blockquote>
-<p>输入在一行中给出长度不超过 105、以回车结束的字符串。</p>
-</blockquote>
-<h3 id="输出格式">输出格式：</h3>
-<blockquote>
-<p>在一行中先后输出 0 的个数和 1 的个数，其间以空格分隔。</p>
-</blockquote>
-<h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">PAT (Basic)
-</code></pre>
-<h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">3 4
-</code></pre>
-<h3 id="思路">思路：</h3>
-<p>题目比较容易：</p>
-<blockquote>
-<p>先将输入字符串转换为整数，这一步可以统一大写（小写）然后减去‘A’（‘a’）得到每个字母的大小</p>
-<p>转换为二进制只需循环对2取余并除以2即可，使用数组统计0、1出现次数</p>
-<p>最后输出数组即可</p>
-</blockquote>
-<p>关于输入时的要点：</p>
-<blockquote>
-<p>在输入时可能会存在空格，因此使用<code>getline</code>函数会比较好</p>
-</blockquote>
-<h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;cctype&gt;
-
-using namespace std;
-
-int main() {
-    string s;
-    getline(cin,s);
-    int sum=0;
-    for(int i=0;i&lt;s.length();i++){
-        if(isalpha(s[i])) sum += tolower(s[i])-'a'+1;
-    }
-    int cnt[2]={0};
-    while(sum&gt;0){
-        cnt[sum%2]++;
-        sum /= 2;
-    }
-    cout &lt;&lt; cnt[0] &lt;&lt; ' ' &lt;&lt; cnt[1];
     return 0;
 }
 </code></pre>

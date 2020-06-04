@@ -5,32 +5,34 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="baidu-site-verification" content="ZGbOgNUIf1" />
-<title>1060 爱丁顿数 (25分) | Milk &#39;s Home</title>
+<title>1068 万绿丛中一点红 (20分) | Milk &#39;s Home</title>
 <meta name="referrer" content="never" />
 <link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
     <meta name="description" content="题目
 
-英国天文学家爱丁顿很喜欢骑车。据说他为了炫耀自己的骑车功力，还定义了一个“爱丁顿数” E ，即满足有 E 天骑车超过 E 英里的最大整数 E。据说爱丁顿自己的 E 等于87。
-现给定某人 N 天的骑车距离，请你算出对应的爱丁顿数 E..." />
+对于计算机而言，颜色不过是像素点对应的一个 24 位的数值。现给定一幅分辨率为 M×N 的画，要求你找出万绿丛中的一点红，即有独一无二颜色的那个像素点，并且该点的颜色与其周围 8 个相邻像素的颜色差充分大。
+
+
+输入格式：
+
+输入第..." />
     <meta name="keywords" content="代码练习" />
     
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
     <script src="https://dreammilk.now.sh/media/js/prism.min.js"></script>
     
     
-    <link rel="prefetch" href="https://dreammilk.now.sh/1061-pan-duan-ti-15-fen/">
     
-    
-    <link rel="prefetch" href="https://dreammilk.now.sh/1059-c-yu-yan-jing-sai-20-fen/">
+    <link rel="prefetch" href="https://dreammilk.now.sh/1067-shi-mi-ma-20-fen/">
     
 </head>
 
 <body>
     <!-- start: #wrapper -->
     <header id="header"
-        style="background-image:url(https://s1.ax1x.com/2020/05/13/YaOGVO.jpg)">
+        style="background-image:url(https://s1.ax1x.com/2020/05/27/tA9NCT.jpg)">
         <div class="header-container">
   <h1 class="site-title"><a href="https://dreammilk.now.sh"><span>Milk &#39;s Home</span><span class="logo__cursor"></span></a></h1>
   <h2 class="site-description">welcome</h2>
@@ -87,68 +89,118 @@
                     <header>
                         <time class="date">
                             <i class="fa">
-                                <span class="datetime">8 天前</span>
+                                <span class="datetime">1 小时内</span>
                             </i>
                         </time>
                     </header>
                     <h1 class="entry-title">
-                        1060 爱丁顿数 (25分)
+                        1068 万绿丛中一点红 (20分)
                     </h1>
                     <div class="post-content">
                         <div class="post-hentry">
                             <h3 id="题目">题目</h3>
 <blockquote>
-<p>英国天文学家爱丁顿很喜欢骑车。据说他为了炫耀自己的骑车功力，还定义了一个“爱丁顿数” <em>E</em> ，即满足有 <em>E</em> 天骑车超过 <em>E</em> 英里的最大整数 <em>E</em>。据说爱丁顿自己的 <em>E</em> 等于87。</p>
-<p>现给定某人 <em>N</em> 天的骑车距离，请你算出对应的爱丁顿数 <em>E</em>（≤<em>N</em>）。</p>
+<p>对于计算机而言，颜色不过是像素点对应的一个 24 位的数值。现给定一幅分辨率为 <em>M</em>×<em>N</em> 的画，要求你找出万绿丛中的一点红，即有独一无二颜色的那个像素点，并且该点的颜色与其周围 8 个相邻像素的颜色差充分大。</p>
 </blockquote>
 <!-- more -->
 <h3 id="输入格式">输入格式：</h3>
 <blockquote>
-<p>输入第一行给出一个正整数 <em>N</em> (≤<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span>)，即连续骑车的天数；第二行给出 <em>N</em> 个非负整数，代表每天的骑车距离。</p>
+<p>输入第一行给出三个正整数，分别是 <em>M</em> 和 <em>N</em>（≤ 1000），即图像的分辨率；以及 TOL，是所求像素点与相邻点的颜色差阈值，色差超过 TOL 的点才被考虑。随后 <em>N</em> 行，每行给出 <em>M</em> 个像素的颜色值，范围在 [0,<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mn>24</mn></msup></mrow><annotation encoding="application/x-tex">2^{24}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span></span>) 内。所有同行数字间用空格或 TAB 分开。</p>
 </blockquote>
 <h3 id="输出格式">输出格式：</h3>
 <blockquote>
-<p>在一行中给出 <em>N</em> 天的爱丁顿数。</p>
+<p>在一行中按照 <code>(x, y): color</code> 的格式输出所求像素点的位置以及颜色值，其中位置 <code>x</code> 和 <code>y</code> 分别是该像素在图像矩阵中的列、行编号（从 1 开始编号）。如果这样的点不唯一，则输出 <code>Not Unique</code>；如果这样的点不存在，则输出 <code>Not Exist</code>。</p>
 </blockquote>
-<h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">10
-6 7 6 9 3 10 8 2 7 8
+<h3 id="输入样例1">输入样例1：</h3>
+<pre><code class="language-in">8 6 200
+0 	 0 	  0 	   0	    0 	     0 	      0        0
+65280 	 65280    65280    16711479 65280    65280    65280    65280
+16711479 65280    65280    65280    16711680 65280    65280    65280
+65280 	 65280    65280    65280    65280    65280    165280   165280
+65280 	 65280 	  16777015 65280    65280    165280   65480    165280
+16777215 16777215 16777215 16777215 16777215 16777215 16777215 16777215
 </code></pre>
-<h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">6
+<h3 id="输出样例1">输出样例1：</h3>
+<pre><code class="language-out">(5, 3): 16711680
+</code></pre>
+<h3 id="输入样例2">输入样例2：</h3>
+<pre><code class="language-in">4 5 2
+0 0 0 0
+0 0 3 0
+0 0 0 0
+0 5 0 0
+0 0 0 0
+</code></pre>
+<h3 id="输出样例2">输出样例2：</h3>
+<pre><code class="language-out">Not Unique
+</code></pre>
+<h3 id="输入样例3">输入样例3：</h3>
+<pre><code class="language-in">3 3 5
+1 2 3
+3 4 5
+5 6 7
+</code></pre>
+<h3 id="输出样例3">输出样例3：</h3>
+<pre><code class="language-out">Not Exist
 </code></pre>
 <h3 id="思路">思路：</h3>
-<p>题目不要使用傻乎乎的反复遍历：</p>
+<p>题目一开始例子没怎么看懂：</p>
 <blockquote>
-<p>首先将输入的数字按从大到小进行排序（从小到大排序不能保证前面的数超过E）</p>
-<p>遍历数字，每次遍历时E++，直到当前数字不超过E为止</p>
-<p>最后输出E即可</p>
+<p>一直在纠结<code>16711479</code>为什么不符合要求，原来首要条件是像素点颜色只能出现一次</p>
 </blockquote>
+<p>做题思路：</p>
+<blockquote>
+<p>因为需要统计颜色是否出现过一次，所以使用了<code>map</code>结构</p>
+<p>可能会觉得这为什么不用数组结构了呢，因为题目输入的大部分数据重复率很高，不像随机散乱的数据</p>
+<p>将输入的像素点用二维数组进行存储，并使用<code>map</code>统计出现次数</p>
+<p>然后遍历二维数组，将只出现一次并与周围相差较大的像素点的行、列数保存，符合要求的个数加一</p>
+<p>最后判断是否只存在一个要求，按照题意进行输出</p>
+</blockquote>
+<p>对于行列数不用担心覆盖的情况，如果覆盖说明不唯一，否则不会存在覆盖现象</p>
 <h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
+<pre><code class="language-cpp">#include&lt;iostream&gt;
 #include&lt;vector&gt;
-#include&lt;algorithm&gt;
+#include&lt;map&gt;
 
 using namespace std;
 
-bool cmp(int a,int b){
-    return a&gt;b;
+int m,n,tol;
+vector&lt;vector&lt;int&gt;&gt; v;
+int r[8][2]={{-1,-1},{0,-1},{1,-1},{-1,0},{1,0},{-1,1},{0,1},{1,1}};
+
+bool round(int i,int j){
+    for(int k=0;k&lt;8;k++){
+        int x=i+r[k][0];
+        int y=j+r[k][1];
+        if(x&gt;=0&amp;&amp;x&lt;n&amp;&amp;y&gt;=0&amp;&amp;y&lt;m&amp;&amp;v[i][j]-v[x][y]&gt;=0-tol&amp;&amp;v[i][j]-v[x][y]&lt;=tol) return false;
+    }
+    return true;
+
 }
 
 int main() {
-    int n;
-    cin &gt;&gt; n;
-    vector&lt;int&gt; v(n);
+    cin &gt;&gt; m &gt;&gt; n &gt;&gt; tol;
+    v.resize(n,vector&lt;int&gt;(m));
+    map&lt;int,int&gt; M;
     for(int i=0;i&lt;n;i++){
-        cin &gt;&gt; v[i];
+        for(int j=0;j&lt;m;j++){
+            cin &gt;&gt; v[i][j];
+            M[v[i][j]]++;
+        }
     }
-    sort(v.begin(),v.end(),cmp);
-    int e=0;
+    int cnt=0,x,y;
     for(int i=0;i&lt;n;i++){
-        if(v[i]&gt;e+1) e++;
-        else break;
+        for(int j=0;j&lt;m;j++){
+            if(M[v[i][j]]==1 &amp;&amp; round(i,j)){
+                x = i+1;
+                y = j+1;
+                cnt++;
+            }
+        }
     }
-    cout &lt;&lt; e &lt;&lt; endl;
+    if(cnt==1) printf(&quot;(%d, %d): %d&quot;,y,x,v[x-1][y-1]);
+    else if(cnt &gt; 1) printf(&quot;Not Unique&quot;);
+    else printf(&quot;Not Exist&quot;);
     return 0;
 }
 </code></pre>
@@ -161,10 +213,10 @@ int main() {
 
                 <div class="pager">
                     
-                    <a class="prev" href="https://dreammilk.now.sh/1061-pan-duan-ti-15-fen/">1061 判断题 (15分)</a>
+                    <span class="prev">已是最新一篇</span>
                     
                     
-                    <a class="next" href="https://dreammilk.now.sh/1059-c-yu-yan-jing-sai-20-fen/">1059 C语言竞赛 (20分)</a>
+                    <a class="next" href="https://dreammilk.now.sh/1067-shi-mi-ma-20-fen/">1067 试密码 (20分)</a>
                     
                     <div class="clear"></div>
                 </div>

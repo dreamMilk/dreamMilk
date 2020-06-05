@@ -5,31 +5,34 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="baidu-site-verification" content="ZGbOgNUIf1" />
-<title>1019 数字黑洞 (20分) | Milk &#39;s Home</title>
+<title>1069 微博转发抽奖 (20分) | Milk &#39;s Home</title>
 <meta name="referrer" content="never" />
 <link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
     <meta name="description" content="题目
 
-给定任一个各位数字不完全相同的 4 位正整数，如果我们先把 4 个数字按非递增排序，再按非递减排序，然后用第 1 个数字减第 2 个数字，将得到一个新的数字。一直重复这样做，我们很快会停在有“数字黑洞”之称的 6174，这个神奇的数..." />
+小明 PAT 考了满分，高兴之余决定发起微博转发抽奖活动，从转发的网友中按顺序每隔 N 个人就发出一个红包。请你编写程序帮助他确定中奖名单。
+
+
+输入格式：
+
+输入第一行给出三个正整数 M（≤ 1000）、N 和 S，分别是转发的总..." />
     <meta name="keywords" content="代码练习" />
     
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
     <script src="https://dreammilk.now.sh/media/js/prism.min.js"></script>
     
     
-    <link rel="prefetch" href="https://dreammilk.now.sh/1020-yue-bing-25-fen/">
     
-    
-    <link rel="prefetch" href="https://dreammilk.now.sh/1018-chui-zi-jian-dao-bu-20-fen/">
+    <link rel="prefetch" href="https://dreammilk.now.sh/1068-wan-lu-cong-zhong-yi-dian-hong-20-fen/">
     
 </head>
 
 <body>
     <!-- start: #wrapper -->
     <header id="header"
-        style="background-image:url(https://s1.ax1x.com/2020/04/12/GL990O.jpg)">
+        style="background-image:url(https://s1.ax1x.com/2020/05/27/tA9U8U.jpg)">
         <div class="header-container">
   <h1 class="site-title"><a href="https://dreammilk.now.sh"><span>Milk &#39;s Home</span><span class="logo__cursor"></span></a></h1>
   <h2 class="site-description">welcome</h2>
@@ -88,91 +91,88 @@
                     <header>
                         <time class="date">
                             <i class="fa">
-                                <span class="datetime">2 个月前</span>
+                                <span class="datetime">8 分钟前</span>
                             </i>
                         </time>
                     </header>
                     <h1 class="entry-title">
-                        1019 数字黑洞 (20分)
+                        1069 微博转发抽奖 (20分)
                     </h1>
                     <div class="post-content">
                         <div class="post-hentry">
                             <h3 id="题目">题目</h3>
 <blockquote>
-<p>给定任一个各位数字不完全相同的 4 位正整数，如果我们先把 4 个数字按非递增排序，再按非递减排序，然后用第 1 个数字减第 2 个数字，将得到一个新的数字。一直重复这样做，我们很快会停在有“数字黑洞”之称的 <code>6174</code>，这个神奇的数字也叫 Kaprekar 常数。</p>
-<p>例如，我们从<code>6767</code>开始，将得到</p>
-<pre><code class="language-in">7766 - 6677 = 1089
-9810 - 0189 = 9621
-9621 - 1269 = 8352
-8532 - 2358 = 6174
-7641 - 1467 = 6174
-... ...    
-</code></pre>
-<p>现给定任意 4 位正整数，请编写程序演示到达黑洞的过程。</p>
+<p>小明 PAT 考了满分，高兴之余决定发起微博转发抽奖活动，从转发的网友中按顺序每隔 N 个人就发出一个红包。请你编写程序帮助他确定中奖名单。</p>
 </blockquote>
 <!-- more -->
 <h3 id="输入格式">输入格式：</h3>
 <blockquote>
-<p>输入给出一个 (0,<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">10^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span>) 区间内的正整数 <em>N</em>。</p>
+<p>输入第一行给出三个正整数 M（≤ 1000）、N 和 S，分别是转发的总量、小明决定的中奖间隔、以及第一位中奖者的序号（编号从 1 开始）。随后 M 行，顺序给出转发微博的网友的昵称（不超过 20 个字符、不包含空格回车的非空字符串）。</p>
+<p>注意：可能有人转发多次，但不能中奖多次。所以如果处于当前中奖位置的网友已经中过奖，则跳过他顺次取下一位。</p>
 </blockquote>
 <h3 id="输出格式">输出格式：</h3>
 <blockquote>
-<p>如果 <em>N</em> 的 4 位数字全相等，则在一行内输出 <code>N - N = 0000</code>；否则将计算的每一步在一行内输出，直到 <code>6174</code> 作为差出现，输出格式见样例。注意每个数字按 <code>4</code> 位数格式输出。</p>
+<p>按照输入的顺序输出中奖名单，每个昵称占一行。如果没有人中奖，则输出 <code>Keep going...</code>。</p>
 </blockquote>
 <h3 id="输入样例1">输入样例1：</h3>
-<pre><code class="language-in">6767
+<pre><code class="language-in">9 3 2
+Imgonnawin!
+PickMe
+PickMeMeMeee
+LookHere
+Imgonnawin!
+TryAgainAgain
+TryAgainAgain
+Imgonnawin!
+TryAgainAgain
 </code></pre>
 <h3 id="输出样例1">输出样例1：</h3>
-<pre><code class="language-out">7766 - 6677 = 1089
-9810 - 0189 = 9621
-9621 - 1269 = 8352
-8532 - 2358 = 6174
+<pre><code class="language-out">PickMe
+Imgonnawin!
+TryAgainAgain
 </code></pre>
 <h3 id="输入样例2">输入样例2：</h3>
-<pre><code class="language-in">2222
+<pre><code class="language-in">2 3 5
+Imgonnawin!
+PickMe
 </code></pre>
 <h3 id="输出样例2">输出样例2：</h3>
-<pre><code class="language-out">2222 - 2222 = 0000
+<pre><code class="language-out">Keep going...
 </code></pre>
 <h3 id="思路">思路：</h3>
-<p>题目描述的逻辑十分清楚，简单捋一下：</p>
+<p>题目比较容易：</p>
 <blockquote>
-<p>将输入的数进行降序和升序后计算差，然后再将差值重复上述步骤，直到出现<code>6174</code>或<code>0</code>为止</p>
+<p>当总人数小于第一位中奖者号码时，说明无人中奖</p>
+<p>使用<code>map</code>记录每个id的出现次数，避免重复参与抽奖</p>
+<p>然后根据题目逻辑进行判断处理</p>
 </blockquote>
-<p>一开始尝试使用很原始的步骤：</p>
+<p>对于题目逻辑可能有点争议：</p>
 <blockquote>
-<p>数字使用数组存储并排序处理，然后使用递归的方式进行调用计算，结果不出意外地未通过，一方面是未考虑到题目的条件：<strong>输入给出一个 (0,<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">10^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span>) 区间内的正整数 <em>N</em></strong>（不一定是四位数）；另一方面是递归调用会导致<strong>栈溢出</strong></p>
+<p>对于是选择到中奖者后判断是否重复；还是每一个都要判断是否重复，然后顺取下一位</p>
+<p>这两种写法都可以通过测试，应该是样例数据的问题，题目的意思应该为前者</p>
 </blockquote>
-<p>最后通过查阅各路大神的代码，总结一下：</p>
-<blockquote>
-<p>万能的<code>sort</code>函数：大部分的结构类型都能通过<code>sort</code>函数排序（默认升序）</p>
-<p>能用现有函数实现的功能尽量不要使用原始方法实现</p>
-</blockquote>
-<p>还有像往常一样不仔细看题，导致逻辑出现漏洞；当看完别人写的简洁代码时，感觉和别人写的都不是同一个题目，说明还要继续努力攀登✏️</p>
+<p>这个问题在写代码时浑然不知，复盘一遍还是能够发现代码的不足之处😁</p>
 <h4 id="于是代码如下">于是代码如下：</h4>
 <pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;algorithm&gt;
+#include&lt;map&gt;
 
 using namespace std;
 
-bool cmp(char a,char b){
-    return a&gt;b;
-}
-
 int main() {
-    string s;
-    cin &gt;&gt; s;
-    s.insert(0,4-s.length(),'0');
-    int n;
-    do {
-        string n1=s,n2=s;
-        sort(n1.begin(),n1.end(),cmp);
-        sort(n2.begin(),n2.end());
-        n = stoi(n1)-stoi(n2);
-        s = to_string(n);
-        s.insert(0,4-s.length(),'0');
-        cout &lt;&lt; n1 &lt;&lt; &quot; - &quot; &lt;&lt; n2 &lt;&lt; &quot; = &quot; &lt;&lt; s &lt;&lt; endl;
-    } while(n!=0 &amp;&amp; n!=6174);
+    int m,n,s;
+    cin &gt;&gt; m &gt;&gt; n &gt;&gt; s;
+    map&lt;string,int&gt; mp;
+    if(m&lt;s) cout &lt;&lt; &quot;Keep going...&quot;;
+    for(int i=1;i&lt;=m;i++){
+        string id;
+        cin &gt;&gt; id;
+        if(i==s &amp;&amp; mp[id]==0){
+            cout &lt;&lt; id &lt;&lt; endl;
+            mp[id]++;
+            s += n;
+        }
+        else if(i==s &amp;&amp; mp[id]!=0) s++;
+    }
     return 0;
 }
 </code></pre>
@@ -185,10 +185,10 @@ int main() {
 
                 <div class="pager">
                     
-                    <a class="prev" href="https://dreammilk.now.sh/1020-yue-bing-25-fen/">1020 月饼 (25分)</a>
+                    <span class="prev">已是最新一篇</span>
                     
                     
-                    <a class="next" href="https://dreammilk.now.sh/1018-chui-zi-jian-dao-bu-20-fen/">1018 锤子剪刀布 (20分)</a>
+                    <a class="next" href="https://dreammilk.now.sh/1068-wan-lu-cong-zhong-yi-dian-hong-20-fen/">1068 万绿丛中一点红 (20分)</a>
                     
                     <div class="clear"></div>
                 </div>

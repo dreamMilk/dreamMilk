@@ -5,32 +5,31 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="baidu-site-verification" content="ZGbOgNUIf1" />
-<title>1031 查验身份证 (15分) | Milk &#39;s Home</title>
+<title>1070 结绳 (25分) | Milk &#39;s Home</title>
 <meta name="referrer" content="never" />
 <link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
     <meta name="description" content="题目
 
-一个合法的身份证号码由17位地区、日期编号和顺序编号加1位校验码组成。校验码的计算规则如下：
-首先对前17位数字加权求和，权重分配为：{7，9，10，5，8，4，2，1，6，3，7，9，10，5，8，4，2}；然后将计算的和对11取..." />
+给定一段一段的绳子，你需要把它们串成一条绳。每次串连的时候，是把两段绳子对折，再如下图所示套接在一起。这样得到的绳子又被当成是另一段绳子，可以再次对折去跟另一段绳子串连。每次串连后，原来两段绳子的长度就会减半。
+
+给定 N 段绳子的..." />
     <meta name="keywords" content="代码练习" />
     
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
     <script src="https://dreammilk.now.sh/media/js/prism.min.js"></script>
     
     
-    <link rel="prefetch" href="https://dreammilk.now.sh/1032-wa-jue-ji-ji-zhu-na-jia-qiang-20-fen/">
     
-    
-    <link rel="prefetch" href="https://dreammilk.now.sh/1030-wan-mei-shu-lie-25-fen/">
+    <link rel="prefetch" href="https://dreammilk.now.sh/1069-wei-bo-zhuan-fa-chou-jiang-20-fen/">
     
 </head>
 
 <body>
     <!-- start: #wrapper -->
     <header id="header"
-        style="background-image:url(https://s1.ax1x.com/2020/04/25/JsA1Fx.jpg)">
+        style="background-image:url(https://s1.ax1x.com/2020/05/27/tA9a2F.jpg)">
         <div class="header-container">
   <h1 class="site-title"><a href="https://dreammilk.now.sh"><span>Milk &#39;s Home</span><span class="logo__cursor"></span></a></h1>
   <h2 class="site-description">welcome</h2>
@@ -89,91 +88,66 @@
                     <header>
                         <time class="date">
                             <i class="fa">
-                                <span class="datetime">1 个月前</span>
+                                <span class="datetime">1 小时前</span>
                             </i>
                         </time>
                     </header>
                     <h1 class="entry-title">
-                        1031 查验身份证 (15分)
+                        1070 结绳 (25分)
                     </h1>
                     <div class="post-content">
                         <div class="post-hentry">
                             <h3 id="题目">题目</h3>
 <blockquote>
-<p>一个合法的身份证号码由17位地区、日期编号和顺序编号加1位校验码组成。校验码的计算规则如下：</p>
-<p>首先对前17位数字加权求和，权重分配为：{7，9，10，5，8，4，2，1，6，3，7，9，10，5，8，4，2}；然后将计算的和对11取模得到值<code>Z</code>；最后按照以下关系对应<code>Z</code>值与校验码<code>M</code>的值：</p>
-<pre><code class="language-markdown">Z：0 1 2 3 4 5 6 7 8 9 10
-M：1 0 X 9 8 7 6 5 4 3 2
-</code></pre>
-<p>现在给定一些身份证号码，请你验证校验码的有效性，并输出有问题的号码。</p>
+<p>给定一段一段的绳子，你需要把它们串成一条绳。每次串连的时候，是把两段绳子对折，再如下图所示套接在一起。这样得到的绳子又被当成是另一段绳子，可以再次对折去跟另一段绳子串连。每次串连后，原来两段绳子的长度就会减半。</p>
+<figure data-type="image" tabindex="1"><img src="https://images.ptausercontent.com/46293e57-aa0e-414b-b5c3-7c4b2d5201e2.jpg" alt="rope.jpg" loading="lazy"></figure>
+<p>给定 <em>N</em> 段绳子的长度，你需要找出它们能串成的绳子的最大长度。</p>
 </blockquote>
 <!-- more -->
 <h3 id="输入格式">输入格式：</h3>
 <blockquote>
-<p>输入第一行给出正整数<em>N</em>（≤100）是输入的身份证号码的个数。随后<em>N</em>行，每行给出1个18位身份证号码。</p>
+<p>每个输入包含 1 个测试用例。每个测试用例第 1 行给出正整数 <em>N</em> (2≤<em>N</em>≤<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">10^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span>)；第 2 行给出 <em>N</em> 个正整数，即原始绳段的长度，数字间以空格分隔。所有整数都不超过<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">10^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span>。</p>
 </blockquote>
 <h3 id="输出格式">输出格式：</h3>
 <blockquote>
-<p>按照输入的顺序每行输出1个有问题的身份证号码。这里并不检验前17位是否合理，只检查前17位是否全为数字且最后1位校验码计算准确。如果所有号码都正常，则输出<code>All passed</code>。</p>
+<p>在一行中输出能够串成的绳子的最大长度。结果向下取整，即取为不超过最大长度的最近整数。</p>
 </blockquote>
-<h3 id="输入样例1">输入样例1：</h3>
-<pre><code class="language-in">4
-320124198808240056
-12010X198901011234
-110108196711301866
-37070419881216001X
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">8
+10 15 12 3 4 13 1 15
 </code></pre>
-<h3 id="输出样例1">输出样例1：</h3>
-<pre><code class="language-out">12010X198901011234
-110108196711301866
-37070419881216001X
-</code></pre>
-<h3 id="输入样例2">输入样例2：</h3>
-<pre><code class="language-in">2
-320124198808240056
-110108196711301862
-</code></pre>
-<h3 id="输出样例2">输出样例2：</h3>
-<pre><code class="language-out">All passed
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">14
 </code></pre>
 <h3 id="思路">思路：</h3>
-<p>题目思路比较清晰，说一下值得讨论的点：</p>
+<p>题目求串成的绳子的最大长度：</p>
 <blockquote>
-<p>关于权值与校验码的存储使用数组进行存储，对其进行操作时非常方便</p>
-<p>对于<code>X</code>需要稍微进行额外的判断</p>
-<p>至于<code>All passed</code>只需要一个bool变量即可</p>
+<p>因为n个绳子变为一根绳子一定会经过n-1次结绳，为防止对折损失的长度最小，应从短绳开始进行结绳</p>
 </blockquote>
-<p>一开始在校验码的对照时，居然在思考两者之间的规律，发现别人的代码只是需要一个数组进行下标与校验码对应即可</p>
+<p>有了上面的想法就比较容易了：</p>
+<blockquote>
+<p>将输入的数字按从小到大的顺序进行排序，然后每次将两个绳子相加除二，最终所得长度即为最大长度</p>
+</blockquote>
 <h4 id="于是代码如下">于是代码如下：</h4>
 <pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;vector&gt;
+#include&lt;algorithm&gt;
 
 using namespace std;
 
 int main() {
-    int n;
-    int weight[17]={7,9,10,5,8,4,2,1,6,3,7,9,10,5,8,4,2};
-    int m[11]={1,0,10,9,8,7,6,5,4,3,2};
-    string id;
-    cin &gt;&gt; n;
-    bool flag = true;
-    for(int i=0;i&lt;n;i++){
-        cin &gt;&gt; id;
-        int sum=0;
-        for(int j=0;j&lt;17;j++){
-            if(id[j] != 'X'){
-                sum = sum+(id[j]-'0')*weight[j];
-            }else sum = sum+10*weight[j];
-        }
-        if(m[sum%11]!=10 &amp;&amp; m[sum%11]!=(id[17]-'0')){
-            cout &lt;&lt; id &lt;&lt; endl;
-            flag = false;
-        }
-        else if(m[sum%11]==10 &amp;&amp; id[17]!='X'){
-            cout &lt;&lt; id &lt;&lt; endl;
-            flag = false;
-        }
+    int m;
+    cin &gt;&gt; m;
+    vector&lt;int&gt; v(m);
+    for(int i=0;i&lt;m;i++){
+        cin &gt;&gt; v[i];
     }
-    if(flag) cout &lt;&lt; &quot;All passed&quot;;
+    sort(v.begin(),v.end());
+    int length=v[0];
+    for(int i=1;i&lt;m;i++){
+        length = (length+v[i])/2;
+    }
+    cout &lt;&lt; length;
     return 0;
 }
 </code></pre>
@@ -186,10 +160,10 @@ int main() {
 
                 <div class="pager">
                     
-                    <a class="prev" href="https://dreammilk.now.sh/1032-wa-jue-ji-ji-zhu-na-jia-qiang-20-fen/">1032 挖掘机技术哪家强 (20分)</a>
+                    <span class="prev">已是最新一篇</span>
                     
                     
-                    <a class="next" href="https://dreammilk.now.sh/1030-wan-mei-shu-lie-25-fen/">1030 完美数列 (25分)</a>
+                    <a class="next" href="https://dreammilk.now.sh/1069-wei-bo-zhuan-fa-chou-jiang-20-fen/">1069 微博转发抽奖 (20分)</a>
                     
                     <div class="clear"></div>
                 </div>

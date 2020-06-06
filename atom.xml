@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dreammilk.now.sh</id>
     <title>Milk &apos;s Home</title>
-    <updated>2020-06-05T04:05:41.418Z</updated>
+    <updated>2020-06-06T05:16:23.105Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dreammilk.now.sh"/>
     <link rel="self" href="https://dreammilk.now.sh/atom.xml"/>
@@ -10,6 +10,75 @@
     <logo>https://dreammilk.now.sh/images/avatar.png</logo>
     <icon>https://dreammilk.now.sh/favicon.ico</icon>
     <rights>All rights reserved 2020, Milk &apos;s Home</rights>
+    <entry>
+        <title type="html"><![CDATA[1070 结绳 (25分)]]></title>
+        <id>https://dreammilk.now.sh/1070-jie-sheng-25-fen/</id>
+        <link href="https://dreammilk.now.sh/1070-jie-sheng-25-fen/">
+        </link>
+        <updated>2020-06-06T04:31:25.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>给定一段一段的绳子，你需要把它们串成一条绳。每次串连的时候，是把两段绳子对折，再如下图所示套接在一起。这样得到的绳子又被当成是另一段绳子，可以再次对折去跟另一段绳子串连。每次串连后，原来两段绳子的长度就会减半。</p>
+<figure data-type="image" tabindex="1"><img src="https://images.ptausercontent.com/46293e57-aa0e-414b-b5c3-7c4b2d5201e2.jpg" alt="rope.jpg" loading="lazy"></figure>
+<p>给定 <em>N</em> 段绳子的长度，你需要找出它们能串成的绳子的最大长度。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>给定一段一段的绳子，你需要把它们串成一条绳。每次串连的时候，是把两段绳子对折，再如下图所示套接在一起。这样得到的绳子又被当成是另一段绳子，可以再次对折去跟另一段绳子串连。每次串连后，原来两段绳子的长度就会减半。</p>
+<figure data-type="image" tabindex="1"><img src="https://images.ptausercontent.com/46293e57-aa0e-414b-b5c3-7c4b2d5201e2.jpg" alt="rope.jpg" loading="lazy"></figure>
+<p>给定 <em>N</em> 段绳子的长度，你需要找出它们能串成的绳子的最大长度。</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>每个输入包含 1 个测试用例。每个测试用例第 1 行给出正整数 <em>N</em> (2≤<em>N</em>≤<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">10^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span>)；第 2 行给出 <em>N</em> 个正整数，即原始绳段的长度，数字间以空格分隔。所有整数都不超过<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">10^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span>。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>在一行中输出能够串成的绳子的最大长度。结果向下取整，即取为不超过最大长度的最近整数。</p>
+</blockquote>
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">8
+10 15 12 3 4 13 1 15
+</code></pre>
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">14
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>题目求串成的绳子的最大长度：</p>
+<blockquote>
+<p>因为n个绳子变为一根绳子一定会经过n-1次结绳，为防止对折损失的长度最小，应从短绳开始进行结绳</p>
+</blockquote>
+<p>有了上面的想法就比较容易了：</p>
+<blockquote>
+<p>将输入的数字按从小到大的顺序进行排序，然后每次将两个绳子相加除二，最终所得长度即为最大长度</p>
+</blockquote>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;vector&gt;
+#include&lt;algorithm&gt;
+
+using namespace std;
+
+int main() {
+    int m;
+    cin &gt;&gt; m;
+    vector&lt;int&gt; v(m);
+    for(int i=0;i&lt;m;i++){
+        cin &gt;&gt; v[i];
+    }
+    sort(v.begin(),v.end());
+    int length=v[0];
+    for(int i=1;i&lt;m;i++){
+        length = (length+v[i])/2;
+    }
+    cout &lt;&lt; length;
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[1069 微博转发抽奖 (20分)]]></title>
         <id>https://dreammilk.now.sh/1069-wei-bo-zhuan-fa-chou-jiang-20-fen/</id>
@@ -738,76 +807,6 @@ int main() {
         }
         cout &lt;&lt; sum &lt;&lt; endl;
     }
-    return 0;
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1060 爱丁顿数 (25分)]]></title>
-        <id>https://dreammilk.now.sh/1060-ai-ding-dun-shu-25-fen/</id>
-        <link href="https://dreammilk.now.sh/1060-ai-ding-dun-shu-25-fen/">
-        </link>
-        <updated>2020-05-27T04:16:08.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>英国天文学家爱丁顿很喜欢骑车。据说他为了炫耀自己的骑车功力，还定义了一个“爱丁顿数” <em>E</em> ，即满足有 <em>E</em> 天骑车超过 <em>E</em> 英里的最大整数 <em>E</em>。据说爱丁顿自己的 <em>E</em> 等于87。</p>
-<p>现给定某人 <em>N</em> 天的骑车距离，请你算出对应的爱丁顿数 <em>E</em>（≤<em>N</em>）。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>英国天文学家爱丁顿很喜欢骑车。据说他为了炫耀自己的骑车功力，还定义了一个“爱丁顿数” <em>E</em> ，即满足有 <em>E</em> 天骑车超过 <em>E</em> 英里的最大整数 <em>E</em>。据说爱丁顿自己的 <em>E</em> 等于87。</p>
-<p>现给定某人 <em>N</em> 天的骑车距离，请你算出对应的爱丁顿数 <em>E</em>（≤<em>N</em>）。</p>
-</blockquote>
-<!-- more -->
-<h3 id="输入格式">输入格式：</h3>
-<blockquote>
-<p>输入第一行给出一个正整数 <em>N</em> (≤<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span>)，即连续骑车的天数；第二行给出 <em>N</em> 个非负整数，代表每天的骑车距离。</p>
-</blockquote>
-<h3 id="输出格式">输出格式：</h3>
-<blockquote>
-<p>在一行中给出 <em>N</em> 天的爱丁顿数。</p>
-</blockquote>
-<h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">10
-6 7 6 9 3 10 8 2 7 8
-</code></pre>
-<h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">6
-</code></pre>
-<h3 id="思路">思路：</h3>
-<p>题目不要使用傻乎乎的反复遍历：</p>
-<blockquote>
-<p>首先将输入的数字按从大到小进行排序（从小到大排序不能保证前面的数超过E）</p>
-<p>遍历数字，每次遍历时E++，直到当前数字不超过E为止</p>
-<p>最后输出E即可</p>
-</blockquote>
-<h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include&lt;vector&gt;
-#include&lt;algorithm&gt;
-
-using namespace std;
-
-bool cmp(int a,int b){
-    return a&gt;b;
-}
-
-int main() {
-    int n;
-    cin &gt;&gt; n;
-    vector&lt;int&gt; v(n);
-    for(int i=0;i&lt;n;i++){
-        cin &gt;&gt; v[i];
-    }
-    sort(v.begin(),v.end(),cmp);
-    int e=0;
-    for(int i=0;i&lt;n;i++){
-        if(v[i]&gt;e+1) e++;
-        else break;
-    }
-    cout &lt;&lt; e &lt;&lt; endl;
     return 0;
 }
 </code></pre>

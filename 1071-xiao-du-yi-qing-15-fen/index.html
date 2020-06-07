@@ -5,36 +5,29 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="baidu-site-verification" content="ZGbOgNUIf1" />
-<title>1067 试密码 (20分) | Milk &#39;s Home</title>
+<title>1071 小赌怡情 (15分) | Milk &#39;s Home</title>
 <meta name="referrer" content="never" />
 <link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
     <meta name="description" content="题目
 
-当你试图登录某个系统却忘了密码时，系统一般只会允许你尝试有限多次，当超出允许次数时，账号就会被锁死。本题就请你实现这个小功能。
-
-
-输入格式：
-
-输入在第一行给出一个密码（长度不超过 20 的、不包含空格、Tab、回车的非空字符串）..." />
+常言道“小赌怡情”。这是一个很简单的小游戏：首先由计算机给出第一个整数；然后玩家下注赌第二个整数将会比第一个数大还是小；玩家下注 t 个筹码后，计算机给出第二个数。若玩家猜对了，则系统奖励玩家 t 个筹码；否则扣除玩家 t 个筹码。..." />
     <meta name="keywords" content="代码练习" />
     
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
     <script src="https://dreammilk.now.sh/media/js/prism.min.js"></script>
     
     
-    <link rel="prefetch" href="https://dreammilk.now.sh/1068-wan-lu-cong-zhong-yi-dian-hong-20-fen/">
     
-    
-    <link rel="prefetch" href="https://dreammilk.now.sh/1066-tu-xiang-guo-lu-15-fen/">
+    <link rel="prefetch" href="https://dreammilk.now.sh/1070-jie-sheng-25-fen/">
     
 </head>
 
 <body>
     <!-- start: #wrapper -->
     <header id="header"
-        style="background-image:url(https://s1.ax1x.com/2020/05/27/tA9Y5V.jpg)">
+        style="background-image:url(https://s1.ax1x.com/2020/05/27/tA9dv4.jpg)">
         <div class="header-container">
   <h1 class="site-title"><a href="https://dreammilk.now.sh"><span>Milk &#39;s Home</span><span class="logo__cursor"></span></a></h1>
   <h2 class="site-description">welcome</h2>
@@ -93,90 +86,96 @@
                     <header>
                         <time class="date">
                             <i class="fa">
-                                <span class="datetime">4 天前</span>
+                                <span class="datetime">8 分钟前</span>
                             </i>
                         </time>
                     </header>
                     <h1 class="entry-title">
-                        1067 试密码 (20分)
+                        1071 小赌怡情 (15分)
                     </h1>
                     <div class="post-content">
                         <div class="post-hentry">
                             <h3 id="题目">题目</h3>
 <blockquote>
-<p>当你试图登录某个系统却忘了密码时，系统一般只会允许你尝试有限多次，当超出允许次数时，账号就会被锁死。本题就请你实现这个小功能。</p>
+<p>常言道“小赌怡情”。这是一个很简单的小游戏：首先由计算机给出第一个整数；然后玩家下注赌第二个整数将会比第一个数大还是小；玩家下注 t 个筹码后，计算机给出第二个数。若玩家猜对了，则系统奖励玩家 t 个筹码；否则扣除玩家 t 个筹码。</p>
+<p>注意：玩家下注的筹码数不能超过自己帐户上拥有的筹码数。当玩家输光了全部筹码后，游戏就结束。</p>
 </blockquote>
 <!-- more -->
 <h3 id="输入格式">输入格式：</h3>
 <blockquote>
-<p>输入在第一行给出一个密码（长度不超过 20 的、不包含空格、Tab、回车的非空字符串）和一个正整数 N（≤ 10），分别是正确的密码和系统允许尝试的次数。随后每行给出一个以回车结束的非空字符串，是用户尝试输入的密码。输入保证至少有一次尝试。当读到一行只有单个 # 字符时，输入结束，并且这一行不是用户的输入。</p>
+<p>输入在第一行给出 2 个正整数 T 和 K（≤ 100），分别是系统在初始状态下赠送给玩家的筹码数、以及需要处理的游戏次数。随后 K 行，每行对应一次游戏，顺序给出 4 个数字：</p>
+<pre><code class="language-in">n1 b t n2
+</code></pre>
+<p>其中 <code>n1</code> 和 <code>n2</code> 是计算机先后给出的两个[0, 9]内的整数，保证两个数字不相等。<code>b</code> 为 0 表示玩家赌<code>小</code>，为 1 表示玩家赌<code>大</code>。<code>t</code> 表示玩家下注的筹码数，保证在整型范围内。</p>
 </blockquote>
 <h3 id="输出格式">输出格式：</h3>
 <blockquote>
-<p>对用户的每个输入，如果是正确的密码且尝试次数不超过 N，则在一行中输出 <code>Welcome in</code>，并结束程序；如果是错误的，则在一行中按格式输出 <code>Wrong password: 用户输入的错误密码</code>；当错误尝试达到 N 次时，再输出一行 <code>Account locked</code>，并结束程序。</p>
+<p>对每一次游戏，根据下列情况对应输出（其中 <code>t</code> 是玩家下注量，<code>x</code> 是玩家当前持有的筹码量）：</p>
+<ul>
+<li>玩家赢，输出 <code>Win t! Total = x.</code>；</li>
+<li>玩家输，输出 <code>Lose t. Total = x.</code>；</li>
+<li>玩家下注超过持有的筹码量，输出 <code>Not enough tokens. Total = x.</code>；</li>
+<li>玩家输光后，输出 <code>Game Over.</code> 并结束程序。</li>
+</ul>
 </blockquote>
 <h3 id="输入样例1">输入样例1：</h3>
-<pre><code class="language-in">Correct%pw 3
-correct%pw
-Correct@PW
-whatisthepassword!
-Correct%pw
-#
+<pre><code class="language-in">100 4
+8 0 100 2
+3 1 50 1
+5 1 200 6
+7 0 200 8
 </code></pre>
 <h3 id="输出样例1">输出样例1：</h3>
-<pre><code class="language-out">Wrong password: correct%pw
-Wrong password: Correct@PW
-Wrong password: whatisthepassword!
-Account locked
+<pre><code class="language-out">Win 100!  Total = 200.
+Lose 50.  Total = 150.
+Not enough tokens.  Total = 150.
+Not enough tokens.  Total = 150.
 </code></pre>
 <h3 id="输入样例2">输入样例2：</h3>
-<pre><code class="language-in">cool@gplt 3
-coolman@gplt
-coollady@gplt
-cool@gplt
-try again
-#
+<pre><code class="language-in">100 4
+8 0 100 2
+3 1 200 1
+5 1 200 6
+7 0 200 8
 </code></pre>
 <h3 id="输出样例2">输出样例2：</h3>
-<pre><code class="language-out">Wrong password: coolman@gplt
-Wrong password: coollady@gplt
-Welcome in
+<pre><code class="language-out">Win 100!  Total = 200.
+Lose 200.  Total = 0.
+Game Over.
 </code></pre>
 <h3 id="思路">思路：</h3>
-<p>感觉题目相对比较简单：</p>
+<p>题目比较容易：</p>
 <blockquote>
-<p>循环输入的字符串，遇到<code>#</code>结束、超过错误次数结束或者输入正确后结束</p>
-<p>关于字符串可以直接通过<code>==</code>比较，每次输入错误时，计数加一</p>
+<p>每次先比较当前筹码与是否能够下注，如果能够下注继续判断输赢情况</p>
+<p>如果本局输了之后筹码归零，则直接退出程序</p>
 </blockquote>
-<p>一个小坑记录：</p>
-<blockquote>
-<p>在使用<code>getline</code>函数时，需要注意前面是否存在回车符号，如果有，需要使用<code>getchar</code>函数吃掉回车</p>
-<p>在网上百度了一下，发现<code>scanf(&quot;\n&quot;)</code>与<code>getchar</code>函数在消除回车时的效果并不一样</p>
-<p><code>scanf(&quot;\n&quot;)</code>有时候消除回车时并不彻底，而<code>getchar</code>函数的表现更胜一筹</p>
-</blockquote>
-<p>哪天有时间可以总结一下这些细枝末节🤓</p>
 <h4 id="于是代码如下">于是代码如下：</h4>
 <pre><code class="language-cpp">#include&lt;iostream&gt;
 
 using namespace std;
 
 int main() {
-    string psd,input;
-    int n,cnt=0;
-    cin &gt;&gt; psd &gt;&gt; n;
-    getchar();
-    getline(cin,input);
-    while(input!=&quot;#&quot; &amp;&amp; cnt&lt;n){
-        if(input != psd){
-            cnt++;
-            cout &lt;&lt; &quot;Wrong password: &quot; &lt;&lt; input &lt;&lt; endl;
-        }else{
-            cout &lt;&lt; &quot;Welcome in&quot;;
-            break;
+    int T,k;
+    cin &gt;&gt; T &gt;&gt; k;
+    for(int i=0;i&lt;k;i++){
+        int n1,b,t,n2;
+        scanf(&quot;%d %d %d %d&quot;,&amp;n1,&amp;b,&amp;t,&amp;n2);
+        if(T &lt; t) printf(&quot;Not enough tokens.  Total = %d.\n&quot;,T);
+        else{
+            if((n1 &lt; n2&amp;&amp;b==1)  || (n1 &gt; n2&amp;&amp;b==0)){
+                T += t;
+                printf(&quot;Win %d!  Total = %d.\n&quot;,t,T);
+            }
+            else{
+                T -= t;
+                printf(&quot;Lose %d.  Total = %d.\n&quot;,t,T);
+            }
+            if(T == 0){
+                printf(&quot;Game Over.&quot;);
+                break;
+            }
         }
-        getline(cin,input);
     }
-    if(cnt == n) cout &lt;&lt; &quot;Account locked&quot;;
     return 0;
 }
 </code></pre>
@@ -189,10 +188,10 @@ int main() {
 
                 <div class="pager">
                     
-                    <a class="prev" href="https://dreammilk.now.sh/1068-wan-lu-cong-zhong-yi-dian-hong-20-fen/">1068 万绿丛中一点红 (20分)</a>
+                    <span class="prev">已是最新一篇</span>
                     
                     
-                    <a class="next" href="https://dreammilk.now.sh/1066-tu-xiang-guo-lu-15-fen/">1066 图像过滤 (15分)</a>
+                    <a class="next" href="https://dreammilk.now.sh/1070-jie-sheng-25-fen/">1070 结绳 (25分)</a>
                     
                     <div class="clear"></div>
                 </div>

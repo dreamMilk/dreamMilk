@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dreammilk.now.sh</id>
     <title>Milk &apos;s Home</title>
-    <updated>2020-06-06T05:16:23.105Z</updated>
+    <updated>2020-06-07T04:18:37.729Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dreammilk.now.sh"/>
     <link rel="self" href="https://dreammilk.now.sh/atom.xml"/>
@@ -10,6 +10,104 @@
     <logo>https://dreammilk.now.sh/images/avatar.png</logo>
     <icon>https://dreammilk.now.sh/favicon.ico</icon>
     <rights>All rights reserved 2020, Milk &apos;s Home</rights>
+    <entry>
+        <title type="html"><![CDATA[1071 小赌怡情 (15分)]]></title>
+        <id>https://dreammilk.now.sh/1071-xiao-du-yi-qing-15-fen/</id>
+        <link href="https://dreammilk.now.sh/1071-xiao-du-yi-qing-15-fen/">
+        </link>
+        <updated>2020-06-07T04:10:57.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>常言道“小赌怡情”。这是一个很简单的小游戏：首先由计算机给出第一个整数；然后玩家下注赌第二个整数将会比第一个数大还是小；玩家下注 t 个筹码后，计算机给出第二个数。若玩家猜对了，则系统奖励玩家 t 个筹码；否则扣除玩家 t 个筹码。</p>
+<p>注意：玩家下注的筹码数不能超过自己帐户上拥有的筹码数。当玩家输光了全部筹码后，游戏就结束。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>常言道“小赌怡情”。这是一个很简单的小游戏：首先由计算机给出第一个整数；然后玩家下注赌第二个整数将会比第一个数大还是小；玩家下注 t 个筹码后，计算机给出第二个数。若玩家猜对了，则系统奖励玩家 t 个筹码；否则扣除玩家 t 个筹码。</p>
+<p>注意：玩家下注的筹码数不能超过自己帐户上拥有的筹码数。当玩家输光了全部筹码后，游戏就结束。</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入在第一行给出 2 个正整数 T 和 K（≤ 100），分别是系统在初始状态下赠送给玩家的筹码数、以及需要处理的游戏次数。随后 K 行，每行对应一次游戏，顺序给出 4 个数字：</p>
+<pre><code class="language-in">n1 b t n2
+</code></pre>
+<p>其中 <code>n1</code> 和 <code>n2</code> 是计算机先后给出的两个[0, 9]内的整数，保证两个数字不相等。<code>b</code> 为 0 表示玩家赌<code>小</code>，为 1 表示玩家赌<code>大</code>。<code>t</code> 表示玩家下注的筹码数，保证在整型范围内。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>对每一次游戏，根据下列情况对应输出（其中 <code>t</code> 是玩家下注量，<code>x</code> 是玩家当前持有的筹码量）：</p>
+<ul>
+<li>玩家赢，输出 <code>Win t! Total = x.</code>；</li>
+<li>玩家输，输出 <code>Lose t. Total = x.</code>；</li>
+<li>玩家下注超过持有的筹码量，输出 <code>Not enough tokens. Total = x.</code>；</li>
+<li>玩家输光后，输出 <code>Game Over.</code> 并结束程序。</li>
+</ul>
+</blockquote>
+<h3 id="输入样例1">输入样例1：</h3>
+<pre><code class="language-in">100 4
+8 0 100 2
+3 1 50 1
+5 1 200 6
+7 0 200 8
+</code></pre>
+<h3 id="输出样例1">输出样例1：</h3>
+<pre><code class="language-out">Win 100!  Total = 200.
+Lose 50.  Total = 150.
+Not enough tokens.  Total = 150.
+Not enough tokens.  Total = 150.
+</code></pre>
+<h3 id="输入样例2">输入样例2：</h3>
+<pre><code class="language-in">100 4
+8 0 100 2
+3 1 200 1
+5 1 200 6
+7 0 200 8
+</code></pre>
+<h3 id="输出样例2">输出样例2：</h3>
+<pre><code class="language-out">Win 100!  Total = 200.
+Lose 200.  Total = 0.
+Game Over.
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>题目比较容易：</p>
+<blockquote>
+<p>每次先比较当前筹码与是否能够下注，如果能够下注继续判断输赢情况</p>
+<p>如果本局输了之后筹码归零，则直接退出程序</p>
+</blockquote>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    int T,k;
+    cin &gt;&gt; T &gt;&gt; k;
+    for(int i=0;i&lt;k;i++){
+        int n1,b,t,n2;
+        scanf(&quot;%d %d %d %d&quot;,&amp;n1,&amp;b,&amp;t,&amp;n2);
+        if(T &lt; t) printf(&quot;Not enough tokens.  Total = %d.\n&quot;,T);
+        else{
+            if((n1 &lt; n2&amp;&amp;b==1)  || (n1 &gt; n2&amp;&amp;b==0)){
+                T += t;
+                printf(&quot;Win %d!  Total = %d.\n&quot;,t,T);
+            }
+            else{
+                T -= t;
+                printf(&quot;Lose %d.  Total = %d.\n&quot;,t,T);
+            }
+            if(T == 0){
+                printf(&quot;Game Over.&quot;);
+                break;
+            }
+        }
+    }
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[1070 结绳 (25分)]]></title>
         <id>https://dreammilk.now.sh/1070-jie-sheng-25-fen/</id>
@@ -733,79 +831,6 @@ int main() {
             printf(&quot;%d/%d&quot;,i,k);
         }
         i++;
-    }
-    return 0;
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1061 判断题 (15分)]]></title>
-        <id>https://dreammilk.now.sh/1061-pan-duan-ti-15-fen/</id>
-        <link href="https://dreammilk.now.sh/1061-pan-duan-ti-15-fen/">
-        </link>
-        <updated>2020-05-28T04:21:39.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>判断题的评判很简单，本题就要求你写个简单的程序帮助老师判题并统计学生们判断题的得分。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>判断题的评判很简单，本题就要求你写个简单的程序帮助老师判题并统计学生们判断题的得分。</p>
-</blockquote>
-<!-- more -->
-<h3 id="输入格式">输入格式：</h3>
-<blockquote>
-<p>输入在第一行给出两个不超过 100 的正整数 N 和 M，分别是学生人数和判断题数量。第二行给出 M 个不超过 5 的正整数，是每道题的满分值。第三行给出每道题对应的正确答案，0 代表“非”，1 代表“是”。随后 N 行，每行给出一个学生的解答。数字间均以空格分隔。</p>
-</blockquote>
-<h3 id="输出格式">输出格式：</h3>
-<blockquote>
-<p>按照输入的顺序输出每个学生的得分，每个分数占一行。</p>
-</blockquote>
-<h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">3 6
-2 1 3 3 4 5
-0 0 1 0 1 1
-0 1 1 0 0 1
-1 0 1 0 1 0
-1 1 0 0 1 1
-</code></pre>
-<h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">13
-11
-12
-</code></pre>
-<h3 id="思路">思路：</h3>
-<p>题目相比于<code>1058 选择题</code>而言，降低了难度：</p>
-<blockquote>
-<p>准备两个数组，一个存放每个题目的分数，另一个存放每个题目的答案</p>
-<p>然后循环学生的解答，答案正确的加分，之后输出当前学生的总分</p>
-</blockquote>
-<p>整体没有什么难点，基础题目</p>
-<h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include&lt;vector&gt;
-
-using namespace std;
-
-int main() {
-    int n,m;
-    cin &gt;&gt; n &gt;&gt; m;
-    vector&lt;int&gt; answer(m),score(m);
-    for(int i=0;i&lt;m;i++){
-        cin &gt;&gt; score[i];
-    }
-    for(int i=0;i&lt;m;i++){
-        cin &gt;&gt; answer[i];
-    }
-    for(int i=0;i&lt;n;i++){
-        int sum=0;
-        for(int j=0;j&lt;m;j++){
-            int option; cin &gt;&gt; option;
-            if(option == answer[j]) sum += score[j];
-        }
-        cout &lt;&lt; sum &lt;&lt; endl;
     }
     return 0;
 }

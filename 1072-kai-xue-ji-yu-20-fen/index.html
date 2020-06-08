@@ -5,36 +5,31 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="baidu-site-verification" content="ZGbOgNUIf1" />
-<title>1067 试密码 (20分) | Milk &#39;s Home</title>
+<title>1072 开学寄语 (20分) | Milk &#39;s Home</title>
 <meta name="referrer" content="never" />
 <link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
     <meta name="description" content="题目
 
-当你试图登录某个系统却忘了密码时，系统一般只会允许你尝试有限多次，当超出允许次数时，账号就会被锁死。本题就请你实现这个小功能。
+下图是上海某校的新学期开学寄语：天将降大任于斯人也，必先删其微博，卸其 QQ，封其电脑，夺其手机，收其 ipad，断其 wifi，使其百无聊赖，然后，净面、理发、整衣，然后思过、读书、锻炼、明智、开悟、精进。而后必成大器也！
 
-
-输入格式：
-
-输入在第一行给出一个密码（长度不超过 20 的、不包含空格、Tab、回车的非空字符串）..." />
+本题..." />
     <meta name="keywords" content="代码练习" />
     
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
     <script src="https://dreammilk.now.sh/media/js/prism.min.js"></script>
     
     
-    <link rel="prefetch" href="https://dreammilk.now.sh/1068-wan-lu-cong-zhong-yi-dian-hong-20-fen/">
     
-    
-    <link rel="prefetch" href="https://dreammilk.now.sh/1066-tu-xiang-guo-lu-15-fen/">
+    <link rel="prefetch" href="https://dreammilk.now.sh/1071-xiao-du-yi-qing-15-fen/">
     
 </head>
 
 <body>
     <!-- start: #wrapper -->
     <header id="header"
-        style="background-image:url(https://s1.ax1x.com/2020/05/27/tA9Y5V.jpg)">
+        style="background-image:url(https://s1.ax1x.com/2020/05/27/tA90KJ.jpg)">
         <div class="header-container">
   <h1 class="site-title"><a href="https://dreammilk.now.sh"><span>Milk &#39;s Home</span><span class="logo__cursor"></span></a></h1>
   <h2 class="site-description">welcome</h2>
@@ -93,90 +88,98 @@
                     <header>
                         <time class="date">
                             <i class="fa">
-                                <span class="datetime">5 天前</span>
+                                <span class="datetime">4 分钟前</span>
                             </i>
                         </time>
                     </header>
                     <h1 class="entry-title">
-                        1067 试密码 (20分)
+                        1072 开学寄语 (20分)
                     </h1>
                     <div class="post-content">
                         <div class="post-hentry">
                             <h3 id="题目">题目</h3>
 <blockquote>
-<p>当你试图登录某个系统却忘了密码时，系统一般只会允许你尝试有限多次，当超出允许次数时，账号就会被锁死。本题就请你实现这个小功能。</p>
+<p>下图是上海某校的新学期开学寄语：天将降大任于斯人也，必先删其微博，卸其 QQ，封其电脑，夺其手机，收其 ipad，断其 wifi，使其百无聊赖，然后，净面、理发、整衣，然后思过、读书、锻炼、明智、开悟、精进。而后必成大器也！</p>
+<figure data-type="image" tabindex="1"><img src="https://images.ptausercontent.com/3b1d9f4a-778b-4942-a9e2-836262f363aa.JPG" alt="jiyu.JPG" loading="lazy"></figure>
+<p>本题要求你写个程序帮助这所学校的老师检查所有学生的物品，以助其成大器。</p>
 </blockquote>
 <!-- more -->
 <h3 id="输入格式">输入格式：</h3>
 <blockquote>
-<p>输入在第一行给出一个密码（长度不超过 20 的、不包含空格、Tab、回车的非空字符串）和一个正整数 N（≤ 10），分别是正确的密码和系统允许尝试的次数。随后每行给出一个以回车结束的非空字符串，是用户尝试输入的密码。输入保证至少有一次尝试。当读到一行只有单个 # 字符时，输入结束，并且这一行不是用户的输入。</p>
+<p>输入第一行给出两个正整数 N（≤ 1000）和 M（≤ 6），分别是学生人数和需要被查缴的物品种类数。第二行给出 M 个需要被查缴的物品编号，其中编号为 4 位数字。随后 N 行，每行给出一位学生的姓名缩写（由 1-4 个大写英文字母组成）、个人物品数量 K（0 ≤ K ≤ 10）、以及 K 个物品的编号。</p>
 </blockquote>
 <h3 id="输出格式">输出格式：</h3>
 <blockquote>
-<p>对用户的每个输入，如果是正确的密码且尝试次数不超过 N，则在一行中输出 <code>Welcome in</code>，并结束程序；如果是错误的，则在一行中按格式输出 <code>Wrong password: 用户输入的错误密码</code>；当错误尝试达到 N 次时，再输出一行 <code>Account locked</code>，并结束程序。</p>
+<p>顺次检查每个学生携带的物品，如果有需要被查缴的物品存在，则按以下格式输出该生的信息和其需要被查缴的物品的信息（注意行末不得有多余空格）：</p>
+<pre><code class="language-in">姓名缩写: 物品编号1 物品编号2 ……
+</code></pre>
+<p>最后一行输出存在问题的学生的总人数和被查缴物品的总数。</p>
 </blockquote>
-<h3 id="输入样例1">输入样例1：</h3>
-<pre><code class="language-in">Correct%pw 3
-correct%pw
-Correct@PW
-whatisthepassword!
-Correct%pw
-#
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">4 2
+2333 6666
+CYLL 3 1234 2345 3456
+U 4 9966 6666 8888 6666
+GG 2 2333 7777
+JJ 3 0012 6666 2333
 </code></pre>
-<h3 id="输出样例1">输出样例1：</h3>
-<pre><code class="language-out">Wrong password: correct%pw
-Wrong password: Correct@PW
-Wrong password: whatisthepassword!
-Account locked
-</code></pre>
-<h3 id="输入样例2">输入样例2：</h3>
-<pre><code class="language-in">cool@gplt 3
-coolman@gplt
-coollady@gplt
-cool@gplt
-try again
-#
-</code></pre>
-<h3 id="输出样例2">输出样例2：</h3>
-<pre><code class="language-out">Wrong password: coolman@gplt
-Wrong password: coollady@gplt
-Welcome in
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">U: 6666 6666
+GG: 2333
+JJ: 6666 2333
+3 5
 </code></pre>
 <h3 id="思路">思路：</h3>
-<p>感觉题目相对比较简单：</p>
+<p>题目比较容易：</p>
 <blockquote>
-<p>循环输入的字符串，遇到<code>#</code>结束、超过错误次数结束或者输入正确后结束</p>
-<p>关于字符串可以直接通过<code>==</code>比较，每次输入错误时，计数加一</p>
+<p>将输入的违禁品编号使用<code>bool ban[10000]</code>进行存储，不属于违禁品的默认false</p>
+<p>循环遍历学生以及携带物品，使用flag判断学生是否携带违禁品，并利用stu统计违规学生，cnt统计违禁品数量</p>
+<p>flag还可以控制是否输出过名字，保证输出格式规范</p>
 </blockquote>
-<p>一个小坑记录：</p>
+<p>对于违禁品编号的存储：</p>
 <blockquote>
-<p>在使用<code>getline</code>函数时，需要注意前面是否存在回车符号，如果有，需要使用<code>getchar</code>函数吃掉回车</p>
-<p>在网上百度了一下，发现<code>scanf(&quot;\n&quot;)</code>与<code>getchar</code>函数在消除回车时的效果并不一样</p>
-<p><code>scanf(&quot;\n&quot;)</code>有时候消除回车时并不彻底，而<code>getchar</code>函数的表现更胜一筹</p>
+<p>一开始发现题目中说明违禁品数量不超过6个，于是决定选择使用map存储</p>
+<p>但是运行的时候发现，使用map存储的耗时要比数组慢很多，但是空间使用却没有太大的区别</p>
 </blockquote>
-<p>哪天有时间可以总结一下这些细枝末节🤓</p>
+<p>数组与map相比，还是数组香，因此在相同情况下还是选择使用数组会比较好</p>
 <h4 id="于是代码如下">于是代码如下：</h4>
 <pre><code class="language-cpp">#include&lt;iostream&gt;
 
 using namespace std;
 
 int main() {
-    string psd,input;
-    int n,cnt=0;
-    cin &gt;&gt; psd &gt;&gt; n;
-    getchar();
-    getline(cin,input);
-    while(input!=&quot;#&quot; &amp;&amp; cnt&lt;n){
-        if(input != psd){
-            cnt++;
-            cout &lt;&lt; &quot;Wrong password: &quot; &lt;&lt; input &lt;&lt; endl;
-        }else{
-            cout &lt;&lt; &quot;Welcome in&quot;;
-            break;
-        }
-        getline(cin,input);
+    int n,m;
+    scanf(&quot;%d%d&quot;,&amp;n,&amp;m);
+    bool ban[10000]={false};
+    for(int i=0;i&lt;m;i++){
+        int id;
+        scanf(&quot;%d&quot;,&amp;id);
+        ban[id]=true;
     }
-    if(cnt == n) cout &lt;&lt; &quot;Account locked&quot;;
+    int cnt=0,stu=0;
+    for(int i=0;i&lt;n;i++){
+        char name[10];
+        int num;
+        bool flag=true;
+        scanf(&quot;%s %d&quot;,&amp;name,&amp;num);
+        for(int j=0;j&lt;num;j++){
+            int id;
+            scanf(&quot;%d&quot;,&amp;id);
+            if(ban[id] &amp;&amp; flag){
+                printf(&quot;%s: %04d&quot;,name,id);
+                cnt++;
+                flag = false;
+            }else if(ban[id]){
+                printf(&quot; %04d&quot;,id);
+                cnt++;
+            }
+        }
+        if(!flag){
+            stu++;
+            printf(&quot;\n&quot;);
+        }
+    }
+    printf(&quot;%d %d\n&quot;,stu,cnt);
     return 0;
 }
 </code></pre>
@@ -189,10 +192,10 @@ int main() {
 
                 <div class="pager">
                     
-                    <a class="prev" href="https://dreammilk.now.sh/1068-wan-lu-cong-zhong-yi-dian-hong-20-fen/">1068 万绿丛中一点红 (20分)</a>
+                    <span class="prev">已是最新一篇</span>
                     
                     
-                    <a class="next" href="https://dreammilk.now.sh/1066-tu-xiang-guo-lu-15-fen/">1066 图像过滤 (15分)</a>
+                    <a class="next" href="https://dreammilk.now.sh/1071-xiao-du-yi-qing-15-fen/">1071 小赌怡情 (15分)</a>
                     
                     <div class="clear"></div>
                 </div>

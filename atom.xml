@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dreammilk.now.sh</id>
     <title>Milk &apos;s Home</title>
-    <updated>2020-06-07T04:18:37.729Z</updated>
+    <updated>2020-06-08T03:48:55.116Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dreammilk.now.sh"/>
     <link rel="self" href="https://dreammilk.now.sh/atom.xml"/>
@@ -10,6 +10,107 @@
     <logo>https://dreammilk.now.sh/images/avatar.png</logo>
     <icon>https://dreammilk.now.sh/favicon.ico</icon>
     <rights>All rights reserved 2020, Milk &apos;s Home</rights>
+    <entry>
+        <title type="html"><![CDATA[1072 开学寄语 (20分)]]></title>
+        <id>https://dreammilk.now.sh/1072-kai-xue-ji-yu-20-fen/</id>
+        <link href="https://dreammilk.now.sh/1072-kai-xue-ji-yu-20-fen/">
+        </link>
+        <updated>2020-06-08T03:44:57.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>下图是上海某校的新学期开学寄语：天将降大任于斯人也，必先删其微博，卸其 QQ，封其电脑，夺其手机，收其 ipad，断其 wifi，使其百无聊赖，然后，净面、理发、整衣，然后思过、读书、锻炼、明智、开悟、精进。而后必成大器也！</p>
+<figure data-type="image" tabindex="1"><img src="https://images.ptausercontent.com/3b1d9f4a-778b-4942-a9e2-836262f363aa.JPG" alt="jiyu.JPG" loading="lazy"></figure>
+<p>本题要求你写个程序帮助这所学校的老师检查所有学生的物品，以助其成大器。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>下图是上海某校的新学期开学寄语：天将降大任于斯人也，必先删其微博，卸其 QQ，封其电脑，夺其手机，收其 ipad，断其 wifi，使其百无聊赖，然后，净面、理发、整衣，然后思过、读书、锻炼、明智、开悟、精进。而后必成大器也！</p>
+<figure data-type="image" tabindex="1"><img src="https://images.ptausercontent.com/3b1d9f4a-778b-4942-a9e2-836262f363aa.JPG" alt="jiyu.JPG" loading="lazy"></figure>
+<p>本题要求你写个程序帮助这所学校的老师检查所有学生的物品，以助其成大器。</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入第一行给出两个正整数 N（≤ 1000）和 M（≤ 6），分别是学生人数和需要被查缴的物品种类数。第二行给出 M 个需要被查缴的物品编号，其中编号为 4 位数字。随后 N 行，每行给出一位学生的姓名缩写（由 1-4 个大写英文字母组成）、个人物品数量 K（0 ≤ K ≤ 10）、以及 K 个物品的编号。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>顺次检查每个学生携带的物品，如果有需要被查缴的物品存在，则按以下格式输出该生的信息和其需要被查缴的物品的信息（注意行末不得有多余空格）：</p>
+<pre><code class="language-in">姓名缩写: 物品编号1 物品编号2 ……
+</code></pre>
+<p>最后一行输出存在问题的学生的总人数和被查缴物品的总数。</p>
+</blockquote>
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">4 2
+2333 6666
+CYLL 3 1234 2345 3456
+U 4 9966 6666 8888 6666
+GG 2 2333 7777
+JJ 3 0012 6666 2333
+</code></pre>
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">U: 6666 6666
+GG: 2333
+JJ: 6666 2333
+3 5
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>题目比较容易：</p>
+<blockquote>
+<p>将输入的违禁品编号使用<code>bool ban[10000]</code>进行存储，不属于违禁品的默认false</p>
+<p>循环遍历学生以及携带物品，使用flag判断学生是否携带违禁品，并利用stu统计违规学生，cnt统计违禁品数量</p>
+<p>flag还可以控制是否输出过名字，保证输出格式规范</p>
+</blockquote>
+<p>对于违禁品编号的存储：</p>
+<blockquote>
+<p>一开始发现题目中说明违禁品数量不超过6个，于是决定选择使用map存储</p>
+<p>但是运行的时候发现，使用map存储的耗时要比数组慢很多，但是空间使用却没有太大的区别</p>
+</blockquote>
+<p>数组与map相比，还是数组香，因此在相同情况下还是选择使用数组会比较好</p>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    int n,m;
+    scanf(&quot;%d%d&quot;,&amp;n,&amp;m);
+    bool ban[10000]={false};
+    for(int i=0;i&lt;m;i++){
+        int id;
+        scanf(&quot;%d&quot;,&amp;id);
+        ban[id]=true;
+    }
+    int cnt=0,stu=0;
+    for(int i=0;i&lt;n;i++){
+        char name[10];
+        int num;
+        bool flag=true;
+        scanf(&quot;%s %d&quot;,&amp;name,&amp;num);
+        for(int j=0;j&lt;num;j++){
+            int id;
+            scanf(&quot;%d&quot;,&amp;id);
+            if(ban[id] &amp;&amp; flag){
+                printf(&quot;%s: %04d&quot;,name,id);
+                cnt++;
+                flag = false;
+            }else if(ban[id]){
+                printf(&quot; %04d&quot;,id);
+                cnt++;
+            }
+        }
+        if(!flag){
+            stu++;
+            printf(&quot;\n&quot;);
+        }
+    }
+    printf(&quot;%d %d\n&quot;,stu,cnt);
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[1071 小赌怡情 (15分)]]></title>
         <id>https://dreammilk.now.sh/1071-xiao-du-yi-qing-15-fen/</id>
@@ -761,77 +862,6 @@ int main() {
         if(sqrt(a*a+b*b) &gt; max_value) max_value=sqrt(a*a+b*b);
     }
     printf(&quot;%.2f&quot;, max_value);
-    return 0;
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1062 最简分数 (20分)]]></title>
-        <id>https://dreammilk.now.sh/1062-zui-jian-fen-shu-20-fen/</id>
-        <link href="https://dreammilk.now.sh/1062-zui-jian-fen-shu-20-fen/">
-        </link>
-        <updated>2020-05-29T03:20:26.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>一个分数一般写成两个整数相除的形式：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi><mi mathvariant="normal">/</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">N/M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord">/</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span></span></span></span>，其中 <em>M</em> 不为0。最简分数是指分子和分母没有公约数的分数表示形式。</p>
-<p>现给定两个不相等的正分数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>N</mi><mn>1</mn></msub><mi mathvariant="normal">/</mi><msub><mi>M</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">N_1/M_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>N</mi><mn>2</mn></msub><mi mathvariant="normal">/</mi><msub><mi>M</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">N_2/M_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，要求你按从小到大的顺序列出它们之间分母为 <em>K</em> 的最简分数。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>一个分数一般写成两个整数相除的形式：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi><mi mathvariant="normal">/</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">N/M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord">/</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span></span></span></span>，其中 <em>M</em> 不为0。最简分数是指分子和分母没有公约数的分数表示形式。</p>
-<p>现给定两个不相等的正分数 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>N</mi><mn>1</mn></msub><mi mathvariant="normal">/</mi><msub><mi>M</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">N_1/M_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>N</mi><mn>2</mn></msub><mi mathvariant="normal">/</mi><msub><mi>M</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">N_2/M_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，要求你按从小到大的顺序列出它们之间分母为 <em>K</em> 的最简分数。</p>
-</blockquote>
-<!-- more -->
-<h3 id="输入格式">输入格式：</h3>
-<blockquote>
-<p>输入在一行中按 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi><mi mathvariant="normal">/</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">N/M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord">/</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span></span></span></span> 的格式给出两个正分数，随后是一个正整数分母 <em>K</em>，其间以空格分隔。题目保证给出的所有整数都不超过 1000。</p>
-</blockquote>
-<h3 id="输出格式">输出格式：</h3>
-<blockquote>
-<p>在一行中按 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi><mi mathvariant="normal">/</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">N/M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord">/</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span></span></span></span> 的格式列出两个给定分数之间分母为 <em>K</em> 的所有最简分数，按从小到大的顺序，其间以 1 个空格分隔。行首尾不得有多余空格。题目保证至少有 1 个输出。</p>
-</blockquote>
-<h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">7/18 13/20 12
-</code></pre>
-<h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">5/12 7/12
-</code></pre>
-<h3 id="思路">思路：</h3>
-<p>题目比较容易：</p>
-<blockquote>
-<p>整体是统计在 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>N</mi><mn>1</mn></msub><mi mathvariant="normal">/</mi><msub><mi>M</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">N_1/M_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>N</mi><mn>2</mn></msub><mi mathvariant="normal">/</mi><msub><mi>M</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">N_2/M_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>之间的A/K~B/K</p>
-<p>并对每个n/K进行公约数检验，如果不存在公约数（公约数为1）</p>
-<p>则符合最简分数要求</p>
-</blockquote>
-<p>需要注意的地方：</p>
-<blockquote>
-<p>对于输入的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>N</mi><mn>1</mn></msub><mi mathvariant="normal">/</mi><msub><mi>M</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">N_1/M_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>N</mi><mn>2</mn></msub><mi mathvariant="normal">/</mi><msub><mi>M</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">N_2/M_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>需要判断顺序是否正确，否则进行交换</p>
-<p>分数的范围并不包括 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>N</mi><mn>1</mn></msub><mi mathvariant="normal">/</mi><msub><mi>M</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">N_1/M_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 和<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>N</mi><mn>2</mn></msub><mi mathvariant="normal">/</mi><msub><mi>M</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">N_2/M_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>两个数字</p>
-</blockquote>
-<h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-
-using namespace std;
-
-int gcd(int a,int b){
-    return a%b==0?b:gcd(b,a%b);
-}
-
-int main() {
-    int n1,m1,n2,m2,k;
-    scanf(&quot;%d/%d %d/%d %d&quot;,&amp;n1,&amp;m1,&amp;n2,&amp;m2,&amp;k);
-    if(n1*m2&gt;n2*m1) {swap(n1,n2);swap(m1,m2);}
-    int i=1;bool flag=true;
-    while(i*m1&lt;=n1*k) i++;
-    while(i*m2&lt;k*n2){
-        if(gcd(i,k)==1){
-            !flag?printf(&quot; &quot;):flag=false;
-            printf(&quot;%d/%d&quot;,i,k);
-        }
-        i++;
-    }
     return 0;
 }
 </code></pre>

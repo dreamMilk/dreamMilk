@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dreammilk.now.sh</id>
     <title>Milk &apos;s Home</title>
-    <updated>2020-06-08T03:48:55.116Z</updated>
+    <updated>2020-06-10T02:46:51.272Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dreammilk.now.sh"/>
     <link rel="self" href="https://dreammilk.now.sh/atom.xml"/>
@@ -10,6 +10,226 @@
     <logo>https://dreammilk.now.sh/images/avatar.png</logo>
     <icon>https://dreammilk.now.sh/favicon.ico</icon>
     <rights>All rights reserved 2020, Milk &apos;s Home</rights>
+    <entry>
+        <title type="html"><![CDATA[1074 宇宙无敌加法器 (20分)]]></title>
+        <id>https://dreammilk.now.sh/1074-yu-zhou-wu-di-jia-fa-qi-20-fen/</id>
+        <link href="https://dreammilk.now.sh/1074-yu-zhou-wu-di-jia-fa-qi-20-fen/">
+        </link>
+        <updated>2020-06-10T04:44:56.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>地球人习惯使用十进制数，并且默认一个数字的每一位都是十进制的。而在 PAT 星人开挂的世界里，每个数字的每一位都是不同进制的，这种神奇的数字称为“PAT数”。每个 PAT 星人都必须熟记各位数字的进制表，例如“……0527”就表示最低位是 7 进制数、第 2 位是 2 进制数、第 3 位是 5 进制数、第 4 位是 10 进制数，等等。每一位的进制 d 或者是 0（表示十进制）、或者是 [2，9] 区间内的整数。理论上这个进制表应该包含无穷多位数字，但从实际应用出发，PAT 星人通常只需要记住前 20 位就够用了，以后各位默认为 10 进制。</p>
+<p>在这样的数字系统中，即使是简单的加法运算也变得不简单。例如对应进制表“0527”，该如何计算“6203 + 415”呢？我们得首先计算最低位：3 + 5 = 8；因为最低位是 7 进制的，所以我们得到 1 和 1 个进位。第 2 位是：0 + 1 + 1（进位）= 2；因为此位是 2 进制的，所以我们得到 0 和 1 个进位。第 3 位是：2 + 4 + 1（进位）= 7；因为此位是 5 进制的，所以我们得到 2 和 1 个进位。第 4 位是：6 + 1（进位）= 7；因为此位是 10 进制的，所以我们就得到 7。最后我们得到：6203 + 415 = 7201。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>地球人习惯使用十进制数，并且默认一个数字的每一位都是十进制的。而在 PAT 星人开挂的世界里，每个数字的每一位都是不同进制的，这种神奇的数字称为“PAT数”。每个 PAT 星人都必须熟记各位数字的进制表，例如“……0527”就表示最低位是 7 进制数、第 2 位是 2 进制数、第 3 位是 5 进制数、第 4 位是 10 进制数，等等。每一位的进制 d 或者是 0（表示十进制）、或者是 [2，9] 区间内的整数。理论上这个进制表应该包含无穷多位数字，但从实际应用出发，PAT 星人通常只需要记住前 20 位就够用了，以后各位默认为 10 进制。</p>
+<p>在这样的数字系统中，即使是简单的加法运算也变得不简单。例如对应进制表“0527”，该如何计算“6203 + 415”呢？我们得首先计算最低位：3 + 5 = 8；因为最低位是 7 进制的，所以我们得到 1 和 1 个进位。第 2 位是：0 + 1 + 1（进位）= 2；因为此位是 2 进制的，所以我们得到 0 和 1 个进位。第 3 位是：2 + 4 + 1（进位）= 7；因为此位是 5 进制的，所以我们得到 2 和 1 个进位。第 4 位是：6 + 1（进位）= 7；因为此位是 10 进制的，所以我们就得到 7。最后我们得到：6203 + 415 = 7201。</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入首先在第一行给出一个 N 位的进制表（0 &lt; N ≤ 20），以回车结束。 随后两行，每行给出一个不超过 N 位的非负的 PAT 数。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>在一行中输出两个 PAT 数之和。</p>
+</blockquote>
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">30527
+06203
+415
+</code></pre>
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">7201
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>题目没有什么比较绕的地方：</p>
+<blockquote>
+<p>先将数字都与进制位数对齐，不足的前面补零</p>
+<p>然后像题干中的运算过程一样，统计当前位的数字以及是否进位</p>
+<p>最后得出运算结果输出即可</p>
+</blockquote>
+<p>一些需要注意的地方：</p>
+<blockquote>
+<p>进制中的0是10，使用时需要稍微加工一下</p>
+<p>对于首位相加进位，需要记得在结果前面添加<code>1</code>，（PS：两个数相加进位不可能是2）</p>
+<p>结果为全零时，需要输出0</p>
+</blockquote>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include&lt;iostream&gt;
+#include&lt;string&gt;
+#include&lt;algorithm&gt;
+
+using namespace std;
+
+int main() {
+    string jz,n,m;
+    cin &gt;&gt; jz &gt;&gt; n &gt;&gt; m;
+    m.insert(0,jz.length()-m.length(),'0');
+    n.insert(0,jz.length()-n.length(),'0');
+    reverse(n.begin(),n.end());
+    reverse(m.begin(),m.end());
+    reverse(jz.begin(),jz.end());
+    int up=0;string str;
+    for(int i=0;i&lt;jz.length();i++){
+        int j = jz[i]=='0'?10:jz[i]-'0';
+        int num = (n[i]-'0'+m[i]-'0'+up)%j;
+        up = (n[i]-'0'+m[i]-'0'+up)/j;
+        str.insert(0,1,num+'0');
+    }
+    if(up!=0) str = '1'+str;
+    bool flag = false;
+    for(int i=0;i&lt;str.length();i++){
+        if(str[i]!='0' || flag){
+            flag = true;
+            cout &lt;&lt; str[i];
+        }
+    }
+    if(!flag) printf(&quot;0&quot;);
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[1073 多选题常见计分法 (20分)]]></title>
+        <id>https://dreammilk.now.sh/1073-duo-xuan-ti-chang-jian-ji-fen-fa-20-fen/</id>
+        <link href="https://dreammilk.now.sh/1073-duo-xuan-ti-chang-jian-ji-fen-fa-20-fen/">
+        </link>
+        <updated>2020-06-09T04:28:22.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>批改多选题是比较麻烦的事情，有很多不同的计分方法。有一种最常见的计分方法是：如果考生选择了部分正确选项，并且没有选择任何错误选项，则得到 50% 分数；如果考生选择了任何一个错误的选项，则不能得分。本题就请你写个程序帮助老师批改多选题，并且指出哪道题的哪个选项错的人最多。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>批改多选题是比较麻烦的事情，有很多不同的计分方法。有一种最常见的计分方法是：如果考生选择了部分正确选项，并且没有选择任何错误选项，则得到 50% 分数；如果考生选择了任何一个错误的选项，则不能得分。本题就请你写个程序帮助老师批改多选题，并且指出哪道题的哪个选项错的人最多。</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入在第一行给出两个正整数 N（≤1000）和 M（≤100），分别是学生人数和多选题的个数。随后 M 行，每行顺次给出一道题的满分值（不超过 5 的正整数）、选项个数（不少于 2 且不超过 5 的正整数）、正确选项个数（不超过选项个数的正整数）、所有正确选项。注意每题的选项从小写英文字母 a 开始顺次排列。各项间以 1 个空格分隔。最后 N 行，每行给出一个学生的答题情况，其每题答案格式为 <code>(选中的选项个数 选项1 ……)</code>，按题目顺序给出。注意：题目保证学生的答题情况是合法的，即不存在选中的选项数超过实际选项数的情况。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>按照输入的顺序给出每个学生的得分，每个分数占一行，输出小数点后 1 位。最后输出错得最多的题目选项的信息，格式为：<code>错误次数 题目编号（题目按照输入的顺序从1开始编号）-选项号</code>。如果有并列，则每行一个选项，按题目编号递增顺序输出；再并列则按选项号递增顺序输出。行首尾不得有多余空格。如果所有题目都没有人错，则在最后一行输出 <code>Too simple</code>。</p>
+</blockquote>
+<h3 id="输入样例1">输入样例1：</h3>
+<pre><code class="language-in">3 4 
+3 4 2 a c
+2 5 1 b
+5 3 2 b c
+1 5 4 a b d e
+(2 a c) (3 b d e) (2 a c) (3 a b e)
+(2 a c) (1 b) (2 a b) (4 a b d e)
+(2 b d) (1 e) (1 c) (4 a b c d)
+</code></pre>
+<h3 id="输出样例1">输出样例1：</h3>
+<pre><code class="language-out">3.5
+6.0
+2.5
+2 2-e
+2 3-a
+2 3-b
+</code></pre>
+<h3 id="输入样例2">输入样例2：</h3>
+<pre><code class="language-in">2 2 
+3 4 2 a c
+2 5 1 b
+(2 a c) (1 b)
+(2 a c) (1 b)
+</code></pre>
+<h3 id="输出样例2">输出样例2：</h3>
+<pre><code class="language-out">5.0
+5.0
+Too simple
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>题目是<code>1058 选择题</code>的升级版，不仅需要判断对错，还需要找出什么选项出现错误：</p>
+<blockquote>
+<p>先说明一下三种运算：异或、与、或</p>
+<p>异或^运算：当两个数不同时取1，相同时取0</p>
+<p>与&amp;运算：当两个数全1时取1，其余情况取0</p>
+<p>或 | 运算：只有两个数全0时取0，其余情况取1</p>
+<p>本题关于判断题目选项错误以及错误点便可以采取以上运算</p>
+<p>先采用异或运算，通过是否全0判断错误，并标出错误选项</p>
+<p>再通过与运算，通过和正确选项对比，判断是否存在多选的情况</p>
+<p>然后通过或运算，判断错误选项分别是哪几个</p>
+<p>举个栗子：选项答案为BC（01100），学生答案为AC（10100）</p>
+<p>异或（11000）存在错误---&gt;与（00100）存在多选---&gt;或运算判断存在A（错选）B（漏选）错误</p>
+<p>具体细节观察代码，自行推演计算</p>
+</blockquote>
+<p>存储变量的含义：</p>
+<blockquote>
+<p><code>fullscre</code>存储每个题目的分值；<code>trueopt</code>存储每个题目的选项和</p>
+<p><code>cnt</code>存储每个题目的每个选项的错误次数；<code>opt</code>存储每个学生的每个题目的选项和</p>
+</blockquote>
+<p>整个题目的重难点主要在于判断哪些选项错误，其余的细节基本与<a href="https://dreammilk.now.sh/1058-xuan-ze-ti-20-fen/"><code>1058 选择题</code></a>类似</p>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;cmath&gt;
+using namespace std;
+int main() {
+    int n, m, optnum, truenum, temp, maxcnt = 0;
+    int hash[] = {1, 2, 4, 8, 16}, opt[1010][110] = {0};
+    char c;
+    scanf(&quot;%d %d&quot;, &amp;n, &amp;m);
+    vector&lt;int&gt; fullscore(m), trueopt(m);
+    vector&lt;vector&lt;int&gt;&gt; cnt(m, vector&lt;int&gt;(5));
+    for (int i = 0; i &lt; m; i++) {
+        scanf(&quot;%d %d %d&quot;, &amp;fullscore[i], &amp;optnum, &amp;truenum);
+        for (int j = 0; j &lt; truenum; j++) {
+            scanf(&quot; %c&quot;, &amp;c);
+            trueopt[i] += hash[c-'a'];
+        }
+    }
+    for (int i = 0; i &lt; n; i++) {
+        double grade = 0;
+        for (int j = 0; j &lt; m; j++) {
+            getchar();
+            scanf(&quot;(%d&quot;, &amp;temp);
+            for (int k = 0; k &lt; temp; k++) {
+                scanf(&quot; %c)&quot;, &amp;c);
+                opt[i][j] += hash[c-'a'];
+            }
+            int el = opt[i][j] ^ trueopt[j];
+            if (el) {
+                if ((opt[i][j] | trueopt[j]) == trueopt[j]) {
+                    grade += fullscore[j] * 1.0 / 2;
+                }
+                if (el) {
+                    for (int k = 0; k &lt; 5; k++)
+                        if (el &amp; hash[k]) cnt[j][k]++;
+                }
+            } else {
+                grade += fullscore[j];
+            }
+        }
+        printf(&quot;%.1f\n&quot;, grade);
+    }
+    for (int i = 0; i &lt; m; i++)
+        for (int j = 0; j &lt; 5; j++)
+            maxcnt = maxcnt &gt; cnt[i][j] ? maxcnt : cnt[i][j];
+
+    if (maxcnt == 0) {
+        printf(&quot;Too simple\n&quot;);
+    } else {
+        for (int i = 0; i &lt; m; i++) {
+            for (int j = 0; j &lt; cnt[i].size(); j++) {
+                if (maxcnt == cnt[i][j])
+                    printf(&quot;%d %d-%c\n&quot;, maxcnt, i+1, 'a'+j);
+            }
+        }
+    }
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[1072 开学寄语 (20分)]]></title>
         <id>https://dreammilk.now.sh/1072-kai-xue-ji-yu-20-fen/</id>
@@ -731,137 +951,6 @@ int main() {
         if(it==single.begin()) printf(&quot;%05d&quot;,*it);
         else printf(&quot; %05d&quot;,*it);
     }
-    return 0;
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1064 朋友数 (20分)]]></title>
-        <id>https://dreammilk.now.sh/1064-peng-you-shu-20-fen/</id>
-        <link href="https://dreammilk.now.sh/1064-peng-you-shu-20-fen/">
-        </link>
-        <updated>2020-05-31T04:11:29.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>如果两个整数各位数字的和是一样的，则被称为是“朋友数”，而那个公共的和就是它们的“朋友证号”。例如 123 和 51 就是朋友数，因为 1+2+3 = 5+1 = 6，而 6 就是它们的朋友证号。给定一些整数，要求你统计一下它们中有多少个不同的朋友证号。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>如果两个整数各位数字的和是一样的，则被称为是“朋友数”，而那个公共的和就是它们的“朋友证号”。例如 123 和 51 就是朋友数，因为 1+2+3 = 5+1 = 6，而 6 就是它们的朋友证号。给定一些整数，要求你统计一下它们中有多少个不同的朋友证号。</p>
-</blockquote>
-<!-- more -->
-<h3 id="输入格式">输入格式：</h3>
-<blockquote>
-<p>输入第一行给出正整数 N。随后一行给出 N 个正整数，数字间以空格分隔。题目保证所有数字小于 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">10^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span>。</p>
-</blockquote>
-<h3 id="输出格式">输出格式：</h3>
-<blockquote>
-<p>首先第一行输出给定数字中不同的朋友证号的个数；随后一行按递增顺序输出这些朋友证号，数字间隔一个空格，且行末不得有多余空格。</p>
-</blockquote>
-<h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">8
-123 899 51 998 27 33 36 12
-</code></pre>
-<h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">4
-3 6 9 26
-</code></pre>
-<h3 id="思路">思路：</h3>
-<p>题目主要是关于朋友数的个数：</p>
-<blockquote>
-<p>只要能够想起set结构的特性，本题基本就迎刃而解了</p>
-<p>遍历每一个数，将该数的朋友数填入set数组中</p>
-<p>最后输出set结构的大小与元素即可</p>
-</blockquote>
-<p>set结构的元素无重复特性在解题需要去重时可以考虑一下😸</p>
-<h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;set&gt;
-
-using namespace std;
-
-int main() {
-    int n;
-    cin &gt;&gt; n;
-    set&lt;int&gt; s;
-    for(int i=0;i&lt;n;i++){
-        int num,sum=0;
-        cin &gt;&gt; num;
-        while(num!=0){
-            sum += num%10;
-            num /= 10;
-        }
-        s.insert(sum);
-    }
-    cout &lt;&lt; s.size() &lt;&lt; endl;
-    for(auto it=s.begin();it!=s.end();it++){
-        if(it==s.begin()) cout &lt;&lt; *it;
-        else cout &lt;&lt; ' ' &lt;&lt; *it;
-    }
-    return 0;
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1063 计算谱半径 (20分)]]></title>
-        <id>https://dreammilk.now.sh/1063-ji-suan-pu-ban-jing-20-fen/</id>
-        <link href="https://dreammilk.now.sh/1063-ji-suan-pu-ban-jing-20-fen/">
-        </link>
-        <updated>2020-05-30T04:25:56.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>在数学中，矩阵的“谱半径”是指其特征值的模集合的上确界。换言之，对于给定的 <em>n</em> 个复数空间的特征值 { <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>b</mi><mn>1</mn></msub><mi>i</mi></mrow><annotation encoding="application/x-tex">a_1+b_1i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault">i</span></span></span></span>,⋯,<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>+</mo><msub><mi>b</mi><mi>n</mi></msub><mi>i</mi></mrow><annotation encoding="application/x-tex">a_n+b_ni</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault">i</span></span></span></span> }，它们的模为实部与虚部的平方和的开方，而“谱半径”就是最大模。</p>
-<p>现在给定一些复数空间的特征值，请你计算并输出这些特征值的谱半径。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>在数学中，矩阵的“谱半径”是指其特征值的模集合的上确界。换言之，对于给定的 <em>n</em> 个复数空间的特征值 { <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><msub><mi>b</mi><mn>1</mn></msub><mi>i</mi></mrow><annotation encoding="application/x-tex">a_1+b_1i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault">i</span></span></span></span>,⋯,<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>+</mo><msub><mi>b</mi><mi>n</mi></msub><mi>i</mi></mrow><annotation encoding="application/x-tex">a_n+b_ni</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.84444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">b</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault">i</span></span></span></span> }，它们的模为实部与虚部的平方和的开方，而“谱半径”就是最大模。</p>
-<p>现在给定一些复数空间的特征值，请你计算并输出这些特征值的谱半径。</p>
-</blockquote>
-<!-- more -->
-<h3 id="输入格式">输入格式：</h3>
-<blockquote>
-<p>输入第一行给出正整数 N（≤ 10 000）是输入的特征值的个数。随后 N 行，每行给出 1 个特征值的实部和虚部，其间以空格分隔。注意：题目保证实部和虚部均为绝对值不超过 1000 的整数。</p>
-</blockquote>
-<h3 id="输出格式">输出格式：</h3>
-<blockquote>
-<p>在一行中输出谱半径，四舍五入保留小数点后 2 位。</p>
-</blockquote>
-<h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">5
-0 1
-2 0
--1 0
-3 3
-0 -3
-</code></pre>
-<h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">4.24
-</code></pre>
-<h3 id="思路">思路：</h3>
-<p>题目描述的比较高大上，实际比较简单：</p>
-<blockquote>
-<p>主要内容是在每行输入的两个数平方和的开方中寻找最大值</p>
-</blockquote>
-<h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;cmath&gt;
-
-using namespace std;
-
-int main() {
-    int n;float max_value=0;
-    cin &gt;&gt; n;
-    for(int i=0;i&lt;n;i++){
-        float a,b;
-        cin &gt;&gt; a &gt;&gt; b;
-        if(sqrt(a*a+b*b) &gt; max_value) max_value=sqrt(a*a+b*b);
-    }
-    printf(&quot;%.2f&quot;, max_value);
     return 0;
 }
 </code></pre>

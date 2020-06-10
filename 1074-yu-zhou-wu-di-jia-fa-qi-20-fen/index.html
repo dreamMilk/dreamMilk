@@ -5,31 +5,29 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="baidu-site-verification" content="ZGbOgNUIf1" />
-<title>1050 螺旋矩阵 (25分) | Milk &#39;s Home</title>
+<title>1074 宇宙无敌加法器 (20分) | Milk &#39;s Home</title>
 <meta name="referrer" content="never" />
 <link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
     <meta name="description" content="题目
 
-本题要求将给定的 N 个正整数按非递增的顺序，填入“螺旋矩阵”。所谓“螺旋矩阵”，是指从左上角第 1 个格子开始，按顺时针螺旋方向填充。要求矩阵的规模为 m 行 n 列，满足条件：m×n 等于 N；m≥n；且 m−n 取所有可能值中..." />
+地球人习惯使用十进制数，并且默认一个数字的每一位都是十进制的。而在 PAT 星人开挂的世界里，每个数字的每一位都是不同进制的，这种神奇的数字称为“PAT数”。每个 PAT 星人都必须熟记各位数字的进制表，例如“……0527”就表示最..." />
     <meta name="keywords" content="代码练习" />
     
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
     <script src="https://dreammilk.now.sh/media/js/prism.min.js"></script>
     
     
-    <link rel="prefetch" href="https://dreammilk.now.sh/1051-fu-shu-cheng-fa-15-fen/">
     
-    
-    <link rel="prefetch" href="https://dreammilk.now.sh/1049-shu-lie-de-pian-duan-he-20-fen/">
+    <link rel="prefetch" href="https://dreammilk.now.sh/1073-duo-xuan-ti-chang-jian-ji-fen-fa-20-fen/">
     
 </head>
 
 <body>
     <!-- start: #wrapper -->
     <header id="header"
-        style="background-image:url(https://s1.ax1x.com/2020/05/13/YaOVVU.jpg)">
+        style="background-image:url(https://s1.ax1x.com/2020/05/27/tA9DbR.png)">
         <div class="header-container">
   <h1 class="site-title"><a href="https://dreammilk.now.sh"><span>Milk &#39;s Home</span><span class="logo__cursor"></span></a></h1>
   <h2 class="site-description">welcome</h2>
@@ -88,94 +86,81 @@
                     <header>
                         <time class="date">
                             <i class="fa">
-                                <span class="datetime">24 天前</span>
+                                <span class="datetime">2 小时内</span>
                             </i>
                         </time>
                     </header>
                     <h1 class="entry-title">
-                        1050 螺旋矩阵 (25分)
+                        1074 宇宙无敌加法器 (20分)
                     </h1>
                     <div class="post-content">
                         <div class="post-hentry">
                             <h3 id="题目">题目</h3>
 <blockquote>
-<p>本题要求将给定的 <em>N</em> 个正整数按非递增的顺序，填入“螺旋矩阵”。所谓“螺旋矩阵”，是指从左上角第 1 个格子开始，按顺时针螺旋方向填充。要求矩阵的规模为 <em>m</em> 行 <em>n</em> 列，满足条件：<em>m</em>×<em>n</em> 等于 <em>N</em>；<em>m</em>≥<em>n</em>；且 <em>m</em>−<em>n</em> 取所有可能值中的最小值。</p>
+<p>地球人习惯使用十进制数，并且默认一个数字的每一位都是十进制的。而在 PAT 星人开挂的世界里，每个数字的每一位都是不同进制的，这种神奇的数字称为“PAT数”。每个 PAT 星人都必须熟记各位数字的进制表，例如“……0527”就表示最低位是 7 进制数、第 2 位是 2 进制数、第 3 位是 5 进制数、第 4 位是 10 进制数，等等。每一位的进制 d 或者是 0（表示十进制）、或者是 [2，9] 区间内的整数。理论上这个进制表应该包含无穷多位数字，但从实际应用出发，PAT 星人通常只需要记住前 20 位就够用了，以后各位默认为 10 进制。</p>
+<p>在这样的数字系统中，即使是简单的加法运算也变得不简单。例如对应进制表“0527”，该如何计算“6203 + 415”呢？我们得首先计算最低位：3 + 5 = 8；因为最低位是 7 进制的，所以我们得到 1 和 1 个进位。第 2 位是：0 + 1 + 1（进位）= 2；因为此位是 2 进制的，所以我们得到 0 和 1 个进位。第 3 位是：2 + 4 + 1（进位）= 7；因为此位是 5 进制的，所以我们得到 2 和 1 个进位。第 4 位是：6 + 1（进位）= 7；因为此位是 10 进制的，所以我们就得到 7。最后我们得到：6203 + 415 = 7201。</p>
 </blockquote>
 <!-- more -->
 <h3 id="输入格式">输入格式：</h3>
 <blockquote>
-<p>输入在第 1 行中给出一个正整数 <em>N</em>，第 2 行给出 <em>N</em> 个待填充的正整数。所有数字不超过 104，相邻数字以空格分隔。</p>
+<p>输入首先在第一行给出一个 N 位的进制表（0 &lt; N ≤ 20），以回车结束。 随后两行，每行给出一个不超过 N 位的非负的 PAT 数。</p>
 </blockquote>
 <h3 id="输出格式">输出格式：</h3>
 <blockquote>
-<p>输出螺旋矩阵。每行 <em>n</em> 个数字，共 <em>m</em> 行。相邻数字以 1 个空格分隔，行末不得有多余空格。</p>
+<p>在一行中输出两个 PAT 数之和。</p>
 </blockquote>
 <h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">12
-37 76 20 98 76 42 53 95 60 81 58 93
+<pre><code class="language-in">30527
+06203
+415
 </code></pre>
 <h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">98 95 93
-42 37 81
-53 20 76
-58 60 76
+<pre><code class="language-out">7201
 </code></pre>
 <h3 id="思路">思路：</h3>
-<p>首先整理一下题目的思路：</p>
+<p>题目没有什么比较绕的地方：</p>
 <blockquote>
-<p>先从<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msqrt><mi>N</mi></msqrt></mrow><annotation encoding="application/x-tex">\sqrt{N}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.11333499999999996em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9266650000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span><span style="top:-2.886665em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
--10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
--50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
-35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
--221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
-s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
-s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.11333499999999996em;"><span></span></span></span></span></span></span></span></span>开始往前寻找到列数n,然后确定行数m</p>
-<p>将输入的数字按从大到小排序</p>
-<p>因为每次螺旋一圈会减少两行，所以可以通过行数m确定循环次数（旋转圈数）</p>
-<p>每次旋转一圈需要经过上、右、下、左四个边，每个边写成一个循环，将对应数字按序装入二维数组</p>
-<p>最后将二维数组输出即可</p>
+<p>先将数字都与进制位数对齐，不足的前面补零</p>
+<p>然后像题干中的运算过程一样，统计当前位的数字以及是否进位</p>
+<p>最后得出运算结果输出即可</p>
 </blockquote>
-<p>需要注意的地方：</p>
+<p>一些需要注意的地方：</p>
 <blockquote>
-<p>当第一次发现符合条件的n时，需要退出循环，避免获取到错误的n</p>
-<p>当行数是偶数时，循环次数为行数/2，奇数时，循环次数为行数/2+1</p>
-<p>当四条边循环时，需要注意每条边之间的重合部分，避免发生错误</p>
+<p>进制中的0是10，使用时需要稍微加工一下</p>
+<p>对于首位相加进位，需要记得在结果前面添加<code>1</code>，（PS：两个数相加进位不可能是2）</p>
+<p>结果为全零时，需要输出0</p>
 </blockquote>
-<p>只要在存储到二维数组的过程中仔细地对应下标数字，题目就没什么问题了</p>
 <h4 id="于是代码如下">于是代码如下：</h4>
 <pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;vector&gt;
-#include&lt;cmath&gt;
+#include&lt;string&gt;
 #include&lt;algorithm&gt;
 
 using namespace std;
 
-int cmp(int a,int b){ return a&gt;b; }
-
 int main() {
-    int N,m,n;
-    cin &gt;&gt; N;
-    for(int i=sqrt((double)N);i&gt;0;i--){
-        if(N%i == 0) {n=i; m=N/n; break;}
+    string jz,n,m;
+    cin &gt;&gt; jz &gt;&gt; n &gt;&gt; m;
+    m.insert(0,jz.length()-m.length(),'0');
+    n.insert(0,jz.length()-n.length(),'0');
+    reverse(n.begin(),n.end());
+    reverse(m.begin(),m.end());
+    reverse(jz.begin(),jz.end());
+    int up=0;string str;
+    for(int i=0;i&lt;jz.length();i++){
+        int j = jz[i]=='0'?10:jz[i]-'0';
+        int num = (n[i]-'0'+m[i]-'0'+up)%j;
+        up = (n[i]-'0'+m[i]-'0'+up)/j;
+        str.insert(0,1,num+'0');
     }
-    vector&lt;int&gt; v(N);
-    for(int i=0;i&lt;N;i++) scanf(&quot;%d&quot;,&amp;v[i]);
-    sort(v.begin(),v.end(),cmp);
-    vector&lt;vector&lt;int&gt;&gt; V(m,vector&lt;int&gt;(n));
-    int t=0,level = m%2+m/2;
-    for(int i=0;i&lt;level;i++){
-        for(int j=i;j&lt;n-i &amp;&amp; t &lt; N;j++) V[i][j] = v[t++];
-        for(int j=i+1;j&lt;m-i &amp;&amp; t &lt; N;j++) V[j][n-i-1] = v[t++];
-        for(int j=i+1;j&lt;n-i &amp;&amp; t &lt; N;j++) V[m-1-i][n-1-j] = v[t++];
-        for(int j=i+1;j&lt;m-1-i &amp;&amp; t &lt; N;j++) V[m-1-j][i] = v[t++];
-    }
-    for(int i=0;i&lt;m;i++){
-        for(int j=0;j&lt;n;j++){
-            if(j==0) cout &lt;&lt; V[i][j];
-            else cout &lt;&lt; ' ' &lt;&lt; V[i][j];
+    if(up!=0) str = '1'+str;
+    bool flag = false;
+    for(int i=0;i&lt;str.length();i++){
+        if(str[i]!='0' || flag){
+            flag = true;
+            cout &lt;&lt; str[i];
         }
-        cout &lt;&lt; endl;
     }
+    if(!flag) printf(&quot;0&quot;);
     return 0;
 }
 </code></pre>
@@ -188,10 +173,10 @@ int main() {
 
                 <div class="pager">
                     
-                    <a class="prev" href="https://dreammilk.now.sh/1051-fu-shu-cheng-fa-15-fen/">1051 复数乘法 (15分)</a>
+                    <span class="prev">已是最新一篇</span>
                     
                     
-                    <a class="next" href="https://dreammilk.now.sh/1049-shu-lie-de-pian-duan-he-20-fen/">1049 数列的片段和 (20分)</a>
+                    <a class="next" href="https://dreammilk.now.sh/1073-duo-xuan-ti-chang-jian-ji-fen-fa-20-fen/">1073 多选题常见计分法 (20分)</a>
                     
                     <div class="clear"></div>
                 </div>

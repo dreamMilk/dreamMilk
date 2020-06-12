@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dreammilk.now.sh</id>
     <title>Milk &apos;s Home</title>
-    <updated>2020-06-11T06:17:41.913Z</updated>
+    <updated>2020-06-12T02:57:21.804Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dreammilk.now.sh"/>
     <link rel="self" href="https://dreammilk.now.sh/atom.xml"/>
@@ -10,6 +10,82 @@
     <logo>https://dreammilk.now.sh/images/avatar.png</logo>
     <icon>https://dreammilk.now.sh/favicon.ico</icon>
     <rights>All rights reserved 2020, Milk &apos;s Home</rights>
+    <entry>
+        <title type="html"><![CDATA[1076 Wifi密码 (15分)]]></title>
+        <id>https://dreammilk.now.sh/1076-wifi-mi-ma-15-fen/</id>
+        <link href="https://dreammilk.now.sh/1076-wifi-mi-ma-15-fen/">
+        </link>
+        <updated>2020-06-12T04:52:45.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>下面是微博上流传的一张照片：“各位亲爱的同学们，鉴于大家有时需要使用 wifi，又怕耽误亲们的学习，现将 wifi 密码设置为下列数学题答案：A-1；B-2；C-3；D-4；请同学们自己作答，每两日一换。谢谢合作！！~”—— 老师们为了促进学生学习也是拼了…… 本题就要求你写程序把一系列题目的答案按照卷子上给出的对应关系翻译成 wifi 的密码。这里简单假设每道选择题都有 4 个选项，有且只有 1 个正确答案。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>下面是微博上流传的一张照片：“各位亲爱的同学们，鉴于大家有时需要使用 wifi，又怕耽误亲们的学习，现将 wifi 密码设置为下列数学题答案：A-1；B-2；C-3；D-4；请同学们自己作答，每两日一换。谢谢合作！！~”—— 老师们为了促进学生学习也是拼了…… 本题就要求你写程序把一系列题目的答案按照卷子上给出的对应关系翻译成 wifi 的密码。这里简单假设每道选择题都有 4 个选项，有且只有 1 个正确答案。</p>
+</blockquote>
+<!-- more -->
+<blockquote>
+<figure data-type="image" tabindex="1"><img src="https://images.ptausercontent.com/7e56be3f-caba-45f1-b9cb-38a96d44de76.jpg" alt="wifi.jpg" loading="lazy"></figure>
+</blockquote>
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入第一行给出一个正整数 N（≤ 100），随后 N 行，每行按照 <code>编号-答案</code> 的格式给出一道题的 4 个选项，<code>T</code> 表示正确选项，<code>F</code> 表示错误选项。选项间用空格分隔。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>在一行中输出 wifi 密码。</p>
+</blockquote>
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">8
+A-T B-F C-F D-F
+C-T B-F A-F D-F
+A-F D-F C-F B-T
+B-T A-F C-F D-F
+B-F D-T A-F C-F
+A-T C-F B-F D-F
+D-T B-F C-F A-F
+C-T A-F B-F D-F
+</code></pre>
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">13224143
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>题目比较简单：</p>
+<blockquote>
+<p>将每一行的输入读入时，判断正确选项并输出对应数字</p>
+</blockquote>
+<p>稍微注意一下输入：</p>
+<blockquote>
+<p>每行的回车符号与空格需要吃掉，避免错误读入</p>
+</blockquote>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    int n;
+    scanf(&quot;%d&quot;,&amp;n);
+    for(int i=0;i&lt;n;i++){
+        scanf(&quot;\n&quot;);
+        bool flag=false;
+        for(int j=0;j&lt;4;j++){
+            char opt,ans;
+            if(!flag){
+                scanf(&quot;%c-%c&quot;,&amp;opt,&amp;ans);
+                flag = true;
+            }
+            else scanf(&quot; %c-%c&quot;,&amp;opt,&amp;ans);
+            if(ans == 'T') printf(&quot;%d&quot;,opt-'A'+1);
+        }
+    }
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[1075 链表元素分类 (25分)]]></title>
         <id>https://dreammilk.now.sh/1075-lian-biao-yuan-su-fen-lei-25-fen/</id>
@@ -901,69 +977,6 @@ int main() {
         getline(cin,input);
     }
     if(cnt == n) cout &lt;&lt; &quot;Account locked&quot;;
-    return 0;
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1066 图像过滤 (15分)]]></title>
-        <id>https://dreammilk.now.sh/1066-tu-xiang-guo-lu-15-fen/</id>
-        <link href="https://dreammilk.now.sh/1066-tu-xiang-guo-lu-15-fen/">
-        </link>
-        <updated>2020-06-02T04:39:19.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>图像过滤是把图像中不重要的像素都染成背景色，使得重要部分被凸显出来。现给定一幅黑白图像，要求你将灰度值位于某指定区间内的所有像素颜色都用一种指定的颜色替换。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>图像过滤是把图像中不重要的像素都染成背景色，使得重要部分被凸显出来。现给定一幅黑白图像，要求你将灰度值位于某指定区间内的所有像素颜色都用一种指定的颜色替换。</p>
-</blockquote>
-<!-- more -->
-<h3 id="输入格式">输入格式：</h3>
-<blockquote>
-<p>输入在第一行给出一幅图像的分辨率，即两个正整数 <em>M</em> 和 <em>N</em>（0&lt;<em>M</em>,<em>N</em>≤500），另外是待过滤的灰度值区间端点 <em>A</em> 和 <em>B</em>（0≤<em>A</em>&lt;<em>B</em>≤255）、以及指定的替换灰度值。随后 <em>M</em> 行，每行给出 <em>N</em> 个像素点的灰度值，其间以空格分隔。所有灰度值都在 [0, 255] 区间内。</p>
-</blockquote>
-<h3 id="输出格式">输出格式：</h3>
-<blockquote>
-<p>输出按要求过滤后的图像。即输出 <em>M</em> 行，每行 <em>N</em> 个像素灰度值，每个灰度值占 3 位（例如黑色要显示为 <code>000</code>），其间以一个空格分隔。行首尾不得有多余空格。</p>
-</blockquote>
-<h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">3 5 100 150 0
-3 189 254 101 119
-150 233 151 99 100
-88 123 149 0 255
-</code></pre>
-<h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">003 189 254 000 000
-000 233 151 099 000
-088 000 000 000 255
-</code></pre>
-<h3 id="思路">思路：</h3>
-<p>题目比较容易：</p>
-<blockquote>
-<p>遍历二维数组，如果在过滤范围内，替换即可</p>
-</blockquote>
-<p>输出时使用<code>%03d</code>即可</p>
-<h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-
-using namespace std;
-
-int main() {
-    int m,n,a,b,g;
-    scanf(&quot;%d%d%d%d%d&quot;,&amp;m,&amp;n,&amp;a,&amp;b,&amp;g);
-    for(int i=0;i&lt;m;i++){
-        for(int j=0;j&lt;n;j++){
-            int color;scanf(&quot;%d&quot;,&amp;color);
-            if(color&lt;a||color&gt;b) printf(&quot;%03d&quot;,color);
-            else printf(&quot;%03d&quot;,g);
-            if(j!=n-1) printf(&quot; &quot;);
-        }
-        printf(&quot;\n&quot;);
-    }
     return 0;
 }
 </code></pre>

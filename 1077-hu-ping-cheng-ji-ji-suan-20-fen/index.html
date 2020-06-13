@@ -5,32 +5,29 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="baidu-site-verification" content="ZGbOgNUIf1" />
-<title>1005 继续(3n+1)猜想 (25分) | Milk &#39;s Home</title>
+<title>1077 互评成绩计算 (20分) | Milk &#39;s Home</title>
 <meta name="referrer" content="never" />
 <link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
     <meta name="description" content="题目
 
-卡拉兹(Callatz)猜想已经在1001中给出了描述。在这个题目里，情况稍微有些复杂。
-当我们验证卡拉兹猜想的时候，为了避免重复计算，可以记录下递推过程中遇到的每一个数。例如对 n=3 进行验证的时候，我们需要计算 3、5、8、4..." />
+在浙大的计算机专业课中，经常有互评分组报告这个环节。一个组上台介绍自己的工作，其他组在台下为其表现评分。最后这个组的互评成绩是这样计算的：所有其他组的评分中，去掉一个最高分和一个最低分，剩下的分数取平均分记为 G1；老师给这个组的评..." />
     <meta name="keywords" content="代码练习" />
     
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
     <script src="https://dreammilk.now.sh/media/js/prism.min.js"></script>
     
     
-    <link rel="prefetch" href="https://dreammilk.now.sh/1006-huan-ge-ge-shi-shu-chu-zheng-shu-15-fen/">
     
-    
-    <link rel="prefetch" href="https://dreammilk.now.sh/1004-cheng-ji-pai-ming-20-fen/">
+    <link rel="prefetch" href="https://dreammilk.now.sh/1076-wifi-mi-ma-15-fen/">
     
 </head>
 
 <body>
     <!-- start: #wrapper -->
     <header id="header"
-        style="background-image:url(https://s1.ax1x.com/2020/04/02/GtV6e0.png)">
+        style="background-image:url(https://s1.ax1x.com/2020/06/04/t0EcxU.jpg)">
         <div class="header-container">
   <h1 class="site-title"><a href="https://dreammilk.now.sh"><span>Milk &#39;s Home</span><span class="logo__cursor"></span></a></h1>
   <h2 class="site-description">welcome</h2>
@@ -89,128 +86,79 @@
                     <header>
                         <time class="date">
                             <i class="fa">
-                                <span class="datetime">2 个月前</span>
+                                <span class="datetime">9 小时前</span>
                             </i>
                         </time>
                     </header>
                     <h1 class="entry-title">
-                        1005 继续(3n+1)猜想 (25分)
+                        1077 互评成绩计算 (20分)
                     </h1>
                     <div class="post-content">
                         <div class="post-hentry">
                             <h3 id="题目">题目</h3>
 <blockquote>
-<p>卡拉兹(Callatz)猜想已经在1001中给出了描述。在这个题目里，情况稍微有些复杂。</p>
-<p>当我们验证卡拉兹猜想的时候，为了避免重复计算，可以记录下递推过程中遇到的每一个数。例如对 <em>n</em>=3 进行验证的时候，我们需要计算 3、5、8、4、2、1，则当我们对 <em>n</em>=5、8、4、2 进行验证的时候，就可以直接判定卡拉兹猜想的真伪，而不需要重复计算，因为这 4 个数已经在验证3的时候遇到过了，我们称 5、8、4、2 是被 3“覆盖”的数。我们称一个数列中的某个数 <em>n</em> 为“关键数”，如果 <em>n</em> 不能被数列中的其他数字所覆盖。</p>
-<p>现在给定一系列待验证的数字，我们只需要验证其中的几个关键数，就可以不必再重复验证余下的数字。你的任务就是找出这些关键数字，并按从大到小的顺序输出它们。</p>
-</blockquote>
-<h2 id="补充1001-卡拉兹callatz猜想">补充1001 卡拉兹(Callatz)猜想：</h2>
-<blockquote>
-<p>对任何一个正整数 <em>n</em>，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把 (3<em>n</em>+1) 砍掉一半。这样一直反复砍下去，最后一定在某一步得到 <em>n</em>=1。</p>
+<p>在浙大的计算机专业课中，经常有互评分组报告这个环节。一个组上台介绍自己的工作，其他组在台下为其表现评分。最后这个组的互评成绩是这样计算的：所有其他组的评分中，去掉一个最高分和一个最低分，剩下的分数取平均分记为 <em>G</em>1；老师给这个组的评分记为 <em>G</em>2。该组得分为 (<em>G</em>1+<em>G</em>2)/2，最后结果四舍五入后保留整数分。本题就要求你写个程序帮助老师计算每个组的互评成绩。</p>
 </blockquote>
 <!-- more -->
 <h3 id="输入格式">输入格式：</h3>
 <blockquote>
-<p>每个测试输入包含 1 个测试用例，第 1 行给出一个正整数 <em>K</em> (&lt;100)，第 2 行给出 <em>K</em> 个互不相同的待验证的正整数 <em>n</em> (1&lt;<em>n</em>≤100)的值，数字间用空格隔开。</p>
+<p>输入第一行给出两个正整数 <em>N</em>（&gt; 3）和 <em>M</em>，分别是分组数和满分，均不超过 100。随后 <em>N</em> 行，每行给出该组得到的 <em>N</em> 个分数（均保证为整型范围内的整数），其中第 1 个是老师给出的评分，后面 <em>N</em>−1 个是其他组给的评分。合法的输入应该是 [0,<em>M</em>] 区间内的整数，若不在合法区间内，则该分数须被忽略。题目保证老师的评分都是合法的，并且每个组至少会有 3 个来自同学的合法评分。</p>
 </blockquote>
 <h3 id="输出格式">输出格式：</h3>
 <blockquote>
-<p>每个测试用例的输出占一行，按从大到小的顺序输出关键数字。数字间用 1 个空格隔开，但一行中最后一个数字后没有空格。</p>
+<p>为每个组输出其最终得分。每个得分占一行。</p>
 </blockquote>
 <h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">6
-3 5 6 7 8 11
+<pre><code class="language-in">6 50
+42 49 49 35 38 41
+36 51 50 28 -1 30
+40 36 41 33 47 49
+30 250 -25 27 45 31
+48 0 0 50 50 1234
+43 41 36 29 42 29
 </code></pre>
 <h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">7 6
+<pre><code class="language-out">42
+33
+41
+31
+37
+39
 </code></pre>
 <h3 id="思路">思路：</h3>
-<p>题目难度一般，要求寻找所给数组的关键数字，首先先梳理一下题目说指出的逻辑</p>
+<p>唯一需要注意的是计算逻辑，需要看清楚题意：</p>
 <blockquote>
-<p>每个数所对应的中间数</p>
-<p>3：5、8、4、2、1</p>
-<p>5：8、4、2、1</p>
-<p>6：3、5、8、4、2、1</p>
-<p>7：11、17、26、13、20、10、5、8、4、2、1</p>
-<p>8：4、2、1</p>
-<p>11：17、26、13、20、10、5、8、4、2、1</p>
-</blockquote>
-<p>通过观察上面的数据能发现：</p>
-<p><code>5</code>的中间数被<code>3</code>覆盖，所以可以舍弃<code>5</code>，继续观察发现<code>3</code>的中间数被<code>6</code>覆盖，所以可以舍弃<code>3</code>,在比较<code>6</code>和<code>7</code>时，发现<code>6</code>和<code>3</code>并没有被<code>7</code>所覆盖，因此<code>6</code>和<code>7</code>被保留，余下数字同理</p>
-<h4 id="于是逻辑如下">于是逻辑如下：</h4>
-<blockquote>
-<p>当前数字在已存储的中间数中进行比对：</p>
-<p>如果存在，说明当前数字的中间数已经被计算完成，于是跳过该数字</p>
-<p>如果不存在，说明该数字没有<s>被覆盖</s>（没有被完全覆盖），继续计算该数字的中间数，每次计算后都与存储的中间数进行比对</p>
-<p>如果存在，停止计算并比较当前的<strong>中间值</strong>是否与存储的关键字相同</p>
-<ul>
-<li>如果相同，删除之前的关键字，存储本数字</li>
-<li>如果不同，直接存储本数字即可</li>
-</ul>
-<p>如果不存在，则存储该中间数，继续计算</p>
+<p>对输入的每行数据进行处理，寻找最大最小值，学生有效分数和数量总计，老师分数</p>
+<p>计算时可以使用0.5来帮助小数进行四舍五入</p>
 </blockquote>
 <h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;vector&gt;
-#include&lt;set&gt;
-#include &lt;algorithm&gt;
+<pre><code class="language-cpp">#include &lt;iostream&gt;
 
 using namespace std;
 
-bool Callatz(int n,vector&lt;int&gt; &amp;key,set&lt;int&gt; &amp;num){
-    if(find(key.begin(),key.end(),n) == key.end()){
-        key.push_back(n);
-        while(n != 1){
-            if(n%2 == 0){
-                n = n/2;
-            }else{
-                n = (n*3+1)/2;
+int main() {
+    int n,m;
+    scanf(&quot;%d %d&quot;,&amp;n,&amp;m);
+    for(int i=0;i&lt;n;i++){
+        int teacher,cnt=0,MAX=0,MIN=m;
+        float students=0;
+        cin &gt;&gt; teacher;
+        for(int j=0;j&lt;n-1;j++){
+            int score;
+            cin &gt;&gt; score;
+            if(score&gt;=0&amp;&amp;score&lt;=m){
+                if(score &gt; MAX) MAX = score;
+                if(score &lt; MIN) MIN = score;
+                students += score;
+                cnt++;
             }
-            if(find(key.begin(),key.end(),n) != key.end()){
-                if(num.find(n) != num.end()){
-                    num.erase(n);
-                }
-                return true;
-            }else{
-                key.push_back(n);
-            }
         }
-        return true;
-    }else{
-        return false;
-    }
-}
-
-int main(){
-    int k;
-    int j=0;
-    set&lt;int&gt; num;
-    vector&lt;int&gt; key;
-    cin &gt;&gt; k;
-    for(int i=0;i &lt; k;i++){
-        int n;
-        cin &gt;&gt; n;
-        if(Callatz(n,key,num)){
-            num.insert(n);
-        }
-    }
-    for(auto it= num.rbegin();it != num.rend();it++){
-        if(it == num.rbegin()){
-            cout &lt;&lt; *it;
-        }else{
-            cout &lt;&lt; &quot; &quot; &lt;&lt; *it;
-        }
+        int sum=(teacher+(students-MAX-MIN)/(cnt-2))/2+0.5;
+        cout &lt;&lt; sum &lt;&lt; endl;
     }
     return 0;
 }
 </code></pre>
-<h4 id="总结一下">总结一下</h4>
-<ul>
-<li>在使用<code>set，vector</code>类型时，如果涉及其操作方法，需导入<code>#include &lt;algorithm&gt;</code>，否则会显示方法未定义</li>
-<li>面对可变数组时可以考虑一下<code>vector</code>，面对排序后输出时可以考虑一下<code>set</code></li>
-<li><code>set、vector</code>在输出时不仅可以正向迭代输出，还可以反向迭代输出，只需将<code>for</code>循环中的<code>begin、end</code>换为<code>rbegin、rend</code>即可</li>
-</ul>
-<p>还是需要继续努力前行，争取以后一个小时内解决战斗💻</p>
 
                             <div class="clear"></div>
                         </div>
@@ -220,10 +168,10 @@ int main(){
 
                 <div class="pager">
                     
-                    <a class="prev" href="https://dreammilk.now.sh/1006-huan-ge-ge-shi-shu-chu-zheng-shu-15-fen/">1006 换个格式输出整数 (15分)</a>
+                    <span class="prev">已是最新一篇</span>
                     
                     
-                    <a class="next" href="https://dreammilk.now.sh/1004-cheng-ji-pai-ming-20-fen/">1004 成绩排名 (20分)</a>
+                    <a class="next" href="https://dreammilk.now.sh/1076-wifi-mi-ma-15-fen/">1076 Wifi密码 (15分)</a>
                     
                     <div class="clear"></div>
                 </div>

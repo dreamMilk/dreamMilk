@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dreammilk.now.sh</id>
     <title>Milk &apos;s Home</title>
-    <updated>2020-06-15T03:32:42.876Z</updated>
+    <updated>2020-06-17T04:19:14.538Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dreammilk.now.sh"/>
     <link rel="self" href="https://dreammilk.now.sh/atom.xml"/>
@@ -10,6 +10,108 @@
     <logo>https://dreammilk.now.sh/images/avatar.png</logo>
     <icon>https://dreammilk.now.sh/favicon.ico</icon>
     <rights>All rights reserved 2020, Milk &apos;s Home</rights>
+    <entry>
+        <title type="html"><![CDATA[1081 检查密码 (15分)]]></title>
+        <id>https://dreammilk.now.sh/1081-jian-cha-mi-ma-15-fen/</id>
+        <link href="https://dreammilk.now.sh/1081-jian-cha-mi-ma-15-fen/">
+        </link>
+        <updated>2020-06-17T04:16:44.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>本题要求你帮助某网站的用户注册模块写一个密码合法性检查的小功能。该网站要求用户设置的密码必须由不少于6个字符组成，并且只能有英文字母、数字和小数点 <code>.</code>，还必须既有字母也有数字。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>本题要求你帮助某网站的用户注册模块写一个密码合法性检查的小功能。该网站要求用户设置的密码必须由不少于6个字符组成，并且只能有英文字母、数字和小数点 <code>.</code>，还必须既有字母也有数字。</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入第一行给出一个正整数 N（≤ 100），随后 N 行，每行给出一个用户设置的密码，为不超过 80 个字符的非空字符串，以回车结束。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>对每个用户的密码，在一行中输出系统反馈信息，分以下5种：</p>
+<ul>
+<li>如果密码合法，输出<code>Your password is wan mei.</code>；</li>
+<li>如果密码太短，不论合法与否，都输出<code>Your password is tai duan le.</code>；</li>
+<li>如果密码长度合法，但存在不合法字符，则输出<code>Your password is tai luan le.</code>；</li>
+<li>如果密码长度合法，但只有字母没有数字，则输出<code>Your password needs shu zi.</code>；</li>
+<li>如果密码长度合法，但只有数字没有字母，则输出<code>Your password needs zi mu.</code>。</li>
+</ul>
+</blockquote>
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">5
+123s
+zheshi.wodepw
+1234.5678
+WanMei23333
+pass*word.6
+</code></pre>
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">Your password is tai duan le.
+Your password needs shu zi.
+Your password needs zi mu.
+Your password is wan mei.
+Your password is tai luan le.
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>题目的输出格式将逻辑展示的非常清楚：</p>
+<blockquote>
+<p>对每一个字符串，首先判断字符长度，过短则输出</p>
+<p>对字符串的每一个字符进行判断，使用<code>bool</code>变量检测数字和字母是否出现（在字符遍历完后判断）</p>
+<p>如果出现不规范的字符则直接停止字符遍历，进行输出；否则继续遍历</p>
+</blockquote>
+<p>注意一点：</p>
+<blockquote>
+<p>题目虽然没有明确提醒输入时会有空格，但是需要考虑这种情况，避免测试点无法通过</p>
+</blockquote>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;cctype&gt;
+
+using namespace std;
+
+int main() {
+    int n;
+    scanf(&quot;%d\n&quot;,&amp;n);
+    for(int i=0;i&lt;n;i++){
+        string str;
+        getline(cin,str);
+        if(str.length() &lt; 6){
+            cout &lt;&lt; &quot;Your password is tai duan le.&quot; &lt;&lt; endl;
+            continue;
+        }
+        else{
+            int j;
+            bool number=true,alpha=true;
+            for(j=0;j&lt;str.length();j++){
+                if(isdigit(str[j])) number=false;
+                else if(isalpha(str[j])) alpha = false;
+                else if(str[j]=='.') continue;
+                else{
+                    cout &lt;&lt; &quot;Your password is tai luan le.&quot; &lt;&lt; endl;
+                    break;
+                }
+            }
+            if(j!=str.length()) continue;
+            if(number){
+                cout &lt;&lt; &quot;Your password needs shu zi.&quot; &lt;&lt; endl;
+                continue;
+            }
+            if(alpha){
+                cout &lt;&lt; &quot;Your password needs zi mu.&quot; &lt;&lt; endl;
+                continue;
+            }
+            cout &lt;&lt; &quot;Your password is wan mei.&quot; &lt;&lt; endl;
+        }
+    }
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[1079 延迟的回文数 (20分)]]></title>
         <id>https://dreammilk.now.sh/1079-yan-chi-de-hui-wen-shu-20-fen/</id>
@@ -882,75 +984,6 @@ int main() {
             }
         }
     }
-    return 0;
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1070 结绳 (25分)]]></title>
-        <id>https://dreammilk.now.sh/1070-jie-sheng-25-fen/</id>
-        <link href="https://dreammilk.now.sh/1070-jie-sheng-25-fen/">
-        </link>
-        <updated>2020-06-06T04:31:25.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>给定一段一段的绳子，你需要把它们串成一条绳。每次串连的时候，是把两段绳子对折，再如下图所示套接在一起。这样得到的绳子又被当成是另一段绳子，可以再次对折去跟另一段绳子串连。每次串连后，原来两段绳子的长度就会减半。</p>
-<figure data-type="image" tabindex="1"><img src="https://images.ptausercontent.com/46293e57-aa0e-414b-b5c3-7c4b2d5201e2.jpg" alt="rope.jpg" loading="lazy"></figure>
-<p>给定 <em>N</em> 段绳子的长度，你需要找出它们能串成的绳子的最大长度。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>给定一段一段的绳子，你需要把它们串成一条绳。每次串连的时候，是把两段绳子对折，再如下图所示套接在一起。这样得到的绳子又被当成是另一段绳子，可以再次对折去跟另一段绳子串连。每次串连后，原来两段绳子的长度就会减半。</p>
-<figure data-type="image" tabindex="1"><img src="https://images.ptausercontent.com/46293e57-aa0e-414b-b5c3-7c4b2d5201e2.jpg" alt="rope.jpg" loading="lazy"></figure>
-<p>给定 <em>N</em> 段绳子的长度，你需要找出它们能串成的绳子的最大长度。</p>
-</blockquote>
-<!-- more -->
-<h3 id="输入格式">输入格式：</h3>
-<blockquote>
-<p>每个输入包含 1 个测试用例。每个测试用例第 1 行给出正整数 <em>N</em> (2≤<em>N</em>≤<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">10^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span>)；第 2 行给出 <em>N</em> 个正整数，即原始绳段的长度，数字间以空格分隔。所有整数都不超过<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">10^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span>。</p>
-</blockquote>
-<h3 id="输出格式">输出格式：</h3>
-<blockquote>
-<p>在一行中输出能够串成的绳子的最大长度。结果向下取整，即取为不超过最大长度的最近整数。</p>
-</blockquote>
-<h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">8
-10 15 12 3 4 13 1 15
-</code></pre>
-<h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">14
-</code></pre>
-<h3 id="思路">思路：</h3>
-<p>题目求串成的绳子的最大长度：</p>
-<blockquote>
-<p>因为n个绳子变为一根绳子一定会经过n-1次结绳，为防止对折损失的长度最小，应从短绳开始进行结绳</p>
-</blockquote>
-<p>有了上面的想法就比较容易了：</p>
-<blockquote>
-<p>将输入的数字按从小到大的顺序进行排序，然后每次将两个绳子相加除二，最终所得长度即为最大长度</p>
-</blockquote>
-<h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;vector&gt;
-#include&lt;algorithm&gt;
-
-using namespace std;
-
-int main() {
-    int m;
-    cin &gt;&gt; m;
-    vector&lt;int&gt; v(m);
-    for(int i=0;i&lt;m;i++){
-        cin &gt;&gt; v[i];
-    }
-    sort(v.begin(),v.end());
-    int length=v[0];
-    for(int i=1;i&lt;m;i++){
-        length = (length+v[i])/2;
-    }
-    cout &lt;&lt; length;
     return 0;
 }
 </code></pre>

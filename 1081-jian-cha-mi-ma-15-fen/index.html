@@ -5,31 +5,34 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="baidu-site-verification" content="ZGbOgNUIf1" />
-<title>1076 Wifi密码 (15分) | Milk &#39;s Home</title>
+<title>1081 检查密码 (15分) | Milk &#39;s Home</title>
 <meta name="referrer" content="never" />
 <link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
     <meta name="description" content="题目
 
-下面是微博上流传的一张照片：“各位亲爱的同学们，鉴于大家有时需要使用 wifi，又怕耽误亲们的学习，现将 wifi 密码设置为下列数学题答案：A-1；B-2；C-3；D-4；请同学们自己作答，每两日一换。谢谢合作！！~”—— 老师们..." />
+本题要求你帮助某网站的用户注册模块写一个密码合法性检查的小功能。该网站要求用户设置的密码必须由不少于6个字符组成，并且只能有英文字母、数字和小数点 .，还必须既有字母也有数字。
+
+
+输入格式：
+
+输入第一行给出一个正整数 N（≤ 1..." />
     <meta name="keywords" content="代码练习" />
     
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
     <script src="https://dreammilk.now.sh/media/js/prism.min.js"></script>
     
     
-    <link rel="prefetch" href="https://dreammilk.now.sh/1077-hu-ping-cheng-ji-ji-suan-20-fen/">
     
-    
-    <link rel="prefetch" href="https://dreammilk.now.sh/1075-lian-biao-yuan-su-fen-lei-25-fen/">
+    <link rel="prefetch" href="https://dreammilk.now.sh/1079-yan-chi-de-hui-wen-shu-20-fen/">
     
 </head>
 
 <body>
     <!-- start: #wrapper -->
     <header id="header"
-        style="background-image:url(https://s1.ax1x.com/2020/06/04/t0EtxS.jpg)">
+        style="background-image:url(https://s1.ax1x.com/2020/06/04/t0E4aR.jpg)">
         <div class="header-container">
   <h1 class="site-title"><a href="https://dreammilk.now.sh"><span>Milk &#39;s Home</span><span class="logo__cursor"></span></a></h1>
   <h2 class="site-description">welcome</h2>
@@ -88,73 +91,99 @@
                     <header>
                         <time class="date">
                             <i class="fa">
-                                <span class="datetime">5 天前</span>
+                                <span class="datetime">2 分钟前</span>
                             </i>
                         </time>
                     </header>
                     <h1 class="entry-title">
-                        1076 Wifi密码 (15分)
+                        1081 检查密码 (15分)
                     </h1>
                     <div class="post-content">
                         <div class="post-hentry">
                             <h3 id="题目">题目</h3>
 <blockquote>
-<p>下面是微博上流传的一张照片：“各位亲爱的同学们，鉴于大家有时需要使用 wifi，又怕耽误亲们的学习，现将 wifi 密码设置为下列数学题答案：A-1；B-2；C-3；D-4；请同学们自己作答，每两日一换。谢谢合作！！~”—— 老师们为了促进学生学习也是拼了…… 本题就要求你写程序把一系列题目的答案按照卷子上给出的对应关系翻译成 wifi 的密码。这里简单假设每道选择题都有 4 个选项，有且只有 1 个正确答案。</p>
+<p>本题要求你帮助某网站的用户注册模块写一个密码合法性检查的小功能。该网站要求用户设置的密码必须由不少于6个字符组成，并且只能有英文字母、数字和小数点 <code>.</code>，还必须既有字母也有数字。</p>
 </blockquote>
 <!-- more -->
-<blockquote>
-<figure data-type="image" tabindex="1"><img src="https://images.ptausercontent.com/7e56be3f-caba-45f1-b9cb-38a96d44de76.jpg" alt="wifi.jpg" loading="lazy"></figure>
-</blockquote>
 <h3 id="输入格式">输入格式：</h3>
 <blockquote>
-<p>输入第一行给出一个正整数 N（≤ 100），随后 N 行，每行按照 <code>编号-答案</code> 的格式给出一道题的 4 个选项，<code>T</code> 表示正确选项，<code>F</code> 表示错误选项。选项间用空格分隔。</p>
+<p>输入第一行给出一个正整数 N（≤ 100），随后 N 行，每行给出一个用户设置的密码，为不超过 80 个字符的非空字符串，以回车结束。</p>
 </blockquote>
 <h3 id="输出格式">输出格式：</h3>
 <blockquote>
-<p>在一行中输出 wifi 密码。</p>
+<p>对每个用户的密码，在一行中输出系统反馈信息，分以下5种：</p>
+<ul>
+<li>如果密码合法，输出<code>Your password is wan mei.</code>；</li>
+<li>如果密码太短，不论合法与否，都输出<code>Your password is tai duan le.</code>；</li>
+<li>如果密码长度合法，但存在不合法字符，则输出<code>Your password is tai luan le.</code>；</li>
+<li>如果密码长度合法，但只有字母没有数字，则输出<code>Your password needs shu zi.</code>；</li>
+<li>如果密码长度合法，但只有数字没有字母，则输出<code>Your password needs zi mu.</code>。</li>
+</ul>
 </blockquote>
 <h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">8
-A-T B-F C-F D-F
-C-T B-F A-F D-F
-A-F D-F C-F B-T
-B-T A-F C-F D-F
-B-F D-T A-F C-F
-A-T C-F B-F D-F
-D-T B-F C-F A-F
-C-T A-F B-F D-F
+<pre><code class="language-in">5
+123s
+zheshi.wodepw
+1234.5678
+WanMei23333
+pass*word.6
 </code></pre>
 <h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">13224143
+<pre><code class="language-out">Your password is tai duan le.
+Your password needs shu zi.
+Your password needs zi mu.
+Your password is wan mei.
+Your password is tai luan le.
 </code></pre>
 <h3 id="思路">思路：</h3>
-<p>题目比较简单：</p>
+<p>题目的输出格式将逻辑展示的非常清楚：</p>
 <blockquote>
-<p>将每一行的输入读入时，判断正确选项并输出对应数字</p>
+<p>对每一个字符串，首先判断字符长度，过短则输出</p>
+<p>对字符串的每一个字符进行判断，使用<code>bool</code>变量检测数字和字母是否出现（在字符遍历完后判断）</p>
+<p>如果出现不规范的字符则直接停止字符遍历，进行输出；否则继续遍历</p>
 </blockquote>
-<p>稍微注意一下输入：</p>
+<p>注意一点：</p>
 <blockquote>
-<p>每行的回车符号与空格需要吃掉，避免错误读入</p>
+<p>题目虽然没有明确提醒输入时会有空格，但是需要考虑这种情况，避免测试点无法通过</p>
 </blockquote>
 <h4 id="于是代码如下">于是代码如下：</h4>
 <pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;cctype&gt;
 
 using namespace std;
 
 int main() {
     int n;
-    scanf(&quot;%d&quot;,&amp;n);
+    scanf(&quot;%d\n&quot;,&amp;n);
     for(int i=0;i&lt;n;i++){
-        scanf(&quot;\n&quot;);
-        bool flag=false;
-        for(int j=0;j&lt;4;j++){
-            char opt,ans;
-            if(!flag){
-                scanf(&quot;%c-%c&quot;,&amp;opt,&amp;ans);
-                flag = true;
+        string str;
+        getline(cin,str);
+        if(str.length() &lt; 6){
+            cout &lt;&lt; &quot;Your password is tai duan le.&quot; &lt;&lt; endl;
+            continue;
+        }
+        else{
+            int j;
+            bool number=true,alpha=true;
+            for(j=0;j&lt;str.length();j++){
+                if(isdigit(str[j])) number=false;
+                else if(isalpha(str[j])) alpha = false;
+                else if(str[j]=='.') continue;
+                else{
+                    cout &lt;&lt; &quot;Your password is tai luan le.&quot; &lt;&lt; endl;
+                    break;
+                }
             }
-            else scanf(&quot; %c-%c&quot;,&amp;opt,&amp;ans);
-            if(ans == 'T') printf(&quot;%d&quot;,opt-'A'+1);
+            if(j!=str.length()) continue;
+            if(number){
+                cout &lt;&lt; &quot;Your password needs shu zi.&quot; &lt;&lt; endl;
+                continue;
+            }
+            if(alpha){
+                cout &lt;&lt; &quot;Your password needs zi mu.&quot; &lt;&lt; endl;
+                continue;
+            }
+            cout &lt;&lt; &quot;Your password is wan mei.&quot; &lt;&lt; endl;
         }
     }
     return 0;
@@ -169,10 +198,10 @@ int main() {
 
                 <div class="pager">
                     
-                    <a class="prev" href="https://dreammilk.now.sh/1077-hu-ping-cheng-ji-ji-suan-20-fen/">1077 互评成绩计算 (20分)</a>
+                    <span class="prev">已是最新一篇</span>
                     
                     
-                    <a class="next" href="https://dreammilk.now.sh/1075-lian-biao-yuan-su-fen-lei-25-fen/">1075 链表元素分类 (25分)</a>
+                    <a class="next" href="https://dreammilk.now.sh/1079-yan-chi-de-hui-wen-shu-20-fen/">1079 延迟的回文数 (20分)</a>
                     
                     <div class="clear"></div>
                 </div>

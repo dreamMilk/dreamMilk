@@ -5,36 +5,34 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="baidu-site-verification" content="ZGbOgNUIf1" />
-<title>1032 挖掘机技术哪家强 (20分) | Milk &#39;s Home</title>
+<title>1082 射击比赛 (20分) | Milk &#39;s Home</title>
 <meta name="referrer" content="never" />
 <link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
     <meta name="description" content="题目
 
-为了用事实说明挖掘机技术到底哪家强，PAT 组织了一场挖掘机技能大赛。现请你根据比赛结果统计出技术最强的那个学校。
+本题目给出的射击比赛的规则非常简单，谁打的弹洞距离靶心最近，谁就是冠军；谁差得最远，谁就是菜鸟。本题给出一系列弹洞的平面坐标(x,y)，请你编写程序找出冠军和菜鸟。我们假设靶心在原点(0,0)。
 
 
 输入格式：
 
-输入在第 1 行给出不超过 10510^5105 的正整数 N，即参赛人数。随后 N 行，每行给出..." />
+输入在第一行中给出..." />
     <meta name="keywords" content="代码练习" />
     
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
     <script src="https://dreammilk.now.sh/media/js/prism.min.js"></script>
     
     
-    <link rel="prefetch" href="https://dreammilk.now.sh/1033-jiu-jian-pan-da-zi-20-fen/">
     
-    
-    <link rel="prefetch" href="https://dreammilk.now.sh/1031-cha-yan-shen-fen-zheng-15-fen/">
+    <link rel="prefetch" href="https://dreammilk.now.sh/1081-jian-cha-mi-ma-15-fen/">
     
 </head>
 
 <body>
     <!-- start: #wrapper -->
     <header id="header"
-        style="background-image:url(https://s1.ax1x.com/2020/04/25/JsE91O.jpg)">
+        style="background-image:url(https://s1.ax1x.com/2020/06/04/t0VSit.jpg)">
         <div class="header-container">
   <h1 class="site-title"><a href="https://dreammilk.now.sh"><span>Milk &#39;s Home</span><span class="logo__cursor"></span></a></h1>
   <h2 class="site-description">welcome</h2>
@@ -93,73 +91,69 @@
                     <header>
                         <time class="date">
                             <i class="fa">
-                                <span class="datetime">2 个月前</span>
+                                <span class="datetime">2 分钟前</span>
                             </i>
                         </time>
                     </header>
                     <h1 class="entry-title">
-                        1032 挖掘机技术哪家强 (20分)
+                        1082 射击比赛 (20分)
                     </h1>
                     <div class="post-content">
                         <div class="post-hentry">
                             <h3 id="题目">题目</h3>
 <blockquote>
-<p>为了用事实说明挖掘机技术到底哪家强，PAT 组织了一场挖掘机技能大赛。现请你根据比赛结果统计出技术最强的那个学校。</p>
+<p>本题目给出的射击比赛的规则非常简单，谁打的弹洞距离靶心最近，谁就是冠军；谁差得最远，谁就是菜鸟。本题给出一系列弹洞的平面坐标(x,y)，请你编写程序找出冠军和菜鸟。我们假设靶心在原点(0,0)。</p>
 </blockquote>
 <!-- more -->
 <h3 id="输入格式">输入格式：</h3>
 <blockquote>
-<p>输入在第 1 行给出不超过 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span> 的正整数 <em>N</em>，即参赛人数。随后 <em>N</em> 行，每行给出一位参赛者的信息和成绩，包括其所代表的学校的编号（从 1 开始连续编号）、及其比赛成绩（百分制），中间以空格分隔。</p>
+<p>输入在第一行中给出一个正整数 N（≤ 10 000）。随后 N 行，每行按下列格式给出：</p>
+<pre><code>ID x y
+</code></pre>
+<p>其中 <code>ID</code> 是运动员的编号（由 4 位数字组成）；<code>x</code> 和 <code>y</code> 是其打出的弹洞的平面坐标(<code>x</code>,<code>y</code>)，均为整数，且 0 ≤ |<code>x</code>|, |<code>y</code>| ≤ 100。题目保证每个运动员的编号不重复，且每人只打 1 枪。</p>
 </blockquote>
 <h3 id="输出格式">输出格式：</h3>
 <blockquote>
-<p>在一行中给出总得分最高的学校的编号、及其总分，中间以空格分隔。题目保证答案唯一，没有并列。</p>
+<p>输出冠军和菜鸟的编号，中间空 1 格。题目保证他们是唯一的。</p>
 </blockquote>
 <h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">6
-3 65
-2 80
-1 100
-2 70
-3 40
-3 0
+<pre><code class="language-in">3
+0001 5 7
+1020 -1 3
+0233 0 -1
 </code></pre>
 <h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">2 150
+<pre><code class="language-out">0233 0001
 </code></pre>
 <h3 id="思路">思路：</h3>
-<p>题目本身基本可以秒杀，但是说一下亮点：</p>
+<p>题目主要还是找最大最小值：</p>
 <blockquote>
-<p>题目中<code>其所代表的学校的编号（从 1 开始连续编号）</code>这个条件的意思比较隐蔽</p>
-<p>从这个条件可以知道所有学校的编号不会超过输入的参赛人数<code>N</code></p>
-<p>有了这个条件，可以使用数组进行存储，避免使用map等结构进行存储，提高效率</p>
+<p>对于距离还是直接使用<code>x*x+y*y</code>进行比较</p>
+<p>找到最大最小值时需要保存他们的id</p>
+<p>最后直接输出最小值id与最大值id</p>
 </blockquote>
-<p>其实可以稍微处理一下，避免第一个空间被浪费，但是为了代码简单明了就忽略了</p>
-<p><strong>通过近些天的题目做一些小结：</strong></p>
-<p>在存在一一映射的关系时，可以优先考虑一下使用数组，数组在后续进行排序以及搜索等操作时，会更加方便</p>
 <h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;vector&gt;
+<pre><code class="language-cpp">#include &lt;iostream&gt;
 
 using namespace std;
 
 int main() {
-    int n;
+    int n,MAX=0,MIN=10000,maxid,minid;
     cin &gt;&gt; n;
-    vector&lt;int&gt; v(n+1);
     for(int i=0;i&lt;n;i++){
-        int school,score;
-        cin &gt;&gt; school &gt;&gt; score;
-        v[school] += score;
-    }
-    int max_score=v[1],max_school=1;
-    for(int i=2;i&lt;n;i++){
-        if(v[i] &gt; max_score){
-            max_score=v[i];
-            max_school=i;
+        int id,x,y,length;
+        cin &gt;&gt; id &gt;&gt; x &gt;&gt; y;
+        length = x*x+y*y;
+        if(length &gt; MAX){
+            MAX = length;
+            maxid = id;
+        }
+        if(length &lt; MIN){
+            MIN = length;
+            minid = id;
         }
     }
-    cout &lt;&lt; max_school &lt;&lt; &quot; &quot; &lt;&lt; max_score;
+    printf(&quot;%04d %04d&quot;,minid,maxid);
     return 0;
 }
 </code></pre>
@@ -172,10 +166,10 @@ int main() {
 
                 <div class="pager">
                     
-                    <a class="prev" href="https://dreammilk.now.sh/1033-jiu-jian-pan-da-zi-20-fen/">1033 旧键盘打字 (20分)</a>
+                    <span class="prev">已是最新一篇</span>
                     
                     
-                    <a class="next" href="https://dreammilk.now.sh/1031-cha-yan-shen-fen-zheng-15-fen/">1031 查验身份证 (15分)</a>
+                    <a class="next" href="https://dreammilk.now.sh/1081-jian-cha-mi-ma-15-fen/">1081 检查密码 (15分)</a>
                     
                     <div class="clear"></div>
                 </div>

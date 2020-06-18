@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dreammilk.now.sh</id>
     <title>Milk &apos;s Home</title>
-    <updated>2020-06-17T04:19:14.538Z</updated>
+    <updated>2020-06-18T04:09:03.370Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dreammilk.now.sh"/>
     <link rel="self" href="https://dreammilk.now.sh/atom.xml"/>
@@ -10,6 +10,76 @@
     <logo>https://dreammilk.now.sh/images/avatar.png</logo>
     <icon>https://dreammilk.now.sh/favicon.ico</icon>
     <rights>All rights reserved 2020, Milk &apos;s Home</rights>
+    <entry>
+        <title type="html"><![CDATA[1082 射击比赛 (20分)]]></title>
+        <id>https://dreammilk.now.sh/1082-she-ji-bi-sai-20-fen/</id>
+        <link href="https://dreammilk.now.sh/1082-she-ji-bi-sai-20-fen/">
+        </link>
+        <updated>2020-06-18T04:07:31.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>本题目给出的射击比赛的规则非常简单，谁打的弹洞距离靶心最近，谁就是冠军；谁差得最远，谁就是菜鸟。本题给出一系列弹洞的平面坐标(x,y)，请你编写程序找出冠军和菜鸟。我们假设靶心在原点(0,0)。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>本题目给出的射击比赛的规则非常简单，谁打的弹洞距离靶心最近，谁就是冠军；谁差得最远，谁就是菜鸟。本题给出一系列弹洞的平面坐标(x,y)，请你编写程序找出冠军和菜鸟。我们假设靶心在原点(0,0)。</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入在第一行中给出一个正整数 N（≤ 10 000）。随后 N 行，每行按下列格式给出：</p>
+<pre><code>ID x y
+</code></pre>
+<p>其中 <code>ID</code> 是运动员的编号（由 4 位数字组成）；<code>x</code> 和 <code>y</code> 是其打出的弹洞的平面坐标(<code>x</code>,<code>y</code>)，均为整数，且 0 ≤ |<code>x</code>|, |<code>y</code>| ≤ 100。题目保证每个运动员的编号不重复，且每人只打 1 枪。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>输出冠军和菜鸟的编号，中间空 1 格。题目保证他们是唯一的。</p>
+</blockquote>
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">3
+0001 5 7
+1020 -1 3
+0233 0 -1
+</code></pre>
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">0233 0001
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>题目主要还是找最大最小值：</p>
+<blockquote>
+<p>对于距离还是直接使用<code>x*x+y*y</code>进行比较</p>
+<p>找到最大最小值时需要保存他们的id</p>
+<p>最后直接输出最小值id与最大值id</p>
+</blockquote>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    int n,MAX=0,MIN=10000,maxid,minid;
+    cin &gt;&gt; n;
+    for(int i=0;i&lt;n;i++){
+        int id,x,y,length;
+        cin &gt;&gt; id &gt;&gt; x &gt;&gt; y;
+        length = x*x+y*y;
+        if(length &gt; MAX){
+            MAX = length;
+            maxid = id;
+        }
+        if(length &lt; MIN){
+            MIN = length;
+            minid = id;
+        }
+    }
+    printf(&quot;%04d %04d&quot;,minid,maxid);
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[1081 检查密码 (15分)]]></title>
         <id>https://dreammilk.now.sh/1081-jian-cha-mi-ma-15-fen/</id>
@@ -886,104 +956,6 @@ int main() {
         }
     }
     printf(&quot;%d %d\n&quot;,stu,cnt);
-    return 0;
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1071 小赌怡情 (15分)]]></title>
-        <id>https://dreammilk.now.sh/1071-xiao-du-yi-qing-15-fen/</id>
-        <link href="https://dreammilk.now.sh/1071-xiao-du-yi-qing-15-fen/">
-        </link>
-        <updated>2020-06-07T04:10:57.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>常言道“小赌怡情”。这是一个很简单的小游戏：首先由计算机给出第一个整数；然后玩家下注赌第二个整数将会比第一个数大还是小；玩家下注 t 个筹码后，计算机给出第二个数。若玩家猜对了，则系统奖励玩家 t 个筹码；否则扣除玩家 t 个筹码。</p>
-<p>注意：玩家下注的筹码数不能超过自己帐户上拥有的筹码数。当玩家输光了全部筹码后，游戏就结束。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>常言道“小赌怡情”。这是一个很简单的小游戏：首先由计算机给出第一个整数；然后玩家下注赌第二个整数将会比第一个数大还是小；玩家下注 t 个筹码后，计算机给出第二个数。若玩家猜对了，则系统奖励玩家 t 个筹码；否则扣除玩家 t 个筹码。</p>
-<p>注意：玩家下注的筹码数不能超过自己帐户上拥有的筹码数。当玩家输光了全部筹码后，游戏就结束。</p>
-</blockquote>
-<!-- more -->
-<h3 id="输入格式">输入格式：</h3>
-<blockquote>
-<p>输入在第一行给出 2 个正整数 T 和 K（≤ 100），分别是系统在初始状态下赠送给玩家的筹码数、以及需要处理的游戏次数。随后 K 行，每行对应一次游戏，顺序给出 4 个数字：</p>
-<pre><code class="language-in">n1 b t n2
-</code></pre>
-<p>其中 <code>n1</code> 和 <code>n2</code> 是计算机先后给出的两个[0, 9]内的整数，保证两个数字不相等。<code>b</code> 为 0 表示玩家赌<code>小</code>，为 1 表示玩家赌<code>大</code>。<code>t</code> 表示玩家下注的筹码数，保证在整型范围内。</p>
-</blockquote>
-<h3 id="输出格式">输出格式：</h3>
-<blockquote>
-<p>对每一次游戏，根据下列情况对应输出（其中 <code>t</code> 是玩家下注量，<code>x</code> 是玩家当前持有的筹码量）：</p>
-<ul>
-<li>玩家赢，输出 <code>Win t! Total = x.</code>；</li>
-<li>玩家输，输出 <code>Lose t. Total = x.</code>；</li>
-<li>玩家下注超过持有的筹码量，输出 <code>Not enough tokens. Total = x.</code>；</li>
-<li>玩家输光后，输出 <code>Game Over.</code> 并结束程序。</li>
-</ul>
-</blockquote>
-<h3 id="输入样例1">输入样例1：</h3>
-<pre><code class="language-in">100 4
-8 0 100 2
-3 1 50 1
-5 1 200 6
-7 0 200 8
-</code></pre>
-<h3 id="输出样例1">输出样例1：</h3>
-<pre><code class="language-out">Win 100!  Total = 200.
-Lose 50.  Total = 150.
-Not enough tokens.  Total = 150.
-Not enough tokens.  Total = 150.
-</code></pre>
-<h3 id="输入样例2">输入样例2：</h3>
-<pre><code class="language-in">100 4
-8 0 100 2
-3 1 200 1
-5 1 200 6
-7 0 200 8
-</code></pre>
-<h3 id="输出样例2">输出样例2：</h3>
-<pre><code class="language-out">Win 100!  Total = 200.
-Lose 200.  Total = 0.
-Game Over.
-</code></pre>
-<h3 id="思路">思路：</h3>
-<p>题目比较容易：</p>
-<blockquote>
-<p>每次先比较当前筹码与是否能够下注，如果能够下注继续判断输赢情况</p>
-<p>如果本局输了之后筹码归零，则直接退出程序</p>
-</blockquote>
-<h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-
-using namespace std;
-
-int main() {
-    int T,k;
-    cin &gt;&gt; T &gt;&gt; k;
-    for(int i=0;i&lt;k;i++){
-        int n1,b,t,n2;
-        scanf(&quot;%d %d %d %d&quot;,&amp;n1,&amp;b,&amp;t,&amp;n2);
-        if(T &lt; t) printf(&quot;Not enough tokens.  Total = %d.\n&quot;,T);
-        else{
-            if((n1 &lt; n2&amp;&amp;b==1)  || (n1 &gt; n2&amp;&amp;b==0)){
-                T += t;
-                printf(&quot;Win %d!  Total = %d.\n&quot;,t,T);
-            }
-            else{
-                T -= t;
-                printf(&quot;Lose %d.  Total = %d.\n&quot;,t,T);
-            }
-            if(T == 0){
-                printf(&quot;Game Over.&quot;);
-                break;
-            }
-        }
-    }
     return 0;
 }
 </code></pre>

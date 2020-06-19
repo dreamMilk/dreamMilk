@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dreammilk.now.sh</id>
     <title>Milk &apos;s Home</title>
-    <updated>2020-06-18T04:09:03.370Z</updated>
+    <updated>2020-06-19T04:15:15.625Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dreammilk.now.sh"/>
     <link rel="self" href="https://dreammilk.now.sh/atom.xml"/>
@@ -10,6 +10,94 @@
     <logo>https://dreammilk.now.sh/images/avatar.png</logo>
     <icon>https://dreammilk.now.sh/favicon.ico</icon>
     <rights>All rights reserved 2020, Milk &apos;s Home</rights>
+    <entry>
+        <title type="html"><![CDATA[[需复盘]1084 外观数列 (20分)]]></title>
+        <id>https://dreammilk.now.sh/xu-fu-pan-1084-wai-guan-shu-lie-20-fen/</id>
+        <link href="https://dreammilk.now.sh/xu-fu-pan-1084-wai-guan-shu-lie-20-fen/">
+        </link>
+        <updated>2020-06-19T04:10:56.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>外观数列是指具有以下特点的整数序列：</p>
+<pre><code>d, d1, d111, d113, d11231, d112213111, ...
+</code></pre>
+<p>它从不等于 1 的数字 <code>d</code> 开始，序列的第 n+1 项是对第 n 项的描述。比如第 2 项表示第 1 项有 1 个 <code>d</code>，所以就是 <code>d1</code>；第 2 项是 1 个 <code>d</code>（对应 <code>d1</code>）和 1 个 1（对应 11），所以第 3 项就是 <code>d111</code>。又比如第 4 项是 <code>d113</code>，其描述就是 1 个 <code>d</code>，2 个 1，1 个 3，所以下一项就是 <code>d11231</code>。当然这个定义对 <code>d</code> = 1 也成立。本题要求你推算任意给定数字 <code>d</code> 的外观数列的第 N 项。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>外观数列是指具有以下特点的整数序列：</p>
+<pre><code>d, d1, d111, d113, d11231, d112213111, ...
+</code></pre>
+<p>它从不等于 1 的数字 <code>d</code> 开始，序列的第 n+1 项是对第 n 项的描述。比如第 2 项表示第 1 项有 1 个 <code>d</code>，所以就是 <code>d1</code>；第 2 项是 1 个 <code>d</code>（对应 <code>d1</code>）和 1 个 1（对应 11），所以第 3 项就是 <code>d111</code>。又比如第 4 项是 <code>d113</code>，其描述就是 1 个 <code>d</code>，2 个 1，1 个 3，所以下一项就是 <code>d11231</code>。当然这个定义对 <code>d</code> = 1 也成立。本题要求你推算任意给定数字 <code>d</code> 的外观数列的第 N 项。</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入第一行给出 [0,9] 范围内的一个整数 <code>d</code>、以及一个正整数 N（≤ 40），用空格分隔。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>在一行中给出数字 <code>d</code> 的外观数列的第 N 项。</p>
+</blockquote>
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">1 8
+</code></pre>
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">1123123111
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>目前没有理解为什么会出现测试点无法通过的点</p>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    int n;
+    string d;
+    cin &gt;&gt; d &gt;&gt; n;
+    for(int i=1;i&lt;n;i++){
+        string str=&quot;&quot;;
+        char temp = d[0];int cnt = 1;
+        for(int j=1;j&lt;d.length();j++){
+            if(d[j]==temp) cnt++;
+            else{
+                str = str+temp+char('0'+cnt);
+                cnt = 1;
+                temp=d[j];
+            }
+        }
+        str = str+temp+char('0'+cnt);
+        d = str;
+    }
+    cout &lt;&lt; d &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+<p>修改后：</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    string s;
+    int n, j;
+    cin &gt;&gt; s &gt;&gt; n;
+    for (int cnt = 1; cnt &lt; n; cnt++) {
+        string t;
+        for (int i = 0; i &lt; s.length(); i = j) {
+            for (j = i; j &lt; s.length() &amp;&amp; s[j] == s[i]; j++);
+            t += s[i] + to_string(j - i);
+        }
+        s = t;
+    }
+    cout &lt;&lt; s;
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[1082 射击比赛 (20分)]]></title>
         <id>https://dreammilk.now.sh/1082-she-ji-bi-sai-20-fen/</id>
@@ -855,107 +943,6 @@ int main() {
             }
         }
     }
-    return 0;
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1072 开学寄语 (20分)]]></title>
-        <id>https://dreammilk.now.sh/1072-kai-xue-ji-yu-20-fen/</id>
-        <link href="https://dreammilk.now.sh/1072-kai-xue-ji-yu-20-fen/">
-        </link>
-        <updated>2020-06-08T03:44:57.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>下图是上海某校的新学期开学寄语：天将降大任于斯人也，必先删其微博，卸其 QQ，封其电脑，夺其手机，收其 ipad，断其 wifi，使其百无聊赖，然后，净面、理发、整衣，然后思过、读书、锻炼、明智、开悟、精进。而后必成大器也！</p>
-<figure data-type="image" tabindex="1"><img src="https://images.ptausercontent.com/3b1d9f4a-778b-4942-a9e2-836262f363aa.JPG" alt="jiyu.JPG" loading="lazy"></figure>
-<p>本题要求你写个程序帮助这所学校的老师检查所有学生的物品，以助其成大器。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>下图是上海某校的新学期开学寄语：天将降大任于斯人也，必先删其微博，卸其 QQ，封其电脑，夺其手机，收其 ipad，断其 wifi，使其百无聊赖，然后，净面、理发、整衣，然后思过、读书、锻炼、明智、开悟、精进。而后必成大器也！</p>
-<figure data-type="image" tabindex="1"><img src="https://images.ptausercontent.com/3b1d9f4a-778b-4942-a9e2-836262f363aa.JPG" alt="jiyu.JPG" loading="lazy"></figure>
-<p>本题要求你写个程序帮助这所学校的老师检查所有学生的物品，以助其成大器。</p>
-</blockquote>
-<!-- more -->
-<h3 id="输入格式">输入格式：</h3>
-<blockquote>
-<p>输入第一行给出两个正整数 N（≤ 1000）和 M（≤ 6），分别是学生人数和需要被查缴的物品种类数。第二行给出 M 个需要被查缴的物品编号，其中编号为 4 位数字。随后 N 行，每行给出一位学生的姓名缩写（由 1-4 个大写英文字母组成）、个人物品数量 K（0 ≤ K ≤ 10）、以及 K 个物品的编号。</p>
-</blockquote>
-<h3 id="输出格式">输出格式：</h3>
-<blockquote>
-<p>顺次检查每个学生携带的物品，如果有需要被查缴的物品存在，则按以下格式输出该生的信息和其需要被查缴的物品的信息（注意行末不得有多余空格）：</p>
-<pre><code class="language-in">姓名缩写: 物品编号1 物品编号2 ……
-</code></pre>
-<p>最后一行输出存在问题的学生的总人数和被查缴物品的总数。</p>
-</blockquote>
-<h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">4 2
-2333 6666
-CYLL 3 1234 2345 3456
-U 4 9966 6666 8888 6666
-GG 2 2333 7777
-JJ 3 0012 6666 2333
-</code></pre>
-<h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">U: 6666 6666
-GG: 2333
-JJ: 6666 2333
-3 5
-</code></pre>
-<h3 id="思路">思路：</h3>
-<p>题目比较容易：</p>
-<blockquote>
-<p>将输入的违禁品编号使用<code>bool ban[10000]</code>进行存储，不属于违禁品的默认false</p>
-<p>循环遍历学生以及携带物品，使用flag判断学生是否携带违禁品，并利用stu统计违规学生，cnt统计违禁品数量</p>
-<p>flag还可以控制是否输出过名字，保证输出格式规范</p>
-</blockquote>
-<p>对于违禁品编号的存储：</p>
-<blockquote>
-<p>一开始发现题目中说明违禁品数量不超过6个，于是决定选择使用map存储</p>
-<p>但是运行的时候发现，使用map存储的耗时要比数组慢很多，但是空间使用却没有太大的区别</p>
-</blockquote>
-<p>数组与map相比，还是数组香，因此在相同情况下还是选择使用数组会比较好</p>
-<h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-
-using namespace std;
-
-int main() {
-    int n,m;
-    scanf(&quot;%d%d&quot;,&amp;n,&amp;m);
-    bool ban[10000]={false};
-    for(int i=0;i&lt;m;i++){
-        int id;
-        scanf(&quot;%d&quot;,&amp;id);
-        ban[id]=true;
-    }
-    int cnt=0,stu=0;
-    for(int i=0;i&lt;n;i++){
-        char name[10];
-        int num;
-        bool flag=true;
-        scanf(&quot;%s %d&quot;,&amp;name,&amp;num);
-        for(int j=0;j&lt;num;j++){
-            int id;
-            scanf(&quot;%d&quot;,&amp;id);
-            if(ban[id] &amp;&amp; flag){
-                printf(&quot;%s: %04d&quot;,name,id);
-                cnt++;
-                flag = false;
-            }else if(ban[id]){
-                printf(&quot; %04d&quot;,id);
-                cnt++;
-            }
-        }
-        if(!flag){
-            stu++;
-            printf(&quot;\n&quot;);
-        }
-    }
-    printf(&quot;%d %d\n&quot;,stu,cnt);
     return 0;
 }
 </code></pre>

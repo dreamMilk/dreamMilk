@@ -5,31 +5,35 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="baidu-site-verification" content="ZGbOgNUIf1" />
-<title>1025 反转链表 (25分) | Milk &#39;s Home</title>
+<title>1085 PAT单位排行 (25分) | Milk &#39;s Home</title>
 <meta name="referrer" content="never" />
 <link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
     <meta name="description" content="题目
 
-给定一个常数 K 以及一个单链表 L，请编写程序将 L 中每 K 个结点反转。例如：给定 L 为 1→2→3→4→5→6，K 为 3，则输出应该为 3→2→1→6→5→4；如果 K 为 4，则输出应该为 4→3→2→1→5→6，即最..." />
+每次 PAT 考试结束后，考试中心都会发布一个考生单位排行榜。本题就请你实现这个功能。
+
+
+输入格式：
+
+输入第一行给出一个正整数 N（≤10510^5105），即考生人数。随后 N 行，每行按下列格式给出一个考生的信息：
+准考证号..." />
     <meta name="keywords" content="代码练习" />
     
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
     <script src="https://dreammilk.now.sh/media/js/prism.min.js"></script>
     
     
-    <link rel="prefetch" href="https://dreammilk.now.sh/1026-cheng-xu-yun-xing-shi-jian-15-fen/">
     
-    
-    <link rel="prefetch" href="https://dreammilk.now.sh/1024-ke-xue-ji-shu-fa-20-fen/">
+    <link rel="prefetch" href="https://dreammilk.now.sh/xu-fu-pan-1084-wai-guan-shu-lie-20-fen/">
     
 </head>
 
 <body>
     <!-- start: #wrapper -->
     <header id="header"
-        style="background-image:url(https://s1.ax1x.com/2020/04/12/GL9TgI.jpg)">
+        style="background-image:url(https://s1.ax1x.com/2020/06/04/t0VJoR.jpg)">
         <div class="header-container">
   <h1 class="site-title"><a href="https://dreammilk.now.sh"><span>Milk &#39;s Home</span><span class="logo__cursor"></span></a></h1>
   <h2 class="site-description">welcome</h2>
@@ -88,93 +92,120 @@
                     <header>
                         <time class="date">
                             <i class="fa">
-                                <span class="datetime">2 个月前</span>
+                                <span class="datetime">10 小时前</span>
                             </i>
                         </time>
                     </header>
                     <h1 class="entry-title">
-                        1025 反转链表 (25分)
+                        1085 PAT单位排行 (25分)
                     </h1>
                     <div class="post-content">
                         <div class="post-hentry">
                             <h3 id="题目">题目</h3>
 <blockquote>
-<p>给定一个常数 <em>K</em> 以及一个单链表 <em>L</em>，请编写程序将 <em>L</em> 中每 <em>K</em> 个结点反转。例如：给定 <em>L</em> 为 1→2→3→4→5→6，<em>K</em> 为 3，则输出应该为 3→2→1→6→5→4；如果 <em>K</em> 为 4，则输出应该为 4→3→2→1→5→6，即最后不到 <em>K</em> 个元素不反转。</p>
+<p>每次 PAT 考试结束后，考试中心都会发布一个考生单位排行榜。本题就请你实现这个功能。</p>
 </blockquote>
 <!-- more -->
 <h3 id="输入格式">输入格式：</h3>
 <blockquote>
-<p>每个输入包含 1 个测试用例。每个测试用例第 1 行给出第 1 个结点的地址、结点总个数正整数 <em>N</em> (≤105)、以及正整数 <em>K</em> (≤<em>N</em>)，即要求反转的子链结点的个数。结点的地址是 5 位非负整数，NULL 地址用 −1 表示。</p>
-<p>接下来有 <em>N</em> 行，每行格式为：</p>
-<pre><code class="language-markdown">Address Data Next
+<p>输入第一行给出一个正整数 N（≤<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span>），即考生人数。随后 N 行，每行按下列格式给出一个考生的信息：</p>
+<pre><code class="language-markdown">准考证号 得分 学校
 </code></pre>
-<p>其中 <code>Address</code> 是结点地址，<code>Data</code> 是该结点保存的整数数据，<code>Next</code> 是下一结点的地址。</p>
+<p>其中<code>准考证号</code>是由 6 个字符组成的字符串，其首字母表示考试的级别：<code>B</code>代表乙级，<code>A</code>代表甲级，<code>T</code>代表顶级；<code>得分</code>是 [0, 100] 区间内的整数；<code>学校</code>是由不超过 6 个英文字母组成的单位码（大小写无关）。注意：题目保证每个考生的准考证号是不同的。</p>
 </blockquote>
 <h3 id="输出格式">输出格式：</h3>
 <blockquote>
-<p>对每个测试用例，顺序输出反转后的链表，其上每个结点占一行，格式与输入相同。</p>
+<p>首先在一行中输出单位个数。随后按以下格式非降序输出单位的排行榜：</p>
+<pre><code class="language-markdown">排名 学校 加权总分 考生人数
+</code></pre>
+<p>其中<code>排名</code>是该单位的排名（从 1 开始）；<code>学校</code>是全部按小写字母输出的单位码；<code>加权总分</code>定义为<code>乙级总分/1.5 + 甲级总分 + 顶级总分*1.5</code>的<strong>整数部分</strong>；<code>考生人数</code>是该属于单位的考生的总人数。</p>
+<p>学校首先按加权总分排行。如有并列，则应对应相同的排名，并按考生人数升序输出。如果仍然并列，则按单位码的字典序输出。</p>
 </blockquote>
 <h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">00100 6 4
-00000 4 99999
-00100 1 12309
-68237 6 -1
-33218 3 00000
-99999 5 68237
-12309 2 33218
+<pre><code class="language-in">10
+A57908 85 Au
+B57908 54 LanX
+A37487 60 au
+T28374 67 CMU
+T32486 24 hypu
+A66734 92 cmu
+B76378 71 AU
+A47780 45 lanx
+A72809 100 pku
+A03274 45 hypu
 </code></pre>
 <h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">00000 4 33218
-33218 3 12309
-12309 2 00100
-00100 1 99999
-99999 5 68237
-68237 6 -1
+<pre><code class="language-out">5
+1 cmu 192 2
+1 au 192 3
+3 pku 100 1
+4 hypu 81 2
+4 lanx 81 2
 </code></pre>
 <h3 id="思路">思路：</h3>
-<p>题目模拟链表存储过程，所有的地址均为虚拟地址，并非实际地址：</p>
+<p>读题感觉难度不高，写起来真费脑子🧠：</p>
 <blockquote>
-<p>对于链表结点的结构，可以分为<code>结构体</code>或<code>多个数组</code>进行存储表示</p>
-<p>因为题目涉及到多次交换位置，使用多个数组进行操作可能会比较方便进行定位翻转</p>
-<p>于是有<strong>数据数组</strong>、<strong>下一个结点地址数组</strong>以及<strong>整理好顺序的结点地址数组</strong></p>
+<p>首先选择使用两个<code>map</code>结构分别存放考生人数与学校加权总分，使用<code>vector</code>存放最后输出内容</p>
+<p>学校名称需要统一小写后存放，然后根据考试级别统计各学校加权总分，于是得到了两个<code>map</code>的数据</p>
+<p>然后根据两个<code>map</code>数据统计每个学校<code>名字 加权总分 考生人数</code>汇总到<code>vector</code>中</p>
+<p>接着根据题目提供的排序逻辑进行排序，然后通过判断语句输出相应的排名数</p>
 </blockquote>
-<p>数据输入时，将数据值存放到对应地址下表的数组中，下一节点的地址存放到对应地址下标数组中</p>
-<blockquote>
-<p>之所以需要整理链表，一是捋顺链表顺序，二是排除干扰结点（除头节点外没有前结点的结点）</p>
-<p>整理完成的数组链表只包含有效结点的地址（根据地址可以查询数值和下一节点地址）</p>
-<p>然后将新的数组链表进行定长翻转，进行输出即可</p>
-</blockquote>
-<p>一开始没有理解题目意思，认为地址是真实地内存地址，十分不理解，最后还是参考他人的逻辑进行编写</p>
 <h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;algorithm&gt;
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;map&gt;
+#include &lt;cctype&gt;
+#include &lt;algorithm&gt;
 
 using namespace std;
 
+struct node{
+    string name;
+    int score=0,number=0;
+};
+
+bool cmp(node a,node b){
+    if(a.score!=b.score) return a.score&gt;b.score;
+    else if(a.number!=b.number) return a.number&lt;b.number;
+    else return a.name&lt;b.name;
+}
+
 int main() {
-    int start,n,k,address;
-    cin &gt;&gt; start &gt;&gt; n &gt;&gt; k;
-    int data[100000],next[100000],new_list[100000];
+    int n;
+    cin &gt;&gt; n;
+    map&lt;string,int&gt; cnt;
+    map&lt;string,float&gt; s;
+    vector&lt;node&gt; v;
     for(int i=0;i&lt;n;i++){
-        cin &gt;&gt; address;
-        cin &gt;&gt; data[address] &gt;&gt; next[address];
+        string tid,school;
+        float score;
+        cin &gt;&gt; tid &gt;&gt; score &gt;&gt; school;
+        for(int j=0;j&lt;school.length();j++)
+        {
+            school[j] = tolower(school[j]);
+        }
+        if(tid[0]=='A') s[school] += score;
+        if(tid[0]=='B') s[school] += score/1.5;
+        if(tid[0]=='T') s[school] += score*1.5;
+        cnt[school]++;
     }
-    int cont=0;
-    while(start != -1){
-        new_list[cont++]=start;
-        start = next[start];
+    for(auto it=s.begin();it!=s.end();it++){
+        node no;
+        no.name=it-&gt;first;
+        no.number=cnt[no.name];
+        no.score=it-&gt;second;
+        v.push_back(no);
     }
-    for(int i=0;i&lt;cont-(cont%k);i += k){
-        reverse(begin(new_list)+i,begin(new_list)+i+k);
+    sort(v.begin(),v.end(),cmp);
+    cout &lt;&lt; v.size() &lt;&lt; endl;
+    int temp=-1;int Rank=1;
+    for(int i=0;i&lt;v.size();i++){
+        if(v[i].score!=temp){
+            Rank = i+1;
+            temp = v[i].score;
+        }
+        cout &lt;&lt; Rank &lt;&lt; ' ' &lt;&lt; v[i].name &lt;&lt; ' ' &lt;&lt; v[i].score &lt;&lt; ' ' &lt;&lt; v[i].number &lt;&lt; endl;
     }
-    for(int i=0;i&lt;cont-1;i++){
-        printf(&quot;%05d &quot;,new_list[i]);
-        cout &lt;&lt; data[new_list[i]];
-        printf(&quot; %05d\n&quot;,new_list[i+1]);
-    }
-    printf(&quot;%05d &quot;,new_list[cont-1]);
-    cout &lt;&lt; data[new_list[cont-1]];
-    printf(&quot; -1\n&quot;);
     return 0;
 }
 </code></pre>
@@ -187,10 +218,10 @@ int main() {
 
                 <div class="pager">
                     
-                    <a class="prev" href="https://dreammilk.now.sh/1026-cheng-xu-yun-xing-shi-jian-15-fen/">1026 程序运行时间 (15分)</a>
+                    <span class="prev">已是最新一篇</span>
                     
                     
-                    <a class="next" href="https://dreammilk.now.sh/1024-ke-xue-ji-shu-fa-20-fen/">1024 科学计数法 (20分)</a>
+                    <a class="next" href="https://dreammilk.now.sh/xu-fu-pan-1084-wai-guan-shu-lie-20-fen/">[需复盘]1084 外观数列 (20分)</a>
                     
                     <div class="clear"></div>
                 </div>

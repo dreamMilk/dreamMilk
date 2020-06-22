@@ -5,32 +5,35 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="baidu-site-verification" content="ZGbOgNUIf1" />
-<title>1078 字符串压缩与解压 (20分) | Milk &#39;s Home</title>
+<title>1086 就不告诉你 (15分) | Milk &#39;s Home</title>
 <meta name="referrer" content="never" />
 <link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
     <meta name="description" content="题目
 
-文本压缩有很多种方法，这里我们只考虑最简单的一种：把由相同字符组成的一个连续的片段用这个字符和片段中含有这个字符的个数来表示。例如 ccccc 就用 5c 来表示。如果字符没有重复，就原样输出。例如 aba 压缩后仍然是 aba。
-..." />
+做作业的时候，邻座的小盆友问你：“五乘以七等于多少？”你应该不失礼貌地围笑着告诉他：“五十三。”本题就要求你，对任何一对给定的正整数，倒着输出它们的乘积。
+
+
+
+输入格式：
+
+输入在第一行给出两个不超过 1000 的正整数 A 和 ..." />
     <meta name="keywords" content="代码练习" />
     
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
     <script src="https://dreammilk.now.sh/media/js/prism.min.js"></script>
     
     
-    <link rel="prefetch" href="https://dreammilk.now.sh/1079-yan-chi-de-hui-wen-shu-20-fen/">
     
-    
-    <link rel="prefetch" href="https://dreammilk.now.sh/1077-hu-ping-cheng-ji-ji-suan-20-fen/">
+    <link rel="prefetch" href="https://dreammilk.now.sh/1085-pat-dan-wei-pai-xing-25-fen/">
     
 </head>
 
 <body>
     <!-- start: #wrapper -->
     <header id="header"
-        style="background-image:url(https://s1.ax1x.com/2020/06/04/t0E2MF.jpg)">
+        style="background-image:url(https://s1.ax1x.com/2020/06/10/toQnrn.jpg)">
         <div class="header-container">
   <h1 class="site-title"><a href="https://dreammilk.now.sh"><span>Milk &#39;s Home</span><span class="logo__cursor"></span></a></h1>
   <h2 class="site-description">welcome</h2>
@@ -89,89 +92,59 @@
                     <header>
                         <time class="date">
                             <i class="fa">
-                                <span class="datetime">8 天前</span>
+                                <span class="datetime">7 分钟前</span>
                             </i>
                         </time>
                     </header>
                     <h1 class="entry-title">
-                        1078 字符串压缩与解压 (20分)
+                        1086 就不告诉你 (15分)
                     </h1>
                     <div class="post-content">
                         <div class="post-hentry">
                             <h3 id="题目">题目</h3>
 <blockquote>
-<p>文本压缩有很多种方法，这里我们只考虑最简单的一种：把由相同字符组成的一个连续的片段用这个字符和片段中含有这个字符的个数来表示。例如 <code>ccccc</code> 就用 <code>5c</code> 来表示。如果字符没有重复，就原样输出。例如 <code>aba</code> 压缩后仍然是 <code>aba</code>。</p>
-<p>解压方法就是反过来，把形如 <code>5c</code> 这样的表示恢复为 <code>ccccc</code>。</p>
-<p>本题需要你根据压缩或解压的要求，对给定字符串进行处理。这里我们简单地假设原始字符串是完全由英文字母和空格组成的非空字符串。</p>
+<p>做作业的时候，邻座的小盆友问你：“五乘以七等于多少？”你应该不失礼貌地围笑着告诉他：“五十三。”本题就要求你，对任何一对给定的正整数，倒着输出它们的乘积。</p>
+<figure data-type="image" tabindex="1"><img src="https://images.ptausercontent.com/0c3a4497-27c3-45ea-9c8e-5a1ab2df48af.jpg" alt="53.jpg" loading="lazy"></figure>
 </blockquote>
 <!-- more -->
 <h3 id="输入格式">输入格式：</h3>
 <blockquote>
-<p>输入第一行给出一个字符，如果是 <code>C</code> 就表示下面的字符串需要被压缩；如果是 <code>D</code> 就表示下面的字符串需要被解压。第二行给出需要被压缩或解压的不超过 1000 个字符的字符串，以回车结尾。题目保证字符重复个数在整型范围内，且输出文件不超过 1MB。</p>
+<p>输入在第一行给出两个不超过 1000 的正整数 A 和 B，其间以空格分隔。</p>
 </blockquote>
 <h3 id="输出格式">输出格式：</h3>
 <blockquote>
-<p>根据要求压缩或解压字符串，并在一行中输出结果。</p>
+<p>在一行中倒着输出 A 和 B 的乘积。</p>
 </blockquote>
-<h3 id="输入样例1">输入样例1：</h3>
-<pre><code class="language-in">C
-TTTTThhiiiis isssss a   tesssst CAaaa as
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">5 7
 </code></pre>
-<h3 id="输出样例1">输出样例1：</h3>
-<pre><code class="language-out">5T2h4is i5s a3 te4st CA3a as
-</code></pre>
-<h3 id="输入样例2">输入样例2：</h3>
-<pre><code class="language-in">D
-5T2h4is i5s a3 te4st CA3a as10Z
-</code></pre>
-<h3 id="输出样例2">输出样例2：</h3>
-<pre><code class="language-out">TTTTThhiiiis isssss a   tesssst CAaaa asZZZZZZZZZZ
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">53
 </code></pre>
 <h3 id="思路">思路：</h3>
-<p>题目比较容易：</p>
+<p>题目输出两个数字乘积的倒序：</p>
 <blockquote>
-<p>在压缩字符串时存在两个变量，<code>temp</code>和<code>cnt</code>分别是前一个字母与出现次数</p>
-<p>如果当前字母与<code>temp</code>不同，则输出<code>cnt</code>和<code>temp</code>，如果<code>cnt</code>为1则省略；不同时<code>cnt++</code></p>
-<p>在解压字符串时需要注意连续出现数字的情况，这些数字需要变为一个整体</p>
-<p>然后每次输出时循环打印即可</p>
+<p>唯一需要注意的地方是乘积倒序后开头为0的情况，需要跳过这些0，从第一个非0数字开始输出</p>
 </blockquote>
-<p>需要注意输入输出的格式问题，避免存储错误信息</p>
+<p>剩余的就是<code>%10</code>的基本操作</p>
 <h4 id="于是代码如下">于是代码如下：</h4>
 <pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;cctype&gt;
 
 using namespace std;
 
 int main() {
-    char c;
-    string s;
-    int cnt=0;
-    cin &gt;&gt; c;
-    getchar();
-    getline(cin,s);
-    if(c=='C'){
-        char temp = s[0];
-        for(int i=1;i&lt;s.length();i++){
-            if(s[i]==temp) cnt++;
-            else{
-                if(cnt==0) cout &lt;&lt; temp;
-                else cout &lt;&lt; cnt+1 &lt;&lt; temp;
-                temp = s[i];
-                cnt = 0;
-            }
+    int a,b,mul,num;
+    cin &gt;&gt; a &gt;&gt; b;
+    mul = a*b;
+    bool flag = true;
+    while(mul!=0){
+        num = mul%10;
+        if(num != 0){
+            cout &lt;&lt; num;
+            flag=false;
         }
-        if(cnt==0) cout &lt;&lt; temp;
-        else cout &lt;&lt; cnt+1 &lt;&lt; temp;
-    }
-    else{
-        for(int i=0;i&lt;s.length();i++){
-            if(isdigit(s[i])) cnt = cnt*10 + s[i]-'0';
-            else{
-                cnt = cnt==0?1:cnt;
-                for(int j=0;j&lt;cnt;j++) cout &lt;&lt; s[i];
-                cnt = 0;
-            }
-        }
+        else if(!flag) cout &lt;&lt; num;
+        mul /=10;
     }
     return 0;
 }
@@ -185,10 +158,10 @@ int main() {
 
                 <div class="pager">
                     
-                    <a class="prev" href="https://dreammilk.now.sh/1079-yan-chi-de-hui-wen-shu-20-fen/">1079 延迟的回文数 (20分)</a>
+                    <span class="prev">已是最新一篇</span>
                     
                     
-                    <a class="next" href="https://dreammilk.now.sh/1077-hu-ping-cheng-ji-ji-suan-20-fen/">1077 互评成绩计算 (20分)</a>
+                    <a class="next" href="https://dreammilk.now.sh/1085-pat-dan-wei-pai-xing-25-fen/">1085 PAT单位排行 (25分)</a>
                     
                     <div class="clear"></div>
                 </div>

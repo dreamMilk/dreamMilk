@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dreammilk.now.sh</id>
     <title>Milk &apos;s Home</title>
-    <updated>2020-06-22T04:14:39.501Z</updated>
+    <updated>2020-06-23T03:56:16.899Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dreammilk.now.sh"/>
     <link rel="self" href="https://dreammilk.now.sh/atom.xml"/>
@@ -10,6 +10,60 @@
     <logo>https://dreammilk.now.sh/images/avatar.png</logo>
     <icon>https://dreammilk.now.sh/favicon.ico</icon>
     <rights>All rights reserved 2020, Milk &apos;s Home</rights>
+    <entry>
+        <title type="html"><![CDATA[1087 有多少不同的值 (20分)]]></title>
+        <id>https://dreammilk.now.sh/1087-you-duo-shao-bu-tong-de-zhi-20-fen/</id>
+        <link href="https://dreammilk.now.sh/1087-you-duo-shao-bu-tong-de-zhi-20-fen/">
+        </link>
+        <updated>2020-06-23T03:54:14.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>当自然数 <em>n</em> 依次取 1、2、3、……、<em>N</em> 时，算式 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⌊</mo><mi>n</mi><mi mathvariant="normal">/</mi><mn>2</mn><mo>⌋</mo></mrow><annotation encoding="application/x-tex">\lfloor n/2 \rfloor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⌊</span><span class="mord mathdefault">n</span><span class="mord">/</span><span class="mord">2</span><span class="mclose">⌋</span></span></span></span>+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⌊</mo><mi>n</mi><mi mathvariant="normal">/</mi><mn>3</mn><mo>⌋</mo></mrow><annotation encoding="application/x-tex">\lfloor n/3 \rfloor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⌊</span><span class="mord mathdefault">n</span><span class="mord">/</span><span class="mord">3</span><span class="mclose">⌋</span></span></span></span>+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⌊</mo><mi>n</mi><mi mathvariant="normal">/</mi><mn>5</mn><mo>⌋</mo></mrow><annotation encoding="application/x-tex">\lfloor n/5 \rfloor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⌊</span><span class="mord mathdefault">n</span><span class="mord">/</span><span class="mord">5</span><span class="mclose">⌋</span></span></span></span> 有多少个不同的值？（注：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⌊</mo><mi>n</mi><mo>⌋</mo></mrow><annotation encoding="application/x-tex">\lfloor n \rfloor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⌊</span><span class="mord mathdefault">n</span><span class="mclose">⌋</span></span></span></span> 为取整函数，表示不超过 <em>x</em> 的最大自然数，即 <em>x</em> 的整数部分。）</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>当自然数 <em>n</em> 依次取 1、2、3、……、<em>N</em> 时，算式 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⌊</mo><mi>n</mi><mi mathvariant="normal">/</mi><mn>2</mn><mo>⌋</mo></mrow><annotation encoding="application/x-tex">\lfloor n/2 \rfloor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⌊</span><span class="mord mathdefault">n</span><span class="mord">/</span><span class="mord">2</span><span class="mclose">⌋</span></span></span></span>+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⌊</mo><mi>n</mi><mi mathvariant="normal">/</mi><mn>3</mn><mo>⌋</mo></mrow><annotation encoding="application/x-tex">\lfloor n/3 \rfloor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⌊</span><span class="mord mathdefault">n</span><span class="mord">/</span><span class="mord">3</span><span class="mclose">⌋</span></span></span></span>+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⌊</mo><mi>n</mi><mi mathvariant="normal">/</mi><mn>5</mn><mo>⌋</mo></mrow><annotation encoding="application/x-tex">\lfloor n/5 \rfloor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⌊</span><span class="mord mathdefault">n</span><span class="mord">/</span><span class="mord">5</span><span class="mclose">⌋</span></span></span></span> 有多少个不同的值？（注：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⌊</mo><mi>n</mi><mo>⌋</mo></mrow><annotation encoding="application/x-tex">\lfloor n \rfloor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⌊</span><span class="mord mathdefault">n</span><span class="mclose">⌋</span></span></span></span> 为取整函数，表示不超过 <em>x</em> 的最大自然数，即 <em>x</em> 的整数部分。）</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入给出一个正整数 <em>N</em>（2≤<em>N</em>≤<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">10^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span>）。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>在一行中输出题面中算式取到的不同值的个数。</p>
+</blockquote>
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">2017
+</code></pre>
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">1480
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>题目中提到了“不同”，二话不说<code>set</code>结构：</p>
+<blockquote>
+<p>将所有结果使用<code>set</code>存储，最后输出<code>set</code>的大小即为所求</p>
+</blockquote>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;set&gt;
+
+using namespace std;
+
+int main() {
+    int n;
+    cin &gt;&gt; n;
+    set&lt;int&gt; s;
+    for(int i=1;i&lt;=n;i++){
+        s.insert(i/2+i/3+i/5);
+    }
+    cout &lt;&lt; s.size();
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[1086 就不告诉你 (15分)]]></title>
         <id>https://dreammilk.now.sh/1086-jiu-bu-gao-su-ni-15-fen/</id>
@@ -797,115 +851,6 @@ int main() {
             if(ans == 'T') printf(&quot;%d&quot;,opt-'A'+1);
         }
     }
-    return 0;
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1075 链表元素分类 (25分)]]></title>
-        <id>https://dreammilk.now.sh/1075-lian-biao-yuan-su-fen-lei-25-fen/</id>
-        <link href="https://dreammilk.now.sh/1075-lian-biao-yuan-su-fen-lei-25-fen/">
-        </link>
-        <updated>2020-06-11T03:59:35.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>给定一个单链表，请编写程序将链表元素进行分类排列，使得所有负值元素都排在非负值元素的前面，而 [0, K] 区间内的元素都排在大于 K 的元素前面。但每一类内部元素的顺序是不能改变的。例如：给定链表为 18→7→-4→0→5→-6→10→11→-2，K 为 10，则输出应该为 -4→-6→-2→7→0→5→10→18→11。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>给定一个单链表，请编写程序将链表元素进行分类排列，使得所有负值元素都排在非负值元素的前面，而 [0, K] 区间内的元素都排在大于 K 的元素前面。但每一类内部元素的顺序是不能改变的。例如：给定链表为 18→7→-4→0→5→-6→10→11→-2，K 为 10，则输出应该为 -4→-6→-2→7→0→5→10→18→11。</p>
-</blockquote>
-<!-- more -->
-<h3 id="输入格式">输入格式：</h3>
-<blockquote>
-<p>每个输入包含一个测试用例。每个测试用例第 1 行给出：第 1 个结点的地址；结点总个数，即正整数N (≤<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span>)；以及正整数K (≤<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">10^3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span>)。结点的地址是 5 位非负整数，NULL 地址用 −1 表示。</p>
-<p>接下来有 N 行，每行格式为：</p>
-<pre><code class="language-in">Address Data Next
-</code></pre>
-<p>其中 <code>Address</code> 是结点地址；<code>Data</code> 是该结点保存的数据，为 [<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">−</mi><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">−10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span>,<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span>] 区间内的整数；<code>Next</code> 是下一结点的地址。题目保证给出的链表不为空。</p>
-</blockquote>
-<h3 id="输出格式">输出格式：</h3>
-<blockquote>
-<p>对每个测试用例，按链表从头到尾的顺序输出重排后的结果链表，其上每个结点占一行，格式与输入相同。</p>
-</blockquote>
-<h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">00100 9 10
-23333 10 27777
-00000 0 99999
-00100 18 12309
-68237 -6 23333
-33218 -4 00000
-48652 -2 -1
-99999 5 68237
-27777 11 48652
-12309 7 33218
-</code></pre>
-<h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">33218 -4 68237
-68237 -6 48652
-48652 -2 12309
-12309 7 00000
-00000 0 99999
-99999 5 23333
-23333 10 00100
-00100 18 27777
-27777 11 -1
-</code></pre>
-<h3 id="思路">思路：</h3>
-<p>题目依旧是按照数组结构的顺序存储：</p>
-<blockquote>
-<p>构造一个表示结点的结构体，存储数据和下一个结点地址，然后使用数组存放</p>
-<p>总共三次循环：第一次存储输入数据；第二次将数据按照大小分类；第三次将每个类中的数据输出</p>
-<p>题目的意思是将数据分为（-∞，0）、[0，K]和（K，+∞），保持输入顺序即可</p>
-</blockquote>
-<p>其实最关键的地方在于输出的处理：</p>
-<blockquote>
-<p>往常一直是非常死板的认为输出语句最多输出一行的数据，可以保持输出代码比较整洁易读</p>
-<p>本题的输出却是输出两行的内容，在输出当前节点时，不需要输出后续节点地址，而是有下一个结点负责补充</p>
-<p>这样可以避免产生多余的控制逻辑，提高执行效率</p>
-</blockquote>
-<h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;vector&gt;
-
-using namespace std;
-
-struct Node{
-    int data,next;
-};
-
-int main() {
-    int start,n,k;
-    Node sqlist[100000];
-    scanf(&quot;%d %d %d&quot;,&amp;start,&amp;n,&amp;k);
-    for(int i=0;i&lt;n;i++){
-        int address;
-        scanf(&quot;%d &quot;,&amp;address);
-        scanf(&quot;%d %d&quot;,&amp;sqlist[address].data,&amp;sqlist[address].next);
-    }
-    int p=start;
-    vector&lt;int&gt; v[3];
-    while(p!=-1){
-        if(sqlist[p].data &lt; 0) v[0].push_back(p);
-        else if(sqlist[p].data &gt; k) v[2].push_back(p);
-        else v[1].push_back(p);
-        p = sqlist[p].next;
-    }
-    bool flag=false;
-    for(int i=0;i&lt;3;i++){
-        for(int j=0;j&lt;v[i].size();j++){
-            if(flag){
-                printf(&quot; %05d\n%05d %d&quot;,v[i][j],v[i][j],sqlist[v[i][j]].data);
-            }
-            else{
-                printf(&quot;%05d %d&quot;,v[i][j],sqlist[v[i][j]].data);
-                flag = true;
-            }
-        }
-    }
-    printf(&quot; -1&quot;);
     return 0;
 }
 </code></pre>

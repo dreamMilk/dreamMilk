@@ -5,31 +5,29 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="baidu-site-verification" content="ZGbOgNUIf1" />
-<title>1079 延迟的回文数 (20分) | Milk &#39;s Home</title>
+<title>1087 有多少不同的值 (20分) | Milk &#39;s Home</title>
 <meta name="referrer" content="never" />
 <link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
     <meta name="description" content="题目
 
-给定一个 k+1 位的正整数 N，写成 aka_kak​⋯a1a0a_1a_0a1​a0​ 的形式，其中对所有 i 有 0≤aia_iai​&lt;10 且 aka_kak​&gt;0。N 被称为一个回文数，当且仅当对所有 i 有 ..." />
+当自然数 n 依次取 1、2、3、……、N 时，算式 ⌊n/2⌋\lfloor n/2 \rfloor⌊n/2⌋+⌊n/3⌋\lfloor n/3 \rfloor⌊n/3⌋+⌊n/5⌋\lfloor n/5 \rfloor⌊n/5⌋..." />
     <meta name="keywords" content="代码练习" />
     
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
     <script src="https://dreammilk.now.sh/media/js/prism.min.js"></script>
     
     
-    <link rel="prefetch" href="https://dreammilk.now.sh/1081-jian-cha-mi-ma-15-fen/">
     
-    
-    <link rel="prefetch" href="https://dreammilk.now.sh/1078-zi-fu-chuan-ya-suo-yu-jie-ya-20-fen/">
+    <link rel="prefetch" href="https://dreammilk.now.sh/1086-jiu-bu-gao-su-ni-15-fen/">
     
 </head>
 
 <body>
     <!-- start: #wrapper -->
     <header id="header"
-        style="background-image:url(https://s1.ax1x.com/2020/06/04/t0ERr4.jpg)">
+        style="background-image:url(https://s1.ax1x.com/2020/06/10/toQubq.jpg)">
         <div class="header-container">
   <h1 class="site-title"><a href="https://dreammilk.now.sh"><span>Milk &#39;s Home</span><span class="logo__cursor"></span></a></h1>
   <h2 class="site-description">welcome</h2>
@@ -88,100 +86,53 @@
                     <header>
                         <time class="date">
                             <i class="fa">
-                                <span class="datetime">8 天前</span>
+                                <span class="datetime">2 分钟前</span>
                             </i>
                         </time>
                     </header>
                     <h1 class="entry-title">
-                        1079 延迟的回文数 (20分)
+                        1087 有多少不同的值 (20分)
                     </h1>
                     <div class="post-content">
                         <div class="post-hentry">
                             <h3 id="题目">题目</h3>
 <blockquote>
-<p>给定一个 <em>k</em>+1 位的正整数 <em>N</em>，写成 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>a</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">a_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>⋯<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>a</mi><mn>1</mn></msub><msub><mi>a</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">a_1a_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 的形式，其中对所有 <em>i</em> 有 0≤<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">a_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>&lt;10 且 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>a</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">a_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>&gt;0。<em>N</em> 被称为一个<strong>回文数</strong>，当且仅当对所有 <em>i</em> 有 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>a</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">a_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>=<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>a</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">a_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>−<em>i</em>。零也被定义为一个回文数。</p>
-<p>非回文数也可以通过一系列操作变出回文数。首先将该数字逆转，再将逆转数与该数相加，如果和还不是一个回文数，就重复这个逆转再相加的操作，直到一个回文数出现。如果一个非回文数可以变出回文数，就称这个数为<strong>延迟的回文数</strong>。（定义翻译自 https://en.wikipedia.org/wiki/Palindromic_number ）</p>
-<p>给定任意一个正整数，本题要求你找到其变出的那个回文数。</p>
+<p>当自然数 <em>n</em> 依次取 1、2、3、……、<em>N</em> 时，算式 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⌊</mo><mi>n</mi><mi mathvariant="normal">/</mi><mn>2</mn><mo>⌋</mo></mrow><annotation encoding="application/x-tex">\lfloor n/2 \rfloor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⌊</span><span class="mord mathdefault">n</span><span class="mord">/</span><span class="mord">2</span><span class="mclose">⌋</span></span></span></span>+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⌊</mo><mi>n</mi><mi mathvariant="normal">/</mi><mn>3</mn><mo>⌋</mo></mrow><annotation encoding="application/x-tex">\lfloor n/3 \rfloor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⌊</span><span class="mord mathdefault">n</span><span class="mord">/</span><span class="mord">3</span><span class="mclose">⌋</span></span></span></span>+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⌊</mo><mi>n</mi><mi mathvariant="normal">/</mi><mn>5</mn><mo>⌋</mo></mrow><annotation encoding="application/x-tex">\lfloor n/5 \rfloor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⌊</span><span class="mord mathdefault">n</span><span class="mord">/</span><span class="mord">5</span><span class="mclose">⌋</span></span></span></span> 有多少个不同的值？（注：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⌊</mo><mi>n</mi><mo>⌋</mo></mrow><annotation encoding="application/x-tex">\lfloor n \rfloor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">⌊</span><span class="mord mathdefault">n</span><span class="mclose">⌋</span></span></span></span> 为取整函数，表示不超过 <em>x</em> 的最大自然数，即 <em>x</em> 的整数部分。）</p>
 </blockquote>
 <!-- more -->
 <h3 id="输入格式">输入格式：</h3>
 <blockquote>
-<p>输入在一行中给出一个不超过1000位的正整数。</p>
+<p>输入给出一个正整数 <em>N</em>（2≤<em>N</em>≤<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">10^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span>）。</p>
 </blockquote>
 <h3 id="输出格式">输出格式：</h3>
 <blockquote>
-<p>对给定的整数，一行一行输出其变出回文数的过程。每行格式如下</p>
-<pre><code class="language-markdown">A + B = C
-</code></pre>
-<p>其中 <code>A</code> 是原始的数字，<code>B</code> 是 <code>A</code> 的逆转数，<code>C</code> 是它们的和。<code>A</code> 从输入的整数开始。重复操作直到 <code>C</code> 在 10 步以内变成回文数，这时在一行中输出 <code>C is a palindromic number.</code>；或者如果 10 步都没能得到回文数，最后就在一行中输出 <code>Not found in 10 iterations.</code>。</p>
+<p>在一行中输出题面中算式取到的不同值的个数。</p>
 </blockquote>
-<h3 id="输入样例1">输入样例1：</h3>
-<pre><code class="language-in">97152
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">2017
 </code></pre>
-<h3 id="输出样例1">输出样例1：</h3>
-<pre><code class="language-out">97152 + 25179 = 122331
-122331 + 133221 = 255552
-255552 is a palindromic number.
-</code></pre>
-<h3 id="输入样例2">输入样例2：</h3>
-<pre><code class="language-in">196
-</code></pre>
-<h3 id="输出样例2">输出样例2：</h3>
-<pre><code class="language-out">196 + 691 = 887
-887 + 788 = 1675
-1675 + 5761 = 7436
-7436 + 6347 = 13783
-13783 + 38731 = 52514
-52514 + 41525 = 94039
-94039 + 93049 = 187088
-187088 + 880781 = 1067869
-1067869 + 9687601 = 10755470
-10755470 + 07455701 = 18211171
-Not found in 10 iterations.
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">1480
 </code></pre>
 <h3 id="思路">思路：</h3>
-<p>题目隐藏的意思：</p>
+<p>题目中提到了“不同”，二话不说<code>set</code>结构：</p>
 <blockquote>
-<p>如果输入的数字就是回文数的话，直接输出<code>C is a palindromic number.</code></p>
-</blockquote>
-<p>大致过程：</p>
-<blockquote>
-<p>进行10次循环，每次先对输入字符串判断是否为回文数，如果是则退出，否则下一步</p>
-<p>然后输出等式并将字符串与反转字符串相加，得到新的字符串</p>
-<p>结束循环后判断是否是中途退出循环，如果是则符合回文要求，否则不能得到回文数</p>
+<p>将所有结果使用<code>set</code>存储，最后输出<code>set</code>的大小即为所求</p>
 </blockquote>
 <h4 id="于是代码如下">于是代码如下：</h4>
 <pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;algorithm&gt;
+#include &lt;set&gt;
 
 using namespace std;
 
 int main() {
-    string input,str;
-    cin &gt;&gt; str;
-    int i;
-    for(i=0;i&lt;10;i++){
-        input = str;
-        reverse(str.begin(),str.end());
-        if(input == str){
-            cout &lt;&lt; input &lt;&lt; &quot; is a palindromic number.&quot;;
-            break;
-        }
-        cout &lt;&lt; input &lt;&lt; &quot; + &quot;;
-
-        cout &lt;&lt; str &lt;&lt; &quot; = &quot;;
-        int up=0;str=&quot;&quot;;
-        for(int j=0;j&lt;input.length();j++){
-            char c;
-            int num=input[j]+input[input.length()-1-j]-2*'0'+up;
-            c = num%10+'0';
-            up = num/10;
-            str = c+str;
-        }
-        if(up!=0) str = &quot;1&quot;+str;
-        cout &lt;&lt; str &lt;&lt; endl;
+    int n;
+    cin &gt;&gt; n;
+    set&lt;int&gt; s;
+    for(int i=1;i&lt;=n;i++){
+        s.insert(i/2+i/3+i/5);
     }
-    if(i==10) cout &lt;&lt; &quot;Not found in 10 iterations.&quot;;
+    cout &lt;&lt; s.size();
     return 0;
 }
 </code></pre>
@@ -194,10 +145,10 @@ int main() {
 
                 <div class="pager">
                     
-                    <a class="prev" href="https://dreammilk.now.sh/1081-jian-cha-mi-ma-15-fen/">1081 检查密码 (15分)</a>
+                    <span class="prev">已是最新一篇</span>
                     
                     
-                    <a class="next" href="https://dreammilk.now.sh/1078-zi-fu-chuan-ya-suo-yu-jie-ya-20-fen/">1078 字符串压缩与解压 (20分)</a>
+                    <a class="next" href="https://dreammilk.now.sh/1086-jiu-bu-gao-su-ni-15-fen/">1086 就不告诉你 (15分)</a>
                     
                     <div class="clear"></div>
                 </div>

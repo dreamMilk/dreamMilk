@@ -5,31 +5,30 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="baidu-site-verification" content="ZGbOgNUIf1" />
-<title>1049 数列的片段和 (20分) | Milk &#39;s Home</title>
+<title>1088 三人行 (20分) | Milk &#39;s Home</title>
 <meta name="referrer" content="never" />
 <link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
     <meta name="description" content="题目
 
-给定一个正数数列，我们可以从中截取任意的连续的几个数，称为片段。例如，给定数列 { 0.1, 0.2, 0.3, 0.4 }，我们有 (0.1) (0.1, 0.2) (0.1, 0.2, 0.3) (0.1, 0.2, 0.3, ..." />
+子曰：“三人行，必有我师焉。择其善者而从之，其不善者而改之。”
+本题给定甲、乙、丙三个人的能力值关系为：甲的能力值确定是 2 位正整数；把甲的能力值的 2 个数字调换位置就是乙的能力值；甲乙两人能力差是丙的能力值的 X 倍；乙的能力..." />
     <meta name="keywords" content="代码练习" />
     
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
     <script src="https://dreammilk.now.sh/media/js/prism.min.js"></script>
     
     
-    <link rel="prefetch" href="https://dreammilk.now.sh/1050-luo-xuan-ju-zhen-25-fen/">
     
-    
-    <link rel="prefetch" href="https://dreammilk.now.sh/1048-shu-zi-jia-mi-20-fen/">
+    <link rel="prefetch" href="https://dreammilk.now.sh/1087-you-duo-shao-bu-tong-de-zhi-20-fen/">
     
 </head>
 
 <body>
     <!-- start: #wrapper -->
     <header id="header"
-        style="background-image:url(https://s1.ax1x.com/2020/04/30/JHdWcV.png)">
+        style="background-image:url(https://s1.ax1x.com/2020/06/13/txAL79.jpg)">
         <div class="header-container">
   <h1 class="site-title"><a href="https://dreammilk.now.sh"><span>Milk &#39;s Home</span><span class="logo__cursor"></span></a></h1>
   <h2 class="site-description">welcome</h2>
@@ -88,67 +87,74 @@
                     <header>
                         <time class="date">
                             <i class="fa">
-                                <span class="datetime">1 个月前</span>
+                                <span class="datetime">2 分钟前</span>
                             </i>
                         </time>
                     </header>
                     <h1 class="entry-title">
-                        1049 数列的片段和 (20分)
+                        1088 三人行 (20分)
                     </h1>
                     <div class="post-content">
                         <div class="post-hentry">
                             <h3 id="题目">题目</h3>
 <blockquote>
-<p>给定一个正数数列，我们可以从中截取任意的连续的几个数，称为片段。例如，给定数列 { 0.1, 0.2, 0.3, 0.4 }，我们有 (0.1) (0.1, 0.2) (0.1, 0.2, 0.3) (0.1, 0.2, 0.3, 0.4) (0.2) (0.2, 0.3) (0.2, 0.3, 0.4) (0.3) (0.3, 0.4) (0.4) 这 10 个片段。</p>
-<p>给定正整数数列，求出全部片段包含的所有的数之和。如本例中 10 个片段总和是 0.1 + 0.3 + 0.6 + 1.0 + 0.2 + 0.5 + 0.9 + 0.3 + 0.7 + 0.4 = 5.0。</p>
+<p>子曰：“三人行，必有我师焉。择其善者而从之，其不善者而改之。”</p>
+<p>本题给定甲、乙、丙三个人的能力值关系为：甲的能力值确定是 2 位正整数；把甲的能力值的 2 个数字调换位置就是乙的能力值；甲乙两人能力差是丙的能力值的 X 倍；乙的能力值是丙的 Y 倍。请你指出谁比你强应“从之”，谁比你弱应“改之”。</p>
 </blockquote>
 <!-- more -->
 <h3 id="输入格式">输入格式：</h3>
 <blockquote>
-<p>输入第一行给出一个不超过 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">10^5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span></span></span></span></span></span></span></span> 的正整数 <em>N</em>，表示数列中数的个数，第二行给出 <em>N</em> 个不超过 1.0 的正数，是数列中的数，其间以空格分隔。</p>
+<p>输入在一行中给出三个数，依次为：M（你自己的能力值）、X 和 Y。三个数字均为不超过 1000 的正整数。</p>
 </blockquote>
 <h3 id="输出格式">输出格式：</h3>
 <blockquote>
-<p>在一行中输出该序列所有片段包含的数之和，精确到小数点后 2 位。</p>
+<p>在一行中首先输出甲的能力值，随后依次输出甲、乙、丙三人与你的关系：如果其比你强，输出 <code>Cong</code>；平等则输出 <code>Ping</code>；比你弱则输出 <code>Gai</code>。其间以 1 个空格分隔，行首尾不得有多余空格。</p>
+<p>注意：如果解不唯一，则以甲的最大解为准进行判断；如果解不存在，则输出 <code>No Solution</code>。</p>
 </blockquote>
-<h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">4
-0.1 0.2 0.3 0.4
+<h3 id="输入样例1">输入样例1：</h3>
+<pre><code class="language-in">48 3 7
 </code></pre>
-<h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">5.00
+<h3 id="输出样例1">输出样例1：</h3>
+<pre><code class="language-out">48 Ping Cong Gai
+</code></pre>
+<h3 id="输入样例2">输入样例2：</h3>
+<pre><code class="language-in">48 11 6
+</code></pre>
+<h3 id="输出样例2">输出样例2：</h3>
+<pre><code class="language-out">No Solution
 </code></pre>
 <h3 id="思路">思路：</h3>
-<p>题目主要是寻找规律：</p>
+<p>因为题目没有明确的数值规律，直接使用遍历进行求解：</p>
 <blockquote>
-<pre><code class="language-json">1	12	123	1234			|		其中1出现的次数为1*4（第一行的四种组合）
-	 2	 23	 234			|		    2出现的次数为2*3（前两行的后三列的六种组合）
-		  3	  34			|			3出现的次数为3*2（前三行的后两列的六种组合）
-			   4			|			4出现的次数为4*1（最后一列的四种组合）
-</code></pre>
-<p>按照上面的例子可以看出来每个数值出现的次数是有规律的</p>
-<p><code>(i+1)*(n-i)</code>：其中<code>i</code>指第i个数（从0开始计数），<code>n</code>指输入的总数</p>
-<p>使用上述规律将每个数 * 出现次数再进行相加就可以得到结果</p>
+<p>因为以最大解为准，所以使用反向遍历[10，99]，对符合要求的数值再按照题目逻辑进行判断</p>
 </blockquote>
-<p>注意题目的精度问题，需要使用double类型才能通过所有测试点，float可能会精度不足</p>
 <h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;vector&gt;
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;cmath&gt;
 
 using namespace std;
 
+void judge(int m,double p){
+    if(m &gt; p) cout &lt;&lt; &quot; Gai&quot;;
+    else if(m == p) cout &lt;&lt; &quot; Ping&quot;;
+    else cout &lt;&lt; &quot; Cong&quot;;
+}
+
 int main() {
-    int n;
-    cin &gt;&gt; n;
-    vector&lt;double&gt; v(n);
-    for(int i=0;i&lt;n;i++){
-        cin &gt;&gt; v[i];
+    int m,x,y,i;
+    cin &gt;&gt; m &gt;&gt; x &gt;&gt; y;
+    for(i=99;i&gt;=10;i--){
+        int yi = i%10*10+i/10;
+        double bin = yi*1.0/y;
+        if(abs(i-yi) == bin*x){
+            cout &lt;&lt; i;
+            judge(m,i);
+            judge(m,yi);
+            judge(m,bin);
+            break;
+        }
     }
-    double sum=0.0;
-    for(int i=0;i&lt;n;i++){
-        sum += v[i]*(i+1)*(n-i);
-    }
-    printf(&quot;%.2f&quot;,sum);
+    if(i&lt;10) cout &lt;&lt; &quot;No Solution&quot;;
     return 0;
 }
 </code></pre>
@@ -161,10 +167,10 @@ int main() {
 
                 <div class="pager">
                     
-                    <a class="prev" href="https://dreammilk.now.sh/1050-luo-xuan-ju-zhen-25-fen/">1050 螺旋矩阵 (25分)</a>
+                    <span class="prev">已是最新一篇</span>
                     
                     
-                    <a class="next" href="https://dreammilk.now.sh/1048-shu-zi-jia-mi-20-fen/">1048 数字加密 (20分)</a>
+                    <a class="next" href="https://dreammilk.now.sh/1087-you-duo-shao-bu-tong-de-zhi-20-fen/">1087 有多少不同的值 (20分)</a>
                     
                     <div class="clear"></div>
                 </div>

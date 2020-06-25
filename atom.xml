@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dreammilk.now.sh</id>
     <title>Milk &apos;s Home</title>
-    <updated>2020-06-24T04:18:12.796Z</updated>
+    <updated>2020-06-25T04:55:18.846Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dreammilk.now.sh"/>
     <link rel="self" href="https://dreammilk.now.sh/atom.xml"/>
@@ -10,6 +10,74 @@
     <logo>https://dreammilk.now.sh/images/avatar.png</logo>
     <icon>https://dreammilk.now.sh/favicon.ico</icon>
     <rights>All rights reserved 2020, Milk &apos;s Home</rights>
+    <entry>
+        <title type="html"><![CDATA[1091 N-自守数 (15分)]]></title>
+        <id>https://dreammilk.now.sh/1091-n-zi-shou-shu-15-fen/</id>
+        <link href="https://dreammilk.now.sh/1091-n-zi-shou-shu-15-fen/">
+        </link>
+        <updated>2020-06-25T04:43:52.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>如果某个数 <em>K</em> 的平方乘以 <em>N</em> 以后，结果的末尾几位数等于 <em>K</em>，那么就称这个数为“<em>N</em>-自守数”。例如 3×922=25392，而 25392 的末尾两位正好是 92，所以 92 是一个 3-自守数。</p>
+<p>本题就请你编写程序判断一个给定的数字是否关于某个 <em>N</em> 是 <em>N</em>-自守数。</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
+<blockquote>
+<p>如果某个数 <em>K</em> 的平方乘以 <em>N</em> 以后，结果的末尾几位数等于 <em>K</em>，那么就称这个数为“<em>N</em>-自守数”。例如 3×922=25392，而 25392 的末尾两位正好是 92，所以 92 是一个 3-自守数。</p>
+<p>本题就请你编写程序判断一个给定的数字是否关于某个 <em>N</em> 是 <em>N</em>-自守数。</p>
+</blockquote>
+<!-- more -->
+<h3 id="输入格式">输入格式：</h3>
+<blockquote>
+<p>输入在第一行中给出正整数 <em>M</em>（≤20），随后一行给出 <em>M</em> 个待检测的、不超过 1000 的正整数。</p>
+</blockquote>
+<h3 id="输出格式">输出格式：</h3>
+<blockquote>
+<p>对每个需要检测的数字，如果它是 <em>N</em>-自守数就在一行中输出最小的 <em>N</em> 和  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>N</mi><msup><mi>K</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">NK^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> 的值，以一个空格隔开；否则输出 <code>No</code>。注意题目保证 <em>N</em>&lt;10。</p>
+</blockquote>
+<h3 id="输入样例">输入样例：</h3>
+<pre><code class="language-in">3
+92 5 233
+</code></pre>
+<h3 id="输出样例">输出样例：</h3>
+<pre><code class="language-out">3 25392
+1 25
+No
+</code></pre>
+<h3 id="思路">思路：</h3>
+<p>题目思路比较简单：</p>
+<blockquote>
+<p>先对输入的每一个数进行判断是几位数，然后按照要求计算结果，通过<code>%</code>取模的方式得到相应尾数进行比较</p>
+</blockquote>
+<h4 id="于是代码如下">于是代码如下：</h4>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+    int m;
+    cin &gt;&gt; m;
+    for(int i=0;i&lt;m;i++){
+        int num,div,j;
+        cin &gt;&gt; num;
+        if(num/100&gt;0) div=1000;
+        else if(num/10&gt;0) div=100;
+        else div = 10;
+        for(j=1;j&lt;10;j++){
+            int result = j*num*num;
+            if(result%div == num){
+                printf(&quot;%d %d\n&quot;,j,result);
+                break;
+            }
+        }
+        if(j==10) printf(&quot;No\n&quot;);
+    }
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[1088 三人行 (20分)]]></title>
         <id>https://dreammilk.now.sh/1088-san-ren-xing-20-fen/</id>
@@ -745,99 +813,6 @@ int main() {
         cout &lt;&lt; str &lt;&lt; endl;
     }
     if(i==10) cout &lt;&lt; &quot;Not found in 10 iterations.&quot;;
-    return 0;
-}
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[1078 字符串压缩与解压 (20分)]]></title>
-        <id>https://dreammilk.now.sh/1078-zi-fu-chuan-ya-suo-yu-jie-ya-20-fen/</id>
-        <link href="https://dreammilk.now.sh/1078-zi-fu-chuan-ya-suo-yu-jie-ya-20-fen/">
-        </link>
-        <updated>2020-06-14T04:25:53.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>文本压缩有很多种方法，这里我们只考虑最简单的一种：把由相同字符组成的一个连续的片段用这个字符和片段中含有这个字符的个数来表示。例如 <code>ccccc</code> 就用 <code>5c</code> 来表示。如果字符没有重复，就原样输出。例如 <code>aba</code> 压缩后仍然是 <code>aba</code>。</p>
-<p>解压方法就是反过来，把形如 <code>5c</code> 这样的表示恢复为 <code>ccccc</code>。</p>
-<p>本题需要你根据压缩或解压的要求，对给定字符串进行处理。这里我们简单地假设原始字符串是完全由英文字母和空格组成的非空字符串。</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="题目">题目</h3>
-<blockquote>
-<p>文本压缩有很多种方法，这里我们只考虑最简单的一种：把由相同字符组成的一个连续的片段用这个字符和片段中含有这个字符的个数来表示。例如 <code>ccccc</code> 就用 <code>5c</code> 来表示。如果字符没有重复，就原样输出。例如 <code>aba</code> 压缩后仍然是 <code>aba</code>。</p>
-<p>解压方法就是反过来，把形如 <code>5c</code> 这样的表示恢复为 <code>ccccc</code>。</p>
-<p>本题需要你根据压缩或解压的要求，对给定字符串进行处理。这里我们简单地假设原始字符串是完全由英文字母和空格组成的非空字符串。</p>
-</blockquote>
-<!-- more -->
-<h3 id="输入格式">输入格式：</h3>
-<blockquote>
-<p>输入第一行给出一个字符，如果是 <code>C</code> 就表示下面的字符串需要被压缩；如果是 <code>D</code> 就表示下面的字符串需要被解压。第二行给出需要被压缩或解压的不超过 1000 个字符的字符串，以回车结尾。题目保证字符重复个数在整型范围内，且输出文件不超过 1MB。</p>
-</blockquote>
-<h3 id="输出格式">输出格式：</h3>
-<blockquote>
-<p>根据要求压缩或解压字符串，并在一行中输出结果。</p>
-</blockquote>
-<h3 id="输入样例1">输入样例1：</h3>
-<pre><code class="language-in">C
-TTTTThhiiiis isssss a   tesssst CAaaa as
-</code></pre>
-<h3 id="输出样例1">输出样例1：</h3>
-<pre><code class="language-out">5T2h4is i5s a3 te4st CA3a as
-</code></pre>
-<h3 id="输入样例2">输入样例2：</h3>
-<pre><code class="language-in">D
-5T2h4is i5s a3 te4st CA3a as10Z
-</code></pre>
-<h3 id="输出样例2">输出样例2：</h3>
-<pre><code class="language-out">TTTTThhiiiis isssss a   tesssst CAaaa asZZZZZZZZZZ
-</code></pre>
-<h3 id="思路">思路：</h3>
-<p>题目比较容易：</p>
-<blockquote>
-<p>在压缩字符串时存在两个变量，<code>temp</code>和<code>cnt</code>分别是前一个字母与出现次数</p>
-<p>如果当前字母与<code>temp</code>不同，则输出<code>cnt</code>和<code>temp</code>，如果<code>cnt</code>为1则省略；不同时<code>cnt++</code></p>
-<p>在解压字符串时需要注意连续出现数字的情况，这些数字需要变为一个整体</p>
-<p>然后每次输出时循环打印即可</p>
-</blockquote>
-<p>需要注意输入输出的格式问题，避免存储错误信息</p>
-<h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;cctype&gt;
-
-using namespace std;
-
-int main() {
-    char c;
-    string s;
-    int cnt=0;
-    cin &gt;&gt; c;
-    getchar();
-    getline(cin,s);
-    if(c=='C'){
-        char temp = s[0];
-        for(int i=1;i&lt;s.length();i++){
-            if(s[i]==temp) cnt++;
-            else{
-                if(cnt==0) cout &lt;&lt; temp;
-                else cout &lt;&lt; cnt+1 &lt;&lt; temp;
-                temp = s[i];
-                cnt = 0;
-            }
-        }
-        if(cnt==0) cout &lt;&lt; temp;
-        else cout &lt;&lt; cnt+1 &lt;&lt; temp;
-    }
-    else{
-        for(int i=0;i&lt;s.length();i++){
-            if(isdigit(s[i])) cnt = cnt*10 + s[i]-'0';
-            else{
-                cnt = cnt==0?1:cnt;
-                for(int j=0;j&lt;cnt;j++) cout &lt;&lt; s[i];
-                cnt = 0;
-            }
-        }
-    }
     return 0;
 }
 </code></pre>

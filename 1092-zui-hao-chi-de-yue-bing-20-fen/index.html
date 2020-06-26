@@ -5,34 +5,31 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="baidu-site-verification" content="ZGbOgNUIf1" />
-<title>1044 火星数字 (20分) | Milk &#39;s Home</title>
+<title>1092 最好吃的月饼 (20分) | Milk &#39;s Home</title>
 <meta name="referrer" content="never" />
 <link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
 <link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
     <meta name="description" content="题目
 
-火星人是以 13 进制计数的：
+月饼是久负盛名的中国传统糕点之一，自唐朝以来，已经发展出几百品种。
 
-地球人的 0 被火星人称为 tret。
-地球人数字 1 到 12 的火星文分别为：jan, feb, mar, apr, may, jun, jly, aug, sep, oct, nov, dec..." />
+若想评比出一种“最好吃”的月饼，那势必在吃货界引发一场腥风血雨…… 在这里我们用数字说话，给出全国各地各种月饼的销量，要求你从中找出销量冠军，认定为最好吃的月饼。..." />
     <meta name="keywords" content="代码练习" />
     
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
     <script src="https://dreammilk.now.sh/media/js/prism.min.js"></script>
     
     
-    <link rel="prefetch" href="https://dreammilk.now.sh/1045-kuai-su-pai-xu-25-fen/">
     
-    
-    <link rel="prefetch" href="https://dreammilk.now.sh/1043-shu-chu-patest-20-fen/">
+    <link rel="prefetch" href="https://dreammilk.now.sh/1091-n-zi-shou-shu-15-fen/">
     
 </head>
 
 <body>
     <!-- start: #wrapper -->
     <header id="header"
-        style="background-image:url(https://s1.ax1x.com/2020/04/30/JHd9S0.jpg)">
+        style="background-image:url(https://s1.ax1x.com/2020/06/18/NelAOI.jpg)">
         <div class="header-container">
   <h1 class="site-title"><a href="https://dreammilk.now.sh"><span>Milk &#39;s Home</span><span class="logo__cursor"></span></a></h1>
   <h2 class="site-description">welcome</h2>
@@ -91,100 +88,76 @@
                     <header>
                         <time class="date">
                             <i class="fa">
-                                <span class="datetime">1 个月前</span>
+                                <span class="datetime">9 分钟前</span>
                             </i>
                         </time>
                     </header>
                     <h1 class="entry-title">
-                        1044 火星数字 (20分)
+                        1092 最好吃的月饼 (20分)
                     </h1>
                     <div class="post-content">
                         <div class="post-hentry">
                             <h3 id="题目">题目</h3>
 <blockquote>
-<p>火星人是以 13 进制计数的：</p>
-<ul>
-<li>地球人的 0 被火星人称为 tret。</li>
-<li>地球人数字 1 到 12 的火星文分别为：jan, feb, mar, apr, may, jun, jly, aug, sep, oct, nov, dec。</li>
-<li>火星人将进位以后的 12 个高位数字分别称为：tam, hel, maa, huh, tou, kes, hei, elo, syy, lok, mer, jou。</li>
-</ul>
-<p>例如地球人的数字 <code>29</code> 翻译成火星文就是 <code>hel mar</code>；而火星文 <code>elo nov</code> 对应地球数字 <code>115</code>。为了方便交流，请你编写程序实现地球和火星数字之间的互译。</p>
+<p>月饼是久负盛名的中国传统糕点之一，自唐朝以来，已经发展出几百品种。</p>
+<figure data-type="image" tabindex="1"><img src="https://images.ptausercontent.com/fcb325a0-7090-4bf4-acb0-d4d7ea832f27.jpg" alt="mk.jpg" loading="lazy"></figure>
+<p>若想评比出一种“最好吃”的月饼，那势必在吃货界引发一场腥风血雨…… 在这里我们用数字说话，给出全国各地各种月饼的销量，要求你从中找出销量冠军，认定为最好吃的月饼。</p>
 </blockquote>
 <!-- more -->
 <h3 id="输入格式">输入格式：</h3>
 <blockquote>
-<p>输入第一行给出一个正整数 <em>N</em>（&lt;100），随后 <em>N</em> 行，每行给出一个 [0, 169) 区间内的数字 —— 或者是地球文，或者是火星文。</p>
+<p>输入首先给出两个正整数 <em>N</em>（≤1000）和 <em>M</em>（≤100），分别为月饼的种类数（于是默认月饼种类从 1 到 <em>N</em> 编号）和参与统计的城市数量。</p>
+<p>接下来 <em>M</em> 行，每行给出 <em>N</em> 个非负整数（均不超过 1 百万），其中第 <em>i</em> 个整数为第 <em>i</em> 种月饼的销量（块）。数字间以空格分隔。</p>
 </blockquote>
 <h3 id="输出格式">输出格式：</h3>
 <blockquote>
-<p>对应输入的每一行，在一行中输出翻译后的另一种语言的数字。</p>
+<p>在第一行中输出最大销量，第二行输出销量最大的月饼的种类编号。如果冠军不唯一，则按编号递增顺序输出并列冠军。数字间以 1 个空格分隔，行首尾不得有多余空格。</p>
 </blockquote>
 <h3 id="输入样例">输入样例：</h3>
-<pre><code class="language-in">4
-29
-5
-elo nov
-tam
+<pre><code class="language-in">5 3
+1001 992 0 233 6
+8 0 2018 0 2008
+36 18 0 1024 4
 </code></pre>
 <h3 id="输出样例">输出样例：</h3>
-<pre><code class="language-out">hel mar
-may
-115
-13
+<pre><code class="language-out">2018
+3 5
 </code></pre>
 <h3 id="思路">思路：</h3>
-<p>题目需要字符转数字，数字转字符：</p>
+<p>题目比较容易，没有什么复杂的逻辑处理：</p>
 <blockquote>
-<p>在结构上，一开始不知道是选用map结构还是数组结构好，但是感觉map在键值对存储上应该好一点</p>
-<p>在字符转数字方面确实比较顺利，但是在数字转字符时，因为map存储时乱序的原因，发现两个字符表达的数，需要通过遍历两边map进行确定，但是分为两个map结构就没意义了</p>
+<p>使用<code>vector</code>数组保存每种月饼的总销量，通过依次遍历输入数据进行相加即可</p>
+<p>在统计的时候，同时记录最大值为多少（下面写法在此有所出入）</p>
+<p>最后输出时，按照要求打印输出总销量为最大值的月饼编号</p>
 </blockquote>
-<p>最后为了节省还是选择使用两个数组进行存储：</p>
-<blockquote>
-<p>数组主要是在字符转数字时，需要遍历两次数组，（这不是疯了吗，不就是为了节省时间才选择的数组吗）</p>
-<p>但是两个数组可以同时开始遍历，比起两次map结构遍历还是快一点</p>
-</blockquote>
-<p>写完发现数组遍历写了两遍，感觉与一次遍历两遍map感觉没什么区别🤦‍♂️</p>
-<p>其实整体写下来发现两种写法各有优缺点：map结构在字符转数字时，比起数组会好一点；数组结构在数字转字符时，比起map结构会好一点。</p>
 <h4 id="于是代码如下">于是代码如下：</h4>
-<pre><code class="language-cpp">#include&lt;iostream&gt;
-#include&lt;string&gt;
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
 
 using namespace std;
 
 int main() {
-    int n;
-    cin &gt;&gt; n;
-    string v1[13]={&quot;tret&quot;,&quot;jan&quot;,&quot;feb&quot;,&quot;mar&quot;,&quot;apr&quot;,&quot;may&quot;,&quot;jun&quot;,&quot;jly&quot;,&quot;aug&quot;,&quot;sep&quot;,&quot;oct&quot;,&quot;nov&quot;,&quot;dec&quot;};
-    string v2[13]={&quot; &quot;,&quot;tam&quot;,&quot;hel&quot;,&quot;maa&quot;,&quot;huh&quot;,&quot;tou&quot;,&quot;kes&quot;,&quot;hei&quot;,&quot;elo&quot;,&quot;syy&quot;,&quot;lok&quot;,&quot;mer&quot;,&quot;jou&quot;};
-    getchar();
-    for(int i=0; i&lt;n; i++) {
-        string input;
-        getline(cin,input);
-        //两个字符串的火星文
-        if(input.length()&gt;3){
-            int num=0;
-            //分别检索两个字符串的含义
-            for(int i=0;i&lt;13;i++){
-                if(v2[i]==input.substr(0,3)) num += i*13;
-                if(v1[i]==input.substr(4)) num += i;
-            }
-            cout &lt;&lt; num &lt;&lt; endl;
+    int n,m;
+    cin &gt;&gt; n &gt;&gt; m;
+    vector&lt;int&gt; v(n,0);
+    for(int i=0;i&lt;m;i++){
+        for(int j=0;j&lt;n;j++){
+            int num;
+            cin &gt;&gt; num;
+            v[j] += num;
         }
-        //一个字符串的火星文
-        else if(islower(input[0])){
-            //分别从高位字符数组和低位字符数组中检索
-            for(int i=0;i&lt;13;i++){
-                if(v1[i]==input){cout &lt;&lt; i &lt;&lt; endl;break;}
-                if(v2[i]==input){cout &lt;&lt; i*13 &lt;&lt; endl;break;}
+    }
+    int max_n=*max_element(v.begin(),v.end());
+    bool flag = false;
+    cout &lt;&lt; max_n &lt;&lt; endl;
+    for(int i=0;i&lt;n;i++){
+        if(v[i]==max_n){
+            if(!flag){
+                printf(&quot;%d&quot;,i+1);
+                flag = true;
             }
-        }
-        //数字
-        else{
-            int num=stoi(input);
-            int n1=num/13,n2=num%13;
-            if(n1*n2!=0)cout &lt;&lt; v2[n1]  &lt;&lt; ' ' &lt;&lt; v1[n2];
-            else n1 &gt; 0 ? cout &lt;&lt; v2[n1]:cout &lt;&lt; v1[n2];
-            cout &lt;&lt; endl;
+            else printf(&quot; %d&quot;,i+1);
         }
     }
     return 0;
@@ -199,10 +172,10 @@ int main() {
 
                 <div class="pager">
                     
-                    <a class="prev" href="https://dreammilk.now.sh/1045-kuai-su-pai-xu-25-fen/">1045 快速排序 (25分)</a>
+                    <span class="prev">已是最新一篇</span>
                     
                     
-                    <a class="next" href="https://dreammilk.now.sh/1043-shu-chu-patest-20-fen/">1043 输出PATest (20分)</a>
+                    <a class="next" href="https://dreammilk.now.sh/1091-n-zi-shou-shu-15-fen/">1091 N-自守数 (15分)</a>
                     
                     <div class="clear"></div>
                 </div>

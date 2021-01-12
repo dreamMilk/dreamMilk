@@ -2,14 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://dreammilk.now.sh</id>
     <title>Milk &apos;s Home</title>
-    <updated>2020-06-26T05:00:27.172Z</updated>
+    <updated>2021-01-12T07:05:04.375Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://dreammilk.now.sh"/>
     <link rel="self" href="https://dreammilk.now.sh/atom.xml"/>
     <subtitle>welcome</subtitle>
     <logo>https://dreammilk.now.sh/images/avatar.png</logo>
     <icon>https://dreammilk.now.sh/favicon.ico</icon>
-    <rights>All rights reserved 2020, Milk &apos;s Home</rights>
+    <rights>All rights reserved 2021, Milk &apos;s Home</rights>
     <entry>
         <title type="html"><![CDATA[1092 最好吃的月饼 (20分)]]></title>
         <id>https://dreammilk.now.sh/1092-zui-hao-chi-de-yue-bing-20-fen/</id>

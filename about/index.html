@@ -90,7 +90,7 @@
                     <header>
                         <time class="date">
                             <i class="fa">
-                                <span class="datetime">1 年前</span>
+                                <span class="datetime">2 年前</span>
                             </i>
                         </time>
                     </header>
@@ -117,6 +117,28 @@
 <h2 id="题目思路">💡 题目思路</h2>
 <ul>
 <li>题目类似于数学解方程时，如果没有明确的规律性，那还是直接遍历开始寻找符合题目要求的值比较好</li>
+<li>有关素数问题的总结：
+<ul>
+<li>追求低空间：使用素数规律和基础素数检验进行筛选</li>
+</ul>
+<blockquote>
+<p><strong>素数只可能出现在6的倍数左右。</strong></p>
+<p>6的倍数就是<code>6k</code>，它附近的数就是<code>6k-3</code>,<code>6k-2</code>,<code>6k-1</code>,<code>6k+1</code>,<code>6k+2</code>,<code>6k+3</code>,那么不在<code>6k</code>左右的数是</p>
+<p><code>6k-3</code>,<code>6k-2</code>,<code>6k+2</code>,<code>6k+3</code>,第一个和最后一个数是可以整除3，另两个数是可以整除2的，所以他们肯定不是素数。</p>
+<p>所以只有6的倍数左右的两个数才有可能是素数。</p>
+<p>反例：比如<code>25</code>在6的倍数左右，但是它不是素数，</p>
+<p><strong>因此在6的倍数左右也不一定是素数，但是不在左右就一定不是素数</strong></p>
+</blockquote>
+<ul>
+<li>追求高效率：使用线性筛法</li>
+</ul>
+</li>
+<li>有关i的幂问题的总结
+<ul>
+<li>2的幂：可以使用二进制的特性，将n与n-1进行&amp;操作，如果n&amp;(n-1)==0，则为2的幂</li>
+<li>i的幂：求解整数范围内i的幂的最大值，如果最大值%n==0，则为i的幂</li>
+</ul>
+</li>
 </ul>
 <hr>
 <p>后续更新补充</p>

@@ -1,296 +1,150 @@
+<!doctype html>
 <html>
-<head>
-    <meta charset="utf-8"/>
-<meta name="description" content=""/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="baidu-site-verification" content="ZGbOgNUIf1" />
 <title>代码练习 | Milk &#39;s Home</title>
-
-<link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico?v=1615122712403">
-
-<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://dreammilk.now.sh/styles/main.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
-
-<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
-<!-- DEMO JS -->
-<!--<script src="media/scripts/index.js"></script>-->
-
-
-
-</head>
-<body>
-<div class="main gt-bg-theme-color-first">
-    <div class="main-content">
-        <nav class="navbar navbar-expand-lg">
-    <div class="navbar-brand">
-        <img class="user-avatar" src="/images/avatar.png" alt="头像">
-        <div class="site-name gt-c-content-color-first">
-            Milk &#39;s Home
-        </div>
-    </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="navbar-nav mr-auto" style="text-align: center">
-            
-                <div class="nav-item">
-                    
-                        <a href="https://dreammilk.now.sh" class="menu gt-a-link">
-                            首页
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="https://dreammilk.now.sh/archives" class="menu gt-a-link">
-                            归档
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="https://dreammilk.now.sh/tags" class="menu gt-a-link">
-                            标签
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="https://dreammilk.now.sh/about" class="menu gt-a-link">
-                            总结
-                        </a>
-                    
-                </div>
-            
-        </div>
-        <div style="text-align: center">
-            <form id="gridea-search-form" style="position: relative" data-update="1615122712403" action="/search/index.html">
-                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
-                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
-            </form>
-        </div>
-    </div>
-</nav>
-
-        <div class="current-tag-container">
-            <h2 class="title gt-c-content-color-first">
-                #代码练习
-            </h2>
-        </div>
-        <div class="post-list-container">
-    <div class="post-inner">
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://dreammilk.now.sh/1013-shu-su-shu-20-fen/">
-                            <span class="post-title gt-c-content-color-first">1013 数素数 (20分)</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <h3 id="题目">题目</h3>
-<blockquote>
-<p>令 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">P_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 表示第 <em>i</em> 个素数。现任给两个正整数 <em>M</em>≤<em>N</em>≤<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><msup><mn>0</mn><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">10^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span></span></span></span>，请输出 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mi>M</mi></msub></mrow><annotation encoding="application/x-tex">P_M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">M</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 到 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mi>N</mi></msub></mrow><annotation encoding="application/x-tex">P_N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>的所有素数。</p>
-</blockquote>
-
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-04-11 ·
-                        </time>
-                        
-                            <a href="https://dreammilk.now.sh/practice/" class="post-tag">
-                                # 代码练习
-                            </a>
-                        
-                    </div>
-                </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://dreammilk.now.sh/1012-shu-zi-fen-lei-20-fen/">
-                            <span class="post-title gt-c-content-color-first">1012 数字分类 (20分)</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <h3 id="题目">题目</h3>
-<blockquote>
-<p>给定一系列正整数，请按要求对数字进行分类，并输出以下 5 个数字：</p>
-<ul>
-<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">A_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> = 能被 5 整除的数字中所有偶数的和；</li>
-<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">A_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> = 将被 5 除后余 1 的数字按给出顺序进行交错求和，即计算 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>n</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">n_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>−<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>n</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">n_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>n</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">n_3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>−<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>n</mi><mn>4</mn></msub></mrow><annotation encoding="application/x-tex">n_4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>⋯；</li>
-<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">A_3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> = 被 5 除后余 2 的数字的个数；</li>
-<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>4</mn></msub></mrow><annotation encoding="application/x-tex">A_4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> = 被 5 除后余 3 的数字的平均数，精确到小数点后 1 位；</li>
-<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mn>5</mn></msub></mrow><annotation encoding="application/x-tex">A_5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> = 被 5 除后余 4 的数字中最大数字。</li>
-</ul>
-</blockquote>
-
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-04-10 ·
-                        </time>
-                        
-                            <a href="https://dreammilk.now.sh/practice/" class="post-tag">
-                                # 代码练习
-                            </a>
-                        
-                    </div>
-                </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://dreammilk.now.sh/1011-ab-he-c-15-fen/">
-                            <span class="post-title gt-c-content-color-first">1011 A+B 和 C (15分)</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <h3 id="题目">题目</h3>
-<blockquote>
-<p>给定区间 [−<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mn>31</mn></msup></mrow><annotation encoding="application/x-tex">2^{31}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span>,<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mn>31</mn></msup></mrow><annotation encoding="application/x-tex">2^{31}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span>]  内的 3 个整数 <em>A</em>、<em>B</em> 和 <em>C</em>，请判断 <em>A</em>+<em>B</em> 是否大于 <em>C</em>。</p>
-</blockquote>
-
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-04-08 ·
-                        </time>
-                        
-                            <a href="https://dreammilk.now.sh/practice/" class="post-tag">
-                                # 代码练习
-                            </a>
-                        
-                    </div>
-                </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://dreammilk.now.sh/1010-yi-yuan-duo-xiang-shi-qiu-dao-25-fen/">
-                            <span class="post-title gt-c-content-color-first">1010 一元多项式求导 (25分)</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <h3 id="题目">题目</h3>
-<blockquote>
-<p>设计函数求一元多项式的导数。（注：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>x</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">x^n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.664392em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span></span></span></span>（<em>n</em>为整数）的一阶导数为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><msup><mi>x</mi><mrow><mi>n</mi><mi mathvariant="normal">−</mi><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">nx^{n−1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord mathdefault">n</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mord mtight">−</span><span class="mord mtight">1</span></span></span></span></span></span></span></span></span></span></span></span>。）</p>
-</blockquote>
-
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-04-07 ·
-                        </time>
-                        
-                            <a href="https://dreammilk.now.sh/practice/" class="post-tag">
-                                # 代码练习
-                            </a>
-                        
-                    </div>
-                </div>
-                
-            </div>
-        
-            <div class="post gt-bg-theme-color-second">
-                <div class="post-left">
-                    <div>
-                        
-                        <a href="https://dreammilk.now.sh/1009-shuo-fan-hua-20-fen/">
-                            <span class="post-title gt-c-content-color-first">1009 说反话 (20分)</span>
-                        </a>
-                    </div>
-                    <div class="gt-post-content post-abstract gt-c-content-color-second">
-                        <h3 id="题目">题目</h3>
-<blockquote>
-<p>给定一句英语，要求你编写程序，将句中所有单词的顺序颠倒输出。</p>
-</blockquote>
-
-                    </div>
-                    <div class="post-info">
-                        <time class="post-time gt-c-content-color-first">
-                            发布于 · 2020-04-06 ·
-                        </time>
-                        
-                            <a href="https://dreammilk.now.sh/practice/" class="post-tag">
-                                # 代码练习
-                            </a>
-                        
-                    </div>
-                </div>
-                
-            </div>
-        
-    </div>
-</div>
-        <div class="pagination-container">
+<meta name="referrer" content="never" />
+<link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
+<link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
+  </head>
+  <body>
+    <!-- start: #wrapper -->
+    <header id="header" style="background-image:url(/media/images/custom-headerBgImage.webp)">
+        <div class="header-container">
+  <h1 class="site-title"><a href="https://dreammilk.now.sh"><span>Milk &#39;s Home</span><span class="logo__cursor"></span></a></h1>
+  <h2 class="site-description">welcome</h2>
+  <nav class="main-navigation">
+    <ul id="" class="">
+      
+      <li class="" ><a href="https://dreammilk.now.sh" class="menu">首页</a></li>
+      
+      <li class="" ><a href="https://dreammilk.now.sh/archives" class="menu">归档</a></li>
+      
+      <li class="" ><a href="https://dreammilk.now.sh/tags" class="menu">标签</a></li>
+      
+      <li class="" ><a href="https://dreammilk.now.sh/about" class="menu">总结</a></li>
+      
+    </ul>
+  </nav>
+  <!-- <form id="gridea-search-form" action="https://dreammilk.now.sh/search/">
+    <input name="q" />
+  </form> -->
+  <div class="my_socials">
     
-        <a href="https://dreammilk.now.sh/practice/page/15/" class="prev-page gt-a-link">上一页</a>
+      
     
+      
     
-        <a href="https://dreammilk.now.sh/practice/page/17/" class="prev-page gt-a-link">下一页</a>
+      
     
+      
+    
+      
+      <a href="https://github.com/dreamMilk" class="translate-effect" target="_blank"><i class="fa fa-github"></i></a>
+      
+    
+      
+      <a href="https://dreammilk.now.sh/atom.xml" class="translate-effect" target="_blank"><i class="fa fa-flickr"></i></a>
+      
+    
+      
+    
+  </div>
 </div>
+    </header>
 
-        <div class="site-footer gt-c-content-color-first">
-    <div class="slogan gt-c-content-color-first">welcome</div>
-    <div class="social-container">
-        
+    <div class="wrapper">
+    <div class="content posts post archive hentry">
+        <h1>全站标签</h1>
+        <ul class="archive-list ">
             
-                <a href="https://github.com/dreamMilk" target="_blank">
-                    <i class="fab fa-github gt-c-content-color-first"></i>
-                </a>
+            <li class="archive-item tags-item">
+                <img class="archive-list-image" src="https://dreammilk.now.sh/media/images/practice.png"></img>
+                <a href="https://dreammilk.now.sh/practice/">代码练习</a>
+                <span class="archive-item-meta">practice</span>
+            </li>
             
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-    </div>
-    <div class="footer-info">
-        Powered by <a href="https://pages.github.com/" target="_blank">Github pages</a>
-    </div>
-    <div>
-        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
-                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://dreammilk.now.sh/atom.xml" target="_blank">RSS</a></a>
-    </div>
-</div>
+        </ul>
+        <div class="clear"></div>
 
-<script>
-  hljs.initHighlightingOnLoad()
-</script>
+        <h1># 代码练习</h1>
+        <ul class="archive-list">
+            
+            	<li class="archive-item">
+                    <img class="archive-list-image" src="https://s1.ax1x.com/2020/04/11/GHptDe.jpg"></img>
+                    <a href="https://dreammilk.now.sh/1013-shu-su-shu-20-fen/">1013 数素数 (20分)</a>
+                    <time class="date" style="text-align:left;"><span class="archive-item-meta datetime">2020-04-11</span></time>
+                </li>
+            
+            	<li class="archive-item">
+                    <img class="archive-list-image" src="https://s1.ax1x.com/2020/04/07/G2hSiQ.jpg"></img>
+                    <a href="https://dreammilk.now.sh/1012-shu-zi-fen-lei-20-fen/">1012 数字分类 (20分)</a>
+                    <time class="date" style="text-align:left;"><span class="archive-item-meta datetime">2020-04-10</span></time>
+                </li>
+            
+            	<li class="archive-item">
+                    <img class="archive-list-image" src="https://s1.ax1x.com/2020/04/07/G2fvdS.jpg"></img>
+                    <a href="https://dreammilk.now.sh/1011-ab-he-c-15-fen/">1011 A+B 和 C (15分)</a>
+                    <time class="date" style="text-align:left;"><span class="archive-item-meta datetime">2020-04-08</span></time>
+                </li>
+            
+            	<li class="archive-item">
+                    <img class="archive-list-image" src="https://s1.ax1x.com/2020/04/07/G2f4aD.jpg"></img>
+                    <a href="https://dreammilk.now.sh/1010-yi-yuan-duo-xiang-shi-qiu-dao-25-fen/">1010 一元多项式求导 (25分)</a>
+                    <time class="date" style="text-align:left;"><span class="archive-item-meta datetime">2020-04-07</span></time>
+                </li>
+            
+            	<li class="archive-item">
+                    <img class="archive-list-image" src="https://s1.ax1x.com/2020/04/06/G6n4Vx.jpg"></img>
+                    <a href="https://dreammilk.now.sh/1009-shuo-fan-hua-20-fen/">1009 说反话 (20分)</a>
+                    <time class="date" style="text-align:left;"><span class="archive-item-meta datetime">2020-04-06</span></time>
+                </li>
+            
+        </ul>
+        <div class="clear"></div>
+    </div>
+            
+              
+            <div class="paginator pager pagination">
+              <div class="nav">
+                
+                  <a href="https://dreammilk.now.sh/practice/page/15/" class="prev button red">上一页</a>
+                
+                
+                  <a href="https://dreammilk.now.sh/practice/page/17/" class="next button red">下一页</a>
+                
+                <div class="clear"></div>
+              </div>
+            </div>
+          
+        <footer id="footer" class="">
+        <p class="published border-effect">
+          ©2020 共 87 篇文章
+          <br/>
+          Theme <a href="https://github.com/dreamMilk/dreamMilk.github.io" target="_blank">「Motify」</a> Powered by <a href="https://gridea.dev/" target="_blank">「Gridea」</a>
+        </p>
+    </footer>
+
+    <a id="back_to_top" href="#" class="back_to_top">
+      <span>⚡</span>
+    </a>
+
+
+<script src="https://cdn.jsdelivr.net/gh/dreamMilk/dreamMilk.github.io/media/js/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/dreamMilk/dreamMilk.github.io/media/js/lately.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/dreamMilk/dreamMilk.github.io/media/js/waterfall.min.js"></script>
+<script async src="https://cdn.jsdelivr.net/gh/dreamMilk/dreamMilk.github.io/media/js/slimbox2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/dreamMilk/dreamMilk.github.io/media/js/functions.js"></script>
+<script async src="https://cdn.jsdelivr.net/gh/dreamMilk/dreamMilk.github.io/media/js/func.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+
+
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
 
     </div>
-</div>
-</body>
+    <!-- end: #wrapper -->
+  </body>
 </html>

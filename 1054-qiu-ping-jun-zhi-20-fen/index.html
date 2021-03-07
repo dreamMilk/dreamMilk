@@ -1,102 +1,216 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="baidu-site-verification" content="ZGbOgNUIf1" />
-<title>1054 求平均值 (20分) | Milk &#39;s Home</title>
-<meta name="referrer" content="never" />
-<link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico">
-<link rel="stylesheet" type="text/css" href="https://dreammilk.now.sh/styles/main.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
-    <meta name="description" content="题目
+<title>
+    Milk &#39;s Home
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="https://dreammilk.now.sh/styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
 
-本题的基本要求非常简单：给定 N 个实数，计算它们的平均值。但复杂的是有些输入数据可能是非法的。一个“合法”的输入是 [−1000,1000] 区间内的实数，并且最多精确到小数点后 2 位。当你计算平均值的时候，不能把那些非法的数据..." />
-    <meta name="keywords" content="代码练习" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
     
-    <script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
-    <script src="https://dreammilk.now.sh/media/js/prism.min.js"></script>
-    
-    
-    <link rel="prefetch" href="https://dreammilk.now.sh/1055-ji-ti-zhao-25-fen/">
-    
-    
-    <link rel="prefetch" href="https://dreammilk.now.sh/1053-zhu-fang-kong-zhi-lu-20-fen/">
-    
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.12/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.12/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic@latest/assets/media/script/APlayer.min.js"></script>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+                    
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
 </head>
 
 <body>
-    <!-- start: #wrapper -->
-    <header id="header"
-        style="background-image:url(https://s1.ax1x.com/2020/05/13/YaOuG9.jpg)">
-        <div class="header-container">
-  <h1 class="site-title"><a href="https://dreammilk.now.sh"><span>Milk &#39;s Home</span><span class="logo__cursor"></span></a></h1>
-  <h2 class="site-description">welcome</h2>
-  <nav class="main-navigation">
-    <ul id="" class="">
-      
-      <li class="" ><a href="https://dreammilk.now.sh" class="menu">首页</a></li>
-      
-      <li class="" ><a href="https://dreammilk.now.sh/archives" class="menu">归档</a></li>
-      
-      <li class="" ><a href="https://dreammilk.now.sh/tags" class="menu">标签</a></li>
-      
-      <li class="" ><a href="https://dreammilk.now.sh/movies/" class="menu">电影</a></li>
-      
-      <li class="" ><a href="https://dreammilk.now.sh/books/" class="menu">阅读</a></li>
-      
-      <li class="" ><a href="https://dreammilk.now.sh/about" class="menu">总结</a></li>
-      
-    </ul>
-  </nav>
-  <!-- <form id="gridea-search-form" action="https://dreammilk.now.sh/search/">
-    <input name="q" />
-  </form> -->
-  <div class="my_socials">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-      <a href="https://github.com/dreamMilk" class="translate-effect" target="_blank"><i class="fa fa-github"></i></a>
-      
-    
-      
-    
-      
-      <a href="https://dreammilk.now.sh/atom.xml" class="translate-effect" target="_blank"><i class="fa fa-feed"></i></a>
-      
-    
-  </div>
-</div>
-    </header>
-    <div class="wrapper single">
-        <div class="post-meta">
-        </div>
-        <div class="content">
-            <div id="posts" class="posts">
-                <!-- start: .articles -->
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="https://dreammilk.now.sh">
+                    Milk &#39;s Home
+                </a>
+            </div>
+
+            <div class="menu navbar-right">
                 
-                <article
-                    class="post hentry format-daily format-practice">
-                    <header>
-                        <time class="date">
-                            <i class="fa">
-                                <span class="datetime">9 个月前</span>
-                            </i>
-                        </time>
-                    </header>
-                    <h1 class="entry-title">
-                        1054 求平均值 (20分)
-                    </h1>
-                    <div class="post-content">
-                        <div class="post-hentry">
+                    <a class="menu-item" href="https://dreammilk.now.sh">
+                        首页
+                    </a>
+                    
+                    <a class="menu-item" href="https://dreammilk.now.sh/archives">
+                        归档
+                    </a>
+                    
+                    <a class="menu-item" href="https://dreammilk.now.sh/tags">
+                        标签
+                    </a>
+                    
+                    <a class="menu-item" href="https://dreammilk.now.sh/movies/">
+                        电影
+                    </a>
+                    
+                    <a class="menu-item" href="https://dreammilk.now.sh/books/">
+                        阅读
+                    </a>
+                    
+                    <a class="menu-item" href="https://dreammilk.now.sh/about">
+                        总结
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1615117770661" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="https://dreammilk.now.sh">
+                            Milk &#39;s Home
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1615117770661" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="https://dreammilk.now.sh">
+                            首页
+                        </a>
+                        
+                        <a class="menu-item" href="https://dreammilk.now.sh/archives">
+                            归档
+                        </a>
+                        
+                        <a class="menu-item" href="https://dreammilk.now.sh/tags">
+                            标签
+                        </a>
+                        
+                        <a class="menu-item" href="https://dreammilk.now.sh/movies/">
+                            电影
+                        </a>
+                        
+                        <a class="menu-item" href="https://dreammilk.now.sh/books/">
+                            阅读
+                        </a>
+                        
+                        <a class="menu-item" href="https://dreammilk.now.sh/about">
+                            总结
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                1054 求平均值 (20分)
+                            </h1>
+                            
+                                    <!--zh-->
+                                    <div class="post-meta zh">
+                                        &#x4F5C;&#x8005;:
+                                        <a itemprop="author" rel="author" href="/">
+                                            Milk 's Home
+                                        </a>
+                                        <span class="post-time">&#x65E5;&#x671F;: <a href="#">2020-05-21</a></span>
+                                        <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a
+                                    href="#">3.8
+                                    &#x5206;&#x949F;</a></span>
+                                        <span class="post-words">&#x5B57;&#x6570;:<a href="#">864</a></span>
+                                        
+                                            <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://dreammilk.now.sh/practice/">代码练习</a>
+                                
+                            </span>
+                                            
+                                                阅读量:
+                                                <span data-hk-page="current"> - </span>
+                                                
+                                    </div>
+                                    
+                        </header>
+                        
+                            <img class="post-feature-image" src="https://s1.ax1x.com/2020/05/13/YaOuG9.jpg" alt="">
+                          
+                        <div class="post-content">
                             <h3 id="题目">题目</h3>
 <blockquote>
 <p>本题的基本要求非常简单：给定 <em>N</em> 个实数，计算它们的平均值。但复杂的是有些输入数据可能是非法的。一个“合法”的输入是 [−1000,1000] 区间内的实数，并且最多精确到小数点后 2 位。当你计算平均值的时候，不能把那些非法的数据算在内。</p>
@@ -194,146 +308,232 @@ int main() {
 }
 </code></pre>
 
-                            <div class="clear"></div>
+                        </div>
+                        
+                                
+                                    
+                                            <!--zh-->
+                                            <section class="post-copyright zh">
+                                                <p class="copyright-item ">
+                                                    <span>&#x4F5C;&#x8005;:</span>
+                                                    <span>Milk 's Home</span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                                    <span><a href="https://dreammilk.now.sh/1054-qiu-ping-jun-zhi-20-fen/">https://dreammilk.now.sh/1054-qiu-ping-jun-zhi-20-fen/</a></span>
+                                                </p>
+
+                                                <p class="copyright-item">
+                                                    <span>&#x534F;&#x8BAE;:</span>
+                                                    <span>MIT License</span>
+                                                </p>
+                                            </section>
+                                            
+                                                
+                                                    
+                                                                    <!--Share-->
+                                                                    <span style="margin-right:15px">
+                        <i class="post-share"></i>
+                        <span>&#x5206;&#x4EAB;:</span>
+                                                                    <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://dreammilk.now.sh/1054-qiu-ping-jun-zhi-20-fen/"><i class="fa fa-qrcode"></i></a>
+                                                                    <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://dreammilk.now.sh/1054-qiu-ping-jun-zhi-20-fen/&sharesource=qzone&title=1054 求平均值 (20分)&pics=https://dreammilk.now.sh/images/avatar.png?v=1615117770661&summary=&lt;h3 id=&#34;题目&#34;&gt;题目&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本题的基本要求非常简单：给定 &lt;em&gt;N&lt;/em&gt; 个实数，计算它们的平均值。但复杂的是有些输入数据可能是非法的。一个“合法”的输入是 [−1000,1000] 区间内的实数，并且最多精确到小数点后 2 位。当你计算平均值的时候，不能把那些非法的数据算在内。&lt;/p&gt;
+&lt;/blockquote&gt;
+"><i class="fa fa-qq"></i></a>
+                                                                    <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://dreammilk.now.sh/1054-qiu-ping-jun-zhi-20-fen/&sharesource=weibo&title=1054 求平均值 (20分) + " - " + &lt;h3 id=&#34;题目&#34;&gt;题目&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本题的基本要求非常简单：给定 &lt;em&gt;N&lt;/em&gt; 个实数，计算它们的平均值。但复杂的是有些输入数据可能是非法的。一个“合法”的输入是 [−1000,1000] 区间内的实数，并且最多精确到小数点后 2 位。当你计算平均值的时候，不能把那些非法的数据算在内。&lt;/p&gt;
+&lt;/blockquote&gt;
+&pic="https://dreammilk.now.sh/images/avatar.png?v=1615117770661 "><i class="fa fa-weibo "></i></a>
+
+                                                                    </span>
+                                                                    
+                                                                            <!--zh-->
+                                                                            <section class="post-tags zh ">
+                                                                                <div>
+                                                                                    <span>&#x6807;&#x7B7E;:</span>
+                                                                                    <span class="tag ">
+                        
+                        
+                        <a href="https://dreammilk.now.sh/practice/">#
+                    代码练习
+                        </a>
+                        
+                            
+                                </span>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <a href="javascript:window.history.back();">
+                        &#x8FD4;&#x56DE;</a>
+                                                                                    <span>&dot;</span>
+                                                                                    <a href="#">&#x4E3B;&#x9875;</a>
+                                                                                </div>
+                                                                            </section>
+
+                                                                            
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="https://dreammilk.now.sh/1055-ji-ti-zhao-25-fen/">
+                                                                                            1055 集体照 (25分)
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="https://dreammilk.now.sh/1053-zhu-fang-kong-zhi-lu-20-fen/">
+                                                                                                    1053 住房空置率 (20分)
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+            </div>
+    </div>
+    </div>
+    </div>
+    
+    <div id="player"></div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
                         </div>
                     </div>
-                </article>
-                
-
-                <div class="pager">
                     
-                    <a class="prev" href="https://dreammilk.now.sh/1055-ji-ti-zhao-25-fen/">1055 集体照 (25分)</a>
-                    
-                    
-                    <a class="next" href="https://dreammilk.now.sh/1053-zhu-fang-kong-zhi-lu-20-fen/">1053 住房空置率 (20分)</a>
-                    
-                    <div class="clear"></div>
-                </div>
-
-                
-                <div id="comments"></div>
-                <div class="clear"></div>
-                
-
+                        Powered by <a href="https://pages.github.com/" target="_blank">Github pages</a>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        Milk &#39;s Home &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
             </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.5
+                </div>
+                
+                    <script>
+                        var pat = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + pat + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
 
-        </div>
-
-            <footer id="footer" class="">
-        <p class="published border-effect">
-          ©2020 共 87 篇文章
-          <br/>
-          Theme <a href="https://github.com/dreamMilk/dreamMilk.github.io" target="_blank">「Motify」</a> Powered by <a href="https://gridea.dev/" target="_blank">「Gridea」</a>
-        </p>
-    </footer>
-
-    <a id="back_to_top" href="#" class="back_to_top">
-      <span>⚡</span>
-    </a>
-
-
-<script src="https://cdn.jsdelivr.net/gh/dreamMilk/dreamMilk.github.io/media/js/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/dreamMilk/dreamMilk.github.io/media/js/lately.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/dreamMilk/dreamMilk.github.io/media/js/waterfall.min.js"></script>
-<script async src="https://cdn.jsdelivr.net/gh/dreamMilk/dreamMilk.github.io/media/js/slimbox2.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/dreamMilk/dreamMilk.github.io/media/js/functions.js"></script>
-<script async src="https://cdn.jsdelivr.net/gh/dreamMilk/dreamMilk.github.io/media/js/func.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
-
-
-<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
-    </div>
-
-    
-    <!-- <script src="https://cdn.staticfile.org/valine/1.3.10/Valine.Pure.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.Pure.min.js"></script>
-    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js"></script>
-    <script>
-        jQuery(document).ready(function ($) {
-            new Valine({
-                el: '#comments',
-                visitor:true,
-                recordIP: true,
-                appId: 'PeKXGBvSz0e8NaL0a7evysl3-MdYXbMMI',
-                appKey: 'KBGk1meRDYb0eANKOoU0Q8YD',
-                pageSize: 30,
-                placeholder: '既然来了，那就留个痕迹吧~',
-                requiredFields: ['nick','mail'],
-                emojiCDN: '//i0.hdslb.com/bfs/emote/',
-                emojiMaps: {
-                    "tv_doge": "6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png",
-                    "tv_亲亲": "a8111ad55953ef5e3be3327ef94eb4a39d535d06.png",
-                    "tv_偷笑": "bb690d4107620f1c15cff29509db529a73aee261.png",
-                    "tv_再见": "180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png",
-                    "tv_冷漠": "b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png",
-                    "tv_发怒": "34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png",
-                    "tv_发财": "34db290afd2963723c6eb3c4560667db7253a21a.png",
-                    "tv_可爱": "9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png",
-                    "tv_吐血": "09dd16a7aa59b77baa1155d47484409624470c77.png",
-                    "tv_呆": "fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png",
-                    "tv_呕吐": "9f996894a39e282ccf5e66856af49483f81870f3.png",
-                    "tv_困": "241ee304e44c0af029adceb294399391e4737ef2.png",
-                    "tv_坏笑": "1f0b87f731a671079842116e0991c91c2c88645a.png",
-                    "tv_大佬": "093c1e2c490161aca397afc45573c877cdead616.png",
-                    "tv_大哭": "23269aeb35f99daee28dda129676f6e9ea87934f.png",
-                    "tv_委屈": "d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png",
-                    "tv_害羞": "a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png",
-                    "tv_尴尬": "7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png",
-                    "tv_微笑": "70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png",
-                    "tv_思考": "90cf159733e558137ed20aa04d09964436f618a1.png",
-                    "tv_惊吓": "0d15c7e2ee58e935adc6a7193ee042388adc22af.png",
-                    "tv_打脸": "56ab10b624063e966bfcb76ea5dc4794d87dfd47.png",
-                    "tv_抓狂": "fe31c08edad661d63762b04e17b8d5ae3c71a757.png",
-                    "tv_抠鼻": "c666f55e88d471e51bbd9fab9bb308110824a6eb.png",
-                    "tv_斜眼笑": "911f987aa8bc1bee12d52aafe62bc41ef4474e6c.png",
-                    "tv_无奈": "ea8ed89ee9878f2fece2dda0ea8a5dbfe21b5751.png",
-                    "tv_晕": "5443c22b4d07fb1907ccc610c8e6db254f2461b7.png",
-                    "tv_流汗": "cead1c351ab8d79e9f369605beb90148db0fbed3.png",
-                    "tv_流泪": "7e71cde7858f0cd50d74b0264aa26db612a8a167.png",
-                    "tv_流鼻血": "c32d39db2737f89b904ca32700d140a9241b0767.png",
-                    "tv_点赞": "f85c354995bd99e28fc76c869bfe42ba6438eff4.png",
-                    "tv_生气": "26702dcafdab5e8225b43ffd23c94ac1ff932654.png",
-                    "tv_生病": "8b0ec90e6b86771092a498c54f09fc94621c1900.png",
-                    "tv_疑问": "0793d949b18d7be716078349c202c15ff166f314.png",
-                    "tv_白眼": "c1d59f439e379ee50eef488bcb5e5378e5044ea4.png",
-                    "tv_皱眉": "72ccad6679fea0d14cce648b4d818e09b8ffea2d.png",
-                    "tv_目瞪口呆": "0b8cb81a68de5d5365212c99375e7ace3e7891b7.png",
-                    "tv_睡着": "8b196675b53af58264f383c50ad0945048290b33.png",
-                    "tv_笑哭": "1abc628f6d4f4caf9d0e7800878f4697abbc8273.png",
-                    "tv_腼腆": "89712c0d4af73e67f89e35cbc518420380a7f6f4.png",
-                    "tv_色": "61822c7e9aae5da76475e7892534545336b23a6f.png",
-                    "tv_调侃": "4bc022533ef31544ca0d72c12c808cf4a1cce3e3.png",
-                    "tv_调皮": "b9c41de8e82dd7a8515ae5e3cb63e898bf245186.png",
-                    "tv_鄙视": "6e72339f346a692a495b123174b49e4e8e781303.png",
-                    "tv_闭嘴": "c9e990da7f6e93975e25fd8b70e2e290aa4086ef.png",
-                    "tv_难过": "87f46748d3f142ebc6586ff58860d0e2fc8263ba.png",
-                    "tv_馋": "fc7e829b845c43c623c8b490ee3602b7f0e76a31.png",
-                    "tv_鬼脸": "0ffbbddf8a94d124ca2f54b360bbc04feb6bbfea.png",
-                    "tv_黑人问号": "45821a01f51bc867da9edbaa2e070410819a95b2.png",
-                    "tv_鼓掌": "1d21793f96ef4e6f48b23e53e3b9e42da833a0f6.png"
-                } 
-            })
-            jinrishici.load(function (result) {
-                var jrsc_plac = result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin.dynasty + " · " + result.data.origin.author
-                document.getElementById("veditor").setAttribute("placeholder", jrsc_plac);
-            });
-            $('.vemoji-btn').append('');
-            $("#comments").on('click', 'span.vat', function () {
-                $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
-                $('textarea#veditor').focus();
-            })
-            if (window.location.hash) {
-                var checkExist = setInterval(function () {
-                    if ($(window.location.hash).length) {
-                        $('html, body').animate({ scrollTop: $(window.location.hash).offset().top - 90 }, 1000);
-                        clearInterval(checkExist);
+                    function LoadPlayer() {
+                        var music_array = [];
+                        
+                        music_array.push({
+                            name: '',
+                            url: '',
+                            artist: '',
+                            cover: '',
+                        });
+                        
+                        console.log(" MusicList: " + music_array);
+                        
+                        const ap = new APlayer({
+                            container: document.getElementById('player'),
+                            fixed: true,
+                            audio: music_array
+                        });
+                        
                     }
-                }, 100);
-            }
-        });
-    </script>
-    
-
+                    LoadPlayer();
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1615117770661);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+                
+                    <div id="tp-weather-widget" style="background: #666;display: flex;"></div>
+                    <script>
+                        (function(T, h, i, n, k, P, a, g, e) {
+                            g = function() {
+                                P = h.createElement(i);
+                                a = h.getElementsByTagName(i)[0];
+                                P.src = k;
+                                P.charset = "utf-8";
+                                P.async = 1;
+                                a.parentNode.insertBefore(P, a)
+                            };
+                            T["ThinkPageWeatherWidgetObject"] = n;
+                            T[n] || (T[n] = function() {
+                                (T[n].q = T[n].q || []).push(arguments)
+                            });
+                            T[n].l = +new Date();
+                            if (T.attachEvent) {
+                                T.attachEvent("onload", g)
+                            } else {
+                                T.addEventListener("load", g, false)
+                            }
+                        }(window, document, "script", "tpwidget", "//widget.seniverse.com/widget/chameleon.js"))
+                    </script>
+                    <script>
+                        var wearther_margin = "10px 10px";
+                        
+                        wearther_margin = "70px 5px";
+                        
+                        tpwidget("init", {
+                            "flavor": "bubble",
+                            "location": "WX4FBXXFKE4F",
+                            "geolocation": "enabled",
+                            "position": "bottom-left",
+                            "margin": wearther_margin,
+                            "language": "zh-chs",
+                            "unit": "c",
+                            "theme": "chameleon",
+                            "uid": "UFC977E1C7",
+                            "hash": "213ad798bc472dc365da3a9d4a9ff115"
+                        });
+                        tpwidget("show");
+                    </script>
+                    
+        </div>
 </body>
+<script>
+    scroll();
+</script>
 
 </html>

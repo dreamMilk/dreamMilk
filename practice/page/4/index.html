@@ -1,93 +1,315 @@
-<!DOCTYPE html>
+<html>
 <head>
-<link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="welcome"><meta charset="UTF-8"><title>代码练习 | Milk &#39;s Home</title>
-<link href="https://dreammilk.now.sh/styles/main.css" type="text/css" rel="stylesheet" /><link href="https://at.alicdn.com/t/font_1621793_zatzzgvf30g.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://dreammilk.now.sh/media/css/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://dreammilk.now.sh/media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
-<script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
-  
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<title>代码练习 | Milk &#39;s Home</title>
+
+<link rel="shortcut icon" href="https://dreammilk.now.sh/favicon.ico?v=1615122613952">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://dreammilk.now.sh/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
 </head>
 <body>
-<div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
-<noscript><p class="warn" >本页面需要浏览器支持（启用）JavaScript</p></noscript><div class="header"><div class="logo_title"><div class="title animated fadeInDown"><a href="https://dreammilk.now.sh"><img alt="logo" style="display:inline-block;" src="https://dreammilk.now.sh/images/avatar.png"/></a><h1 title="Milk &#39;s Home" class="weaklink"><a  href="/">Milk &#39;s Home</a></h1>
+<div class="main gt-bg-theme-color-first">
+    <div class="main-content">
+        <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            Milk &#39;s Home
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="https://dreammilk.now.sh" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://dreammilk.now.sh/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://dreammilk.now.sh/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="https://dreammilk.now.sh/about" class="menu gt-a-link">
+                            总结
+                        </a>
+                    
+                </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1615122613952" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
 
-<div class="navbar weaklink">
-<div class="normal_nav">
-<div class="bitcron_nav_container"><div class="bitcron_nav"><div class="bitcron_nav"><div style="display:flex;justify-content:center;"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://dreammilk.now.sh" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://dreammilk.now.sh/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://dreammilk.now.sh/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://dreammilk.now.sh/about" class="selected active current nav__item" >总结</a></li></ul></nav>
-<div style="float:right;margin-top:1em"><form id="gridea-search-form" data-update="1578893743252" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="Search..."></form></div><div style="margin-left:0.5em;margin-top:1.2em"><input id="switch_default" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
-<div class="clear clear_nav_inline_end"></div></div></div><div class="clear clear_nav_end"></div></div></div><div class="hamberger" href="javascript:void(0)" onclick="btn_toggle();"><i class="iconfont icon-category"></i></div></div></div></div>
-<div id="hn" class="no-js hidden_nav animated fadeInDown"><div class="bitcron_nav_container"><div class="bitcron_nav"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://dreammilk.now.sh" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://dreammilk.now.sh/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://dreammilk.now.sh/tags" class="selected active current nav__item" >标签</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://dreammilk.now.sh/about" class="selected active current nav__item" >总结</a></li></ul><div class="clear clear_nav_inline_end"></div></nav></div><div class="clear clear_nav_end"></div></div>
-<div style="display:flex;justify-content:center;inline-block;text-align:center;margin-top:7%"><div><form id="gridea-search-form" data-update="1615122483608" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q"  placeholder="Search..." /></form></div><div style="margin-left:0.5em"><input id="switch_default_h" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
-</div></div>
-<script>function enableDarkmode(){document.body.classList.add("darkmode"),document.getElementById("switch_default").checked=1,document.getElementById("switch_default_h").checked=1}function removeDarkmode(){document.body.classList.remove("darkmode"),document.getElementById("switch_default").checked=0,document.getElementById("switch_default_h").checked=0}function getCookie(a){var b,c=new RegExp("(^| )"+a+"=([^;]*)(;|$)");return(b=document.cookie.match(c))?unescape(b[2]):null}cookie=getCookie("darkmode"),"enable"==cookie&&enableDarkmode(),window.matchMedia("(prefers-color-scheme: dark)").matches&&"disable"!==cookie&&(enableDarkmode(),document.cookie="darkmode=enable; path=/");var mobileBtn=function(){1==document.getElementById("switch_default").checked?(enableDarkmode(),document.cookie="darkmode=enable; path=/"):(removeDarkmode(),document.cookie="darkmode=disable; path=/")};</script>
-
-<div class="main"><div class="main-inner"><div class="content"><div class="round-shape-one"></div><div class="post_list" >
-
-<div class="post">
-
-<div class="post_title weaklink"><h2><a href="https://dreammilk.now.sh/1074-yu-zhou-wu-di-jia-fa-qi-20-fen/">1074 宇宙无敌加法器 (20分)</a></h2></div>
-<div class="post_content markdown"><div class="p_part"><p><h3 id="题目">题目</h3>
+        <div class="current-tag-container">
+            <h2 class="title gt-c-content-color-first">
+                #代码练习
+            </h2>
+        </div>
+        <div class="post-list-container">
+    <div class="post-inner">
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://dreammilk.now.sh/1074-yu-zhou-wu-di-jia-fa-qi-20-fen/">
+                            <span class="post-title gt-c-content-color-first">1074 宇宙无敌加法器 (20分)</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        <h3 id="题目">题目</h3>
 <blockquote>
 <p>地球人习惯使用十进制数，并且默认一个数字的每一位都是十进制的。而在 PAT 星人开挂的世界里，每个数字的每一位都是不同进制的，这种神奇的数字称为“PAT数”。每个 PAT 星人都必须熟记各位数字的进制表，例如“……0527”就表示最低位是 7 进制数、第 2 位是 2 进制数、第 3 位是 5 进制数、第 4 位是 10 进制数，等等。每一位的进制 d 或者是 0（表示十进制）、或者是 [2，9] 区间内的整数。理论上这个进制表应该包含无穷多位数字，但从实际应用出发，PAT 星人通常只需要记住前 20 位就够用了，以后各位默认为 10 进制。</p>
 <p>在这样的数字系统中，即使是简单的加法运算也变得不简单。例如对应进制表“0527”，该如何计算“6203 + 415”呢？我们得首先计算最低位：3 + 5 = 8；因为最低位是 7 进制的，所以我们得到 1 和 1 个进位。第 2 位是：0 + 1 + 1（进位）= 2；因为此位是 2 进制的，所以我们得到 0 和 1 个进位。第 3 位是：2 + 4 + 1（进位）= 7；因为此位是 5 进制的，所以我们得到 2 和 1 个进位。第 4 位是：6 + 1（进位）= 7；因为此位是 10 进制的，所以我们就得到 7。最后我们得到：6203 + 415 = 7201。</p>
 </blockquote>
-</p></div></div>
-<div class="post_footer"><section class="info weaklink"><i class="iconfont icon-calendar"></i><span style="margin-right:15px">2020-06-10</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:13px"><a href="https://dreammilk.now.sh/practice/"class="tag">代码练习</a></span><i class="iconfont icon-caret-down"></i><span class="weaklink"style="margin-right:20px;">755字</span><i class="iconfont icon-naozhong"></i><span class="weaklink"style="margin-right:15px;">4 min read</span></section>
-</div></div>
 
-<div class="post">
-
-<div class="post_title weaklink"><h2><a href="https://dreammilk.now.sh/1073-duo-xuan-ti-chang-jian-ji-fen-fa-20-fen/">1073 多选题常见计分法 (20分)</a></h2></div>
-<div class="post_content markdown"><div class="p_part"><p><h3 id="题目">题目</h3>
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2020-06-10 ·
+                        </time>
+                        
+                            <a href="https://dreammilk.now.sh/practice/" class="post-tag">
+                                # 代码练习
+                            </a>
+                        
+                    </div>
+                </div>
+                
+                    <a href="https://dreammilk.now.sh/1074-yu-zhou-wu-di-jia-fa-qi-20-fen/" class="post-feature-image"
+                       style="background-image: url('https://s1.ax1x.com/2020/05/27/tA9DbR.png')">
+                    </a>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://dreammilk.now.sh/1073-duo-xuan-ti-chang-jian-ji-fen-fa-20-fen/">
+                            <span class="post-title gt-c-content-color-first">1073 多选题常见计分法 (20分)</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        <h3 id="题目">题目</h3>
 <blockquote>
 <p>批改多选题是比较麻烦的事情，有很多不同的计分方法。有一种最常见的计分方法是：如果考生选择了部分正确选项，并且没有选择任何错误选项，则得到 50% 分数；如果考生选择了任何一个错误的选项，则不能得分。本题就请你写个程序帮助老师批改多选题，并且指出哪道题的哪个选项错的人最多。</p>
 </blockquote>
-</p></div></div>
-<div class="post_footer"><section class="info weaklink"><i class="iconfont icon-calendar"></i><span style="margin-right:15px">2020-06-09</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:13px"><a href="https://dreammilk.now.sh/practice/"class="tag">代码练习</a></span><i class="iconfont icon-caret-down"></i><span class="weaklink"style="margin-right:20px;">1245字</span><i class="iconfont icon-naozhong"></i><span class="weaklink"style="margin-right:15px;">6 min read</span></section>
-</div></div>
 
-<div class="post">
-
-<div class="post_title weaklink"><h2><a href="https://dreammilk.now.sh/1072-kai-xue-ji-yu-20-fen/">1072 开学寄语 (20分)</a></h2></div>
-<div class="post_content markdown"><div class="p_part"><p><h3 id="题目">题目</h3>
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2020-06-09 ·
+                        </time>
+                        
+                            <a href="https://dreammilk.now.sh/practice/" class="post-tag">
+                                # 代码练习
+                            </a>
+                        
+                    </div>
+                </div>
+                
+                    <a href="https://dreammilk.now.sh/1073-duo-xuan-ti-chang-jian-ji-fen-fa-20-fen/" class="post-feature-image"
+                       style="background-image: url('https://s1.ax1x.com/2020/05/27/tA9Br9.jpg')">
+                    </a>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://dreammilk.now.sh/1072-kai-xue-ji-yu-20-fen/">
+                            <span class="post-title gt-c-content-color-first">1072 开学寄语 (20分)</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        <h3 id="题目">题目</h3>
 <blockquote>
 <p>下图是上海某校的新学期开学寄语：天将降大任于斯人也，必先删其微博，卸其 QQ，封其电脑，夺其手机，收其 ipad，断其 wifi，使其百无聊赖，然后，净面、理发、整衣，然后思过、读书、锻炼、明智、开悟、精进。而后必成大器也！</p>
 <figure data-type="image" tabindex="1"><img src="https://images.ptausercontent.com/3b1d9f4a-778b-4942-a9e2-836262f363aa.JPG" alt="jiyu.JPG" loading="lazy"></figure>
 <p>本题要求你写个程序帮助这所学校的老师检查所有学生的物品，以助其成大器。</p>
 </blockquote>
-</p></div></div>
-<div class="post_footer"><section class="info weaklink"><i class="iconfont icon-calendar"></i><span style="margin-right:15px">2020-06-08</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:13px"><a href="https://dreammilk.now.sh/practice/"class="tag">代码练习</a></span><i class="iconfont icon-caret-down"></i><span class="weaklink"style="margin-right:20px;">730字</span><i class="iconfont icon-naozhong"></i><span class="weaklink"style="margin-right:15px;">4 min read</span></section>
-</div></div>
 
-<div class="post">
-
-<div class="post_title weaklink"><h2><a href="https://dreammilk.now.sh/1071-xiao-du-yi-qing-15-fen/">1071 小赌怡情 (15分)</a></h2></div>
-<div class="post_content markdown"><div class="p_part"><p><h3 id="题目">题目</h3>
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2020-06-08 ·
+                        </time>
+                        
+                            <a href="https://dreammilk.now.sh/practice/" class="post-tag">
+                                # 代码练习
+                            </a>
+                        
+                    </div>
+                </div>
+                
+                    <a href="https://dreammilk.now.sh/1072-kai-xue-ji-yu-20-fen/" class="post-feature-image"
+                       style="background-image: url('https://s1.ax1x.com/2020/05/27/tA90KJ.jpg')">
+                    </a>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://dreammilk.now.sh/1071-xiao-du-yi-qing-15-fen/">
+                            <span class="post-title gt-c-content-color-first">1071 小赌怡情 (15分)</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        <h3 id="题目">题目</h3>
 <blockquote>
 <p>常言道“小赌怡情”。这是一个很简单的小游戏：首先由计算机给出第一个整数；然后玩家下注赌第二个整数将会比第一个数大还是小；玩家下注 t 个筹码后，计算机给出第二个数。若玩家猜对了，则系统奖励玩家 t 个筹码；否则扣除玩家 t 个筹码。</p>
 <p>注意：玩家下注的筹码数不能超过自己帐户上拥有的筹码数。当玩家输光了全部筹码后，游戏就结束。</p>
 </blockquote>
-</p></div></div>
-<div class="post_footer"><section class="info weaklink"><i class="iconfont icon-calendar"></i><span style="margin-right:15px">2020-06-07</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:13px"><a href="https://dreammilk.now.sh/practice/"class="tag">代码练习</a></span><i class="iconfont icon-caret-down"></i><span class="weaklink"style="margin-right:20px;">637字</span><i class="iconfont icon-naozhong"></i><span class="weaklink"style="margin-right:15px;">3 min read</span></section>
-</div></div>
 
-<div class="post">
-
-<div class="post_title weaklink"><h2><a href="https://dreammilk.now.sh/1070-jie-sheng-25-fen/">1070 结绳 (25分)</a></h2></div>
-<div class="post_content markdown"><div class="p_part"><p><h3 id="题目">题目</h3>
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2020-06-07 ·
+                        </time>
+                        
+                            <a href="https://dreammilk.now.sh/practice/" class="post-tag">
+                                # 代码练习
+                            </a>
+                        
+                    </div>
+                </div>
+                
+                    <a href="https://dreammilk.now.sh/1071-xiao-du-yi-qing-15-fen/" class="post-feature-image"
+                       style="background-image: url('https://s1.ax1x.com/2020/05/27/tA9dv4.jpg')">
+                    </a>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://dreammilk.now.sh/1070-jie-sheng-25-fen/">
+                            <span class="post-title gt-c-content-color-first">1070 结绳 (25分)</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        <h3 id="题目">题目</h3>
 <blockquote>
 <p>给定一段一段的绳子，你需要把它们串成一条绳。每次串连的时候，是把两段绳子对折，再如下图所示套接在一起。这样得到的绳子又被当成是另一段绳子，可以再次对折去跟另一段绳子串连。每次串连后，原来两段绳子的长度就会减半。</p>
 <figure data-type="image" tabindex="1"><img src="https://images.ptausercontent.com/46293e57-aa0e-414b-b5c3-7c4b2d5201e2.jpg" alt="rope.jpg" loading="lazy"></figure>
 <p>给定 <em>N</em> 段绳子的长度，你需要找出它们能串成的绳子的最大长度。</p>
 </blockquote>
-</p></div></div>
-<div class="post_footer"><section class="info weaklink"><i class="iconfont icon-calendar"></i><span style="margin-right:15px">2020-06-06</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:13px"><a href="https://dreammilk.now.sh/practice/"class="tag">代码练习</a></span><i class="iconfont icon-caret-down"></i><span class="weaklink"style="margin-right:20px;">447字</span><i class="iconfont icon-naozhong"></i><span class="weaklink"style="margin-right:15px;">2 min read</span></section>
-</div></div>
-	
-<div class="round-shape-one"></div><div class="paginator pager pagination"><a href="https://dreammilk.now.sh/practice/page/5/"class="btn next older-posts older_posts">Older Posts</a><a href="https://dreammilk.now.sh/practice/page/3/"class="btn pre newer-posts newer_posts">Newer Posts</a><div style="clear:both;height:0;"></div></div></div></div></div></div>
-<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"><a href="https://github.com/dreamMilk"title="github"><i class="iconfont icon-github"></i></a></div></div><div class="copyright"id="copyright">Powered by <a href="https://pages.github.com/" target="_blank">Github pages</a>Copyright © 2018-2020 <a href="https://dreammilk.now.sh" style="margin:0;">Milk &#39;s Home</a>.</div>
-<span style="display: inline;margin-right:15px;">👁<strong><span id="busuanzi_value_site_uv"></span></strong></span><span id="busuanzi_container_page_pv" style="display: inline;"><span>📚<strong>88</strong> posts</span></div></div>
+
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2020-06-06 ·
+                        </time>
+                        
+                            <a href="https://dreammilk.now.sh/practice/" class="post-tag">
+                                # 代码练习
+                            </a>
+                        
+                    </div>
+                </div>
+                
+                    <a href="https://dreammilk.now.sh/1070-jie-sheng-25-fen/" class="post-feature-image"
+                       style="background-image: url('https://s1.ax1x.com/2020/05/27/tA9a2F.jpg')">
+                    </a>
+                
+            </div>
+        
+    </div>
+</div>
+        <div class="pagination-container">
+    
+        <a href="https://dreammilk.now.sh/practice/page/3/" class="prev-page gt-a-link">上一页</a>
+    
+    
+        <a href="https://dreammilk.now.sh/practice/page/5/" class="prev-page gt-a-link">下一页</a>
+    
+</div>
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">welcome</div>
+    <div class="social-container">
+        
+            
+                <a href="https://github.com/dreamMilk" target="_blank">
+                    <i class="fab fa-github gt-c-content-color-first"></i>
+                </a>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        Powered by <a href="https://pages.github.com/" target="_blank">Github pages</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://dreammilk.now.sh/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
 <script>
-console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+  hljs.initHighlightingOnLoad()
 </script>
-<script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+
+    </div>
+</div>
 </body>
 </html>
